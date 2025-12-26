@@ -1,0 +1,913 @@
+< !DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>IEC 62443 Lifecycle Explorer</title>
+        <!-- Tailwind CSS -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- Chart.js -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet">
+
+        <!-- Chosen Palette: Warm Professional
+                        Background: Warm Neutral (Cream/Off-white)
+                        Primary: Deep Slate
+                        Accents: Muted Blue, Terracotta (for alerts/critical), Sage (for success)
+    -->
+        <style>
+            body {
+                font-family: 'Inter', sans-serif;
+                background-color: #020617;
+                /* Slate 950 */
+                color: #F8FAFC;
+                /* Slate 50 */
+            }
+
+            .glass-panel {
+                background: rgba(15, 23, 42, 0.6);
+                /* Slate 900 with opacity */
+                backdrop-filter: blur(12px);
+                border: 1px solid rgba(255, 255, 255, 0.08);
+                /* White alpha border */
+                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.15);
+            }
+
+            .kanban-card {
+                transition: all 0.2s ease;
+                cursor: pointer;
+                border-left: 4px solid transparent;
+                background-color: #1E293B;
+                /* Slate 800 */
+                border-color: rgba(255, 255, 255, 0.05);
+            }
+
+            .kanban-card:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+                background-color: #334155;
+                /* Slate 700 */
+            }
+
+            .kanban-card.active {
+                border-left-color: #EAB308;
+                /* OXOT Amber/Gold */
+                background-color: rgba(234, 179, 8, 0.1);
+                /* Gold tint */
+            }
+
+            /* Custom Scrollbar for horizontal scrolling */
+            .scroller::-webkit-scrollbar {
+                height: 8px;
+                width: 8px;
+            }
+
+            .scroller::-webkit-scrollbar-track {
+                background: #0F172A;
+                /* Slate 900 */
+                border-radius: 4px;
+            }
+
+            .scroller::-webkit-scrollbar-thumb {
+                background: #334155;
+                /* Slate 700 */
+                border-radius: 4px;
+                border: 1px solid #0F172A;
+            }
+
+            .scroller::-webkit-scrollbar-thumb:hover {
+                background: #475569;
+                /* Slate 600 */
+            }
+
+            .chart-container {
+                position: relative;
+                width: 100%;
+                max-width: 500px;
+                height: 300px;
+                max-height: 400px;
+                margin: 0 auto;
+            }
+        </style>
+    </head>
+
+    <body class="h-screen flex flex-col overflow-hidden bg-slate-950 text-slate-100 selection:bg-amber-500/30">
+
+        <!-- Application Structure Plan:
+                        1. Header: Title and Role Switcher (Supplier vs. Integrator/Owner).
+                        2. Main Content Grid:
+                        - Top Row: Workflow Kanban Board. Horizontal scrollable phases containing cards.
+                        - Bottom Row (Split View):
+                        - Left: Detail Inspector (Content changes based on selected Kanban card).
+                        - Right: Analytics Dashboard (Security Level Chart & Artifact Checklist).
+                        3. Rationale: This split allows users to see the "Process" (Kanban) and the "Details" simultaneously without losing context.
+                        The Role Switcher completely reconfigures the data to match the distinct lifecycles of 62443-4-1 vs 62443-2-1/3-2.
+    -->
+
+        <!-- Header & Persona Selector -->
+        <header
+            class="bg-slate-950/50 backdrop-blur-md border-b border-white/10 px-6 py-4 flex flex-col md:flex-row justify-between items-center shadow-lg z-10 shrink-0">
+            <div>
+                <h1 class="text-2xl font-bold text-white tracking-tight">IEC 62443 <span
+                        class="text-oxot-gold font-light text-amber-500">Workshop</span></h1>
+                <p class="text-sm text-gray-400 mt-1">Lifecycle Management & Artifact Generation Guide</p>
+            </div>
+
+            <div class="mt-4 md:mt-0 flex bg-slate-900 p-1 rounded-lg border border-white/5">
+                <button id="btn-supplier" onclick="app.setPersona('supplier')"
+                    class="px-6 py-2 rounded-md text-sm font-medium transition-all duration-200 text-gray-400 hover:text-white">
+                    📦 Product Supplier
+                    <span class="block text-xs font-normal opacity-75">IEC 62443-4-1 / 4-2</span>
+                </button>
+                <button id="btn-integrator" onclick="app.setPersona('integrator')"
+                    class="px-6 py-2 rounded-md text-sm font-medium transition-all duration-200 bg-slate-800 text-amber-500 shadow-lg border border-white/10 ring-1 ring-white/5">
+                    🏭 Asset Owner/Integrator
+                    <span class="block text-xs font-normal opacity-75">IEC 62443-2-1 / 3-2 / 3-3</span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Main Workspace -->
+        <main class="flex-1 flex flex-col overflow-hidden bg-slate-950">
+
+            <!-- Workflow Kanban (Horizontal) -->
+            <section class="h-1/3 border-b border-white/10 bg-slate-900/50 flex flex-col shrink-0 relative">
+                <div
+                    class="px-6 py-3 bg-slate-900/80 border-b border-white/5 flex justify-between items-center backdrop-blur-sm">
+                    <h2 class="text-sm font-bold uppercase tracking-wide text-gray-400">Lifecycle Phases</h2>
+                    <span id="standards-badge"
+                        class="px-2 py-1 bg-amber-500/10 text-amber-500 text-xs rounded border border-amber-500/20 font-mono">Scope:
+                        IEC 62443-3-2 & 3-3</span>
+                </div>
+                <div id="kanban-board"
+                    class="flex-1 overflow-x-auto scroller flex gap-6 px-6 py-4 items-start min-w-full">
+                    <!-- Kanban Columns injected by JS -->
+                </div>
+            </section>
+
+            <!-- Details & Viz Area -->
+            <section class="flex-1 flex flex-col md:flex-row overflow-hidden bg-slate-950">
+                <!-- Left Panel: Activity Detail Inspector -->
+                <div
+                    class="w-full md:w-3/5 p-6 overflow-y-auto scroller border-r border-white/10 bg-slate-900 relative">
+                    <div class="absolute inset-0 bg-grid-slate-800/[0.1] bg-[size:20px_20px]"></div>
+                    <div id="detail-empty"
+                        class="h-full flex flex-col items-center justify-center text-gray-500 relative z-10">
+                        <div class="text-6xl mb-4 opacity-20 invert filter">📂</div>
+                        <p class="text-lg">Select an activity card from the workflow above to view details.</p>
+                    </div>
+
+                    <div id="detail-content" class="hidden relative z-10">
+                        <div class="flex justify-between items-start mb-6">
+                            <div>
+                                <span id="detail-phase"
+                                    class="text-xs font-bold text-amber-500 bg-amber-500/10 px-2 py-1 rounded mb-2 inline-block border border-amber-500/20">PLANNING</span>
+                                <h2 id="detail-title" class="text-3xl font-bold text-white leading-tight">High-Level
+                                    Risk Assessment</h2>
+                            </div>
+                            <div class="text-right">
+                                <div class="text-xs text-gray-500 uppercase">Standard Ref</div>
+                                <div id="detail-ref" class="font-mono text-sm font-bold text-amber-500/80">IEC 62443-3-2
+                                </div>
+                            </div>
+                        </div>
+
+                        <p id="detail-desc"
+                            class="text-gray-300 mb-8 text-lg leading-relaxed border-l-4 border-amber-500/50 pl-4 bg-white/5 p-4 rounded-r-lg">
+                            The initial assessment to identify critical assets and estimate the worst-case consequence
+                            if those assets were compromised.
+                        </p>
+
+                        <!-- Two Column Grid for Tasks & Artifacts -->
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+                            <!-- Column 1: Activities & Inputs -->
+                            <div class="space-y-6">
+                                <div class="glass-panel p-5 rounded-xl border-l-4 border-amber-500">
+                                    <h3 class="font-bold text-white mb-3 flex items-center">
+                                        <span class="mr-2">🔨</span> Activities & Workshops
+                                    </h3>
+                                    <ul id="detail-activities" class="space-y-2 text-sm text-gray-300 list-disc pl-5">
+                                        <!-- Populated by JS -->
+                                    </ul>
+                                </div>
+
+                                <div class="bg-slate-800/50 p-5 rounded-xl border border-white/5">
+                                    <h3 class="font-bold text-white mb-3 flex items-center">
+                                        <span class="mr-2">📥</span> Required Inputs
+                                    </h3>
+                                    <ul id="detail-inputs" class="space-y-2 text-sm text-gray-400">
+                                        <!-- Populated by JS -->
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Column 2: Outputs & Artifacts -->
+                            <div class="space-y-6">
+                                <div class="glass-panel p-5 rounded-xl border-l-4 border-emerald-500">
+                                    <h3 class="font-bold text-white mb-3 flex items-center">
+                                        <span class="mr-2">📄</span> Output Artifacts
+                                    </h3>
+                                    <ul id="detail-artifacts" class="space-y-3">
+                                        <!-- Populated by JS -->
+                                    </ul>
+                                </div>
+
+                                <div class="bg-blue-900/20 p-4 rounded-lg border border-blue-500/20">
+                                    <h4 class="text-blue-400 font-bold text-xs uppercase mb-1">Key Insight</h4>
+                                    <p id="detail-insight" class="text-sm text-blue-300">
+                                        Ensure the scope clearly defines logical and physical boundaries before starting
+                                        the risk assessment.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Panel: Contextual Dashboard -->
+                <div class="w-full md:w-2/5 p-6 bg-slate-900 overflow-y-auto scroller">
+                    <div class="mb-2">
+                        <h3 class="text-sm font-bold text-gray-400 uppercase tracking-wider mb-4">Security Level
+                            Simulation</h3>
+                        <p class="text-xs text-gray-400 mb-2">Adjust values to simulate SL-Target vs SL-Achieved.</p>
+                    </div>
+
+                    <!-- Visualization & Content Choices:
+                                    1. Radar Chart: Best for showing the multidimensional nature of Security Levels (FR1-FR7).
+                                    2. Interaction: Sliders allow users to see how changing requirements impacts the "shape" of security.
+                -->
+                    <!-- Chart Container -->
+                    <div class="glass-panel p-4 rounded-xl mb-6 flex flex-col items-center">
+                        <div class="chart-container">
+                            <canvas id="slChart"></canvas>
+                        </div>
+                        <div class="flex gap-4 mt-4 w-full justify-center">
+                            <button onclick="app.randomizeChart()"
+                                class="text-xs bg-white border border-gray-300 px-3 py-1 rounded hover:bg-gray-50">Simulate
+                                Assessment</button>
+                            <button onclick="app.resetChart()"
+                                class="text-xs bg-white border border-gray-300 px-3 py-1 rounded hover:bg-gray-50">Reset
+                                Defaults</button>
+                        </div>
+                    </div>
+
+                    <!-- Simulation Controls (Sliders) -->
+                    <div class="space-y-3 mb-8">
+                        <div class="flex justify-between text-xs font-bold text-gray-300">
+                            <span>Access Control (AC)</span>
+                            <input type="range" min="0" max="4" value="2" class="w-1/2 accent-amber-500"
+                                oninput="app.updateSL(0, this.value)">
+                        </div>
+                        <div class="flex justify-between text-xs font-bold text-gray-300">
+                            <span>Data Integrity (DI)</span>
+                            <input type="range" min="0" max="4" value="1" class="w-1/2 accent-amber-500"
+                                oninput="app.updateSL(2, this.value)">
+                        </div>
+                        <div class="flex justify-between text-xs font-bold text-gray-300">
+                            <span>Restricted Flow (RDF)</span>
+                            <input type="range" min="0" max="4" value="3" class="w-1/2 accent-amber-500"
+                                oninput="app.updateSL(4, this.value)">
+                        </div>
+                    </div>
+
+                    <!-- Artifact Checklist -->
+                    <div>
+                        <h3 class="text-sm font-bold text-gray-400 uppercase tracking-wider mb-4">Required Deliverables
+                        </h3>
+                        <div id="checklist-container" class="space-y-2">
+                            <!-- Populated by JS -->
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+
+        <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+
+        <script>
+            // --- Data Models ---
+
+            const db = {
+                integrator: {
+                    title: "Asset Owner / Integrator Journey",
+                    standard: "IEC 62443-2-1, 3-2, 3-3 & TS 50701",
+                    phases: [
+                        {
+                            name: "Assess (Risk)",
+                            id: "assess",
+                            cards: [
+                                {
+                                    id: "asset-inv",
+                                    title: "Asset Inventory & Grouping",
+                                    ref: "IEC 62443-2-1",
+                                    desc: "Creation of a comprehensive list of all IACS assets (hardware, software, data) to be protected.",
+                                    activities: [
+                                        "Physical walk-through of plant/site.",
+                                        "Network scanning (passive/active).",
+                                        "Review of P&ID and Network Topology diagrams.",
+                                        "Classify assets by criticality."
+                                    ],
+                                    inputs: [
+                                        "Network Architecture Diagrams",
+                                        "Process Flow Diagrams",
+                                        "Vendor Bill of Materials (BOM)"
+                                    ],
+                                    artifacts: [
+                                        "Comprehensive Asset Inventory (Excel/DB)",
+                                        "Data Flow Diagram"
+                                    ],
+                                    insight: "You cannot protect what you don't know. 80% of gaps are found here."
+                                },
+                                {
+                                    id: "hlra",
+                                    title: "High-Level Risk Assessment",
+                                    ref: "IEC 62443-3-2 / TS 50701",
+                                    desc: "Determine the worst-case consequences of a cyber incident on the system under consideration (SUC).",
+                                    activities: [
+                                        "Workshop with Process Engineers & Safety Officers.",
+                                        "Review HAZOP / LOPA studies.",
+                                        "Identify HSE, Financial, and Operational impacts."
+                                    ],
+                                    inputs: [
+                                        "HAZOP Reports",
+                                        "Corporate Risk Matrix",
+                                        "Asset Inventory"
+                                    ],
+                                    artifacts: [
+                                        "High-Level Risk Assessment Report",
+                                        "Initial Risk Score"
+                                    ],
+                                    insight: "If the worst-case consequence is unacceptably high, a detailed risk assessment is mandatory."
+                                },
+                                {
+                                    id: "zones",
+                                    title: "Zone & Conduit Partitioning",
+                                    ref: "IEC 62443-3-2 ZCR 1-3",
+                                    desc: "Grouping assets into Zones based on similar security requirements and defining Conduits for communication.",
+                                    activities: [
+                                        "Drafting the 'Zone and Conduit Diagram'.",
+                                        "Defining trust boundaries.",
+                                        "Identifying all logical and physical entry points."
+                                    ],
+                                    inputs: [
+                                        "High-Level Risk Assessment",
+                                        "Network Topology",
+                                        "Data Flow Diagrams"
+                                    ],
+                                    artifacts: [
+                                        "ZCE (Zone & Conduit Entry) Diagram",
+                                        "Zone Definition Document"
+                                    ],
+                                    insight: "Conduits are the only path for data flow. If it's not in a conduit, it shouldn't talk."
+                                }
+                            ]
+                        },
+                        {
+                            name: "Target (Design)",
+                            id: "target",
+                            cards: [
+                                {
+                                    id: "risk-detail",
+                                    title: "Detailed Risk Assessment",
+                                    ref: "IEC 62443-3-2 ZCR 4-6",
+                                    desc: "Analyzing specific threats and vulnerabilities for each Zone/Conduit to determine unmitigated risk.",
+                                    activities: [
+                                        "Threat Modeling (STRIDE/LINDDUN).",
+                                        "Vulnerability Scanning.",
+                                        "Likelihood estimation workshop."
+                                    ],
+                                    inputs: [
+                                        "ZCE Diagram",
+                                        "Threat Intelligence Feeds",
+                                        "Vulnerability Database (CVEs)"
+                                    ],
+                                    artifacts: [
+                                        "Detailed Risk Assessment Register",
+                                        "Gap Analysis Report"
+                                    ],
+                                    insight: "This step justifies the budget. It connects technical flaws to business loss."
+                                },
+                                {
+                                    id: "sl-t",
+                                    title: "Determine SL-T (Target)",
+                                    ref: "IEC 62443-3-2",
+                                    desc: "Assigning a Target Security Level (SL-T 1 to 4) for each Zone based on risk tolerance.",
+                                    activities: [
+                                        "Mapping Risk Score to Security Level.",
+                                        "Defining Foundational Requirements (FRs) needed.",
+                                        "SL-Vector Definition (AC, UC, DI, DC, I&A, TRE, RA)."
+                                    ],
+                                    inputs: [
+                                        "Detailed Risk Register",
+                                        "Corporate Risk Appetite Statement"
+                                    ],
+                                    artifacts: [
+                                        "SL-T Vector List",
+                                        "Cybersecurity Requirements Specification (CSRS)"
+                                    ],
+                                    insight: "SL-T is not just a number; it's a vector of 7 requirements (FR1-FR7)."
+                                }
+                            ]
+                        },
+                        {
+                            name: "Implement",
+                            id: "implement",
+                            cards: [
+                                {
+                                    id: "sys-design",
+                                    title: "System Design & Hardening",
+                                    ref: "IEC 62443-3-3 / 2-4",
+                                    desc: "Designing the solution to meet the CRS and SL-T. Selecting controls and countermeasures.",
+                                    activities: [
+                                        "Firewall rule definition.",
+                                        "IDAM system configuration.",
+                                        "Patch management planning.",
+                                        "Backup & Recovery setup."
+                                    ],
+                                    inputs: [
+                                        "Cybersecurity Requirements Spec (CRS)",
+                                        "Vendor Hardening Guides"
+                                    ],
+                                    artifacts: [
+                                        "Detailed Design Specification",
+                                        "Configuration Items (CIs)",
+                                        "SL-C (Capability) Statement"
+                                    ],
+                                    insight: "Compensating controls are allowed if a component cannot meet the SL-T natively."
+                                }
+                            ]
+                        },
+                        {
+                            name: "Verify & Maintain",
+                            id: "verify",
+                            cards: [
+                                {
+                                    id: "verification",
+                                    title: "Verification & Validation",
+                                    ref: "IEC 62443-2-4 / 3-3",
+                                    desc: "Testing to ensure the Achieved Security Level (SL-A) meets the Target (SL-T).",
+                                    activities: [
+                                        "Factory Acceptance Test (FAT) - Security Section.",
+                                        "Site Acceptance Test (SAT).",
+                                        "Penetration Testing (for high SL)."
+                                    ],
+                                    inputs: [
+                                        "Test Plans",
+                                        "Traceability Matrix"
+                                    ],
+                                    artifacts: [
+                                        "Verification Report",
+                                        "SL-A Declaration"
+                                    ],
+                                    insight: "Verification proves the design works. Validation proves the design handles the risk."
+                                },
+                                {
+                                    id: "maintenance",
+                                    title: "CSMS Maintenance",
+                                    ref: "IEC 62443-2-1",
+                                    desc: "Ongoing monitoring, patching, and incident response.",
+                                    activities: [
+                                        "Periodic Audits.",
+                                        "Patch Management Cycles.",
+                                        "Incident Response Drills."
+                                    ],
+                                    inputs: [
+                                        "CSMS Policy",
+                                        "Incident Response Plan"
+                                    ],
+                                    artifacts: [
+                                        "Audit Logs",
+                                        "Incident Reports"
+                                    ],
+                                    insight: "Security is a process, not a product. It degrades over time without maintenance."
+                                }
+                            ]
+                        }
+                    ],
+                    checklist: [
+                        "Asset Inventory",
+                        "High Level Risk Assessment",
+                        "Zone & Conduit Diagram",
+                        "Cybersecurity Req. Spec (CRS)",
+                        "FAT/SAT Security Reports"
+                    ]
+                },
+                supplier: {
+                    title: "Product Supplier Journey",
+                    standard: "IEC 62443-4-1 (SDL) & 4-2 (Component)",
+                    phases: [
+                        {
+                            name: "Practice (SDL)",
+                            id: "sdl",
+                            cards: [
+                                {
+                                    id: "sdl-proc",
+                                    title: "Establish SDL Process",
+                                    ref: "IEC 62443-4-1 (SM)",
+                                    desc: "Defining a Secure Development Lifecycle (SDL) covering the entire product life.",
+                                    activities: [
+                                        "Define Security Management roles.",
+                                        "Establish security training for devs.",
+                                        "Create defect management policy."
+                                    ],
+                                    inputs: [
+                                        "Quality Management System (QMS)",
+                                        "ISO 9001 Docs"
+                                    ],
+                                    artifacts: [
+                                        "SDL Plan",
+                                        "Security Training Records"
+                                    ],
+                                    insight: "4-1 is about the 'Process'. You cannot have a certified product without a certified process."
+                                }
+                            ]
+                        },
+                        {
+                            name: "Specify & Design",
+                            id: "spec-design",
+                            cards: [
+                                {
+                                    id: "threat-mod",
+                                    title: "Threat Modeling",
+                                    ref: "IEC 62443-4-1 (SD)",
+                                    desc: "Analyzing the product architecture to identify threats and trust boundaries.",
+                                    activities: [
+                                        "Architecture Review.",
+                                        "Attack Surface Analysis.",
+                                        "Trust Boundary definition."
+                                    ],
+                                    inputs: [
+                                        "Functional Specifications",
+                                        "Architecture Diagrams"
+                                    ],
+                                    artifacts: [
+                                        "Threat Model Document",
+                                        "Mitigation Plan"
+                                    ],
+                                    insight: "Threat modeling must be done BEFORE code is written."
+                                },
+                                {
+                                    id: "reqs",
+                                    title: "Security Requirements",
+                                    ref: "IEC 62443-4-1 (SR) / 4-2",
+                                    desc: "Defining technical security requirements for the component based on 4-2 CRs.",
+                                    activities: [
+                                        "Select Target Security Level (SL-C).",
+                                        "Map 4-2 Component Requirements (CRs).",
+                                        "Define authentication, logging, integrity specs."
+                                    ],
+                                    inputs: [
+                                        "Threat Model",
+                                        "Market Requirements"
+                                    ],
+                                    artifacts: [
+                                        "Product Security Requirements Spec",
+                                        "Traceability Matrix"
+                                    ],
+                                    insight: "Don't just say 'secure'. Specify 'Account lockout after 5 attempts'."
+                                }
+                            ]
+                        },
+                        {
+                            name: "Implement",
+                            id: "supp-imp",
+                            cards: [
+                                {
+                                    id: "coding",
+                                    title: "Secure Implementation",
+                                    ref: "IEC 62443-4-1 (SI)",
+                                    desc: "Writing code following secure coding standards and guidelines.",
+                                    activities: [
+                                        "Static Code Analysis (SAST).",
+                                        "Code Reviews.",
+                                        "Using approved cryptographic libraries."
+                                    ],
+                                    inputs: [
+                                        "Secure Coding Guidelines",
+                                        "Development Environment"
+                                    ],
+                                    artifacts: [
+                                        "SAST Reports",
+                                        "Code Review Logs"
+                                    ],
+                                    insight: "Automate SAST in your CI/CD pipeline."
+                                }
+                            ]
+                        },
+                        {
+                            name: "Verify & Release",
+                            id: "supp-verify",
+                            cards: [
+                                {
+                                    id: "testing",
+                                    title: "Security Verification",
+                                    ref: "IEC 62443-4-1 (SV)",
+                                    desc: "Testing the product against the requirements and for known vulnerabilities.",
+                                    activities: [
+                                        "Dynamic Application Security Testing (DAST).",
+                                        "Fuzz Testing.",
+                                        "Penetration Testing.",
+                                        "Vulnerability Scanning."
+                                    ],
+                                    inputs: [
+                                        "Executable Binaries",
+                                        "Test Cases"
+                                    ],
+                                    artifacts: [
+                                        "Vulnerability Scan Reports",
+                                        "Fuzzing Results",
+                                        "Pen Test Report"
+                                    ],
+                                    insight: "Fuzz testing is mandatory for 4-1 compliance on external interfaces."
+                                },
+                                {
+                                    id: "guidelines",
+                                    title: "User Documentation",
+                                    ref: "IEC 62443-4-1 (DM)",
+                                    desc: "Providing the user with instructions on how to configure the product securely.",
+                                    activities: [
+                                        "Drafting Security Manual.",
+                                        "Documenting secure configurations.",
+                                        "Listing known issues."
+                                    ],
+                                    inputs: [
+                                        "Technical Specs",
+                                        "Verification Results"
+                                    ],
+                                    artifacts: [
+                                        "Product Security Manual",
+                                        "Hardening Guide"
+                                    ],
+                                    insight: "The Integrator cannot achieve SL-A without your Security Manual."
+                                }
+                            ]
+                        }
+                    ],
+                    checklist: [
+                        "SDL Process Definition",
+                        "Threat Model",
+                        "Secure Coding Standards",
+                        "Fuzz Testing Report",
+                        "Product Security Manual"
+                    ]
+                }
+            };
+
+            // --- Application Logic ---
+
+            const app = {
+                currentPersona: 'integrator',
+                chart: null,
+
+                init: function () {
+                    this.initChart();
+                    this.setPersona('integrator');
+                },
+
+                setPersona: function (persona) {
+                    this.currentPersona = persona;
+
+                    // Toggle Button Styles
+                    const btnSupp = document.getElementById('btn-supplier');
+                    const btnInt = document.getElementById('btn-integrator');
+
+                    if (persona === 'integrator') {
+                        btnInt.classList.add('bg-slate-800', 'text-amber-500', 'shadow-lg', 'border', 'border-amber-500/30', 'ring-1', 'ring-amber-500/20');
+                        btnInt.classList.remove('text-gray-400');
+                        btnSupp.classList.remove('bg-slate-800', 'text-amber-500', 'shadow-lg', 'border', 'border-amber-500/30', 'ring-1', 'ring-amber-500/20');
+                        btnSupp.classList.add('text-gray-400');
+                        document.getElementById('standards-badge').textContent = "Scope: IEC 62443-2-1 / 3-2 / 3-3";
+                        document.getElementById('standards-badge').className = "px-2 py-1 bg-amber-500/10 text-amber-500 text-xs rounded border border-amber-500/20 font-mono";
+                    } else {
+                        btnSupp.classList.add('bg-slate-800', 'text-amber-500', 'shadow-lg', 'border', 'border-amber-500/30', 'ring-1', 'ring-amber-500/20');
+                        btnSupp.classList.remove('text-gray-400');
+                        btnInt.classList.remove('bg-slate-800', 'text-amber-500', 'shadow-lg', 'border', 'border-amber-500/30', 'ring-1', 'ring-amber-500/20');
+                        btnInt.classList.add('text-gray-400');
+                        document.getElementById('standards-badge').textContent = "Scope: IEC 62443-4-1 & 4-2";
+                        document.getElementById('standards-badge').className = "px-2 py-1 bg-blue-500/10 text-blue-400 text-xs rounded border border-blue-500/20 font-mono";
+                    }
+
+                    this.renderKanban();
+                    this.renderChecklist();
+                    this.resetDetailView();
+                    this.updateChartLabels(); // Update chart titles based on context
+                },
+
+                renderKanban: function () {
+                    const board = document.getElementById('kanban-board');
+                    board.innerHTML = '';
+
+                    const data = db[this.currentPersona];
+
+                    data.phases.forEach(phase => {
+                        const col = document.createElement('div');
+                        col.className = 'w-72 shrink-0 flex flex-col h-full';
+
+                        // Column Header
+                        const header = document.createElement('div');
+                        header.className = 'font-bold text-gray-400 mb-3 px-1 flex items-center justify-between';
+                        header.innerHTML = `<span>${phase.name}</span><span class="text-xs bg-slate-800 text-gray-400 px-2 py-0.5 rounded-full border border-white/5">${phase.cards.length}</span>`;
+                        col.appendChild(header);
+
+                        // Cards Container
+                        const cardList = document.createElement('div');
+                        cardList.className = 'flex flex-col gap-3 overflow-y-auto pr-2 pb-2';
+
+                        phase.cards.forEach(card => {
+                            const cardEl = document.createElement('div');
+                            cardEl.className = 'kanban-card bg-slate-800 p-4 rounded-lg border border-white/5 shadow-sm hover:border-amber-500/30';
+                            cardEl.onclick = () => app.loadDetail(card, cardEl);
+                            cardEl.innerHTML = `
+                            <div class="text-xs font-mono text-gray-500 mb-1">${card.ref.split(' ')[1] || card.ref}</div>
+                            <h3 class="font-semibold text-gray-200 text-sm leading-snug">${card.title}</h3>
+                            `;
+                            cardList.appendChild(cardEl);
+                        });
+
+                        col.appendChild(cardList);
+                        board.appendChild(col);
+                    });
+                },
+
+                renderChecklist: function () {
+                    const list = document.getElementById('checklist-container');
+                    list.innerHTML = '';
+                    const items = db[this.currentPersona].checklist;
+
+                    items.forEach(item => {
+                        const row = document.createElement('div');
+                        row.className = 'flex items-center gap-3 p-2 bg-slate-900/50 rounded border border-white/5 hover:border-amber-500/20 transition-colors cursor-default';
+                        row.innerHTML = `
+                            <div class="h-4 w-4 rounded-full border-2 border-gray-600"></div>
+                            <span class="text-xs text-gray-400 font-medium">${item}</span>
+                            `;
+                        list.appendChild(row);
+                    });
+                },
+
+                loadDetail: function (cardData, element) {
+                    // Highlight active card
+                    document.querySelectorAll('.kanban-card').forEach(c => c.classList.remove('active'));
+                    element.classList.add('active');
+
+                    // Show Content, Hide Empty State
+                    document.getElementById('detail-empty').classList.add('hidden');
+                    document.getElementById('detail-content').classList.remove('hidden');
+
+                    // Populate Text
+                    document.getElementById('detail-title').textContent = cardData.title;
+                    document.getElementById('detail-phase').textContent = app.getPhaseName(cardData.id);
+                    document.getElementById('detail-ref').textContent = cardData.ref;
+                    document.getElementById('detail-desc').textContent = cardData.desc;
+                    document.getElementById('detail-insight').textContent = cardData.insight;
+
+                    // Populate Lists
+                    const fillList = (id, items, icon) => {
+                        const ul = document.getElementById(id);
+                        ul.innerHTML = '';
+                        items.forEach(item => {
+                            const li = document.createElement('li');
+                            // Styling for specific lists
+                            if (id === 'detail-artifacts') {
+                                li.className = "flex items-center text-sm text-gray-300 bg-slate-800/80 p-2 rounded border border-emerald-500/20 shadow-sm";
+                                li.innerHTML = `<span class="text-emerald-500 mr-2 text-xs">●</span> ${item}`;
+                            } else if (id === 'detail-inputs') {
+                                li.className = "flex items-start";
+                                li.innerHTML = `<span class="text-gray-500 mr-2 text-xs">↳</span> ${item}`;
+                            } else {
+                                li.textContent = item;
+                            }
+                            ul.appendChild(li);
+                        });
+                    };
+
+                    fillList('detail-activities', cardData.activities);
+                    fillList('detail-inputs', cardData.inputs);
+                    fillList('detail-artifacts', cardData.artifacts);
+                },
+
+                getPhaseName: function (cardId) {
+                    // Helper to find phase name from card ID
+                    const data = db[this.currentPersona].phases;
+                    for (let p of data) {
+                        if (p.cards.find(c => c.id === cardId)) return p.name.toUpperCase();
+                    }
+                    return 'ACTIVITY';
+                },
+
+                resetDetailView: function () {
+                    document.getElementById('detail-empty').classList.remove('hidden');
+                    document.getElementById('detail-content').classList.add('hidden');
+                },
+
+                // --- Chart Logic ---
+
+                initChart: function () {
+                    const ctx = document.getElementById('slChart').getContext('2d');
+
+                    this.chart = new Chart(ctx, {
+                        type: 'radar',
+                        data: {
+                            labels: ['Access Control', 'Use Control', 'Data Integrity', 'Confidentiality', 'Flow Control', 'Auth', 'Availability'],
+                            datasets: [
+                                {
+                                    label: 'SL-Target (Requirement)',
+                                    data: [3, 2, 2, 1, 2, 3, 2],
+                                    fill: true,
+                                    backgroundColor: 'rgba(59, 130, 246, 0.2)',
+                                    borderColor: 'rgb(59, 130, 246)',
+                                    pointBackgroundColor: 'rgb(59, 130, 246)',
+                                    pointBorderColor: '#fff',
+                                    pointHoverBackgroundColor: '#fff',
+                                    pointHoverBorderColor: 'rgb(59, 130, 246)'
+                                },
+                                {
+                                    label: 'SL-Achieved (Current)',
+                                    data: [1, 1, 1, 0, 1, 1, 1],
+                                    fill: true,
+                                    backgroundColor: 'rgba(245, 158, 11, 0.2)',
+                                    borderColor: 'rgb(245, 158, 11)',
+                                    pointBackgroundColor: 'rgb(245, 158, 11)',
+                                    pointBorderColor: '#fff',
+                                    pointHoverBackgroundColor: '#fff',
+                                    pointHoverBorderColor: 'rgb(245, 158, 11)'
+                                }
+                            ]
+                        },
+                        options: {
+                            responsive: true,
+                            maintainAspectRatio: false, // Critical for container responsiveness
+                            elements: {
+                                line: { borderWidth: 2 }
+                            },
+                            scales: {
+                                r: {
+                                    angleLines: { display: true, color: 'rgba(255, 255, 255, 0.1)' },
+                                    grid: { color: 'rgba(255, 255, 255, 0.05)' },
+                                    pointLabels: { color: '#94a3b8', font: { size: 10 } },
+                                    suggestedMin: 0,
+                                    suggestedMax: 4,
+                                    ticks: {
+                                        backdropColor: 'transparent',
+                                        color: '#64748b',
+                                        stepSize: 1
+                                    }
+                                }
+                            },
+                            plugins: {
+                                legend: {
+                                    position: 'bottom',
+                                    labels: { font: { size: 10 } }
+                                }
+                            }
+                        }
+                    });
+                },
+
+                updateSL: function (index, value) {
+                    if (this.chart) {
+                        // Update Target dataset (Index 0)
+                        this.chart.data.datasets[0].data[index] = parseInt(value);
+                        this.chart.update();
+                    }
+                },
+
+                updateChartLabels: function () {
+                    if (!this.chart) return;
+                    if (this.currentPersona === 'integrator') {
+                        this.chart.data.datasets[0].label = 'SL-Target (Risk Based)';
+                        this.chart.data.datasets[1].label = 'SL-Achieved (Verified)';
+                    } else {
+                        this.chart.data.datasets[0].label = 'SL-Capability (Claimed)';
+                        this.chart.data.datasets[1].label = 'Tested Capability';
+                    }
+                    this.chart.update();
+                },
+
+                randomizeChart: function () {
+                    const rand = () => Math.floor(Math.random() * 4);
+                    this.chart.data.datasets[1].data = [rand(), rand(), rand(), rand(), rand(), rand(), rand()];
+                    this.chart.update();
+                },
+
+                resetChart: function () {
+                    this.chart.data.datasets[0].data = [3, 2, 2, 1, 2, 3, 2];
+                    this.chart.data.datasets[1].data = [1, 1, 1, 0, 1, 1, 1];
+                    this.chart.update();
+                }
+            };
+
+            // Initialize App
+            window.onload = function () {
+                app.init();
+            };
+
+        </script>
+    </body>
+
+    </html>

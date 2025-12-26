@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IEC 62443 Expert Workbench</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            /* OXOT Brand Colors - Dark Mode Mapping */
+            --bg-dark: #020617;
+            /* slate-950 */
+            --panel-dark: #0f172a;
+            /* slate-900 */
+            --border-dark: #1e293b;
+            /* slate-800 */
+            --text-primary: #f8fafc;
+            /* slate-50 */
+            --text-secondary: #94a3b8;
+            /* slate-400 */
+
+            --accent-blue: #3b82f6;
+            /* blue-500 */
+            --accent-cyan: #06b6d4;
+            /* cyan-500 */
+            --accent-amber: #f59e0b;
+            /* amber-500 */
+            --accent-green: #22c55e;
+            /* green-500 */
+            --accent-red: #ef4444;
+            /* red-500 */
+            --accent-purple: #a855f7;
+            /* purple-500 */
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-primary);
+            overflow-x: hidden;
+        }
+
+        .font-mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        /* Glass Panel Effect - Darker & Cleaner */
+        .glass-panel {
+            background: rgba(15, 23, 42, 0.6);
+            /* slate-900 */
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.36);
+        }
+
+        /* Section Dividers */
+        .section-block {
+            border-bottom: 1px solid var(--border-dark);
+            padding-bottom: 4rem;
+            margin-bottom: 4rem;
+        }
+
+        /* Kanban Columns */
+        .kanban-column {
+            background: rgba(30, 41, 59, 0.3);
+            /* slate-800 */
+            border-radius: 0.75rem;
+            border: 1px dashed var(--border-dark);
+            min-height: 450px;
+            transition: all 0.3s ease;
+        }
+
+        .kanban-column:hover {
+            border-color: var(--accent-blue);
+            background: rgba(30, 41, 59, 0.5);
+        }
+
+        /* Draggable Cards */
+        .kanban-card {
+            background: #1e293b;
+            /* slate-800 */
+            border: 1px solid #334155;
+            /* slate-700 */
+            cursor: grab;
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .kanban-card:hover {
+            transform: translateY(-4px) scale(1.01);
+            border-color: var(--accent-blue);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+            z-index: 10;
+        }
+
+        .kanban-card:active {
+            cursor: grabbing;
+        }
+
+        /* Scrollbars */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg-dark);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--border-dark);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #475569;
+        }
+
+        /* Canvas/Zone Visuals */
+        .zone-visual {
+            background: linear-gradient(145deg, rgba(30, 41, 59, 0.4) 0%, rgba(15, 23, 42, 0.6) 100%);
+            border: 1px solid var(--border-dark);
+            transition: all 0.3s ease;
+        }
+
+        .zone-visual:hover {
+            transform: scale(1.02);
+            border-color: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Neon Glow Text */
+        .neon-text {
+            text-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+        }
+    </style>
+</head>
+
+<body class="bg-slate-950 text-slate-200">
+
+    <!-- === HEADER === -->
+    <header class="glass-panel sticky top-0 z-50 px-6 py-4 flex justify-between items-center border-b border-slate-800">
+        <div class="flex items-center gap-4">
+            <div
+                class="w-10 h-10 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center shadow-lg shadow-blue-900/50">
+                <i class="fa-solid fa-shield-halved text-white text-xl"></i>
+            </div>
+            <div>
+                <h1 class="text-xl font-bold tracking-tight text-white">IEC 62443 <span
+                        class="text-slate-500 font-light">Architect</span></h1>
+                <div class="flex items-center gap-3 text-xs text-slate-400 font-mono mt-0.5">
+                    <span class="text-emerald-400"><i class="fa-solid fa-circle text-[8px] mr-1"></i>System
+                        Online</span>
+                    <span>|</span>
+                    <span>v2.1.0</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAST NAV -->
+        <nav class="hidden md:flex items-center gap-1 bg-slate-900/80 p-1 rounded-lg border border-slate-800">
+            <a href="#section-lifecycle"
+                class="px-3 py-1.5 text-xs font-medium rounded text-slate-400 hover:text-white hover:bg-slate-800 transition-colors">Lifecycle</a>
+            <a href="#section-datacenter"
+                class="px-3 py-1.5 text-xs font-medium rounded text-slate-400 hover:text-white hover:bg-slate-800 transition-colors">Use
+                Case</a>
+            <a href="#section-canvas"
+                class="px-3 py-1.5 text-xs font-medium rounded text-slate-400 hover:text-white hover:bg-slate-800 transition-colors">Canvas</a>
+            <a href="#section-reference"
+                class="px-3 py-1.5 text-xs font-medium rounded text-slate-400 hover:text-white hover:bg-slate-800 transition-colors">Reference</a>
+        </nav>
+
+        <div class="flex items-center gap-4">
+            <div class="flex items-center gap-2 bg-slate-900 p-1 rounded-lg border border-slate-800">
+                <button id="role-integ"
+                    class="px-3 py-1.5 text-xs font-bold rounded bg-slate-800 text-blue-400 shadow-sm border border-slate-700 cursor-default">Integrator</button>
+                <button id="role-supp"
+                    class="px-3 py-1.5 text-xs font-medium rounded text-slate-500 hover:text-white transition-colors">Supplier</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-[1600px] mx-auto px-6 py-8">
+
+        <!-- === BLOCK 1: LIFECYCLE MANAGEMENT (KANBAN) === -->
+        <section id="section-lifecycle" class="section-block">
+            <div class="flex justify-between items-end mb-6">
+                <div>
+                    <h2 class="text-2xl font-bold text-white mb-2 flex items-center gap-3">
+                        <i class="fa-solid fa-list-check text-blue-500"></i> Lifecycle Management
+                    </h2>
+                    <p class="text-slate-400 text-sm max-w-2xl">
+                        Track assets through the IEC 62443 cybersecurity lifecycle. Drag and drop assets to advance
+                        their maturity state.
+                    </p>
+                </div>
+                <!-- Risk Meter -->
+                <div class="bg-slate-900/80 p-3 rounded-lg border border-slate-800 flex items-center gap-4">
+                    <div class="text-right">
+                        <div class="text-[10px] uppercase tracking-widest text-slate-500 font-bold">Overall Risk</div>
+                        <div id="risk-val" class="text-lg font-bold text-emerald-400 neon-text">Low</div>
+                    </div>
+                    <div class="h-8 w-1 bg-slate-800 rounded-full"></div>
+                    <div class="w-24 h-2 bg-slate-800 rounded-full overflow-hidden">
+                        <div id="risk-meter"
+                            class="h-full bg-gradient-to-r from-emerald-500 via-yellow-500 to-red-500 w-[15%]"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- KANBAN BOARD -->
+            <div class="overflow-x-auto pb-4">
+                <div class="grid grid-cols-4 gap-6 min-w-[1200px]">
+                    <!-- Column 1 -->
+                    <div class="flex flex-col kanban-column">
+                        <div
+                            class="p-3 border-b border-slate-800 bg-slate-900/40 rounded-t-lg flex justify-between items-center backdrop-blur-sm">
+                            <span class="font-bold text-sm text-slate-300 uppercase tracking-wider">Assessment</span>
+                            <span class="bg-slate-800 text-slate-400 text-xs px-2 py-0.5 rounded-full font-mono"
+                                id="count-assess">0</span>
+                        </div>
+                        <div class="flex-1 p-3 space-y-3 overflow-y-auto max-h-[600px]" id="col-assess"
+                            ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    </div>
+                    <!-- Column 2 -->
+                    <div class="flex flex-col kanban-column">
+                        <div
+                            class="p-3 border-b border-slate-800 bg-slate-900/40 rounded-t-lg flex justify-between items-center backdrop-blur-sm">
+                            <span class="font-bold text-sm text-slate-300 uppercase tracking-wider">Development</span>
+                            <span class="bg-slate-800 text-slate-400 text-xs px-2 py-0.5 rounded-full font-mono"
+                                id="count-develop">0</span>
+                        </div>
+                        <div class="flex-1 p-3 space-y-3 overflow-y-auto max-h-[600px]" id="col-develop"
+                            ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    </div>
+                    <!-- Column 3 -->
+                    <div class="flex flex-col kanban-column">
+                        <div
+                            class="p-3 border-b border-slate-800 bg-slate-900/40 rounded-t-lg flex justify-between items-center backdrop-blur-sm">
+                            <span class="font-bold text-sm text-slate-300 uppercase tracking-wider">Verification</span>
+                            <span class="bg-slate-800 text-slate-400 text-xs px-2 py-0.5 rounded-full font-mono"
+                                id="count-verify">0</span>
+                        </div>
+                        <div class="flex-1 p-3 space-y-3 overflow-y-auto max-h-[600px]" id="col-verify"
+                            ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    </div>
+                    <!-- Column 4 -->
+                    <div class="flex flex-col kanban-column">
+                        <div
+                            class="p-3 border-b border-slate-800 bg-slate-900/40 rounded-t-lg flex justify-between items-center backdrop-blur-sm">
+                            <span class="font-bold text-sm text-slate-300 uppercase tracking-wider">Maintenance</span>
+                            <span class="bg-slate-800 text-slate-400 text-xs px-2 py-0.5 rounded-full font-mono"
+                                id="count-maintain">0</span>
+                        </div>
+                        <div class="flex-1 p-3 space-y-3 overflow-y-auto max-h-[600px]" id="col-maintain"
+                            ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- === BLOCK 2: DATACENTER CASE STUDY === -->
+        <section id="section-datacenter" class="section-block">
+            <div class="glass-panel p-8 rounded-2xl border-l-4 border-amber-500 relative overflow-hidden group">
+                <!-- Background Decoration -->
+                <div
+                    class="absolute -right-20 -top-20 w-64 h-64 bg-amber-500/10 rounded-full blur-3xl group-hover:bg-amber-500/20 transition-all duration-700">
+                </div>
+
+                <div class="flex flex-col md:flex-row justify-between gap-8 relative z-10">
+                    <div class="flex-1">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span
+                                class="bg-amber-500/20 text-amber-500 border border-amber-500/30 text-xs font-bold px-3 py-1 rounded uppercase tracking-wider">Live
+                                Use Case</span>
+                            <span class="text-slate-500 text-sm font-mono">// SITE-8_NORTH_WING</span>
+                        </div>
+                        <h2 class="text-3xl font-bold text-white mb-4">Datacenter Digital Twin</h2>
+                        <p class="text-slate-300 mb-6 leading-relaxed">
+                            Integrate physical assets from the <strong>Site-8 High Availability Datacenter</strong> into
+                            your security lifecycle.
+                            Currently monitoring <strong>5 Critical Assets</strong> across Power, Cooling, and Safety
+                            domains.
+                        </p>
+
+                        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+                            <div class="bg-slate-900/50 p-3 rounded border border-slate-800">
+                                <div class="text-xs text-slate-500 uppercase">Power Feed</div>
+                                <div class="font-mono text-white">2N+1 Redundant</div>
+                            </div>
+                            <div class="bg-slate-900/50 p-3 rounded border border-slate-800">
+                                <div class="text-xs text-slate-500 uppercase">Cooling</div>
+                                <div class="font-mono text-white">Chilled Water</div>
+                            </div>
+                            <div class="bg-slate-900/50 p-3 rounded border border-slate-800">
+                                <div class="text-xs text-slate-500 uppercase">Active Zones</div>
+                                <div class="font-mono text-white">8 Defined</div>
+                            </div>
+                            <div class="bg-slate-900/50 p-3 rounded border border-slate-800">
+                                <div class="text-xs text-slate-500 uppercase">SL Target</div>
+                                <div class="font-mono text-amber-400">SL-3 / SL-4</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mini Asset List -->
+                    <div class="w-full md:w-1/3 bg-slate-950/50 rounded-xl border border-slate-800 p-4">
+                        <h4 class="text-sm font-bold text-white mb-3 border-b border-slate-800 pb-2">Tracked Assets</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-center justify-between text-xs p-2 rounded hover:bg-slate-800/50">
+                                <span class="text-slate-300">Caterpillar 3516B</span>
+                                <span class="text-amber-500">Critical</span>
+                            </li>
+                            <li class="flex items-center justify-between text-xs p-2 rounded hover:bg-slate-800/50">
+                                <span class="text-slate-300">Vertiv EXL S1 UPS</span>
+                                <span class="text-amber-500">Critical</span>
+                            </li>
+                            <li class="flex items-center justify-between text-xs p-2 rounded hover:bg-slate-800/50">
+                                <span class="text-slate-300">York YVWA Chiller</span>
+                                <span class="text-yellow-500">High</span>
+                            </li>
+                            <li class="flex items-center justify-between text-xs p-2 rounded hover:bg-slate-800/50">
+                                <span class="text-slate-300">Triconex Safety PLC</span>
+                                <span class="text-red-500">Safety</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- === BLOCK 3: ARCHITECTURE CANVAS === -->
+        <section id="section-canvas" class="section-block">
+            <div class="flex justify-between items-center mb-6">
+                <div>
+                    <h2 class="text-2xl font-bold text-white mb-2 flex items-center gap-3">
+                        <i class="fa-solid fa-network-wired text-purple-500"></i> Architecture Canvas
+                    </h2>
+                    <p class="text-slate-400 text-sm">
+                        Visual representation of Zones and Conduits (IEC 62443-3-2).
+                    </p>
+                </div>
+                <div class="flex gap-2">
+                    <button
+                        class="px-3 py-1.5 bg-slate-800 text-slate-300 text-xs rounded border border-slate-700 hover:bg-slate-700 transition">
+                        <i class="fa-solid fa-plus mr-1"></i> Add Zone
+                    </button>
+                    <button
+                        class="px-3 py-1.5 bg-slate-800 text-slate-300 text-xs rounded border border-slate-700 hover:bg-slate-700 transition">
+                        <i class="fa-solid fa-draw-polygon mr-1"></i> Draw Conduit
+                    </button>
+                    <button
+                        class="px-3 py-1.5 bg-blue-600 text-white text-xs rounded hover:bg-blue-500 transition shadow-lg shadow-blue-900/50">
+                        <i class="fa-solid fa-flask mr-1"></i> Simulate Attack
+                    </button>
+                </div>
+            </div>
+
+            <!-- THE COOL VISUALIZER GRID -->
+            <div class="glass-panel p-1 rounded-xl bg-slate-900/50">
+                <div id="canvas-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 p-4 min-h-[500px]">
+                    <!-- JS Injected Zones -->
+                </div>
+            </div>
+        </section>
+
+        <!-- === BLOCK 4: REFERENCE MATRIX === -->
+        <section id="section-reference" class="mb-20"> <!-- Extra margin at bottom -->
+            <div class="flex justify-between items-center mb-6">
+                <div>
+                    <h2 class="text-2xl font-bold text-white mb-2 flex items-center gap-3">
+                        <i class="fa-solid fa-book-open text-cyan-500"></i> Reference Matrix
+                    </h2>
+                    <p class="text-slate-400 text-sm">
+                        Comprehensive database of IEC 62443-3-3 Foundational Requirements (FR) & System Requirements
+                        (SR).
+                    </p>
+                </div>
+            </div>
+
+            <div class="glass-panel rounded-xl overflow-hidden border border-slate-800">
+                <div class="overflow-x-auto max-h-[600px] overflow-y-auto">
+                    <table class="w-full text-left border-collapse">
+                        <thead class="bg-slate-900 text-xs uppercase text-slate-400 sticky top-0 z-20 shadow-lg">
+                            <tr>
+                                <th class="p-4 border-b border-slate-700 w-24 bg-slate-900">ID</th>
+                                <th class="p-4 border-b border-slate-700 bg-slate-900">Requirement Name</th>
+                                <th class="p-4 border-b border-slate-700 text-center text-green-500 w-16 bg-slate-900">
+                                    SL1</th>
+                                <th class="p-4 border-b border-slate-700 text-center text-yellow-500 w-16 bg-slate-900">
+                                    SL2</th>
+                                <th class="p-4 border-b border-slate-700 text-center text-orange-500 w-16 bg-slate-900">
+                                    SL3</th>
+                                <th class="p-4 border-b border-slate-700 text-center text-red-500 w-16 bg-slate-900">SL4
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody id="reference-tbody" class="divide-y divide-slate-800">
+                            <!-- JS Injected Rows -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- === JAVASCRIPT === -->
+    <script>
+        // --- DATA ---
+        const DC_ASSETS = [
+            { id: 'GEN-01', name: 'Caterpillar 3516B', type: 'Generator', risk: 'High', status: 'assess' },
+            { id: 'UPS-01', name: 'Vertiv EXL S1', type: 'UPS System', risk: 'Critical', status: 'assess' },
+            { id: 'CHILL-01', name: 'York YVWA Chiller', type: 'Cooling', risk: 'Med', status: 'develop' },
+            { id: 'PDU-A1', name: 'Rack PDU A1', type: 'Power Dist', risk: 'Low', status: 'verify' },
+            { id: 'SIS-PLC', name: 'Triconex Safety', type: 'Safety', risk: 'Critical', status: 'maintain' },
+        ];
+
+        const ZONES = [
+            { id: 1, name: 'Enterprise Zone', sl: 1, color: 'blue', desc: 'Corporate IT, ERP, Email', icon: 'fa-building' },
+            { id: 2, name: 'DMZ / Boundary', sl: 2, color: 'yellow', desc: 'Data Diodes, Proxies', icon: 'fa-server' },
+            { id: 3, name: 'BMS Network', sl: 2, color: 'purple', desc: 'HVAC, Lighting Control', icon: 'fa-fan' },
+            { id: 4, name: 'PACS / Security', sl: 3, color: 'accent-cyan', desc: 'Access Control, CCTV', icon: 'fa-id-card' }, // Custom color class handled below
+            { id: 5, name: 'Critical Power', sl: 3, color: 'amber', desc: 'Generators, UPS, Switchgear', icon: 'fa-bolt' },
+            { id: 6, name: 'Cooling Infra', sl: 2, color: 'cyan', desc: 'Chillers, CRAHs, Pumps', icon: 'fa-snowflake' },
+            { id: 7, name: 'Data Hall', sl: 4, color: 'green', desc: 'Servers, Storage, Racks', icon: 'fa-database' },
+            { id: 8, name: 'Safety (SIS)', sl: 4, color: 'red', desc: 'Fire Suppression, EPO', icon: 'fa-fire-extinguisher' }
+        ];
+
+        const FR_DATA = [
+            {
+                id: 'FR 1', name: 'Identification & Authentication Control (IAC)', srs: [
+                    { id: 'SR 1.1', name: 'Human User Identification & Authentication', sl: [1, 1, 1, 1] },
+                    { id: 'SR 1.2', name: 'Software Process & Device Identification', sl: [0, 1, 1, 1] },
+                    { id: 'SR 1.3', name: 'Account Management', sl: [1, 1, 1, 1] }
+                ]
+            },
+            {
+                id: 'FR 2', name: 'Use Control (UC)', srs: [
+                    { id: 'SR 2.1', name: 'Authorization Enforcement', sl: [1, 1, 1, 1] },
+                    { id: 'SR 2.8', name: 'Auditable Events', sl: [1, 1, 1, 1] }
+                ]
+            },
+            {
+                id: 'FR 3', name: 'System Integrity (SI)', srs: [
+                    { id: 'SR 3.1', name: 'Communication Integrity', sl: [1, 1, 1, 1] },
+                    { id: 'SR 3.2', name: 'Malicious Code Protection', sl: [1, 1, 1, 1] }
+                ]
+            },
+            {
+                id: 'FR 4', name: 'Data Confidentiality (DC)', srs: [
+                    { id: 'SR 4.1', name: 'Information Confidentiality', sl: [0, 1, 1, 1] },
+                    { id: 'SR 4.3', name: 'Use of Cryptography', sl: [0, 0, 1, 1] }
+                ]
+            },
+            {
+                id: 'FR 5', name: 'Restricted Data Flow (RDF)', srs: [
+                    { id: 'SR 5.1', name: 'Network Segmentation', sl: [1, 1, 1, 1] },
+                    { id: 'SR 5.2', name: 'Zone Boundary Protection', sl: [1, 1, 1, 1] }
+                ]
+            },
+            {
+                id: 'FR 6', name: 'Timely Response to Events (TRE)', srs: [
+                    { id: 'SR 6.1', name: 'Audit Log Accessibility', sl: [1, 1, 1, 1] },
+                    { id: 'SR 6.2', name: 'Continuous Monitoring', sl: [0, 1, 1, 1] }
+                ]
+            },
+            {
+                id: 'FR 7', name: 'Resource Availability (RA)', srs: [
+                    { id: 'SR 7.1', name: 'Denial of Service Protection', sl: [1, 1, 1, 1] },
+                    { id: 'SR 7.3', name: 'Control System Backup', sl: [1, 1, 1, 1] }
+                ]
+            }
+        ];
+
+        // --- INIT ---
+        document.addEventListener('DOMContentLoaded', () => {
+            initKanban();
+            initCanvas();
+            initReference();
+        });
+
+        // --- KANBAN LOGIC ---
+        function initKanban() {
+            // Clear existing
+            document.querySelectorAll('.kanban-column > div:nth-child(2)').forEach(el => el.innerHTML = '');
+
+            DC_ASSETS.forEach(asset => {
+                const card = document.createElement('div');
+                card.className = 'kanban-card p-3 rounded shadow-sm border-l-4 ' + getRiskBorder(asset.risk);
+                card.draggable = true;
+                card.id = asset.id;
+                card.ondragstart = (ev) => ev.dataTransfer.setData("text", ev.target.id);
+
+                card.innerHTML = `
+                    <div class="flex justify-between items-start mb-2">
+                        <span class="text-[10px] font-mono font-bold text-slate-500">${asset.id}</span>
+                        <div class="h-2 w-2 rounded-full ${getRiskBg(asset.risk)}"></div>
+                    </div>
+                    <div class="font-bold text-sm text-slate-200">${asset.name}</div>
+                    <div class="text-xs text-slate-400 mb-2">${asset.type}</div>
+                    <div class="flex items-center gap-2 mt-2 pt-2 border-t border-slate-700/50">
+                        <span class="text-[10px] px-1.5 py-0.5 rounded bg-slate-800 text-slate-400 border border-slate-700">Ref: Site-8</span>
+                    </div>
+                `;
+
+                const col = document.getElementById(`col-${asset.status}`);
+                if (col) col.appendChild(card);
+            });
+            updateCounts();
+        }
+
+        function allowDrop(ev) { ev.preventDefault(); }
+        function drop(ev) {
+            ev.preventDefault();
+            const data = ev.dataTransfer.getData("text");
+            const card = document.getElementById(data);
+
+            // Find target column
+            let target = ev.target;
+            while (target && !target.id.startsWith('col-')) {
+                target = target.parentNode;
+            }
+            if (target) {
+                target.appendChild(card);
+                updateCounts();
+            }
+        }
+
+        function updateCounts() {
+            ['assess', 'develop', 'verify', 'maintain'].forEach(id => {
+                const col = document.getElementById(`col-${id}`);
+                document.getElementById(`count-${id}`).innerText = col ? col.children.length : 0;
+            });
+        }
+
+        // --- CANVAS LOGIC ---
+        function initCanvas() {
+            const grid = document.getElementById('canvas-grid');
+            grid.innerHTML = ZONES.map(z => {
+                const colorMap = {
+                    blue: 'border-blue-500/30 text-blue-400 bg-blue-500/5 hover:border-blue-400',
+                    yellow: 'border-yellow-500/30 text-yellow-400 bg-yellow-500/5 hover:border-yellow-400',
+                    purple: 'border-purple-500/30 text-purple-400 bg-purple-500/5 hover:border-purple-400',
+                    amber: 'border-amber-500/30 text-amber-400 bg-amber-500/5 hover:border-amber-400',
+                    cyan: 'border-cyan-500/30 text-cyan-400 bg-cyan-500/5 hover:border-cyan-400',
+                    green: 'border-green-500/30 text-green-400 bg-green-500/5 hover:border-green-400',
+                    red: 'border-red-500/30 text-red-400 bg-red-500/5 hover:border-red-400',
+                    'accent-cyan': 'border-cyan-400/30 text-cyan-300 bg-cyan-400/5 hover:border-cyan-300'
+                };
+                const style = colorMap[z.color] || colorMap.blue;
+
+                return `
+                    <div class="zone-visual relative group rounded-xl border p-5 flex flex-col justify-between h-48 cursor-pointer ${style}">
+                        <div class="flex justify-between items-start">
+                            <div class="p-2 rounded-lg bg-slate-950/50 backdrop-blur-sm border border-white/5">
+                                <i class="fa-solid ${z.icon} text-xl"></i>
+                            </div>
+                            <span class="font-mono text-xs font-bold px-2 py-1 rounded bg-slate-900/80 border border-slate-700 text-slate-300">
+                                SL-${z.sl}
+                            </span>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-lg font-bold text-white group-hover:text-glow transition mb-1">${z.name}</h3>
+                            <p class="text-xs text-slate-400 leading-tight">${z.desc}</p>
+                        </div>
+
+                        <!-- Hover Overlay -->
+                        <div class="absolute inset-0 bg-black/40 backdrop-blur-[1px] opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center rounded-xl">
+                            <button class="px-4 py-2 bg-slate-200 text-slate-900 text-xs font-bold rounded hover:scale-105 transition transform">
+                                View Assets
+                            </button>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        // --- REFERENCE LOGIC ---
+        function initReference() {
+            const tbody = document.getElementById('reference-tbody');
+            let html = '';
+            FR_DATA.forEach(fr => {
+                html += `
+                    <tr class="bg-slate-900/50 border-b border-t border-slate-800">
+                        <td colspan="6" class="p-3">
+                            <i class="fa-solid fa-folder-open text-slate-500 mr-2 ml-1"></i>
+                            <span class="font-bold text-slate-300">${fr.id}: ${fr.name}</span>
+                        </td>
+                    </tr>
+                `;
+                fr.srs.forEach(sr => {
+                    html += `
+                        <tr class="hover:bg-slate-800/30 transition-colors border-b border-slate-800/50 group">
+                            <td class="p-3 text-xs font-mono text-slate-500 group-hover:text-slate-300">${sr.id}</td>
+                            <td class="p-3 text-sm text-slate-400 group-hover:text-white transition-colors">${sr.name}</td>
+                            <td class="p-3 text-center">${getStatusIcon(sr.sl[0], 'green')}</td>
+                            <td class="p-3 text-center">${getStatusIcon(sr.sl[1], 'yellow')}</td>
+                            <td class="p-3 text-center">${getStatusIcon(sr.sl[2], 'orange')}</td>
+                            <td class="p-3 text-center">${getStatusIcon(sr.sl[3], 'red')}</td>
+                        </tr>
+                    `;
+                });
+            });
+            tbody.innerHTML = html;
+        }
+
+        // --- HELPERS ---
+        function getRiskBorder(risk) {
+            if (risk === 'Critical') return 'border-red-500';
+            if (risk === 'High') return 'border-orange-500';
+            if (risk === 'Med') return 'border-yellow-500';
+            return 'border-green-500';
+        }
+        function getRiskBg(risk) {
+            if (risk === 'Critical') return 'bg-red-500';
+            if (risk === 'High') return 'bg-orange-500';
+            if (risk === 'Med') return 'bg-yellow-500';
+            return 'bg-green-500';
+        }
+        function getStatusIcon(isActive, color) {
+            if (!isActive) return '<span class="text-slate-700">-</span>';
+            return `<i class="fa-solid fa-check text-${color}-500 glow-${color}"></i>`;
+        }
+    </script>
+</body>
+
+</html>

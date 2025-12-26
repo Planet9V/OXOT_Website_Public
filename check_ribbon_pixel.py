@@ -1,0 +1,29 @@
+import re
+import base64
+from PIL import Image
+from io import BytesIO
+
+files = [
+    "/home/jim/AEON Cyber Digital Twin Website/Site-OXOT_v2/public/OXOT_Gold_Ribbon.svg"
+]
+
+def check_pixel(filepath):
+    print(f"Checking {filepath}...")
+    try:
+        with open(filepath, 'r') as f:
+            content = f.read()
+        
+        match = re.search(r'data:image/png;base64,([A-Za-z0-9+/=]+)', content)
+        if match:
+            bg_data = base64.b64decode(match.group(1))
+            img = Image.open(BytesIO(bg_data))
+            print(f"  Top-Left Pixel: {img.getpixel((0,0))}")
+            print(f"  Center Pixel estimate (100,100): {img.getpixel((100,100))}")
+        else:
+            print("  No embedded base64 PNG found.")
+            
+    except Exception as e:
+        print(f"  Error: {e}")
+
+for f in files:
+    check_pixel(f)
