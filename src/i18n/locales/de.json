@@ -1,0 +1,69 @@
+{
+    "meta": {
+        "locale": "de",
+        "name": "Deutsch",
+        "flag": "🇩🇪"
+    },
+    "nav": {
+        "groups": {
+            "operations": "Operationen",
+            "advisory": "Beratung",
+            "coreSystems": "Kernsysteme",
+            "corporate": "Unternehmen"
+        },
+        "links": {
+            "goldTeam": "Gold Team",
+            "agentRedLeader": "Agent Red Anführer",
+            "agentBlueTeam": "Agent Blue Team",
+            "oxotVision": "OXOT Vision",
+            "nis2Compliance": "NIS2 Compliance",
+            "iec62443Compliance": "IEC 62443 Compliance",
+            "socIntegration": "SOC Integration",
+            "madueDiligence": "M&A Due Diligence",
+            "operatorPlaybook": "Betreiber-Handbuch",
+            "manufacturerGuide": "Hersteller-Leitfaden",
+            "aeonCore": "AEON Kern",
+            "sevenLayerTwin": "7-Schichten-Zwilling",
+            "sovereignLogic": "Souveräne Logik",
+            "conceptHub": "Konzept-Hub",
+            "appliedTheory": "Angewandte Theorie",
+            "aboutOxot": "Über OXOT",
+            "strategicPlanning": "Strategische Planung",
+            "servicesPortfolio": "Dienstleistungsportfolio",
+            "apiEnhancements": "API Erweiterungen"
+        }
+    },
+    "brand": {
+        "tagline": "Souveräne Intelligenz",
+        "uplinkLocation": "Uplink // Amsterdam_NL",
+        "mission": "Zuverlässige Energie // Sauberes Wasser // Gesunde Nahrung",
+        "missionSub": "Für unsere (Enkel-)Kinder.",
+        "copyright": "© 2025 OXOT B.V.",
+        "secureLattice": "Sicheres_Gitter: [AKTIV]",
+        "handshake": "Handshake: [TLS_1.3]"
+    },
+    "common": {
+        "scrollToExplore": "Scrollen zum Erkunden",
+        "learnMore": "Mehr Erfahren",
+        "getStarted": "Loslegen",
+        "contact": "Kontakt",
+        "readMore": "Weiterlesen",
+        "viewDetails": "Details Ansehen",
+        "close": "Schließen",
+        "loading": "Lädt..."
+    },
+    "home": {
+        "heroTitle": "GOLD TEAM",
+        "heroSubtitle": "Elite-Beratungspraxis",
+        "heroTagline": "Strategisch. Zertifiziert. Souverän.",
+        "heroDescription": "Weltklasse IEC 62443 Beratung für kritische Infrastruktur. Wir entwerfen Sicherheitsarchitekturen, begleiten die digitale Transformation und liefern strategische Beratung auf Vorstandsebene, wo Compliance auf Geschäftsführerhaftung trifft.",
+        "whyOxot": "WARUM OXOT",
+        "whyOxotTitle": "Nicht Nur Berater.",
+        "whyOxotHighlight": "Elite-Architekten.",
+        "whyOxotDescription": "Wir kombinieren tiefgreifende OT/ICS-Expertise mit KI-gestützten Analysefähigkeiten, die keine traditionelle Beratung bieten kann."
+    },
+    "cta": {
+        "headline": "Ihr Vorstand Stellt Schwierige Fragen.",
+        "subheadline": "Haben Sie die Antworten, die Sie Brauchen?"
+    }
+}

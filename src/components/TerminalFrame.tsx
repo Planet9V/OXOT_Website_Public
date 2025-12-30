@@ -1,67 +1,72 @@
 'use client'
 
-import React, { useState } from 'react'
+import React from 'react'
 import Link from 'next/link'
-import Image from 'next/image'
 import { usePathname } from 'next/navigation'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 import {
   Zap, Shield, Globe, Layers, Sigma,
   LayoutDashboard, Briefcase, Activity,
-  Terminal, Search, Menu, X, BookOpen, Cpu,
-  Eye, Factory, Radio, Box, Building, Brain
+  Terminal, Menu, X, BookOpen, Cpu,
+  Eye, Radio, Box, Building, Brain
 } from 'lucide-react'
 import { BackgroundEffect } from './BackgroundEffect'
+import { LanguageSwitcher } from './ui/LanguageSwitcher'
+import { useTranslations } from '@/i18n'
 
-const NAV_GROUPS = [
+// Navigation structure with translation keys
+const getNavGroups = (t: ReturnType<typeof useTranslations>['t']) => [
   {
-    title: "Operations",
+    titleKey: 'operations',
+    title: t.nav.groups.operations,
     links: [
-      { name: 'Gold Team', path: '/', icon: <Radio size={16} /> },
+      { name: t.nav.links.goldTeam, path: '/', icon: <Radio size={16} /> },
       {
-        name: 'Agent Red Leader',
+        name: t.nav.links.agentRedLeader,
         path: '/offense',
         icon: <Terminal size={16} />,
         customHover: "group-hover:text-red-500 group-hover:drop-shadow-[0_0_8px_rgba(239,68,68,0.6)]"
       },
       {
-        name: 'Agent Blue Team',
+        name: t.nav.links.agentBlueTeam,
         path: '/defense',
         icon: <Shield size={16} />,
         customHover: "group-hover:text-cyan-400 group-hover:drop-shadow-[0_0_8px_rgba(34,211,238,0.6)]"
       },
-      { name: 'OXOT Vision', path: '/vision', icon: <Eye size={16} /> },
+      { name: t.nav.links.oxotVision, path: '/vision', icon: <Eye size={16} /> },
     ]
   },
   {
-    title: "Advisory",
+    titleKey: 'advisory',
+    title: t.nav.groups.advisory,
     links: [
-      { name: 'NIS2 Compliance', path: '/nis2', icon: <Globe size={16} /> },
-      { name: 'IEC 62443 Compliance', path: '/iec62443', icon: <LayoutDashboard size={16} /> },
-      { name: 'SOC Integration', path: '/soc', icon: <Activity size={16} /> },
-      { name: 'M&A Due Diligence', path: '/acquisitions', icon: <Briefcase size={16} /> },
-      { name: 'Operator Playbook', path: '/playbook-operator', icon: <BookOpen size={16} /> },
-      { name: 'Manufacturer Guide', path: '/playbook-manufacturer', icon: <Cpu size={16} /> },
+      { name: t.nav.links.nis2Compliance, path: '/nis2', icon: <Globe size={16} /> },
+      { name: t.nav.links.iec62443Compliance, path: '/iec62443', icon: <LayoutDashboard size={16} /> },
+      { name: t.nav.links.socIntegration, path: '/soc', icon: <Activity size={16} /> },
+      { name: t.nav.links.madueDiligence, path: '/acquisitions', icon: <Briefcase size={16} /> },
+      { name: t.nav.links.operatorPlaybook, path: '/playbook-operator', icon: <BookOpen size={16} /> },
+      { name: t.nav.links.manufacturerGuide, path: '/playbook-manufacturer', icon: <Cpu size={16} /> },
     ]
   },
   {
-    title: "Core Systems",
+    titleKey: 'coreSystems',
+    title: t.nav.groups.coreSystems,
     links: [
-
-      { name: 'AEON Core', path: '/core', icon: <Activity size={16} /> },
-      { name: '7-Layer Twin', path: '/architecture', icon: <Layers size={16} /> },
-      { name: 'Sovereign Logic', path: '/logic', icon: <Sigma size={16} /> },
-      { name: 'Concept Hub', path: '/concepts', icon: <Box size={16} /> },
-      { name: 'Applied Theory', path: '/theory', icon: <Brain size={16} /> },
+      { name: t.nav.links.aeonCore, path: '/core', icon: <Activity size={16} /> },
+      { name: t.nav.links.sevenLayerTwin, path: '/architecture', icon: <Layers size={16} /> },
+      { name: t.nav.links.sovereignLogic, path: '/logic', icon: <Sigma size={16} /> },
+      { name: t.nav.links.conceptHub, path: '/concepts', icon: <Box size={16} /> },
+      { name: t.nav.links.appliedTheory, path: '/theory', icon: <Brain size={16} /> },
     ]
   },
   {
-    title: "Corporate",
+    titleKey: 'corporate',
+    title: t.nav.groups.corporate,
     links: [
-      { name: 'About OXOT', path: '/about', icon: <Building size={16} /> },
-      { name: 'Strategic Planning', path: '/corporate/strategic-planning', icon: <Briefcase size={16} />, customHover: "group-hover:text-amber-400 group-hover:drop-shadow-[0_0_8px_rgba(245,158,11,0.6)]" },
-      { name: 'Services Portfolio', path: '/corporate/services-portfolio', icon: <Activity size={16} /> },
-      { name: 'API Enhancements', path: '/corporate/enhancements', icon: <Zap size={16} /> },
+      { name: t.nav.links.aboutOxot, path: '/about', icon: <Building size={16} /> },
+      { name: t.nav.links.strategicPlanning, path: '/corporate/strategic-planning', icon: <Briefcase size={16} />, customHover: "group-hover:text-amber-400 group-hover:drop-shadow-[0_0_8px_rgba(245,158,11,0.6)]" },
+      { name: t.nav.links.servicesPortfolio, path: '/corporate/services-portfolio', icon: <Activity size={16} /> },
+      { name: t.nav.links.apiEnhancements, path: '/corporate/enhancements', icon: <Zap size={16} /> },
     ]
   }
 ]
@@ -69,6 +74,9 @@ const NAV_GROUPS = [
 export default function TerminalFrame({ children }: { children: React.ReactNode }) {
   const pathname = usePathname()
   const [isOpen, setIsOpen] = React.useState(false)
+  const { t } = useTranslations()
+
+  const NAV_GROUPS = getNavGroups(t)
 
   return (
     <div className="relative min-h-screen p-0 flex flex-col md:flex-row overflow-hidden bg-black">
@@ -103,13 +111,18 @@ export default function TerminalFrame({ children }: { children: React.ReactNode 
 
             <div className="space-y-1">
               <div className="text-[10px] font-mono text-grey tracking-[0.4em] font-medium uppercase group-hover:text-white transition-colors">
-                Sovereign Intelligence
+                {t.brand.tagline}
               </div>
               <div className="text-[9px] font-mono text-oxot-gold tracking-[0.2em] font-bold uppercase">
-                Uplink // Amsterdam_NL
+                {t.brand.uplinkLocation}
               </div>
             </div>
           </Link>
+
+          {/* Language Switcher - Below logo */}
+          <div className="mt-6">
+            <LanguageSwitcher />
+          </div>
         </div>
 
         {/* Navigation - Clean Hierarchy */}
@@ -158,8 +171,8 @@ export default function TerminalFrame({ children }: { children: React.ReactNode 
         {/* Footer Mission */}
         <div className="p-12 border-t border-white/5 bg-white/[0.02]">
           <div className="text-[11px] font-mono text-grey uppercase tracking-widest leading-relaxed font-bold">
-            Reliable Energy // Clean Water // Healthy Food<br />
-            <span className="text-white opacity-60 mt-1 block">For our (grand)children.</span>
+            {t.brand.mission}<br />
+            <span className="text-white opacity-60 mt-1 block">{t.brand.missionSub}</span>
           </div>
         </div>
       </aside>
@@ -177,10 +190,10 @@ export default function TerminalFrame({ children }: { children: React.ReactNode 
           {/* Status Header */}
           <div className="flex justify-between items-center mb-20 opacity-20 pointer-events-none hidden md:flex font-mono text-[10px] uppercase tracking-[0.4em]">
             <div className="flex gap-12">
-              <div>Secure_Lattice: [ACTIVE]</div>
-              <div>Handshake: [TLS_1.3]</div>
+              <div>{t.brand.secureLattice}</div>
+              <div>{t.brand.handshake}</div>
             </div>
-            <div>© 2025 OXOT B.V.</div>
+            <div>{t.brand.copyright}</div>
           </div>
 
           <div className="relative z-20">

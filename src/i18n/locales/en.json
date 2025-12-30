@@ -1,0 +1,69 @@
+{
+    "meta": {
+        "locale": "en",
+        "name": "English",
+        "flag": "🇬🇧"
+    },
+    "nav": {
+        "groups": {
+            "operations": "Operations",
+            "advisory": "Advisory",
+            "coreSystems": "Core Systems",
+            "corporate": "Corporate"
+        },
+        "links": {
+            "goldTeam": "Gold Team",
+            "agentRedLeader": "Agent Red Leader",
+            "agentBlueTeam": "Agent Blue Team",
+            "oxotVision": "OXOT Vision",
+            "nis2Compliance": "NIS2 Compliance",
+            "iec62443Compliance": "IEC 62443 Compliance",
+            "socIntegration": "SOC Integration",
+            "madueDiligence": "M&A Due Diligence",
+            "operatorPlaybook": "Operator Playbook",
+            "manufacturerGuide": "Manufacturer Guide",
+            "aeonCore": "AEON Core",
+            "sevenLayerTwin": "7-Layer Twin",
+            "sovereignLogic": "Sovereign Logic",
+            "conceptHub": "Concept Hub",
+            "appliedTheory": "Applied Theory",
+            "aboutOxot": "About OXOT",
+            "strategicPlanning": "Strategic Planning",
+            "servicesPortfolio": "Services Portfolio",
+            "apiEnhancements": "API Enhancements"
+        }
+    },
+    "brand": {
+        "tagline": "Sovereign Intelligence",
+        "uplinkLocation": "Uplink // Amsterdam_NL",
+        "mission": "Reliable Energy // Clean Water // Healthy Food",
+        "missionSub": "For our (grand)children.",
+        "copyright": "© 2025 OXOT B.V.",
+        "secureLattice": "Secure_Lattice: [ACTIVE]",
+        "handshake": "Handshake: [TLS_1.3]"
+    },
+    "common": {
+        "scrollToExplore": "Scroll to Explore",
+        "learnMore": "Learn More",
+        "getStarted": "Get Started",
+        "contact": "Contact",
+        "readMore": "Read More",
+        "viewDetails": "View Details",
+        "close": "Close",
+        "loading": "Loading..."
+    },
+    "home": {
+        "heroTitle": "GOLD TEAM",
+        "heroSubtitle": "Elite Advisory Practice",
+        "heroTagline": "Strategic. Certified. Sovereign.",
+        "heroDescription": "World-class IEC 62443 consulting for critical infrastructure. We architect security, guide digital transformation, and deliver board-level strategic advisory where compliance meets executive liability.",
+        "whyOxot": "WHY OXOT",
+        "whyOxotTitle": "Not Just Consultants.",
+        "whyOxotHighlight": "Elite Architects.",
+        "whyOxotDescription": "We combine deep OT/ICS expertise with AI-augmented analysis capabilities that no traditional consultancy can match."
+    },
+    "cta": {
+        "headline": "Your Board Is Asking Hard Questions.",
+        "subheadline": "Do You Have the Answers They Need?"
+    }
+}

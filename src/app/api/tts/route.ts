@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 
 const ELEVENLABS_API_KEY = process.env.ELEVENLABS_API_KEY;
 // Rachel voice - clear, professional female voice
-const VOICE_ID = '21m00Tcm4TlvDq8ikWAM';
+const VOICE_ID = 'l36a3OZWuTxoarPaprYg';
 
 export async function POST(req: Request) {
     try {
@@ -26,7 +26,7 @@ export async function POST(req: Request) {
             },
             body: JSON.stringify({
                 text: text.slice(0, 2500), // ElevenLabs has text limits
-                model_id: 'eleven_monolingual_v1',
+                model_id: 'eleven_turbo_v2_5',
                 voice_settings: {
                     stability: 0.5,
                     similarity_boost: 0.75,

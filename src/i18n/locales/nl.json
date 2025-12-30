@@ -1,0 +1,69 @@
+{
+    "meta": {
+        "locale": "nl",
+        "name": "Nederlands",
+        "flag": "🇳🇱"
+    },
+    "nav": {
+        "groups": {
+            "operations": "Operaties",
+            "advisory": "Advies",
+            "coreSystems": "Kernsystemen",
+            "corporate": "Bedrijf"
+        },
+        "links": {
+            "goldTeam": "Gold Team",
+            "agentRedLeader": "Agent Red Leider",
+            "agentBlueTeam": "Agent Blue Team",
+            "oxotVision": "OXOT Visie",
+            "nis2Compliance": "NIS2 Compliance",
+            "iec62443Compliance": "IEC 62443 Compliance",
+            "socIntegration": "SOC Integratie",
+            "madueDiligence": "M&A Due Diligence",
+            "operatorPlaybook": "Operator Handboek",
+            "manufacturerGuide": "Fabrikanten Handleiding",
+            "aeonCore": "AEON Kern",
+            "sevenLayerTwin": "7-Laags Twin",
+            "sovereignLogic": "Soevereine Logica",
+            "conceptHub": "Concept Hub",
+            "appliedTheory": "Toegepaste Theorie",
+            "aboutOxot": "Over OXOT",
+            "strategicPlanning": "Strategische Planning",
+            "servicesPortfolio": "Dienstenportfolio",
+            "apiEnhancements": "API Verbeteringen"
+        }
+    },
+    "brand": {
+        "tagline": "Soevereine Intelligentie",
+        "uplinkLocation": "Uplink // Amsterdam_NL",
+        "mission": "Betrouwbare Energie // Schoon Water // Gezond Voedsel",
+        "missionSub": "Voor onze (klein)kinderen.",
+        "copyright": "© 2025 OXOT B.V.",
+        "secureLattice": "Beveiligd_Rooster: [ACTIEF]",
+        "handshake": "Handdruk: [TLS_1.3]"
+    },
+    "common": {
+        "scrollToExplore": "Scrol om te Ontdekken",
+        "learnMore": "Meer Informatie",
+        "getStarted": "Aan de Slag",
+        "contact": "Contact",
+        "readMore": "Lees Meer",
+        "viewDetails": "Bekijk Details",
+        "close": "Sluiten",
+        "loading": "Laden..."
+    },
+    "home": {
+        "heroTitle": "GOLD TEAM",
+        "heroSubtitle": "Elite Adviesbureau",
+        "heroTagline": "Strategisch. Gecertificeerd. Soeverein.",
+        "heroDescription": "Wereldklasse IEC 62443 consulting voor kritieke infrastructuur. Wij ontwerpen beveiliging, begeleiden digitale transformatie en leveren strategisch advies op bestuursniveau waar compliance samenvalt met bestuurdersaansprakelijkheid.",
+        "whyOxot": "WAAROM OXOT",
+        "whyOxotTitle": "Niet Alleen Consultants.",
+        "whyOxotHighlight": "Elite Architecten.",
+        "whyOxotDescription": "Wij combineren diepgaande OT/ICS expertise met AI-ondersteunde analysemogelijkheden die geen traditioneel adviesbureau kan evenaren."
+    },
+    "cta": {
+        "headline": "Uw Raad van Bestuur Stelt Moeilijke Vragen.",
+        "subheadline": "Heeft U de Antwoorden Die Ze Nodig Hebben?"
+    }
+}
