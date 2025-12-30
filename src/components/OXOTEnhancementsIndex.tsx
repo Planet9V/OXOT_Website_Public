@@ -82,20 +82,26 @@ export default function OXOTEnhancementsIndex() {
                         <OXOTLogo size="lg" animated />
                     </div>
 
-                    <div className="mb-8">
-                        <div className="inline-flex items-center gap-3 px-4 py-2 bg-amber-500/10 border border-amber-500/30 rounded-full text-amber-400/80 text-xs font-mono tracking-[0.2em] mb-6 uppercase">
-                            <span className="w-2 h-2 rounded-full bg-amber-500 animate-pulse" />
-                            API Enhancement Catalog
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8 }}
+                    >
+                        <div className="mb-8">
+                            <div className="inline-flex items-center gap-3 px-4 py-2 bg-amber-500/10 border border-amber-500/30 rounded-full text-amber-400/80 text-xs font-mono tracking-[0.2em] mb-6 uppercase">
+                                <span className="w-2 h-2 rounded-full bg-amber-500 animate-pulse" />
+                                API Enhancement Catalog
+                            </div>
                         </div>
-                    </div>
 
-                    <PageHeader
-                        title="API Enhancements"
-                        subtitle="Comprehensive catalog of AEON Digital Twin API enhancements organized by tier, with implementation status, dependencies, and business value ratings."
-                        variant="hero"
-                        accent="gold"
-                        className="items-center"
-                    />
+                        <PageHeader
+                            title="API Enhancements"
+                            subtitle="Comprehensive catalog of AEON Digital Twin API enhancements organized by tier, with implementation status, dependencies, and business value ratings."
+                            variant="hero"
+                            accent="gold"
+                            className="items-center"
+                        />
+                    </motion.div>
 
                     {/* Scroll Indicator */}
                     <motion.div

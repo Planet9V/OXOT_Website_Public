@@ -124,53 +124,67 @@ export default function AgentBluePage() {
             {/* Hero Section */}
 
             {/* Hero Section */}
-            <section className="relative h-screen flex flex-col items-center justify-center px-4">
+            <section className="relative h-screen flex flex-col items-center justify-center px-4 z-10">
+                <motion.div style={{ opacity }} className="text-center w-full max-w-5xl mx-auto flex flex-col items-center">
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 1 }}
+                        className="mb-8 flex flex-col items-center gap-6"
+                    >
+                        <BlueTeamLogo />
+                    </motion.div>
 
-                <div className="mb-8 flex flex-col items-center gap-6">
-                    <BlueTeamLogo />
-                </div>
+                    <PageHeader
+                        title="AGENT BLUE TEAM"
+                        subtitle="Predictive Threat Intelligence Powered by the AEON Cyber Digital Twin"
+                        variant="hero"
+                        accent="blue"
+                        className="mb-12"
+                    />
 
-                <PageHeader
-                    title="AGENT BLUE TEAM"
-                    subtitle="Predictive Threat Intelligence Powered by the AEON Cyber Digital Twin"
-                    variant="hero"
-                    accent="blue"
-                    className="mb-12"
-                />
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 0.4 }}
+                        className="text-center z-10 w-full"
+                    >
+                        <p className="text-lg text-gray-400 max-w-3xl mx-auto mb-12 leading-relaxed">
+                            Shifting the paradigm from <span className="text-red-400 line-through">reactive firefighting</span> to <span className="text-oxot-blue-light font-bold">proactive prediction</span>.
+                            Combining technical vulnerabilities, human psychology, organizational culture, and geopolitical context into a unified defensive intelligence platform.
+                        </p>
+                    </motion.div>
 
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8 }}
-                    style={{ opacity }}
-                    className="text-center z-10"
-                >
-                    <p className="text-lg text-gray-400 max-w-3xl mx-auto mb-12 leading-relaxed">
-                        Shifting the paradigm from <span className="text-red-400 line-through">reactive firefighting</span> to <span className="text-oxot-blue-light font-bold">proactive prediction</span>.
-                        Combining technical vulnerabilities, human psychology, organizational culture, and geopolitical context into a unified defensive intelligence platform.
-                    </p>
+                    <div className="flex flex-wrap gap-4 justify-center text-sm">
+                        <div className="px-6 py-3 bg-oxot-blue/10 border border-oxot-blue/30 rounded">
+                            <Shield className="w-5 h-5 inline mr-2 text-oxot-blue-light" />
+                            <span className="text-white font-bold">24/7 Protection</span>
+                        </div>
+                        <div className="px-6 py-3 bg-oxot-blue/10 border border-oxot-blue/30 rounded">
+                            <Brain className="w-5 h-5 inline mr-2 text-oxot-blue" />
+                            <span className="text-white font-bold">AI-Powered Analysis</span>
+                        </div>
+                        <div className="px-6 py-3 bg-oxot-gold/10 border border-oxot-gold/30 rounded">
+                            <Zap className="w-5 h-5 inline mr-2 text-oxot-gold" />
+                            <span className="text-white font-bold">Predictive Intelligence</span>
+                        </div>
+                    </div>
                 </motion.div>
 
-                <div className="flex flex-wrap gap-4 justify-center text-sm">
-                    <div className="px-6 py-3 bg-oxot-blue/10 border border-oxot-blue/30 rounded">
-                        <Shield className="w-5 h-5 inline mr-2 text-oxot-blue-light" />
-                        <span className="text-white font-bold">24/7 Protection</span>
+                {/* Scroll Indicator */}
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 1, duration: 1 }}
+                    className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-gray-600"
+                >
+                    <span className="text-[10px] tracking-[0.2em] uppercase">Scroll to Initialize</span>
+                    <div className="animate-bounce">
+                        <div className="w-6 h-10 border-2 border-oxot-blue/50 rounded-full flex justify-center">
+                            <div className="w-1 h-3 bg-oxot-blue-light rounded-full mt-2"></div>
+                        </div>
                     </div>
-                    <div className="px-6 py-3 bg-oxot-blue/10 border border-oxot-blue/30 rounded">
-                        <Brain className="w-5 h-5 inline mr-2 text-oxot-blue" />
-                        <span className="text-white font-bold">AI-Powered Analysis</span>
-                    </div>
-                    <div className="px-6 py-3 bg-oxot-gold/10 border border-oxot-gold/30 rounded">
-                        <Zap className="w-5 h-5 inline mr-2 text-oxot-gold" />
-                        <span className="text-white font-bold">Predictive Intelligence</span>
-                    </div>
-                </div>
-
-                <div className="absolute bottom-10 animate-bounce">
-                    <div className="w-6 h-10 border-2 border-oxot-blue/50 rounded-full flex justify-center">
-                        <div className="w-1 h-3 bg-oxot-blue-light rounded-full mt-2"></div>
-                    </div>
-                </div>
+                </motion.div>
             </section>
 
             {/* Main Content */}

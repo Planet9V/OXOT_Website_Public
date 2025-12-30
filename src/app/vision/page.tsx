@@ -78,7 +78,8 @@ export default function Home() {
           {/* New Hero Visualization */}
           <VisionHeroVisualization />
 
-          <div className="relative z-10 w-full max-w-[1600px]">
+          <div className="relative z-10 w-full max-w-[1600px] -mt-32">
+
             <PageHeader
               title="AEON CYBER DIGITAL TWIN"
               subtitle="The Operating System for Sovereign Critical Infrastructure."

@@ -75,7 +75,7 @@ export default function OperatorPlaybookPage() {
   return (
     <div ref={containerRef} className="pb-64">
       {/* HERO SECTION */}
-      <section className="h-[70vh] flex flex-col items-center justify-center relative px-4 text-center">
+      <section className="min-h-screen flex flex-col items-center justify-center relative px-4 text-center mb-24">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}

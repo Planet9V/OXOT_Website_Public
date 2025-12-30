@@ -51,20 +51,26 @@ export default function OXOTServicesPortfolio() {
                         <OXOTLogo size="lg" animated />
                     </div>
 
-                    <div className="mb-8">
-                        <div className="inline-flex items-center gap-3 px-4 py-2 bg-blue-500/10 border border-blue-500/30 rounded-full text-blue-400/80 text-xs font-mono tracking-[0.2em] mb-6 uppercase">
-                            <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />
-                            Services Portfolio 2025
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8 }}
+                    >
+                        <div className="mb-8">
+                            <div className="inline-flex items-center gap-3 px-4 py-2 bg-blue-500/10 border border-blue-500/30 rounded-full text-blue-400/80 text-xs font-mono tracking-[0.2em] mb-6 uppercase">
+                                <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />
+                                Services Portfolio 2025
+                            </div>
                         </div>
-                    </div>
 
-                    <PageHeader
-                        title="Services Portfolio"
-                        subtitle="Interactive service selection, pricing models, and implementation timelines for leadership planning and strategic decision-making."
-                        variant="hero"
-                        accent="blue"
-                        className="items-center"
-                    />
+                        <PageHeader
+                            title="Services Portfolio"
+                            subtitle="Interactive service selection, pricing models, and implementation timelines for leadership planning and strategic decision-making."
+                            variant="hero"
+                            accent="blue"
+                            className="items-center"
+                        />
+                    </motion.div>
 
                     {/* Scroll Indicator */}
                     <motion.div

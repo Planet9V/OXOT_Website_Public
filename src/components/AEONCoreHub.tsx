@@ -92,7 +92,7 @@ export default function AEONCoreHub() {
                         transition={{ duration: 1 }}
                         className="mb-8"
                     >
-                        <OXOTLogo size="lg" animated={true} />
+                        {/* OXOTLogo removed as requested */}
                     </motion.div>
 
                     <PageHeader

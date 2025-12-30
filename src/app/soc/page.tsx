@@ -30,19 +30,18 @@ export default function SOCPage() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="flex items-center justify-center gap-6 mb-8"
+            transition={{ duration: 0.6 }}
+            className="inline-flex items-center gap-3 px-4 py-2 bg-white/5 border border-white/10 rounded-full text-white/60 text-xs font-mono tracking-[0.2em] mb-8 uppercase"
           >
-            <div className="text-xs font-mono text-oxot-blue uppercase tracking-[0.4em] py-2">
-              Service_ID: 05 // SOC_Command
-            </div>
+            <span className="w-2 h-2 rounded-full bg-oxot-blue animate-pulse"></span>
+            Service_ID: 05 // SOC_Command
           </motion.div>
 
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-6xl md:text-8xl lg:text-9xl font-black text-white uppercase tracking-tighter leading-[0.85] mb-8"
+            transition={{ duration: 0.8 }}
+            className="text-5xl md:text-7xl lg:text-8xl font-black text-white uppercase tracking-tighter leading-[0.9] mb-8"
           >
             SOC Command<br />
             <span className="text-oxot-blue font-bold">Integration</span>
@@ -52,7 +51,7 @@ export default function SOCPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-xl md:text-2xl text-grey max-w-3xl font-light leading-relaxed mb-12 uppercase tracking-[0.2em]"
+            className="text-lg text-gray-400 max-w-3xl font-light leading-relaxed mb-12"
           >
             Operationalize predictive intelligence. Transform your SOC from a reactive alert queue into a <span className="text-white font-medium">pre-cognitive defense engine</span>.
           </motion.p>

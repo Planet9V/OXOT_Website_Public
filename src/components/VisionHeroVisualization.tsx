@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 export const VisionHeroVisualization = () => {
     return (
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden select-none">
+        <div className="relative w-full h-[500px] flex items-center justify-center pointer-events-none select-none -mt-20">
             {/* Container for the 3D perspective */}
             <div className="relative w-[800px] h-[800px] flex items-center justify-center [perspective:1000px]">
 

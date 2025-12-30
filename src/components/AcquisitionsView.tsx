@@ -6,7 +6,7 @@ import {
     Activity, Shield, AlertTriangle, CheckCircle2,
     DollarSign, TrendingDown, TrendingUp, Search,
     Layout, Users, ArrowRight, BarChart3, Lock,
-    Database, FileDigit, GripVertical, Radar, Calculator
+    Database, FileDigit, GripVertical, Radar, Calculator, ChevronDown
 } from 'lucide-react';
 import dynamic from 'next/dynamic';
 import ContactFormCTA from './ContactFormCTA';
@@ -45,13 +45,11 @@ export default function AcquisitionsView() {
 
             <div className="relative z-10 max-w-[1600px] mx-auto px-6 py-20 pb-40">
 
-                {/* ==================== ACT 1: UNDERSTANDING THE DEAL ==================== */}
-
                 {/* Hero: The Problem Space */}
                 <HeroSection />
 
                 {/* Deal Process Deep Dive */}
-                <div className="max-w-7xl mx-auto mt-32">
+                <div className="max-w-7xl mx-auto mt-20">
                     <DealProcessDeepDive />
                 </div>
 
@@ -173,8 +171,8 @@ export default function AcquisitionsView() {
 
 const HeroSection = () => {
     return (
-        <section className="min-h-[85vh] flex flex-col justify-center relative">
-            <div className="max-w-5xl">
+        <section className="h-screen flex flex-col items-center justify-center relative px-6">
+            <div className="max-w-5xl flex flex-col items-center text-center">
                 <div className="inline-flex items-center gap-3 px-4 py-2 bg-white/5 border border-white/10 rounded-full text-white/60 text-xs font-mono tracking-[0.2em] mb-8 uppercase">
                     <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
                     AEON Cyber Digital Twin • M&A Due Diligence
@@ -194,13 +192,13 @@ const HeroSection = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
-                    className="text-lg text-gray-400 max-w-2xl mb-12"
+                    className="text-lg text-gray-400 max-w-2xl mb-12 mx-auto"
                 >
                     Stress-test target networks with physics-based simulations.
                     Quantify cyber debt as a dollar value. Detect hidden liabilities before you buy.
                 </motion.p>
 
-                <div className="grid md:grid-cols-3 gap-8 md:gap-16 border-t border-white/10 pt-12">
+                <div className="grid md:grid-cols-3 gap-8 md:gap-16 border-t border-white/10 pt-12 text-left">
                     <div className="space-y-4 relative group">
                         <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-oxot-red to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                         <div className="text-4xl font-black text-white group-hover:text-oxot-red transition-colors">53%</div>
@@ -224,6 +222,16 @@ const HeroSection = () => {
                     </div>
                 </div>
             </div>
+
+            <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 1, duration: 1 }}
+                className="absolute bottom-12 flex flex-col items-center gap-2 text-gray-600"
+            >
+                <span className="text-[10px] tracking-[0.2em] uppercase">Scroll for Diligence</span>
+                <ChevronDown className="w-4 h-4 animate-bounce" />
+            </motion.div>
         </section>
     );
 };
