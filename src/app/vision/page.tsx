@@ -21,6 +21,7 @@ import SustenanceDashboard from '@/components/SustenanceDashboard'
 import { NeuralGlobe } from '@/components/NeuralGlobe'
 import TypewriterText from '@/components/TypewriterText'
 import { TypewriterLog } from '@/components/TypewriterLog'
+import { VisionHeroVisualization } from '@/components/VisionHeroVisualization'
 
 import { ArrowRight, Activity, ChevronDown, Globe, Lock, ShieldCheck } from 'lucide-react'
 import Link from 'next/link'
@@ -73,6 +74,9 @@ export default function Home() {
 
         {/* --- 1. HERO SECTION --- */}
         <section className="relative min-h-screen flex flex-col items-center justify-center pt-20 px-4 mb-20">
+
+          {/* New Hero Visualization */}
+          <VisionHeroVisualization />
 
           <div className="relative z-10 w-full max-w-[1600px]">
             <PageHeader

@@ -83,20 +83,20 @@ export default function ContactFormCTA({
             text: 'red-400'
         },
         blue: {
-            accent: 'cyan-500',
-            accentDark: 'cyan-600',
-            glow: 'rgba(0, 224, 176, 0.3)',
-            border: 'cyan-500/30',
-            bg: 'cyan-500/10',
-            text: 'cyan-400'
+            accent: 'oxot-blue',
+            accentDark: 'oxot-blue-light',
+            glow: 'rgba(0, 66, 214, 0.3)',
+            border: 'oxot-blue/30',
+            bg: 'oxot-blue/10',
+            text: 'oxot-blue-light'
         },
         gold: {
-            accent: 'yellow-500',
-            accentDark: 'yellow-600',
-            glow: 'rgba(234, 179, 8, 0.3)',
-            border: 'yellow-500/30',
-            bg: 'yellow-500/10',
-            text: 'yellow-400'
+            accent: 'oxot-gold',
+            accentDark: 'oxot-gold-light',
+            glow: 'rgba(255, 215, 0, 0.3)',
+            border: 'oxot-gold/30',
+            bg: 'oxot-gold/10',
+            text: 'oxot-gold'
         }
     }[variant];
 

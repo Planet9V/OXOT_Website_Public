@@ -1,18 +1,29 @@
 'use client';
 
 import React, { useState, useEffect, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
 import {
     Sigma, Brain, Network, Activity, Database,
     GitBranch, Lock, Shield, Zap, Code,
-    FileText, ArrowRight, Terminal, Cpu, Users, ChevronLeft
+    FileText, ArrowRight, Terminal, Cpu, Users, ChevronLeft, ChevronDown
 } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import E27HyperVisual from './E27HyperVisual';
+import { OXOTLogo } from './branding/OXOTLogo';
+import { PageHeader } from './branding/PageHeader';
 
 export default function E27View() {
     const [activeSection, setActiveSection] = useState(0);
     const router = useRouter();
+    const containerRef = useRef<HTMLDivElement>(null);
+
+    const { scrollYProgress } = useScroll({
+        target: containerRef,
+        offset: ["start start", "end end"]
+    });
+
+    const opacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
+    const scale = useTransform(scrollYProgress, [0, 0.2], [1, 0.8]);
 
     const sections = [
         { id: 'math', title: 'Mathematical Framework', icon: <Sigma size={16} /> },
@@ -22,9 +33,53 @@ export default function E27View() {
     ];
 
     return (
-        <div className="min-h-screen bg-black text-white font-mono selection:bg-oxot-red/30 pb-20">
+        <div ref={containerRef} className="min-h-screen bg-black text-white font-mono selection:bg-oxot-red/30 pb-20 overflow-x-hidden">
             {/* Background Matrix Effect */}
             <MatrixRain />
+
+            {/* Hero Section */}
+            <section className="relative h-screen flex flex-col items-center justify-center z-10 p-4">
+                <motion.div style={{ opacity, scale }} className="text-center max-w-7xl mx-auto flex flex-col items-center">
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 1 }}
+                        className="mb-8"
+                    >
+                        <OXOTLogo size="lg" animated={true} />
+                    </motion.div>
+
+                    <PageHeader
+                        title="SOVEREIGN LOGIC"
+                        subtitle="E27 ENGINE CORE // The Calculus of McKenney-Lacan // Predictive Applications."
+                        variant="hero"
+                        accent="red"
+                        className="mb-12"
+                    />
+
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 0.4 }}
+                        className="max-w-4xl mx-auto"
+                    >
+                        <p className="text-lg text-gray-400 max-w-3xl mx-auto leading-relaxed font-mono">
+                            A fully autonomous logic engine for cross-domain threat prediction.
+                            Give it a scenario, define the variables, and it <span className="text-red-500 font-bold border-b border-red-500/50">will</span> reveal the outcome.
+                        </p>
+                    </motion.div>
+                </motion.div>
+
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 1, duration: 1 }}
+                    className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-gray-600"
+                >
+                    <span className="text-[10px] tracking-[0.2em] uppercase">Scroll to Initialize</span>
+                    <ChevronDown className="w-4 h-4 animate-bounce" />
+                </motion.div>
+            </section>
 
             {/* Header */}
             <div className="relative z-50 border-b border-white/10 bg-black/80 backdrop-blur-md sticky top-0">
@@ -214,14 +269,14 @@ const MathFramework: React.FC = () => {
 };
 
 const EquationBlock: React.FC<{ num: string, title: string, subtitle: string, latex: string, desc: string, color: string, borderColor: string }> = ({ num, title, subtitle, latex, desc, color, borderColor }) => (
-    <div className={`p-8 bg-black/40 border-l-4 ${borderColor} rounded-r-xl flex flex-col md:flex-row gap-8 items-start hover:bg-white/5 transition-colors group`}>
-        <div className={`text-4xl font-black opacity-30 ${color}`}>{num}</div>
-        <div className="flex-1 space-y-4">
+    <div className={`p-6 md:p-8 bg-black/40 border-l-4 ${borderColor} rounded-r-xl flex flex-col md:flex-row gap-6 md:gap-8 items-start hover:bg-white/5 transition-colors group`}>
+        <div className={`text-4xl font-black opacity-30 ${color} shrink-0`}>{num}</div>
+        <div className="flex-1 space-y-4 w-full min-w-0">
             <div>
-                <h3 className="text-2xl font-black text-white uppercase tracking-tighter">{title}</h3>
-                <p className={`text-sm font-mono uppercase tracking-widest ${color} opacity-80`}>{subtitle}</p>
+                <h3 className="text-xl md:text-2xl font-black text-white uppercase tracking-tighter break-words">{title}</h3>
+                <p className={`text-xs md:text-sm font-mono uppercase tracking-widest ${color} opacity-80 break-words`}>{subtitle}</p>
             </div>
-            <div className="py-4 px-6 bg-black rounded border border-white/10 font-mono text-lg text-white shadow-inner">
+            <div className="py-4 px-4 md:px-6 bg-black rounded border border-white/10 font-mono text-sm md:text-lg text-white shadow-inner overflow-x-auto">
                 {latex}
             </div>
             <p className="text-gray-400 text-sm leading-relaxed border-l border-white/10 pl-4">
@@ -232,9 +287,9 @@ const EquationBlock: React.FC<{ num: string, title: string, subtitle: string, la
 );
 
 const MiniEquation: React.FC<{ title: string, latex: string }> = ({ title, latex }) => (
-    <div className="p-4 bg-black/60 rounded border border-white/10 hover:border-oxot-red transition-colors text-center">
-        <div className="text-[10px] text-gray-500 uppercase tracking-widest mb-2">{title}</div>
-        <div className="font-mono text-oxot-blue text-sm">{latex}</div>
+    <div className="p-4 bg-black/60 rounded border border-white/10 hover:border-oxot-red transition-colors text-center h-full flex flex-col justify-center">
+        <div className="text-[9px] md:text-[10px] text-gray-500 uppercase tracking-widest mb-2">{title}</div>
+        <div className="font-mono text-oxot-blue text-xs md:text-sm break-all">{latex}</div>
     </div>
 )
 

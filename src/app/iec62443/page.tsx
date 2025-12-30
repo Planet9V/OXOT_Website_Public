@@ -12,11 +12,15 @@ import CybersecurityLifecycle from '@/components/CybersecurityLifecycle'
 import IECFoundationalRequirementsGrid from '@/components/IECFoundationalRequirementsGrid'
 import TelemetryTicker from '@/components/TelemetryTicker'
 import ContactFormCTA from '@/components/ContactFormCTA'
+
 import OXOTToolkit from '@/components/OXOTToolkit'
 import IECFrameworkMatrix from '@/components/IECFrameworkMatrix'
 import IECUnifiedSystems from '@/components/IECUnifiedSystems'
 import AdvancedEngineeringCanvas from '@/components/AdvancedEngineeringCanvas'
 import dynamic from 'next/dynamic'
+
+const DatacenterDigitalTwin = dynamic(() => import('@/components/DatacenterDigitalTwin'), { ssr: false })
+const HierarchyExplorer = dynamic(() => import('@/components/HierarchyExplorer'), { ssr: false })
 
 // ==================== MAIN COMPONENT ====================
 export default function IEC62443Page() {
@@ -29,13 +33,18 @@ export default function IEC62443Page() {
             </div>
 
             {/* HERO SECTION */}
-            <section className="min-h-[85vh] flex flex-col justify-center relative px-6">
-                <div className="max-w-6xl mx-auto">
+            <section className="h-screen flex flex-col justify-center items-center relative px-6 text-center">
+                <div className="max-w-6xl mx-auto flex flex-col items-center">
                     {/* Badge */}
-                    <div className="inline-flex items-center gap-3 px-4 py-2 bg-white/5 border border-white/10 rounded-full text-white/60 text-xs font-mono tracking-[0.2em] mb-8 uppercase">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6 }}
+                        className="inline-flex items-center gap-3 px-4 py-2 bg-white/5 border border-white/10 rounded-full text-white/60 text-xs font-mono tracking-[0.2em] mb-8 uppercase"
+                    >
                         <span className="w-2 h-2 rounded-full bg-oxot-gold animate-pulse"></span>
                         IEC 62443 Educational Overview
-                    </div>
+                    </motion.div>
 
                     {/* Large Typography */}
                     <motion.h1
@@ -49,7 +58,12 @@ export default function IEC62443Page() {
                     </motion.h1>
 
                     {/* Stats */}
-                    <div className="grid md:grid-cols-3 gap-8 md:gap-16 border-t border-white/10 pt-12">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 0.4 }}
+                        className="grid md:grid-cols-3 gap-8 md:gap-16 border-t border-white/10 pt-12"
+                    >
                         <div className="space-y-4 relative group">
                             <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-oxot-gold to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                             <div className="text-4xl font-black text-white group-hover:text-oxot-gold transition-colors">14</div>
@@ -71,7 +85,7 @@ export default function IEC62443Page() {
                                 Foundational Requirements covering <strong className="text-white">access to availability</strong>.
                             </p>
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
 
                 {/* Scroll Indicator */}
@@ -90,6 +104,7 @@ export default function IEC62443Page() {
             <div className="max-w-7xl mx-auto px-6 space-y-32 pb-32">
 
                 {/* SECTION 1: Overview */}
+
                 <section id="overview">
                     <div className="mb-12 border-b border-white/10 pb-6">
                         <div className="text-oxot-gold text-xs font-mono uppercase tracking-widest mb-4 flex items-center gap-2">
@@ -101,7 +116,9 @@ export default function IEC62443Page() {
                     <OverviewContent />
                 </section>
 
+
                 {/* SECTION 2: Security Lifecycle */}
+
                 <section id="lifecycle">
                     <div className="mb-12 border-b border-white/10 pb-6">
                         <div className="text-oxot-blue-light text-xs font-mono uppercase tracking-widest mb-4 flex items-center gap-2">
@@ -115,7 +132,9 @@ export default function IEC62443Page() {
                     </div>
                 </section>
 
+
                 {/* SECTION 3: Document Library */}
+
                 <section id="library">
                     <div className="mb-12 border-b border-white/10 pb-6">
                         <div className="text-oxot-blue-light text-xs font-mono uppercase tracking-widest mb-4 flex items-center gap-2">
@@ -129,7 +148,9 @@ export default function IEC62443Page() {
                     </div>
                 </section>
 
+
                 {/* SECTION 4: OXOT AI Toolkit */}
+
                 <section className="relative z-10 mb-24" id="toolkit">
                     <div className="mb-12 border-b border-oxot-gold/30 pb-6">
                         <div className="text-oxot-gold text-xs font-mono uppercase tracking-widest mb-4 flex items-center gap-2">
@@ -143,7 +164,35 @@ export default function IEC62443Page() {
                     </div>
                 </section>
 
+
+                {/* SECTION 5b: Digital Twin Core (Migrated from SOC) */}
+
+                <section className="relative z-10 mb-24" id="digital-twin-core">
+                    <div className="space-y-4">
+                        <div className="flex items-center gap-2">
+                            <div className="w-2 h-2 rounded-full bg-yellow-400 animate-pulse" />
+                            <span className="text-xs font-mono text-yellow-400 uppercase tracking-widest">Digital Twin Core // TIER III</span>
+                        </div>
+                        <DatacenterDigitalTwin />
+                    </div>
+                </section>
+
+
+                {/* SECTION 5c: Hierarchy Explorer (Migrated from SOC) */}
+
+                <section className="relative z-10 mb-24" id="hierarchy-explorer">
+                    <div className="space-y-4">
+                        <div className="flex items-center gap-2">
+                            <div className="w-2 h-2 rounded-full bg-oxot-blue animate-pulse" />
+                            <span className="text-xs font-mono text-oxot-blue uppercase tracking-widest">Hierarchy Tier III Data Center Asset Tree</span>
+                        </div>
+                        <HierarchyExplorer />
+                    </div>
+                </section>
+
+
                 {/* SECTION 5: Zone & Conduit Editor */}
+
                 <section className="relative z-10 mb-24" id="network-editor">
 
                     <div className="h-[800px] border border-white/10 rounded-2xl overflow-hidden shadow-2xl relative bg-slate-950">
@@ -154,7 +203,11 @@ export default function IEC62443Page() {
                     </div>
                 </section>
 
+
+
+
                 {/* SECTION 6: IEC 62443 Framework Matrix */}
+
                 <section className="relative z-10 mb-24" id="framework-matrix">
                     <div className="mb-12 border-b border-white/10 pb-6">
                         <div className="text-oxot-blue-light text-xs font-mono uppercase tracking-widest mb-4 flex items-center gap-2">
@@ -170,7 +223,9 @@ export default function IEC62443Page() {
 
 
 
+
                 {/* CTA Section */}
+
                 <section>
                     <ContactFormCTA
                         variant="gold"
@@ -182,8 +237,9 @@ export default function IEC62443Page() {
                         ]}
                     />
                 </section>
+
             </div>
-        </div>
+        </div >
     )
 }
 

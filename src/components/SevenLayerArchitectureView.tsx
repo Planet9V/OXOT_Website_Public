@@ -1,8 +1,10 @@
 "use client";
 
 import React, { useRef, useEffect, useState } from 'react';
-import { Layers, Database, Shield, Brain, Activity, Zap, FileCode, Network, Target, TrendingUp, Users, GitBranch, Lock, BarChart3, Cpu, Globe, Box, Hexagon, Radar, Radio } from 'lucide-react';
+import { Layers, Database, Shield, Brain, Activity, Zap, FileCode, Network, Target, TrendingUp, Users, GitBranch, Lock, BarChart3, Cpu, Globe, Box, Hexagon, Radar, Radio, ChevronDown } from 'lucide-react';
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
+import { OXOTLogo } from './branding/OXOTLogo';
+import { PageHeader } from './branding/PageHeader';
 
 // --- 3D VISUALIZATION COMPONENTS ---
 
@@ -269,8 +271,12 @@ const LAYER_PARTICLES = [
 
 export default function SevenLayerArchitectureView() {
     const containerRef = useRef<HTMLDivElement>(null);
-    const { scrollYProgress } = useScroll({ target: containerRef });
+    const { scrollYProgress } = useScroll({
+        target: containerRef,
+        offset: ["start start", "end end"]
+    });
     const opacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
+    const scale = useTransform(scrollYProgress, [0, 0.2], [1, 0.8]);
 
     useEffect(() => {
         const particles = LAYER_PARTICLES.map((_, i) => document.getElementById(`layer-particle-${i}`));
@@ -461,56 +467,48 @@ export default function SevenLayerArchitectureView() {
             </div>
 
             {/* Hero Section */}
-            <section className="min-h-screen flex flex-col items-center justify-center relative px-4">
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8 }}
-                    style={{ opacity }}
-                    className="text-center z-10"
-                >
-                    <div className="inline-block mb-6 px-6 py-2 border border-blue-500/50 bg-blue-900/10 rounded-full">
-                        <span className="text-blue-400 font-mono text-sm uppercase tracking-widest">Core Architecture</span>
-                    </div>
+            <section className="relative h-screen flex flex-col items-center justify-center z-10 p-4">
+                <motion.div style={{ opacity, scale }} className="text-center max-w-7xl mx-auto flex flex-col items-center">
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 1 }}
+                        className="mb-8"
+                    >
+                        <OXOTLogo size="lg" animated={true} />
+                    </motion.div>
 
-                    <h1 className="text-6xl md:text-8xl font-black text-white mb-6 tracking-tighter">
-                        7-LAYER <span className="text-gradient bg-gradient-to-r from-blue-400 via-cyan-500 to-teal-400 bg-clip-text text-transparent">ARCHITECTURE</span>
-                    </h1>
+                    <PageHeader
+                        title="7-LAYER TWIN"
+                        subtitle="Structural Integrity Models // The Physical-Digital Convergence Architecture."
+                        variant="hero"
+                        accent="blue"
+                        className="mb-12"
+                    />
 
-                    <p className="text-xl md:text-2xl text-blue-400 mb-4 max-w-4xl mx-auto font-light">
-                        From Metal to Mind // The Vertical Stack
-                    </p>
-
-                    <p className="text-lg text-gray-400 max-w-3xl mx-auto mb-12 leading-relaxed">
-                        A comprehensive journey through the foundational layers of the AEON Cyber Digital Twin.
-                        From <span className="text-white font-bold">physical equipment catalogs</span> to
-                        <span className="text-purple-400 font-bold"> predictive intelligence</span>,
-                        spanning <span className="text-green-400 font-bold">316K+ CVEs</span>,
-                        <span className="text-red-400 font-bold"> 691 MITRE techniques</span>, and
-                        <span className="text-pink-400 font-bold"> 30 cognitive biases</span>.
-                    </p>
-
-                    <div className="flex flex-wrap gap-4 justify-center text-sm">
-                        <div className="px-6 py-3 bg-blue-900/20 border border-blue-500/30 rounded">
-                            <Layers className="w-5 h-5 inline mr-2 text-blue-400" />
-                            <span className="text-white font-bold">48,288 Equipment Instances</span>
-                        </div>
-                        <div className="px-6 py-3 bg-green-900/20 border border-green-500/30 rounded">
-                            <FileCode className="w-5 h-5 inline mr-2 text-green-400" />
-                            <span className="text-white font-bold">316,552 CVE Database</span>
-                        </div>
-                        <div className="px-6 py-3 bg-purple-900/20 border border-purple-500/30 rounded">
-                            <Zap className="w-5 h-5 inline mr-2 text-purple-400" />
-                            <span className="text-white font-bold">24,409 Predictions</span>
-                        </div>
-                    </div>
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 0.4 }}
+                        className="max-w-4xl mx-auto"
+                    >
+                        <p className="text-lg text-gray-400 max-w-3xl mx-auto leading-relaxed font-mono">
+                            A comprehensive architectural framework spanning from physical equipment Blueprints (L0)
+                            to strategic Socio-Economic dynamics (L7).
+                            Standardized, interoperable, and resilient.
+                        </p>
+                    </motion.div>
                 </motion.div>
 
-                <div className="absolute bottom-10 animate-bounce">
-                    <div className="w-6 h-10 border-2 border-blue-500/50 rounded-full flex justify-center">
-                        <div className="w-1 h-3 bg-blue-400 rounded-full mt-2"></div>
-                    </div>
-                </div>
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 1, duration: 1 }}
+                    className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-gray-600"
+                >
+                    <span className="text-[10px] tracking-[0.2em] uppercase">Scroll to Map Layers</span>
+                    <ChevronDown className="w-4 h-4 animate-bounce" />
+                </motion.div>
             </section>
 
             {/* Main Content - Layer Sections */}

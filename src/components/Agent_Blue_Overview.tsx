@@ -124,7 +124,7 @@ export default function AgentBluePage() {
             {/* Hero Section */}
 
             {/* Hero Section */}
-            <section className="min-h-[80vh] flex flex-col items-center justify-center relative px-4">
+            <section className="relative h-screen flex flex-col items-center justify-center px-4">
 
                 <div className="mb-8 flex flex-col items-center gap-6">
                     <BlueTeamLogo />

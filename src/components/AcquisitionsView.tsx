@@ -6,7 +6,7 @@ import {
     Activity, Shield, AlertTriangle, CheckCircle2,
     DollarSign, TrendingDown, TrendingUp, Search,
     Layout, Users, ArrowRight, BarChart3, Lock,
-    Database, FileDigit, GripVertical
+    Database, FileDigit, GripVertical, Radar, Calculator
 } from 'lucide-react';
 import dynamic from 'next/dynamic';
 import ContactFormCTA from './ContactFormCTA';
@@ -16,6 +16,11 @@ import DealProcessDeepDive from './DealProcessDeepDive';
 import IndustrialDDGap from './IndustrialDDGap';
 import CyberAdjustedValuation from './CyberAdjustedValuation';
 import GovernanceGates from './GovernanceGates';
+import LemonProblemSection from './LemonProblemSection';
+import MCDESimulator from './MCDESimulator';
+import CyberDurabilityGauge from './CyberDurabilityGauge';
+import CyberDebtCalculator from './CyberDebtCalculator';
+import SupplyChainRadar from './SupplyChainRadar';
 
 // Dynamic imports
 const CriticalSustenance3D = dynamic(() => import('./CriticalSustenance3D'), { ssr: false });
@@ -50,7 +55,55 @@ export default function AcquisitionsView() {
                     <DealProcessDeepDive />
                 </div>
 
-                {/* ==================== ACT 2: THE RISK MANAGEMENT GAP ==================== */}
+                {/* ==================== ACT 2: THE LEMON PROBLEM ==================== */}
+
+                {/* Why Traditional DD Fails */}
+                <div className="max-w-7xl mx-auto mt-32">
+                    <LemonProblemSection />
+                </div>
+
+                {/* ==================== ACT 3: AEON MCDE SOLUTION ==================== */}
+
+                {/* Interactive MCDE Simulator */}
+                <div className="max-w-7xl mx-auto mt-32">
+                    <div className="mb-8">
+                        <div className="text-cyan-400 text-xs font-mono uppercase tracking-widest mb-4 flex items-center gap-2">
+                            <Activity className="w-4 h-4" />
+                            Simulation-Based Diligence
+                        </div>
+                        <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tight">
+                            Stress-Test <span className="text-cyan-400">Before You Buy.</span>
+                        </h2>
+                    </div>
+                    <MCDESimulator />
+                </div>
+
+                {/* Cyber Durability Rating + Cyber Debt Side by Side */}
+                <div className="max-w-7xl mx-auto mt-32">
+                    <div className="mb-8">
+                        <div className="text-oxot-gold text-xs font-mono uppercase tracking-widest mb-4 flex items-center gap-2">
+                            <Calculator className="w-4 h-4" />
+                            Quantified Risk Assessment
+                        </div>
+                        <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tight">
+                            Turn Risk Into <span className="text-oxot-gold">Dollars.</span>
+                        </h2>
+                        <p className="text-gray-400 mt-4 max-w-2xl">
+                            MCDE transforms qualitative security assessments into dollar-denominated adjustments for your valuation model.
+                        </p>
+                    </div>
+                    <div className="grid lg:grid-cols-2 gap-6">
+                        <CyberDurabilityGauge rating="C" score={0.42} />
+                        <CyberDebtCalculator targetName="Target Corp" />
+                    </div>
+                </div>
+
+                {/* Supply Chain Intelligence */}
+                <div className="max-w-7xl mx-auto mt-32">
+                    <SupplyChainRadar />
+                </div>
+
+                {/* ==================== ACT 4: THE RISK MANAGEMENT GAP ==================== */}
 
                 {/* The Industrial Cybersecurity Blind Spot */}
                 <div className="mt-32">
@@ -102,12 +155,12 @@ export default function AcquisitionsView() {
                 <div className="mt-40">
                     <ContactFormCTA
                         variant="blue"
-                        headline="Enhance Your Due Diligence with Specialized Expertise"
-                        subheadline="OXOT combines human expertise with AI-based tools to complement your DD team with industrial cybersecurity capabilities most financial and legal advisors don't possess."
+                        headline="Detect Cyber Lemons Before You Buy"
+                        subheadline="OXOT's M&A Cyber Due Diligence Engine (MCDE) uses physics-based simulation to quantify hidden cyber liabilities. Turn qualitative risk into dollar-denominated valuation adjustments."
                         serviceOptions={[
-                            { value: 'assessment', label: 'Pre-Close Technical Assessment', color: 'cyan' },
-                            { value: 'integration', label: '100-Day Integration Support', color: 'yellow' },
-                            { value: 'valuation', label: 'Purchase Price Adjustment Analysis', color: 'red' }
+                            { value: 'mcde-full', label: 'Full MCDE Analysis ($100K)', color: 'cyan' },
+                            { value: 'mcde-lite', label: 'MCDE Lite Screening ($25K)', color: 'yellow' },
+                            { value: 'mcde-premium', label: 'MCDE Premium + Red Team ($250K)', color: 'red' }
                         ]}
                     />
                 </div>
@@ -123,19 +176,29 @@ const HeroSection = () => {
         <section className="min-h-[85vh] flex flex-col justify-center relative">
             <div className="max-w-5xl">
                 <div className="inline-flex items-center gap-3 px-4 py-2 bg-white/5 border border-white/10 rounded-full text-white/60 text-xs font-mono tracking-[0.2em] mb-8 uppercase">
-                    <span className="w-2 h-2 rounded-full bg-oxot-blue animate-pulse"></span>
-                    M&A Operating Partners
+                    <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+                    AEON Cyber Digital Twin • M&A Due Diligence
                 </div>
 
                 <motion.h1
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
-                    className="text-5xl md:text-7xl lg:text-8xl font-black text-white uppercase tracking-tighter leading-[0.9] mb-12"
+                    className="text-5xl md:text-7xl lg:text-8xl font-black text-white uppercase tracking-tighter leading-[0.9] mb-6"
                 >
-                    Managing <span className="text-transparent bg-clip-text bg-gradient-to-br from-white to-slate-500">Cybersecurity Risk</span><br />
-                    <span className="text-oxot-blue">in Infrastructure M&A.</span>
+                    The <span className="text-transparent bg-clip-text bg-gradient-to-br from-yellow-400 to-orange-500">Lemon Detector</span><br />
+                    <span className="text-oxot-blue">for M&A.</span>
                 </motion.h1>
+
+                <motion.p
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.2 }}
+                    className="text-lg text-gray-400 max-w-2xl mb-12"
+                >
+                    Stress-test target networks with physics-based simulations.
+                    Quantify cyber debt as a dollar value. Detect hidden liabilities before you buy.
+                </motion.p>
 
                 <div className="grid md:grid-cols-3 gap-8 md:gap-16 border-t border-white/10 pt-12">
                     <div className="space-y-4 relative group">

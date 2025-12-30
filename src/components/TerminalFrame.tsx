@@ -9,7 +9,7 @@ import {
   Zap, Shield, Globe, Layers, Sigma,
   LayoutDashboard, Briefcase, Activity,
   Terminal, Search, Menu, X, BookOpen, Cpu,
-  Eye, Factory, Radio, Box, Building
+  Eye, Factory, Radio, Box, Building, Brain
 } from 'lucide-react'
 import { BackgroundEffect } from './BackgroundEffect'
 
@@ -18,16 +18,28 @@ const NAV_GROUPS = [
     title: "Operations",
     links: [
       { name: 'Gold Team', path: '/', icon: <Radio size={16} /> },
-      { name: 'Red Leader', path: '/offense', icon: <Terminal size={16} /> },
-      { name: 'Blue Team', path: '/defense', icon: <Shield size={16} /> },
+      {
+        name: 'Agent Red Leader',
+        path: '/offense',
+        icon: <Terminal size={16} />,
+        customHover: "group-hover:text-red-500 group-hover:drop-shadow-[0_0_8px_rgba(239,68,68,0.6)]"
+      },
+      {
+        name: 'Agent Blue Team',
+        path: '/defense',
+        icon: <Shield size={16} />,
+        customHover: "group-hover:text-cyan-400 group-hover:drop-shadow-[0_0_8px_rgba(34,211,238,0.6)]"
+      },
+      { name: 'OXOT Vision', path: '/vision', icon: <Eye size={16} /> },
     ]
   },
   {
     title: "Advisory",
     links: [
-      { name: 'M&A Due Diligence', path: '/acquisitions', icon: <Briefcase size={16} /> },
-      { name: 'SOC Integration', path: '/soc', icon: <Activity size={16} /> },
+      { name: 'NIS2 Compliance', path: '/nis2', icon: <Globe size={16} /> },
       { name: 'IEC 62443 Compliance', path: '/iec62443', icon: <LayoutDashboard size={16} /> },
+      { name: 'SOC Integration', path: '/soc', icon: <Activity size={16} /> },
+      { name: 'M&A Due Diligence', path: '/acquisitions', icon: <Briefcase size={16} /> },
       { name: 'Operator Playbook', path: '/playbook-operator', icon: <BookOpen size={16} /> },
       { name: 'Manufacturer Guide', path: '/playbook-manufacturer', icon: <Cpu size={16} /> },
     ]
@@ -35,17 +47,21 @@ const NAV_GROUPS = [
   {
     title: "Core Systems",
     links: [
-      { name: 'OXOT Vision', path: '/vision', icon: <Eye size={16} /> },
+
       { name: 'AEON Core', path: '/core', icon: <Activity size={16} /> },
       { name: '7-Layer Twin', path: '/architecture', icon: <Layers size={16} /> },
       { name: 'Sovereign Logic', path: '/logic', icon: <Sigma size={16} /> },
       { name: 'Concept Hub', path: '/concepts', icon: <Box size={16} /> },
+      { name: 'Applied Theory', path: '/theory', icon: <Brain size={16} /> },
     ]
   },
   {
     title: "Corporate",
     links: [
       { name: 'About OXOT', path: '/about', icon: <Building size={16} /> },
+      { name: 'Strategic Planning', path: '/corporate/strategic-planning', icon: <Briefcase size={16} />, customHover: "group-hover:text-amber-400 group-hover:drop-shadow-[0_0_8px_rgba(245,158,11,0.6)]" },
+      { name: 'Services Portfolio', path: '/corporate/services-portfolio', icon: <Activity size={16} /> },
+      { name: 'API Enhancements', path: '/corporate/enhancements', icon: <Zap size={16} /> },
     ]
   }
 ]
@@ -105,7 +121,7 @@ export default function TerminalFrame({ children }: { children: React.ReactNode 
                 {group.title}
               </h3>
               <div className="space-y-1">
-                {group.links.map((link) => (
+                {group.links.map((link: any) => (
                   <Link
                     key={link.path}
                     href={link.path}
@@ -118,8 +134,8 @@ export default function TerminalFrame({ children }: { children: React.ReactNode 
                     `}
                   >
                     <span className={`
-                      transition-colors duration-300
-                      ${pathname === link.path ? 'text-oxot-gold' : 'text-gray-600 group-hover:text-oxot-gold'}
+                      transition-all duration-300
+                      ${pathname === link.path ? 'text-oxot-gold' : `text-gray-600 ${link.customHover || 'group-hover:text-oxot-gold'}`}
                     `}>
                       {link.icon}
                     </span>
