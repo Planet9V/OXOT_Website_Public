@@ -307,6 +307,36 @@
         }
     },
     "acquisitions": {
+        "hero": {
+            "badge": "AEON Cyber Digitale Tweeling • M&A Due Diligence",
+            "title": "De Limoendetector",
+            "subtitle": "voor M&A.",
+            "titleHighlight": "Limoendetector",
+            "description": "Stress-test doelnetwerken met op fysica gebaseerde simulaties. Kwantificeer cyberschuld als een dollarwaarde. Detecteer verborgen risico's voordat u koopt."
+        },
+        "simulator": {
+            "badge": "Op Simulatie Gebaseerde Diligence",
+            "title": "Stress-Test",
+            "titleHighlight": "Voordat U Koopt."
+        },
+        "quantifiedRisk": {
+            "badge": "Gekwantificeerde Risicobeoordeling",
+            "title": "Verander Risico In",
+            "titleHighlight": "Dollars.",
+            "description": "MCDE transformeert kwalitatieve beveiligingsbeoordelingen in aanpassingen in dollarwaarde voor uw waarderingsmodel."
+        },
+        "timeline": {
+            "badge": "Risicobeperking Tijdlijn",
+            "title": "De Eerste 100 Dagen Risicovrij Maken",
+            "specialtyAdvantage": "SPECIALTY DD VOORDEEL",
+            "daysVsMonths": "3-10 Dagen vs 6-12 Maanden"
+        },
+        "expertise": {
+            "badge": "Sector Expertise",
+            "title": "Vragen op Bestuursniveau.",
+            "subtitle": "Technische Antwoorden.",
+            "description": "OXOT werkt samen met uw bestaande DD-adviseurs om sectorspecifieke technische antwoorden te geven op de vragen die uw Bestuur zal stellen."
+        },
         "cta": {
             "headline": "Detecteer cyber-miskopen voordat u koopt",
             "subheadline": "OXOT's M&A Cyber Due Diligence Engine (MCDE) gebruikt op fysica gebaseerde simulatie om verborgen cyberrisico's te kwantificeren. Zet kwalitatief risico om in waardeaanpassingen in dollars.",
@@ -318,6 +348,40 @@
         }
     },
     "strategic": {
+        "hero": {
+            "badge": "Strategisch // Adviesdiensten",
+            "title": "Governance &",
+            "titleHighlight": "Veerkracht",
+            "description": "Expertontwerp en adviesdiensten om uw voorspellende defensie af te stemmen op wereldwijde standaarden. Wij zorgen ervoor dat uw Digitale Tweeling een compliant, strategisch bezit is."
+        },
+        "services": {
+            "nis2": {
+                "title": "NIS2 Naleving",
+                "desc": "Volledige afstemming op de richtlijn van de Europese Unie voor kritieke infrastructuur entiteiten."
+            },
+            "advisory": {
+                "title": "Strategisch Advies",
+                "desc": "Risicorapportage op bestuursniveau en technische roadmaps met veerkracht als prioriteit."
+            },
+            "retainers": {
+                "title": "OT Retainers",
+                "desc": "24/7 toegang met prioriteit tot OXOT-hoofdarchitecten voor incidentrespons en verharding."
+            }
+        },
+        "focus": {
+            "title": "Beleid als Code",
+            "desc": "Wij vertalen wettelijke vereisten (IEC 62443, NIS2, NIST 800-53) naar functionele technische mijlpalen. Ons advies levert niet alleen papier op, maar een Gevalideerde Infrastructuur Staat.",
+            "certified": "IEC 62443 Gecertificeerd",
+            "compliant": "NIS2 Compliant"
+        },
+        "global": {
+            "title": "Wereldwijd Bereik",
+            "desc": "Gevestigd in Nederland, leveren wij strategische architectuurdiensten in Amerika, Europa en ANZ."
+        },
+        "partnerships": {
+            "title": "Partnerschappen",
+            "desc": "Collaboratieve OT Retainers met Dragos en diepere integraties met regionale instanties voor nationale dreigingsmodellering."
+        },
         "cta": {
             "headline": "Klaar om uw beveiligingspositie te transformeren?",
             "subheadline": "OXOT's AEON Cyber Digital Twin biedt voorspellende dreigingsinformatie die aanvallen anticipeert voordat ze plaatsvinden.",

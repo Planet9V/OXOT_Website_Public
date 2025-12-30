@@ -307,6 +307,36 @@
         }
     },
     "acquisitions": {
+        "hero": {
+            "badge": "AEON Cyber Digital Twin • M&A Due Diligence",
+            "title": "The Lemon Detector",
+            "subtitle": "for M&A.",
+            "titleHighlight": "Lemon Detector",
+            "description": "Stress-test target networks with physics-based simulations. Quantify cyber debt as a dollar value. Detect hidden liabilities before you buy."
+        },
+        "simulator": {
+            "badge": "Simulation-Based Diligence",
+            "title": "Stress-Test",
+            "titleHighlight": "Before You Buy."
+        },
+        "quantifiedRisk": {
+            "badge": "Quantified Risk Assessment",
+            "title": "Turn Risk Into",
+            "titleHighlight": "Dollars.",
+            "description": "MCDE transforms qualitative security assessments into dollar-denominated adjustments for your valuation model."
+        },
+        "timeline": {
+            "badge": "Risk Mitigation Timeline",
+            "title": "De-Risking the First 100 Days",
+            "specialtyAdvantage": "SPECIALTY DD ADVANTAGE",
+            "daysVsMonths": "3-10 Days vs 6-12 Months"
+        },
+        "expertise": {
+            "badge": "Sector Expertise",
+            "title": "Board-Level Questions.",
+            "subtitle": "Technical Answers.",
+            "description": "OXOT works alongside your existing DD advisors to provide sector-specific technical answers to the questions your Board will ask."
+        },
         "cta": {
             "headline": "Detect Cyber Lemons Before You Buy",
             "subheadline": "OXOT's M&A Cyber Due Diligence Engine (MCDE) uses physics-based simulation to quantify hidden cyber liabilities. Turn qualitative risk into dollar-denominated valuation adjustments.",
@@ -318,6 +348,40 @@
         }
     },
     "strategic": {
+        "hero": {
+            "badge": "Strategic // Advisory_Services",
+            "title": "Governance &",
+            "titleHighlight": "Resilience",
+            "description": "Expert design and consultancy services to align your predictive defense with global standards. We ensure your Digital Twin is a compliant, strategic asset."
+        },
+        "services": {
+            "nis2": {
+                "title": "NIS2 Compliance",
+                "desc": "Full alignment with European Union directive for critical infrastructure entities."
+            },
+            "advisory": {
+                "title": "Strategic Advisory",
+                "desc": "Board-level risk reporting and resilience-first engineering roadmaps."
+            },
+            "retainers": {
+                "title": "OT Retainers",
+                "desc": "Priority 24/7 access to OXOT lead architects for incident response and hardening."
+            }
+        },
+        "focus": {
+            "title": "Policy as Code",
+            "desc": "We translate regulatory requirements (IEC 62443, NIS2, NIST 800-53) into functional engineering milestones. Our consultancy doesn't just produce paper—it produces a Validated Infrastructure State.",
+            "certified": "IEC 62443 Certified",
+            "compliant": "NIS2 Compliant"
+        },
+        "global": {
+            "title": "Global Reach",
+            "desc": "Based in the Netherlands, we provide strategic architecture services across the Americas, Europe, and ANZ."
+        },
+        "partnerships": {
+            "title": "Partnerships",
+            "desc": "Collaborative OT Retainers with Dragos and deeper integrations with regional agencies for national threat modeling."
+        },
         "cta": {
             "headline": "Ready to Transform Your Security Posture?",
             "subheadline": "OXOT's AEON Cyber Digital Twin provides predictive threat intelligence that anticipates attacks before they happen.",

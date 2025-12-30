@@ -403,6 +403,36 @@ export interface PlaybookOperatorTranslations {
 
 
 export interface AcquisitionsTranslations {
+    hero: {
+        badge: string;
+        title: string;
+        titleHighlight: string;
+        subtitle: string;
+        description: string;
+    };
+    simulator: {
+        badge: string;
+        title: string;
+        titleHighlight: string;
+    };
+    quantifiedRisk: {
+        badge: string;
+        title: string;
+        titleHighlight: string;
+        description: string;
+    };
+    timeline: {
+        badge: string;
+        title: string;
+        specialtyAdvantage: string;
+        daysVsMonths: string;
+    };
+    expertise: {
+        badge: string;
+        title: string;
+        subtitle: string;
+        description: string;
+    };
     cta: {
         headline: string;
         subheadline: string;
@@ -415,6 +445,25 @@ export interface AcquisitionsTranslations {
 }
 
 export interface StrategicTranslations {
+    hero: {
+        badge: string;
+        title: string;
+        titleHighlight: string;
+        description: string;
+    };
+    services: {
+        nis2: { title: string; desc: string; };
+        advisory: { title: string; desc: string; };
+        retainers: { title: string; desc: string; };
+    };
+    focus: {
+        title: string;
+        desc: string;
+        certified: string;
+        compliant: string;
+    };
+    global: { title: string; desc: string; };
+    partnerships: { title: string; desc: string; };
     cta: {
         headline: string;
         subheadline: string;

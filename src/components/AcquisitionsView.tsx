@@ -69,10 +69,10 @@ export default function AcquisitionsView() {
                     <div className="mb-8">
                         <div className="text-cyan-400 text-xs font-mono uppercase tracking-widest mb-4 flex items-center gap-2">
                             <Activity className="w-4 h-4" />
-                            Simulation-Based Diligence
+                            {t.acquisitions.simulator.badge}
                         </div>
                         <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tight">
-                            Stress-Test <span className="text-cyan-400">Before You Buy.</span>
+                            {t.acquisitions.simulator.title} <span className="text-cyan-400">{t.acquisitions.simulator.titleHighlight}</span>
                         </h2>
                     </div>
                     <MCDESimulator />
@@ -83,13 +83,13 @@ export default function AcquisitionsView() {
                     <div className="mb-8">
                         <div className="text-oxot-gold text-xs font-mono uppercase tracking-widest mb-4 flex items-center gap-2">
                             <Calculator className="w-4 h-4" />
-                            Quantified Risk Assessment
+                            {t.acquisitions.quantifiedRisk.badge}
                         </div>
                         <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tight">
-                            Turn Risk Into <span className="text-oxot-gold">Dollars.</span>
+                            {t.acquisitions.quantifiedRisk.title} <span className="text-oxot-gold">{t.acquisitions.quantifiedRisk.titleHighlight}</span>
                         </h2>
                         <p className="text-gray-400 mt-4 max-w-2xl">
-                            MCDE transforms qualitative security assessments into dollar-denominated adjustments for your valuation model.
+                            {t.acquisitions.quantifiedRisk.description}
                         </p>
                     </div>
                     <div className="grid lg:grid-cols-2 gap-6">
@@ -126,12 +126,12 @@ export default function AcquisitionsView() {
                 <div className="max-w-7xl mx-auto mt-32 mb-32">
                     <div className="flex items-end justify-between border-b border-white/10 pb-6 mb-12">
                         <div>
-                            <div className="text-oxot-blue text-xs font-mono uppercase tracking-widest mb-2">Risk Mitigation Timeline</div>
-                            <h2 className="text-3xl font-black text-white uppercase tracking-tight">De-Risking the First 100 Days</h2>
+                            <div className="text-oxot-blue text-xs font-mono uppercase tracking-widest mb-2">{t.acquisitions.timeline.badge}</div>
+                            <h2 className="text-3xl font-black text-white uppercase tracking-tight">{t.acquisitions.timeline.title}</h2>
                         </div>
                         <div className="hidden md:block text-right">
-                            <div className="text-xs text-gray-500 font-mono">SPECIALTY DD ADVANTAGE</div>
-                            <div className="text-xl font-bold text-oxot-blue">3-10 Days vs 6-12 Months</div>
+                            <div className="text-xs text-gray-500 font-mono">{t.acquisitions.timeline.specialtyAdvantage}</div>
+                            <div className="text-xl font-bold text-oxot-blue">{t.acquisitions.timeline.daysVsMonths}</div>
                         </div>
                     </div>
                     <DealTimeline />
@@ -140,12 +140,12 @@ export default function AcquisitionsView() {
                 {/* Sector-Specific Playbooks */}
                 <div className="max-w-7xl mx-auto mt-32">
                     <div className="mb-12">
-                        <div className="text-oxot-blue text-xs font-mono uppercase tracking-widest mb-4">Sector Expertise</div>
+                        <div className="text-oxot-blue text-xs font-mono uppercase tracking-widest mb-4">{t.acquisitions.expertise.badge}</div>
                         <h2 className="text-3xl font-black text-white uppercase tracking-tight mb-4">
-                            Board-Level Questions. <span className="text-gray-500">Technical Answers.</span>
+                            {t.acquisitions.expertise.title} <span className="text-gray-500">{t.acquisitions.expertise.subtitle}</span>
                         </h2>
                         <p className="text-gray-400 text-lg max-w-3xl">
-                            OXOT works alongside your existing DD advisors to provide sector-specific technical answers to the questions your Board will ask.
+                            {t.acquisitions.expertise.description}
                         </p>
                     </div>
                     <GovernanceGates />
@@ -172,12 +172,13 @@ export default function AcquisitionsView() {
 // ================= SUB-COMPONENTS =================
 
 const HeroSection = () => {
+    const { t } = useTranslations()
     return (
         <section className="h-screen flex flex-col items-center justify-center relative px-6">
             <div className="max-w-5xl flex flex-col items-center text-center">
                 <div className="inline-flex items-center gap-3 px-4 py-2 bg-white/5 border border-white/10 rounded-full text-white/60 text-xs font-mono tracking-[0.2em] mb-8 uppercase">
                     <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
-                    AEON Cyber Digital Twin • M&A Due Diligence
+                    {t.acquisitions.hero.badge}
                 </div>
 
                 <motion.h1
@@ -186,8 +187,8 @@ const HeroSection = () => {
                     transition={{ duration: 0.8 }}
                     className="text-5xl md:text-7xl lg:text-8xl font-black text-white uppercase tracking-tighter leading-[0.9] mb-6"
                 >
-                    The <span className="text-transparent bg-clip-text bg-gradient-to-br from-yellow-400 to-orange-500">Lemon Detector</span><br />
-                    <span className="text-oxot-blue">for M&A.</span>
+                    {t.acquisitions.hero.title}<br />
+                    <span className="text-oxot-blue">{t.acquisitions.hero.subtitle}</span>
                 </motion.h1>
 
                 <motion.p
@@ -196,8 +197,7 @@ const HeroSection = () => {
                     transition={{ duration: 0.8, delay: 0.2 }}
                     className="text-lg text-gray-400 max-w-2xl mb-12 mx-auto"
                 >
-                    Stress-test target networks with physics-based simulations.
-                    Quantify cyber debt as a dollar value. Detect hidden liabilities before you buy.
+                    {t.acquisitions.hero.description}
                 </motion.p>
 
                 <div className="grid md:grid-cols-3 gap-8 md:gap-16 border-t border-white/10 pt-12 text-left">

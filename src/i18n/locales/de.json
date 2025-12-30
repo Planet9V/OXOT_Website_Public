@@ -434,6 +434,92 @@
             "Asien-Pazifik"
         ]
     },
+    "acquisitions": {
+        "hero": {
+            "badge": "AEON Cyber Digital Twin • M&A Due Diligence",
+            "title": "Der Zitronendetektor",
+            "subtitle": "für M&A.",
+            "titleHighlight": "Zitronendetektor",
+            "description": "Stress-Testen Sie Zielnetzwerke mit physikbasierten Simulationen. Quantifizieren Sie Cyber-Schulden als Dollarwert. Erkennen Sie versteckte Verbindlichkeiten vor dem Kauf."
+        },
+        "simulator": {
+            "badge": "Simulationsbasierte Diligence",
+            "title": "Stress-Test",
+            "titleHighlight": "Vor Dem Kauf."
+        },
+        "quantifiedRisk": {
+            "badge": "Quantifizierte Risikobewertung",
+            "title": "Verwandeln Sie Risiko In",
+            "titleHighlight": "Dollars.",
+            "description": "MCDE transformiert qualitative Sicherheitsbewertungen in dollarbasierte Anpassungen für Ihr Bewertungsmodell."
+        },
+        "timeline": {
+            "badge": "Risikominderungs-Zeitplan",
+            "title": "Die Ersten 100 Tage Entschärfen",
+            "specialtyAdvantage": "SPEZIAL-DD VORTEIL",
+            "daysVsMonths": "3-10 Tage vs 6-12 Monate"
+        },
+        "expertise": {
+            "badge": "Sektor-Expertise",
+            "title": "Fragen auf Vorstandsebene.",
+            "subtitle": "Technische Antworten.",
+            "description": "OXOT arbeitet mit Ihren bestehenden DD-Beratern zusammen, um sektorspezifische technische Antworten auf die Fragen Ihres Vorstands zu liefern."
+        },
+        "cta": {
+            "headline": "In Cyber-Zitronen Investieren?",
+            "subheadline": "OXOTs M&A Cyber Due Diligence Engine (MCDE) nutzt physikbasierte Simulationen, um versteckte Cyber-Verbindlichkeiten zu quantifizieren. Verwandeln Sie qualitatives Risiko in Bewertungsanpassungen.",
+            "serviceOptions": {
+                "full": "Vollständige MCDE-Analyse ($100K)",
+                "lite": "MCDE Lite Screening ($25K)",
+                "premium": "MCDE Premium + Red Team ($250K)"
+            }
+        }
+    },
+    "strategic": {
+        "hero": {
+            "badge": "Strategisch // Beratungsleistungen",
+            "title": "Governance &",
+            "titleHighlight": "Resilienz",
+            "description": "Expertendesign und Beratungsdienste, um Ihre prädiktive Verteidigung mit globalen Standards in Einklang zu bringen. Wir stellen sicher, dass Ihr Digital Twin ein konformes, strategisches Asset ist."
+        },
+        "services": {
+            "nis2": {
+                "title": "NIS2 Konformität",
+                "desc": "Vollständige Ausrichtung auf die Richtlinie der Europäischen Union für kritische Infrastruktureinrichtungen."
+            },
+            "advisory": {
+                "title": "Strategische Beratung",
+                "desc": "Risikoberichterstattung auf Vorstandsebene und resilienzorientierte Engineering-Roadmaps."
+            },
+            "retainers": {
+                "title": "OT Retainer",
+                "desc": "24/7-Vorrangzugang zu OXOT-Chefarchitekten für Vorfallreaktion und Härtung."
+            }
+        },
+        "focus": {
+            "title": "Policy as Code",
+            "desc": "Wir übersetzen regulatorische Anforderungen (IEC 62443, NIS2, NIST 800-53) in funktionale technische Meilensteine. Unsere Beratung produziert nicht nur Papier – sie produziert einen Validierten Infrastrukturstatus.",
+            "certified": "IEC 62443 Zertifiziert",
+            "compliant": "NIS2 Konform"
+        },
+        "global": {
+            "title": "Globale Reichweite",
+            "desc": "Mit Sitz in den Niederlanden bieten wir strategische Architekturdienste in Amerika, Europa und ANZ an."
+        },
+        "partnerships": {
+            "title": "Partnerschaften",
+            "desc": "Kollaborative OT Retainer mit Dragos und tiefere Integrationen mit regionalen Agenturen für nationale Bedrohungsmodellierung."
+        },
+        "cta": {
+            "headline": "Bereit, Ihre Sicherheitslage zu Transformieren?",
+            "subheadline": "OXOTs AEON Cyber Digital Twin bietet prädiktive Bedrohungsinformationen, die Angriffe antizipieren, bevor sie geschehen.",
+            "serviceOptions": {
+                "pilot": "90-Tage Proof of Value Pilot",
+                "assessment": "Strategische Portfolio-Bewertung",
+                "briefing": "Executive Briefing"
+            }
+        }
+    },
     "soc": {
         "hero": {
             "badge": "Service_ID: 05 // SOC_Kommando",
