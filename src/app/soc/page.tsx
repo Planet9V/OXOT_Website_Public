@@ -46,8 +46,8 @@ export default function SOCPage() {
             transition={{ duration: 0.8 }}
             className="text-5xl md:text-7xl lg:text-8xl font-black text-white uppercase tracking-tighter leading-[0.9] mb-8"
           >
-            SOC Command<br />
-            <span className="text-oxot-blue font-bold">Integration</span>
+            {t.soc.hero.title}<br />
+            <span className="text-oxot-blue font-bold">{t.soc.hero.titleHighlight}</span>
           </motion.h1>
 
           <motion.p
@@ -446,13 +446,7 @@ export default function SOCPage() {
               </div>
 
               <ul className="space-y-2 mb-6">
-                {[
-                  "Continuous Threat Hunting (293 APT Profiles)",
-                  "Real-time EPSS Risk Prioritization",
-                  "Sigma/YARA Detection Engineering",
-                  "Incident Response (4hr SLA)",
-                  "Monthly Purple Team Validation"
-                ].map((feat, i) => (
+                {t.soc.engagement.models.blue.features.map((feat, i) => (
                   <li key={i} className="flex items-center gap-2 text-sm text-gray-300">
                     <CheckCircle size={14} className="text-oxot-blue shrink-0" />
                     {feat}
