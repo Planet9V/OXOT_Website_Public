@@ -62,8 +62,470 @@
         "whyOxotHighlight": "Elite Architecten.",
         "whyOxotDescription": "Wij combineren diepgaande OT/ICS expertise met AI-ondersteunde analysemogelijkheden die geen traditioneel adviesbureau kan evenaren."
     },
+    "vision": {
+        "cta": {
+            "headline": "De toekomst behoort toe aan de voorbereiden.",
+            "subheadline": "Sluit u aan bij organisaties die bouwen aan soevereine digitale immuniteit."
+        }
+    },
+    "agentBlue": {
+        "cta": {
+            "headline": "Elk uur zonder voorspellende defensie is een blinde vlek.",
+            "subheadline": "CISO's kunnen niet beschermen wat ze niet kunnen voorspellen. Blijf de dreigingscurve voor."
+        }
+    },
+    "agentRed": {
+        "cta": {
+            "headline": "Uw tegenstanders zijn al aan het werk.",
+            "subheadline": "Bent u klaar om te zien wat zij zien?"
+        }
+    },
+    "goldTeam": {
+        "cta": {
+            "headline": "Uw bestuur stelt moeilijke vragen.",
+            "subheadline": "Heeft u de antwoorden die zij nodig hebben?"
+        }
+    },
+    "nis2": {
+        "cta": {
+            "headline": "Klaar voor NIS2-naleving?",
+            "subheadline": "Wacht niet op handhavingsacties. Krijg deskundige begeleiding om naleving te bereiken en te behouden.",
+            "serviceOptions": {
+                "assessment": "NIS2 Hiatenanalyse",
+                "implementation": "Volledig Implementatieprogramma",
+                "audit": "Auditvoorbereiding"
+            }
+        }
+    },
+    "iec62443": {
+        "cta": {
+            "headline": "Klaar voor Certificering?",
+            "subheadline": "70% van de IEC 62443-fouten komt door verkeerd begrepen vereisten. Krijg deskundige voorbereiding.",
+            "serviceOptions": {
+                "prep": "IEC 62443 Certificeringsvoorbereiding",
+                "assessment": "OT Beveiligingsbeoordeling"
+            }
+        }
+    },
+    "workshop": {
+        "cta": {
+            "headline": "Klaar voor praktijktraining?",
+            "subheadline": "Volg workshops onder leiding van experts met deze tools in uw eigen systemen.",
+            "serviceOptions": {
+                "workshop": "IEC 62443 Workshop",
+                "program": "Aangepast Trainingsprogramma"
+            }
+        }
+    },
+    "playbookOperator": {
+        "cta": {
+            "headline": "Elk nalevingshiaat is een aanvalsvlak.",
+            "subheadline": "IEC 62443 is geen papierwerk, het is uw operationele basis. Laten we de gaten dichten.",
+            "serviceOptions": {
+                "advisory": "IEC 62443 Advies",
+                "operations": "Blue Team Operaties"
+            }
+        }
+    },
+    "playbookManufacturer": {
+        "cta": {
+            "headline": "Geen SDL = Geen toegang tot de markt.",
+            "subheadline": "Wereldwijde kopers eisen IEC 62443-4-1 gecertificeerde producten. Bouw het in of word buitengesloten.",
+            "serviceOptions": {
+                "advisory": "SDL-certificeringsadvies",
+                "review": "Productbeveiligingsbeoordeling"
+            }
+        }
+    },
+    "about": {
+        "cta": {
+            "headline": "Begin uw soevereine reis.",
+            "subheadline": "Werk samen met de toonaangevende cyberdefensiepraktijk van Amsterdam.",
+            "serviceOptions": {
+                "blue": "Blue Team Defensie",
+                "gold": "Strategisch Advies Gold",
+                "red": "Red Team Offensief",
+                "general": "Algemene Aanvraag"
+            }
+        }
+    },
+    "socV2": {
+        "cta": {
+            "headline": "Co-piloot of Autopiloot?",
+            "subheadline": "Kies het betrokkenheidsmodel dat bij uw volwassenheid past. Beide worden aangedreven door Agent Blue.",
+            "serviceOptions": {
+                "copilot": "Co-piloot (Verbetering)",
+                "autopilot": "Autopiloot (Beheerd)"
+            }
+        }
+    },
+    "acquisitions": {
+        "cta": {
+            "headline": "Detecteer cyber-miskopen voordat u koopt",
+            "subheadline": "OXOT's M&A Cyber Due Diligence Engine (MCDE) gebruikt op fysica gebaseerde simulatie om verborgen cyberrisico's te kwantificeren. Zet kwalitatief risico om in waardeaanpassingen in dollars.",
+            "serviceOptions": {
+                "full": "Volledige MCDE-analyse ($100K)",
+                "lite": "MCDE Lite-screening ($25K)",
+                "premium": "MCDE Premium + Red Team ($250K)"
+            }
+        }
+    },
+    "strategic": {
+        "cta": {
+            "headline": "Klaar om uw beveiligingspositie te transformeren?",
+            "subheadline": "OXOT's AEON Cyber Digital Twin biedt voorspellende dreigingsinformatie die aanvallen anticipeert voordat ze plaatsvinden.",
+            "serviceOptions": {
+                "pilot": "90-daagse pilot ('Proof of Value')",
+                "assessment": "Strategische portefeuillebeoordeling",
+                "briefing": "Executive Briefing"
+            }
+        }
+    },
+    "soc": {
+        "hero": {
+            "badge": "Service_ID: 05 // SOC_Commando",
+            "title": "SOC Commando",
+            "titleHighlight": "Integratie",
+            "subtitle": "Operationaliseer voorspellende intelligentie. Transformeer uw SOC van een reactieve wachtrij naar een <span class=\"text-white font-medium\">pre-cognitieve defensie motor</span>.",
+            "stats": {
+                "coverage": "95% MITRE Dekking",
+                "mttd": "40% Snellere MTTD",
+                "noiseRef": "70% Ruisreductie"
+            },
+            "scroll": "Initialiseer Console"
+        },
+        "modules": {
+            "title": "Actieve Defensie Modules",
+            "status": "SYS.MOD.GELADEN",
+            "telemetry": {
+                "title": "Telemetrie Spiegeling",
+                "desc": "Directe high-fidelity telemetrie-injectie vanuit uw SIEM (Splunk, Sentinel, QRadar) in de E27 Voorspellingsmotor voor real-time risico-mapping."
+            },
+            "hunting": {
+                "title": "Geautomatiseerd Threat Hunting",
+                "desc": "Hypothese-gedreven jacht generatie gebaseerd op 293 APT-specifieke profielen. Wij vertellen uw analisten precies waar te zoeken."
+            },
+            "detection": {
+                "title": "Detectie Engineering",
+                "desc": "Continue Sigma-regel generatie en tunen van valse positieven. Valideer detectielogica tegen real-world vijand TTP's in real-time."
+            },
+            "psychometrics": {
+                "title": "Psychometrische Profilering",
+                "desc": "Verrijk standaard indicatoren met vijandige psychologie. Begrijp NIET alleen 'wat' u raakte, maar 'waarom', 'wie', en 'wat ze hierna doen'."
+            },
+            "blueAI": {
+                "title": "Blue Team AI",
+                "desc": "Verbetert de menselijke ervaring met playbooks, chat en conversationele spraakinteracties. Werkt autonoom on-premise."
+            },
+            "redLeader": {
+                "title": "Red Leader Validatie",
+                "desc": "Continue validatie met Red Squadron Leader—scenario-gebaseerde emulatie over sofisticatieniveaus van opportunistische hackers tot staatshackers."
+            }
+        },
+        "architecture": {
+            "title": "AEON Cyber Digitale Tweeling Architectuur",
+            "layer": "LAAG_0: Component-Niveau Infrastructuur Modellering",
+            "zones": {
+                "title": "Zones & Leidingen",
+                "desc": "Visualiseer IEC 62443 beveiligingszones met SL kleurcodering. Klik op componenten voor SBOM details."
+            },
+            "sbom": {
+                "title": "SBOM Traceerbaarheid",
+                "desc": "Traceer kwetsbaarheden van CVE → Bibliotheek → Interface → Sub-Component → Systeem → Faciliteit."
+            },
+            "epss": {
+                "title": "EPSS Integratie",
+                "desc": "Real-time exploitatie kansscores voor elke bibliotheek in uw OT infrastructuur."
+            },
+            "twinCore": "Digitale Tweeling Kern // TIER III",
+            "canvas": {
+                "title": "Interactief Engineering Canvas",
+                "desc": "Een complete <span class=\"text-white font-bold\">IEC 62443 zone architectuur</span> met 45+ assets over 8 beveiligingszones.",
+                "interaction": "<strong class=\"text-oxot-blue-light\">Interactie:</strong> Sleep om te pannen • Scrol om te zoomen • Klik op een asset voor details."
+            },
+            "hierarchy": "Hiërarchie Navigator",
+            "framework": {
+                "title": "NU / STRAKS / NOOIT",
+                "desc": "Een <span class=\"text-white font-bold\">strategisch prioriteringskader</span> aangedreven door de volledige AEON Cyber Digitale Tweeling.",
+                "now": {
+                    "title": "NU",
+                    "sub": "ONMIDDELLIJKE ACTIE",
+                    "action": "ACTIE: Noodwijziging / OpEx gerechtvaardigd"
+                },
+                "next": {
+                    "title": "STRAKS",
+                    "sub": "GEPLANDE REMEDIËRING",
+                    "action": "ACTIE: CapEx planning / Volgende onderhoudscyclus"
+                },
+                "never": {
+                    "title": "NOOIT",
+                    "sub": "ACCEPTEER RISICO / BACKLOG",
+                    "action": "ACTIE: Documenteer risico-acceptatie / Monitor"
+                },
+                "inputs": {
+                    "title": "Beslissingsinvoer van AEON Kern"
+                },
+                "note": "<strong class=\"text-oxot-blue-light\">Verbetert menselijke beslissingen, vervangt ze niet.</strong> AEON synthetiseert enorme data tot actiegerichte intelligentie."
+            }
+        },
+        "engagement": {
+            "title": "Betrokkenheidsmodellen",
+            "desc": "SOC-gerichte opties om uw beveiligingsoperaties te transformeren.",
+            "models": {
+                "blue": {
+                    "title": "BLUE DIENSTEN",
+                    "sub": "VOORSPELLENDE DEFENSIE OPERATIES",
+                    "desc": "Transformeer uw SOC van reactief naar pre-cognitief. Kies uw implementatiemodel op basis van operationele behoeften.",
+                    "optionA": {
+                        "title": "Optie A: SOC Verbetering",
+                        "desc": "Wij hosten de AEON Motor en integreren met uw bestaande SOC/SIEM om deze te verrijken met Agent Blue voorspellende intelligentie."
+                    },
+                    "optionB": {
+                        "title": "Optie B: Beheerd SOC",
+                        "desc": "Volledig beheerd SOC met AEON Cyber Digitale Tweeling, on-premise Blue Team Docker satellieten en 24/7 menselijk toezicht."
+                    },
+                    "features": [
+                        "Continue Threat Hunting (293 APT Profielen)",
+                        "Real-time EPSS Risicoprioritering",
+                        "Sigma/YARA Detectie Engineering",
+                        "Incident Respons (4u SLA)",
+                        "Maandelijkse Purple Team Validatie"
+                    ],
+                    "cta": "Implementeer Blue Team"
+                },
+                "gold": {
+                    "title": "GOLD DIENSTEN",
+                    "sub": "AANVULLEND ADVIES",
+                    "desc": "Strategische diensten die uw SOC-operaties aanvullen. Versnel volwassenheid en optimaliseer uw beveiligingspositie.",
+                    "advisory": {
+                        "title": "SOC-Gericht Advies",
+                        "desc": "Gold Team diensten ontworpen om uw Blue Team operaties te verbeteren—van architectuur tot compliance."
+                    },
+                    "features": [
+                        "SOC Moderniseringsstrategie",
+                        "Detectie Engineering Consult",
+                        "Crisis War Gaming & Tabletop Oefeningen",
+                        "IEC 62443 Architectuur & Certificering",
+                        "Directie & Raad van Bestuur Advies",
+                        "Regelgeving Compliance (NERC CIP, NIS2)"
+                    ],
+                    "cta": "Plan Consultatie"
+                }
+            }
+        },
+        "cta": {
+            "headline": "Uw analisten verdrinken in 70% ruis.",
+            "subheadline": "Aanvallers glippen erdoor als SOC-teams valse positieven najagen. Kies voor voorspellende verdediging.",
+            "options": {
+                "blue": "Blue Team Operaties",
+                "gold": "Gold Team Advies"
+            }
+        },
+        "tags": {
+            "telemetry": [
+                "Splunk",
+                "Sentinel",
+                "Elastic"
+            ],
+            "hunting": [
+                "APT29",
+                "Lazarus",
+                "Volt Typhoon"
+            ],
+            "detection": [
+                "Sigma",
+                "YARA",
+                "Snort"
+            ],
+            "psychometrics": [
+                "Big 5 Eigenschappen",
+                "Duistere Driehoek"
+            ],
+            "blueAI": [
+                "Spraak AI",
+                "Playbooks",
+                "Auto-Escalatie"
+            ],
+            "redLeader": [
+                "Red Squadron",
+                "APT Emulatie",
+                "Natiestaat"
+            ]
+        },
+        "architectureLegend": {
+            "aeonCloud": {
+                "title": "AEON Cloud",
+                "desc": "Kern, Red/Gold Team, Dreigingsinformatie, Simulatie Motor"
+            },
+            "blueServer": {
+                "title": "Blue Team Server",
+                "desc": "Lokale Tweeling, Telemetrie Opslag, Besluitvormingsmotor, Collector"
+            },
+            "dataDiode": {
+                "title": "Data Diode",
+                "desc": "Eenrichtingsgateway voor dreigingsinformatie in OT-omgeving"
+            },
+            "otAssets": {
+                "title": "OT Activa",
+                "desc": "SCADA, PLC's, HMI's, Generatoren, Koelmachines, GBS, PDU's"
+            }
+        },
+        "meta": {
+            "serviceId": "Service_ID: 05 // SOC_Commando",
+            "globalDeployment": "WERELDWIJDE_IMPLEMENTATIE",
+            "primaryService": "Primaire Dienst",
+            "decisionFramework": "AEON BESLUITVORMINGSKADER"
+        },
+        "framework": {
+            "title": "Besluitvormingskader",
+            "desc": "Hoe AEON Core telemetrie verwerkt en kritieke acties in real-time bepaalt.",
+            "now": {
+                "title": "NU",
+                "sub": "ONMIDDELLIJKE ACTIE VEREIST",
+                "action": "ACTIE: GEAUTOMATISEERDE BLOKKERING / ISOLATIE",
+                "bullets": [
+                    "Actieve exploitatie gedetecteerd in klanttelemetrie",
+                    "EPSS > 10% EN asset in kritiek pad",
+                    "Red Team bevestigde exploitabiliteit in Digitale Tweeling",
+                    "Veiligheidssysteem (SIS/SIL) met bekende kwetsbaarheid"
+                ]
+            },
+            "next": {
+                "title": "VOLGENDE",
+                "sub": "GEPLANDE REMEDIËRING",
+                "action": "ACTIE: TICKET AANMAKEN / PATCHEN",
+                "bullets": [
+                    "Stijgende EPSS-trend (1-10%) met aanvalspadpotentieel",
+                    "SBOM-afhankelijkheid met upstream kwetsbaarheid",
+                    "Asset in dreigingsmodel maar geen actieve exploitatie",
+                    "Renovatiekans sluit aan bij onderhoudsvenster"
+                ]
+            },
+            "never": {
+                "title": "NOOIT",
+                "sub": "RISICO ACCEPTATIE / MONITORING",
+                "action": "ACTIE: ALLEEN LOGGEN / MONITOREN",
+                "bullets": [
+                    "EPSS < 1% zonder aanvalspad in dreigingsmodel",
+                    "Netwerk-geïsoleerd asset met compenserende controles",
+                    "Theoretische CVE zonder wapen in het wild",
+                    "Bedrijfsimpact onder risicocriteriumdrempel"
+                ]
+            },
+            "inputs": {
+                "title": "INTELLIGENTIE INPUTS"
+            },
+            "inputsLegend": {
+                "blue": {
+                    "title": "Blue Team",
+                    "desc": "Dreigingsinformatie, CVE/EPSS, APT profielen"
+                },
+                "red": {
+                    "title": "Red Team",
+                    "desc": "Aanvalspad validatie, exploitabiliteit"
+                },
+                "gold": {
+                    "title": "Gold Team",
+                    "desc": "Bedrijfscontext, ROI, renovatieschema's"
+                },
+                "twin": {
+                    "title": "Digitale Tweeling",
+                    "desc": "Asset modellen, SBOM's, telemetrie"
+                }
+            },
+            "note": "Opmerking: Menselijke analisten geven definitieve toestemming voor high-impact blokkeringsacties in OT-omgevingen."
+        }
+    },
     "cta": {
-        "headline": "Uw Raad van Bestuur Stelt Moeilijke Vragen.",
-        "subheadline": "Heeft U de Antwoorden Die Ze Nodig Hebben?"
+        "defaultHeadline": "Uw tegenstanders zijn al bezig.",
+        "defaultSubheadline": "Bent u klaar om te zien wat zij zien?",
+        "success": {
+            "title": "Bericht Ontvangen.",
+            "message": "Ons team zal uw aanvraag beoordelen en binnen 24 uur contact opnemen. Uw tegenstanders wachten intussen niet—blijf waakzaam."
+        },
+        "threatAdvisory": {
+            "label": "DREIGINGSADVIES:",
+            "message": "Terwijl u deze pagina leest, scannen tegenstanders uw perimeter actief op zwakke plekken."
+        },
+        "briefingRequest": {
+            "prefix": "Vraag een",
+            "link": "gratis dreigingslandschap briefing aan",
+            "description": "Ons team analyseert het huidige dreigingsprofiel van uw sector en identificeert de meest kritieke blootstellingspunten van uw organisatie—geen verplichtingen."
+        },
+        "trustSignals": {
+            "standards": {
+                "title": "In lijn met industriestandaarden",
+                "desc": "Methodologie gebaseerd op CISA-kaders, ICS-CERT-adviezen en de MITRE ATT&CK-matrix."
+            },
+            "sectors": {
+                "title": "Vertrouwd in alle 16 kritieke sectoren",
+                "desc": "Van energienetwerken tot financiële instellingen, wij begrijpen sectorspecifieke dreigingen."
+            },
+            "engagements": {
+                "title": "Beperkte kwartaalbetrokkenheid",
+                "desc": "Wij maximeren onze Red Team-opdrachten om kwaliteit te waarborgen. Reserveer uw slot tijdig."
+            }
+        },
+        "quote": {
+            "text": "Het AEON Red Team identificeerde aanvalspaden waarvan we geen idee hadden. Hun grafiekgebaseerde aanpak vond een keten van 14 stappen van een leveranciersportaal naar ons SCADA-netwerk.",
+            "author": "CS",
+            "authorTitle": "CISO, Fortune 500 Energiebedrijf",
+            "verified": "Geverifieerde Betrokkenheid"
+        },
+        "form": {
+            "title": "Vraag uw Briefing Aan",
+            "labels": {
+                "name": "Volledige Naam *",
+                "title": "Functietitel *",
+                "email": "Werk Email *",
+                "org": "Organisatie *",
+                "sector": "Sector *",
+                "region": "Regio *",
+                "service": "Dienst Interesse *",
+                "concerns": "Wat zijn uw voornaamste zorgen? (Optioneel)"
+            },
+            "placeholders": {
+                "name": "Janneke Smit",
+                "title": "VP, Security Operations",
+                "email": "janneke.smit@bedrijf.nl",
+                "org": "Acme Corporatie",
+                "concerns": "Bijv. We maken ons zorgen over supply chain risico's en IT/OT convergentie...",
+                "selectSector": "Selecteer Sector",
+                "selectRegion": "Selecteer Regio"
+            },
+            "submit": "Vraag Dreigingsbriefing Aan",
+            "submitting": "Verzenden...",
+            "disclaimer": "Door te verzenden, gaat u akkoord met een vertrouwelijk, vrijblijvend gesprek met ons team."
+        },
+        "urgency": {
+            "label": "Gemiddelde responstijd:",
+            "value": "Minder dan 4 uur"
+        },
+        "sectors": [
+            "Energie",
+            "Water & Afvalwater",
+            "Gezondheidszorg & Volksgezondheid",
+            "Financiële Diensten",
+            "Transportsystemen",
+            "Communicatie",
+            "Informatietechnologie",
+            "Productie",
+            "Defensie Industriële Basis",
+            "Voedsel & Landbouw",
+            "Overheidsfaciliteiten",
+            "Nooddiensten",
+            "Kernreactoren",
+            "Chemie",
+            "Commerciële Faciliteiten",
+            "Dammen",
+            "Overig"
+        ],
+        "regions": [
+            "Noord-Amerika",
+            "Europa, Midden-Oosten & Afrika (EMEA)",
+            "Azië-Pacific (APAC)",
+            "Latijns-Amerika",
+            "Wereldwijd / Multi-Regio"
+        ]
     }
 }

@@ -62,8 +62,470 @@
         "whyOxotHighlight": "Elite Architects.",
         "whyOxotDescription": "We combine deep OT/ICS expertise with AI-augmented analysis capabilities that no traditional consultancy can match."
     },
+    "vision": {
+        "cta": {
+            "headline": "The Future Belongs to the Prepared.",
+            "subheadline": "Join the Organizations Building Sovereign Digital Immunity."
+        }
+    },
+    "agentBlue": {
+        "cta": {
+            "headline": "Every Hour Without Predictive Defense Is a Blind Spot.",
+            "subheadline": "CISOs can't protect what they can't predict. Get ahead of the threat curve."
+        }
+    },
+    "agentRed": {
+        "cta": {
+            "headline": "Your Adversaries Are Already Working.",
+            "subheadline": "Are You Ready to See What They See?"
+        }
+    },
+    "goldTeam": {
+        "cta": {
+            "headline": "Your Board Is Asking Hard Questions.",
+            "subheadline": "Do You Have the Answers They Need?"
+        }
+    },
+    "nis2": {
+        "cta": {
+            "headline": "Ready for NIS2 Compliance?",
+            "subheadline": "Don't wait for enforcement action. Get expert guidance to achieve and maintain compliance.",
+            "serviceOptions": {
+                "assessment": "NIS2 Gap Assessment",
+                "implementation": "Full Implementation Program",
+                "audit": "Audit Preparation"
+            }
+        }
+    },
+    "iec62443": {
+        "cta": {
+            "headline": "Ready to Get Certified?",
+            "subheadline": "70% of IEC 62443 failures come from misunderstood requirements. Get expert-led preparation.",
+            "serviceOptions": {
+                "prep": "IEC 62443 Certification Prep",
+                "assessment": "OT Security Assessment"
+            }
+        }
+    },
+    "workshop": {
+        "cta": {
+            "headline": "Ready for Hands-On Training?",
+            "subheadline": "Get expert-led workshops using these tools with your actual systems.",
+            "serviceOptions": {
+                "workshop": "IEC 62443 Workshop",
+                "program": "Custom Training Program"
+            }
+        }
+    },
+    "playbookOperator": {
+        "cta": {
+            "headline": "Every Compliance Gap Is an Attack Surface.",
+            "subheadline": "IEC 62443 isn't paperwork—it's your operational foundation. Let's close the gaps.",
+            "serviceOptions": {
+                "advisory": "IEC 62443 Advisory",
+                "operations": "Blue Team Operations"
+            }
+        }
+    },
+    "playbookManufacturer": {
+        "cta": {
+            "headline": "No SDL = No Market Access.",
+            "subheadline": "Global buyers demand IEC 62443-4-1 certified products. Build it in or get locked out.",
+            "serviceOptions": {
+                "advisory": "SDL Certification Advisory",
+                "review": "Product Security Review"
+            }
+        }
+    },
+    "about": {
+        "cta": {
+            "headline": "Begin Your Sovereign Journey.",
+            "subheadline": "Partner with Amsterdam's Premier Cyber Defense Practice.",
+            "serviceOptions": {
+                "blue": "Blue Team Defense",
+                "gold": "Gold Strategic Advisory",
+                "red": "Red Team Offensive",
+                "general": "General Inquiry"
+            }
+        }
+    },
+    "socV2": {
+        "cta": {
+            "headline": "Co-Pilot or Autopilot?",
+            "subheadline": "Choose the engagement model that fits your maturity. Both are powered by Agent Blue.",
+            "serviceOptions": {
+                "copilot": "Co-Pilot (Enhancement)",
+                "autopilot": "Autopilot (Managed)"
+            }
+        }
+    },
+    "acquisitions": {
+        "cta": {
+            "headline": "Detect Cyber Lemons Before You Buy",
+            "subheadline": "OXOT's M&A Cyber Due Diligence Engine (MCDE) uses physics-based simulation to quantify hidden cyber liabilities. Turn qualitative risk into dollar-denominated valuation adjustments.",
+            "serviceOptions": {
+                "full": "Full MCDE Analysis ($100K)",
+                "lite": "MCDE Lite Screening ($25K)",
+                "premium": "MCDE Premium + Red Team ($250K)"
+            }
+        }
+    },
+    "strategic": {
+        "cta": {
+            "headline": "Ready to Transform Your Security Posture?",
+            "subheadline": "OXOT's AEON Cyber Digital Twin provides predictive threat intelligence that anticipates attacks before they happen.",
+            "serviceOptions": {
+                "pilot": "90-Day Proof of Value Pilot",
+                "assessment": "Strategic Portfolio Assessment",
+                "briefing": "Executive Briefing"
+            }
+        }
+    },
+    "soc": {
+        "hero": {
+            "badge": "Service_ID: 05 // SOC_Command",
+            "title": "SOC Command",
+            "titleHighlight": "Integration",
+            "subtitle": "Operationalize predictive intelligence. Transform your SOC from a reactive alert queue into a <span class=\"text-white font-medium\">pre-cognitive defense engine</span>.",
+            "stats": {
+                "coverage": "95% MITRE Coverage",
+                "mttd": "40% Faster MTTD",
+                "noiseRef": "70% Noise Reduction"
+            },
+            "scroll": "Initialize Console"
+        },
+        "modules": {
+            "title": "Active Defense Modules",
+            "status": "SYS.MOD.LOADED",
+            "telemetry": {
+                "title": "Telemetry Mirroring",
+                "desc": "Direct high-fidelity telemetry injection from your SIEM (Splunk, Sentinel, QRadar) into the E27 Prediction Engine for real-time risk mapping."
+            },
+            "hunting": {
+                "title": "Automated Threat Hunting",
+                "desc": "Hypothesis-driven hunt generation based on 293 APT-specific profiles. We tell your analysts exactly where to look before the beacon calls home."
+            },
+            "detection": {
+                "title": "Detection Engineering",
+                "desc": "Continuous Sigma rule generation and false positive tuning. Validate detection logic against real-world adversary TTPs in real-time."
+            },
+            "psychometrics": {
+                "title": "Psychometric Profiling",
+                "desc": "Enrich standard indicators with adversary psychology. Understand NOT just 'what' IP hit you, but 'why', 'who', and 'what they will do next'."
+            },
+            "blueAI": {
+                "title": "Blue Team AI",
+                "desc": "Enhances human experience with playbooks, chat, and conversational voice interactions. Works autonomously on-premise while escalating to AEON Core."
+            },
+            "redLeader": {
+                "title": "Red Leader Validation",
+                "desc": "Continuous validation using Red Squadron Leader—scenario-based emulation across sophistication levels from opportunistic hackers to nation-state APTs."
+            }
+        },
+        "architecture": {
+            "title": "AEON Cyber Digital Twin Architecture",
+            "layer": "LAYER_0: Component-Level Infrastructure Modeling",
+            "zones": {
+                "title": "Zones & Conduits",
+                "desc": "Visualize IEC 62443 security zones with SL color-coding. Click components to drill into SBOM details."
+            },
+            "sbom": {
+                "title": "SBOM Traceability",
+                "desc": "Trace vulnerabilities from CVE → Library → Interface → Sub-Component → System → Facility."
+            },
+            "epss": {
+                "title": "EPSS Integration",
+                "desc": "Real-time exploit probability scores for every library in your OT infrastructure."
+            },
+            "twinCore": "Digital Twin Core // TIER III",
+            "canvas": {
+                "title": "Interactive Engineering Canvas",
+                "desc": "A complete <span class=\"text-white font-bold\">IEC 62443 zone architecture</span> with 45+ assets across 8 security zones.",
+                "interaction": "<strong class=\"text-oxot-blue-light\">Interaction:</strong> Drag to pan • Scroll to zoom • Click any asset for details."
+            },
+            "hierarchy": "Hierarchy Navigator",
+            "framework": {
+                "title": "NOW / NEXT / NEVER",
+                "desc": "A <span class=\"text-white font-bold\">strategic prioritization framework</span> powered by the full AEON Cyber Digital Twin.",
+                "now": {
+                    "title": "NOW",
+                    "sub": "IMMEDIATE ACTION",
+                    "action": "ACTION: Emergency change / OpEx justified"
+                },
+                "next": {
+                    "title": "NEXT",
+                    "sub": "SCHEDULED REMEDIATION",
+                    "action": "ACTION: CapEx planning / Next refit cycle"
+                },
+                "never": {
+                    "title": "NEVER",
+                    "sub": "ACCEPT RISK / BACKLOG",
+                    "action": "ACTION: Document risk acceptance / Monitor"
+                },
+                "inputs": {
+                    "title": "Decision Inputs from AEON Core"
+                },
+                "note": "<strong class=\"text-oxot-blue-light\">Enhancing human decisions, not replacing them.</strong> AEON synthesizes vast data into actionable intelligence."
+            }
+        },
+        "engagement": {
+            "title": "Engagement Models",
+            "desc": "SOC-focused engagement options to transform your security operations.",
+            "models": {
+                "blue": {
+                    "title": "BLUE SERVICES",
+                    "sub": "PREDICTIVE DEFENSE OPERATIONS",
+                    "desc": "Transform your SOC from reactive to pre-cognitive. Choose your deployment model based on operational needs.",
+                    "optionA": {
+                        "title": "Option A: SOC Enhancement",
+                        "desc": "We host the AEON Engine and integrate with your existing SOC/SIEM to enhance it with Agent Blue predictive intelligence."
+                    },
+                    "optionB": {
+                        "title": "Option B: Managed SOC",
+                        "desc": "Full managed SOC with AEON Cyber Digital Twin, on-premise Blue Team Docker satellites, and 24/7 human oversight."
+                    },
+                    "features": [
+                        "Continuous Threat Hunting (293 APT Profiles)",
+                        "Real-time EPSS Risk Prioritization",
+                        "Sigma/YARA Detection Engineering",
+                        "Incident Response (4hr SLA)",
+                        "Monthly Purple Team Validation"
+                    ],
+                    "cta": "Deploy Blue Team"
+                },
+                "gold": {
+                    "title": "GOLD SERVICES",
+                    "sub": "COMPLEMENTARY ADVISORY",
+                    "desc": "Strategic services that complement your SOC operations. Accelerate maturity and optimize your security posture.",
+                    "advisory": {
+                        "title": "SOC-Focused Advisory",
+                        "desc": "Gold Team services designed to enhance your Blue Team operations—from architecture to compliance."
+                    },
+                    "features": [
+                        "SOC Modernization Strategy",
+                        "Detection Engineering Consulting",
+                        "Crisis War Gaming & Tabletop Exercises",
+                        "IEC 62443 Architecture & Certification",
+                        "Executive & Board Advisory",
+                        "Regulatory Compliance (NERC CIP, NIS2)"
+                    ],
+                    "cta": "Schedule Consultation"
+                }
+            }
+        },
+        "cta": {
+            "headline": "Your Analysts Are Drowning in 70% Noise.",
+            "subheadline": "Attackers slip through when SOC teams chase false positives. Get predictive defense.",
+            "options": {
+                "blue": "Blue Team Operations",
+                "gold": "Gold Team Advisory"
+            }
+        },
+        "tags": {
+            "telemetry": [
+                "Splunk",
+                "Sentinel",
+                "Elastic"
+            ],
+            "hunting": [
+                "APT29",
+                "Lazarus",
+                "Volt Typhoon"
+            ],
+            "detection": [
+                "Sigma",
+                "YARA",
+                "Snort"
+            ],
+            "psychometrics": [
+                "Big 5 Traits",
+                "Dark Triad"
+            ],
+            "blueAI": [
+                "Voice AI",
+                "Playbooks",
+                "Auto-Escalate"
+            ],
+            "redLeader": [
+                "Red Squadron",
+                "APT Emulation",
+                "Nation-State"
+            ]
+        },
+        "architectureLegend": {
+            "aeonCloud": {
+                "title": "AEON Cloud",
+                "desc": "Core, Red/Gold Team, Threat Intel, Simulation Engine"
+            },
+            "blueServer": {
+                "title": "Blue Team Server",
+                "desc": "Local Twin, Telemetry Store, Decision Engine, Collector"
+            },
+            "dataDiode": {
+                "title": "Data Diode",
+                "desc": "Unidirectional gateway for threat intel into OT environment"
+            },
+            "otAssets": {
+                "title": "OT Assets",
+                "desc": "SCADA, PLCs, HMIs, Generators, Chillers, BMS, PDUs"
+            }
+        },
+        "meta": {
+            "serviceId": "Service_ID: 05 // SOC_Command",
+            "globalDeployment": "GLOBAL_DEPLOYMENT",
+            "primaryService": "Primary Service",
+            "decisionFramework": "AEON DECISION FRAMEWORK"
+        },
+        "framework": {
+            "title": "Decision Framework",
+            "desc": "How AEON Core processes telemetry and determines critical actions in real-time.",
+            "now": {
+                "title": "NOW",
+                "sub": "IMMEDIATE ACTION REQUIRED",
+                "action": "ACTION: AUTOMATED BLOCK / ISOLATION",
+                "bullets": [
+                    "Active exploitation detected in customer telemetry",
+                    "EPSS > 10% AND asset in critical path",
+                    "Red Team confirmed exploitability in Digital Twin",
+                    "Safety system (SIS/SIL) with known vulnerability"
+                ]
+            },
+            "next": {
+                "title": "NEXT",
+                "sub": "SCHEDULED REMEDIATION",
+                "action": "ACTION: TICKET CREATION / PATCHING",
+                "bullets": [
+                    "Rising EPSS trend (1-10%) with attack path potential",
+                    "SBOM dependency with upstream vulnerability",
+                    "Asset in threat model but no active exploitation",
+                    "Refit opportunity aligns with maintenance window"
+                ]
+            },
+            "never": {
+                "title": "NEVER",
+                "sub": "RISK ACCEPTANCE / MONITOR",
+                "action": "ACTION: LOGGING / MONITORING ONLY",
+                "bullets": [
+                    "EPSS < 1% with no attack path in threat model",
+                    "Network-isolated asset with compensating controls",
+                    "Theoretical CVE with no weapon in the wild",
+                    "Business impact below risk appetite threshold"
+                ]
+            },
+            "inputs": {
+                "title": "INTELLIGENCE INPUTS"
+            },
+            "inputsLegend": {
+                "blue": {
+                    "title": "Blue Team",
+                    "desc": "Threat intel, CVE/EPSS, APT profiles"
+                },
+                "red": {
+                    "title": "Red Team",
+                    "desc": "Attack path validation, exploitability"
+                },
+                "gold": {
+                    "title": "Gold Team",
+                    "desc": "Business context, ROI, refit schedules"
+                },
+                "twin": {
+                    "title": "Digital Twin",
+                    "desc": "Asset models, SBOMs, telemetry"
+                }
+            },
+            "note": "Note: Human analysts provide final authorization for high-impact blocking actions in OT environments."
+        }
+    },
     "cta": {
-        "headline": "Your Board Is Asking Hard Questions.",
-        "subheadline": "Do You Have the Answers They Need?"
+        "defaultHeadline": "Your Adversaries Are Already Working.",
+        "defaultSubheadline": "Are You Ready to See What They See?",
+        "success": {
+            "title": "Message Received.",
+            "message": "Our team will review your request and reach out within 24 hours. In the meantime, your adversaries won't be waiting—stay vigilant."
+        },
+        "threatAdvisory": {
+            "label": "THREAT ADVISORY:",
+            "message": "While you read this page, adversaries are actively scanning your perimeter for weaknesses."
+        },
+        "briefingRequest": {
+            "prefix": "Request a",
+            "link": "complimentary threat landscape briefing",
+            "description": "Our team will analyze your sector's current threat profile and identify your organization's most critical exposure points—no commitment required."
+        },
+        "trustSignals": {
+            "standards": {
+                "title": "Aligned with Industry Standards",
+                "desc": "Methodology based on CISA frameworks, ICS-CERT advisories, and the MITRE ATT&CK matrix."
+            },
+            "sectors": {
+                "title": "Trusted Across All 16 Critical Sectors",
+                "desc": "From energy grids to financial institutions, we understand sector-specific threats."
+            },
+            "engagements": {
+                "title": "Limited Quarterly Engagements",
+                "desc": "We cap our Red Team engagements to ensure quality. Secure your slot early."
+            }
+        },
+        "quote": {
+            "text": "The AEON Red Team identified attack paths we had no idea existed. Their graph-based approach found a 14-hop chain from a vendor portal to our SCADA network.",
+            "author": "CS",
+            "authorTitle": "CISO, Fortune 500 Energy Company",
+            "verified": "Verified Engagement"
+        },
+        "form": {
+            "title": "Request Your Briefing",
+            "labels": {
+                "name": "Full Name *",
+                "title": "Job Title *",
+                "email": "Work Email *",
+                "org": "Organization *",
+                "sector": "Sector *",
+                "region": "Region *",
+                "service": "Service Interest *",
+                "concerns": "What are your primary concerns? (Optional)"
+            },
+            "placeholders": {
+                "name": "Jane Smith",
+                "title": "VP, Security Operations",
+                "email": "jane.smith@company.com",
+                "org": "Acme Corporation",
+                "concerns": "E.g., We are concerned about supply chain risks and IT/OT convergence...",
+                "selectSector": "Select Sector",
+                "selectRegion": "Select Region"
+            },
+            "submit": "Request Threat Briefing",
+            "submitting": "Submitting...",
+            "disclaimer": "By submitting, you agree to a confidential, no-obligation conversation with our team."
+        },
+        "urgency": {
+            "label": "Average response time:",
+            "value": "Under 4 hours"
+        },
+        "sectors": [
+            "Energy",
+            "Water & Wastewater",
+            "Healthcare & Public Health",
+            "Financial Services",
+            "Transportation Systems",
+            "Communications",
+            "Information Technology",
+            "Manufacturing",
+            "Defense Industrial Base",
+            "Food & Agriculture",
+            "Government Facilities",
+            "Emergency Services",
+            "Nuclear Reactors",
+            "Chemicals",
+            "Commercial Facilities",
+            "Dams",
+            "Other"
+        ],
+        "regions": [
+            "North America",
+            "Europe, Middle East & Africa (EMEA)",
+            "Asia Pacific (APAC)",
+            "Latin America",
+            "Global / Multi-Region"
+        ]
     }
 }

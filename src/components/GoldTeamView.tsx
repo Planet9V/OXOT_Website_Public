@@ -15,8 +15,10 @@ import {
 import Link from 'next/link';
 import GoldTeamGraph from './GoldTeamGraph';
 import ContactFormCTA from './ContactFormCTA';
+import { useTranslations } from '@/i18n';
 
 export const GoldTeamView = () => {
+    const { t } = useTranslations();
     const containerRef = useRef<HTMLDivElement>(null);
     const { scrollYProgress } = useScroll({
         target: containerRef,
@@ -518,8 +520,8 @@ export const GoldTeamView = () => {
                 {/* CTA Section */}
                 < ContactFormCTA
                     variant="gold"
-                    headline="Your Board Is Asking Hard Questions."
-                    subheadline="Do You Have the Answers They Need?"
+                    headline={t.goldTeam.cta.headline}
+                    subheadline={t.goldTeam.cta.subheadline}
                 />
 
             </div >

@@ -4,6 +4,19 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 export const VisionHeroVisualization = () => {
+    const [particles, setParticles] = React.useState<Array<{ x: number, y: number, tx: number, ty: number, duration: number, delay: number }>>([]);
+
+    React.useEffect(() => {
+        setParticles([...Array(20)].map(() => ({
+            x: (Math.random() - 0.5) * 600,
+            y: (Math.random() - 0.5) * 600,
+            tx: (Math.random() - 0.5) * 700,
+            ty: (Math.random() - 0.5) * 700,
+            duration: 3 + Math.random() * 4,
+            delay: Math.random() * 2,
+        })));
+    }, []);
+
     return (
         <div className="relative w-full h-[500px] flex items-center justify-center pointer-events-none select-none -mt-20">
             {/* Container for the 3D perspective */}
@@ -88,25 +101,25 @@ export const VisionHeroVisualization = () => {
                 ))}
 
                 {/* --- PARTICLE FIELD --- */}
-                {[...Array(20)].map((_, i) => (
+                {particles.map((p, i) => (
                     <motion.div
                         key={`p-${i}`}
                         className="absolute w-1 h-1 bg-white rounded-full"
                         initial={{
-                            x: (Math.random() - 0.5) * 600,
-                            y: (Math.random() - 0.5) * 600,
+                            x: p.x,
+                            y: p.y,
                             opacity: 0
                         }}
                         animate={{
                             scale: [0, 1.5, 0],
                             opacity: [0, 0.8, 0],
-                            x: (Math.random() - 0.5) * 700,
-                            y: (Math.random() - 0.5) * 700,
+                            x: p.tx,
+                            y: p.ty,
                         }}
                         transition={{
-                            duration: 3 + Math.random() * 4,
+                            duration: p.duration,
                             repeat: Infinity,
-                            delay: Math.random() * 2,
+                            delay: p.delay,
                         }}
                     />
                 ))}

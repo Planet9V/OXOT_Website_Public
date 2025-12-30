@@ -9,6 +9,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { useLiveNews } from '../services/liveData';
 import { OXOTLogo } from './branding/OXOTLogo';
 import { PageHeader } from './branding/PageHeader';
+import { useTranslations } from '@/i18n';
 
 // --- PARTICLES DATA ---
 const CONCEPTS = [
@@ -30,6 +31,7 @@ const CONCEPTS = [
 ];
 
 export default function AgentRedPage() {
+    const { t } = useTranslations();
     const containerRef = useRef<HTMLDivElement>(null);
     const { scrollYProgress } = useScroll({
         target: containerRef,
@@ -721,8 +723,8 @@ export default function AgentRedPage() {
                 {/* CTA Section */}
                 <ContactFormCTA
                     variant="red"
-                    headline="Your Adversaries Are Already Working."
-                    subheadline="Are You Ready to See What They See?"
+                    headline={t.agentRed.cta.headline}
+                    subheadline={t.agentRed.cta.subheadline}
                 />
             </div>
         </div>

@@ -10,6 +10,7 @@ import {
 import { GlowCard } from '@/components/ui/GlowCard'
 import TelemetryTicker from '@/components/TelemetryTicker'
 import ContactFormCTA from '@/components/ContactFormCTA'
+import { useTranslations } from '@/i18n'
 
 import dynamic from 'next/dynamic'
 
@@ -69,6 +70,7 @@ const DIFFERENTIATORS = [
 ]
 
 export default function NIS2Page() {
+    const { t } = useTranslations()
     return (
         <div className="min-h-screen bg-transparent text-gray-100 relative">
 
@@ -345,12 +347,12 @@ export default function NIS2Page() {
                 <section>
                     <ContactFormCTA
                         variant="blue"
-                        headline="Ready for NIS2 Compliance?"
-                        subheadline="Don't wait for enforcement action. Get expert guidance to achieve and maintain compliance."
+                        headline={t.nis2.cta.headline}
+                        subheadline={t.nis2.cta.subheadline}
                         serviceOptions={[
-                            { value: 'nis2-assessment', label: 'NIS2 Gap Assessment', color: 'blue' },
-                            { value: 'nis2-implementation', label: 'Full Implementation Program', color: 'gold' },
-                            { value: 'nis2-audit', label: 'Audit Preparation', color: 'blue' }
+                            { value: 'nis2-assessment', label: t.nis2.cta.serviceOptions.assessment, color: 'blue' },
+                            { value: 'nis2-implementation', label: t.nis2.cta.serviceOptions.implementation, color: 'gold' },
+                            { value: 'nis2-audit', label: t.nis2.cta.serviceOptions.audit, color: 'blue' }
                         ]}
                     />
                 </section>

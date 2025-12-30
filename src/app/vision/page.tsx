@@ -11,6 +11,7 @@ import { CalculusPanel } from '@/components/CalculusPanel'
 import { IntegrationTicker } from '@/components/IntegrationTicker'
 import { SimulationGraph } from '@/components/SimulationGraph'
 import { SimulationParams } from '@/types'
+import { useTranslations } from '@/i18n'
 
 // NEW COMPONENTS
 import { PageHeader } from '@/components/branding/PageHeader'
@@ -35,6 +36,7 @@ const DEFAULT_PARAMS: SimulationParams = {
 };
 
 export default function Home() {
+  const { t } = useTranslations()
   const [bootComplete, setBootComplete] = useState(true)
   const [simParams, setSimParams] = useState<SimulationParams>(DEFAULT_PARAMS);
 
@@ -175,8 +177,8 @@ export default function Home() {
         {/* CTA Section */}
         <ContactFormCTA
           variant="blue"
-          headline="The Future Belongs to the Prepared."
-          subheadline="Join the Organizations Building Sovereign Digital Immunity."
+          headline={t.vision.cta.headline}
+          subheadline={t.vision.cta.subheadline}
         />
 
       </motion.div>

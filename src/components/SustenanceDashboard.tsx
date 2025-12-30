@@ -345,7 +345,7 @@ export default function SustenanceDashboard() {
         for (let day = 0; day <= days; day++) {
             const phaseShift = Math.sin(timeStep * 0.1);
             const timeNoise = Math.sin(day * 0.1 + phaseShift) * 0.05;
-            const entropyNoise = (Math.random() - 0.5) * 0.15;
+            const entropyNoise = (Math.sin(day * 999 + timeStep) - 0.5) * 0.15;
 
             const riskDelta = 0.03;
             const mitigation = 0.025;

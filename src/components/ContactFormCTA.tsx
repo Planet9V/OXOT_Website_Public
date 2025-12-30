@@ -1,36 +1,9 @@
 "use client";
 
 import React, { useState } from 'react';
+import { useTranslations } from '@/i18n';
 import { motion } from 'framer-motion';
 import { AlertTriangle, Shield, CheckCircle, Clock, Users, Zap, Send, Building, Globe, Mail, User, Briefcase, MessageSquare } from 'lucide-react';
-
-const SECTORS = [
-    "Energy",
-    "Water & Wastewater",
-    "Healthcare & Public Health",
-    "Financial Services",
-    "Transportation Systems",
-    "Communications",
-    "Information Technology",
-    "Manufacturing",
-    "Defense Industrial Base",
-    "Food & Agriculture",
-    "Government Facilities",
-    "Emergency Services",
-    "Nuclear Reactors",
-    "Chemicals",
-    "Commercial Facilities",
-    "Dams",
-    "Other"
-];
-
-const REGIONS = [
-    "North America",
-    "Europe, Middle East & Africa (EMEA)",
-    "Asia Pacific (APAC)",
-    "Latin America",
-    "Global / Multi-Region"
-];
 
 interface ContactFormCTAProps {
     variant?: 'red' | 'blue' | 'gold';
@@ -45,6 +18,12 @@ export default function ContactFormCTA({
     subheadline = "Are You Ready to See What They See?",
     serviceOptions
 }: ContactFormCTAProps) {
+    const { t } = useTranslations();
+
+    // Use translations for defaults if props are not provided
+    const effectiveHeadline = headline === "Your Adversaries Are Already Working." ? t.cta.defaultHeadline : headline;
+    const effectiveSubheadline = subheadline === "Are You Ready to See What They See?" ? t.cta.defaultSubheadline : subheadline;
+
     const [formData, setFormData] = useState({
         fullName: '',
         jobTitle: '',
@@ -113,10 +92,9 @@ export default function ContactFormCTA({
                         <div className={`w-20 h-20 bg-${colorScheme.bg} border border-${colorScheme.border} rounded-full flex items-center justify-center mx-auto mb-8`}>
                             <CheckCircle className={`w-10 h-10 text-${colorScheme.text}`} />
                         </div>
-                        <h3 className="text-2xl font-bold text-white mb-4">Message Received.</h3>
+                        <h3 className="text-2xl font-bold text-white mb-4">{t.cta.success.title}</h3>
                         <p className="text-gray-400 text-lg">
-                            Our team will review your request and reach out within 24 hours.
-                            In the meantime, your adversaries won't be waiting—stay vigilant.
+                            {t.cta.success.message}
                         </p>
                     </motion.div>
                 </div>
@@ -141,10 +119,10 @@ export default function ContactFormCTA({
                 >
                     <div className="flex items-center gap-2 text-red-400">
                         <AlertTriangle className="w-4 h-4 animate-pulse" />
-                        <span className="font-bold">THREAT ADVISORY:</span>
+                        <span className="font-bold">{t.cta.threatAdvisory.label}</span>
                     </div>
                     <span className="text-gray-300 text-center">
-                        While you read this page, adversaries are actively scanning your perimeter for weaknesses.
+                        {t.cta.threatAdvisory.message}
                     </span>
                 </motion.div>
 
@@ -157,14 +135,14 @@ export default function ContactFormCTA({
                         transition={{ duration: 0.6 }}
                     >
                         <h2 className="text-2xl md:text-3xl font-black text-white mb-4 leading-tight">
-                            {headline}
+                            {effectiveHeadline}
                         </h2>
                         <p className={`text-xl text-${colorScheme.text} font-medium mb-8`}>
-                            {subheadline}
+                            {effectiveSubheadline}
                         </p>
                         <p className="text-gray-400 mb-10 leading-relaxed">
-                            Request a <span className="text-white font-bold">complimentary threat landscape briefing</span>.
-                            Our team will analyze your sector's current threat profile and identify your organization's most critical exposure points—no commitment required.
+                            {t.cta.briefingRequest.prefix} <span className="text-white font-bold">{t.cta.briefingRequest.link}</span>.
+                            {t.cta.briefingRequest.description}
                         </p>
 
                         {/* Trust Signals */}
@@ -174,8 +152,8 @@ export default function ContactFormCTA({
                                     <Shield className={`w-5 h-5 text-${colorScheme.text}`} />
                                 </div>
                                 <div>
-                                    <h4 className="text-white font-bold">Aligned with Industry Standards</h4>
-                                    <p className="text-gray-500 text-sm">Methodology based on CISA frameworks, ICS-CERT advisories, and the MITRE ATT&CK matrix.</p>
+                                    <h4 className="text-white font-bold">{t.cta.trustSignals.standards.title}</h4>
+                                    <p className="text-gray-500 text-sm">{t.cta.trustSignals.standards.desc}</p>
                                 </div>
                             </div>
                             <div className="flex items-start gap-4">
@@ -183,8 +161,8 @@ export default function ContactFormCTA({
                                     <Users className={`w-5 h-5 text-${colorScheme.text}`} />
                                 </div>
                                 <div>
-                                    <h4 className="text-white font-bold">Trusted Across All 16 Critical Sectors</h4>
-                                    <p className="text-gray-500 text-sm">From energy grids to financial institutions, we understand sector-specific threats.</p>
+                                    <h4 className="text-white font-bold">{t.cta.trustSignals.sectors.title}</h4>
+                                    <p className="text-gray-500 text-sm">{t.cta.trustSignals.sectors.desc}</p>
                                 </div>
                             </div>
                             <div className="flex items-start gap-4">
@@ -192,8 +170,8 @@ export default function ContactFormCTA({
                                     <Clock className={`w-5 h-5 text-${colorScheme.text}`} />
                                 </div>
                                 <div>
-                                    <h4 className="text-white font-bold">Limited Quarterly Engagements</h4>
-                                    <p className="text-gray-500 text-sm">We cap our Red Team engagements to ensure quality. Secure your slot early.</p>
+                                    <h4 className="text-white font-bold">{t.cta.trustSignals.engagements.title}</h4>
+                                    <p className="text-gray-500 text-sm">{t.cta.trustSignals.engagements.desc}</p>
                                 </div>
                             </div>
                         </div>
@@ -201,15 +179,15 @@ export default function ContactFormCTA({
                         {/* Social Proof Quote */}
                         <div className="bg-white/5 border border-white/10 rounded-xl p-6">
                             <p className="text-gray-300 italic mb-4">
-                                "The AEON Red Team identified attack paths we had no idea existed. Their graph-based approach found a 14-hop chain from a vendor portal to our SCADA network."
+                                "{t.cta.quote.text}"
                             </p>
                             <div className="flex items-center gap-3">
                                 <div className="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center text-gray-400 font-bold">
-                                    CS
+                                    {t.cta.quote.author}
                                 </div>
                                 <div>
-                                    <div className="text-white text-sm font-bold">CISO, Fortune 500 Energy Company</div>
-                                    <div className="text-gray-500 text-xs">Verified Engagement</div>
+                                    <div className="text-white text-sm font-bold">{t.cta.quote.authorTitle}</div>
+                                    <div className="text-gray-500 text-xs">{t.cta.quote.verified}</div>
                                 </div>
                             </div>
                         </div>
@@ -225,14 +203,14 @@ export default function ContactFormCTA({
                         <div className={`bg-black/60 backdrop-blur-md border border-white/10 rounded-2xl p-8 shadow-2xl`}>
                             <div className="flex items-center gap-3 mb-6">
                                 <div className={`w-3 h-3 bg-${colorScheme.accent} rounded-full animate-pulse`}></div>
-                                <h3 className="text-lg font-bold text-white">Request Your Briefing</h3>
+                                <h3 className="text-lg font-bold text-white">{t.cta.form.title}</h3>
                             </div>
 
                             <form onSubmit={handleSubmit} className="space-y-5">
                                 {/* Name & Title */}
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                     <div>
-                                        <label className="text-xs text-gray-500 uppercase tracking-widest font-bold mb-1 block">Full Name *</label>
+                                        <label className="text-xs text-gray-500 uppercase tracking-widest font-bold mb-1 block">{t.cta.form.labels.name}</label>
                                         <div className="relative">
                                             <User className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-600" />
                                             <input
@@ -242,12 +220,12 @@ export default function ContactFormCTA({
                                                 value={formData.fullName}
                                                 onChange={handleChange}
                                                 className="w-full bg-white/5 border border-white/10 rounded-lg py-3 pl-10 pr-4 text-white placeholder-gray-600 focus:border-red-500/50 focus:outline-none focus:ring-1 focus:ring-red-500/30 transition-all"
-                                                placeholder="Jane Smith"
+                                                placeholder={t.cta.form.placeholders.name}
                                             />
                                         </div>
                                     </div>
                                     <div>
-                                        <label className="text-xs text-gray-500 uppercase tracking-widest font-bold mb-1 block">Job Title *</label>
+                                        <label className="text-xs text-gray-500 uppercase tracking-widest font-bold mb-1 block">{t.cta.form.labels.title}</label>
                                         <div className="relative">
                                             <Briefcase className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-600" />
                                             <input
@@ -257,7 +235,7 @@ export default function ContactFormCTA({
                                                 value={formData.jobTitle}
                                                 onChange={handleChange}
                                                 className="w-full bg-white/5 border border-white/10 rounded-lg py-3 pl-10 pr-4 text-white placeholder-gray-600 focus:border-red-500/50 focus:outline-none focus:ring-1 focus:ring-red-500/30 transition-all"
-                                                placeholder="VP, Security Operations"
+                                                placeholder={t.cta.form.placeholders.title}
                                             />
                                         </div>
                                     </div>
@@ -265,7 +243,7 @@ export default function ContactFormCTA({
 
                                 {/* Email */}
                                 <div>
-                                    <label className="text-xs text-gray-500 uppercase tracking-widest font-bold mb-1 block">Work Email *</label>
+                                    <label className="text-xs text-gray-500 uppercase tracking-widest font-bold mb-1 block">{t.cta.form.labels.email}</label>
                                     <div className="relative">
                                         <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-600" />
                                         <input
@@ -275,14 +253,14 @@ export default function ContactFormCTA({
                                             value={formData.email}
                                             onChange={handleChange}
                                             className="w-full bg-white/5 border border-white/10 rounded-lg py-3 pl-10 pr-4 text-white placeholder-gray-600 focus:border-red-500/50 focus:outline-none focus:ring-1 focus:ring-red-500/30 transition-all"
-                                            placeholder="jane.smith@company.com"
+                                            placeholder={t.cta.form.placeholders.email}
                                         />
                                     </div>
                                 </div>
 
                                 {/* Organization */}
                                 <div>
-                                    <label className="text-xs text-gray-500 uppercase tracking-widest font-bold mb-1 block">Organization *</label>
+                                    <label className="text-xs text-gray-500 uppercase tracking-widest font-bold mb-1 block">{t.cta.form.labels.org}</label>
                                     <div className="relative">
                                         <Building className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-600" />
                                         <input
@@ -292,7 +270,7 @@ export default function ContactFormCTA({
                                             value={formData.organization}
                                             onChange={handleChange}
                                             className="w-full bg-white/5 border border-white/10 rounded-lg py-3 pl-10 pr-4 text-white placeholder-gray-600 focus:border-red-500/50 focus:outline-none focus:ring-1 focus:ring-red-500/30 transition-all"
-                                            placeholder="Acme Corporation"
+                                            placeholder={t.cta.form.placeholders.org}
                                         />
                                     </div>
                                 </div>
@@ -300,7 +278,7 @@ export default function ContactFormCTA({
                                 {/* Sector & Region */}
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                     <div>
-                                        <label className="text-xs text-gray-500 uppercase tracking-widest font-bold mb-1 block">Sector *</label>
+                                        <label className="text-xs text-gray-500 uppercase tracking-widest font-bold mb-1 block">{t.cta.form.labels.sector}</label>
                                         <select
                                             name="sector"
                                             required
@@ -308,12 +286,12 @@ export default function ContactFormCTA({
                                             onChange={handleChange}
                                             className="w-full bg-white/5 border border-white/10 rounded-lg py-3 px-4 text-white focus:border-red-500/50 focus:outline-none focus:ring-1 focus:ring-red-500/30 transition-all appearance-none"
                                         >
-                                            <option value="" className="bg-gray-900">Select Sector</option>
-                                            {SECTORS.map(s => <option key={s} value={s} className="bg-gray-900">{s}</option>)}
+                                            <option value="" className="bg-gray-900">{t.cta.form.placeholders.selectSector}</option>
+                                            {t.cta.sectors.map(s => <option key={s} value={s} className="bg-gray-900">{s}</option>)}
                                         </select>
                                     </div>
                                     <div>
-                                        <label className="text-xs text-gray-500 uppercase tracking-widest font-bold mb-1 block">Region *</label>
+                                        <label className="text-xs text-gray-500 uppercase tracking-widest font-bold mb-1 block">{t.cta.form.labels.region}</label>
                                         <select
                                             name="region"
                                             required
@@ -321,8 +299,8 @@ export default function ContactFormCTA({
                                             onChange={handleChange}
                                             className="w-full bg-white/5 border border-white/10 rounded-lg py-3 px-4 text-white focus:border-red-500/50 focus:outline-none focus:ring-1 focus:ring-red-500/30 transition-all appearance-none"
                                         >
-                                            <option value="" className="bg-gray-900">Select Region</option>
-                                            {REGIONS.map(r => <option key={r} value={r} className="bg-gray-900">{r}</option>)}
+                                            <option value="" className="bg-gray-900">{t.cta.form.placeholders.selectRegion}</option>
+                                            {t.cta.regions.map(r => <option key={r} value={r} className="bg-gray-900">{r}</option>)}
                                         </select>
                                     </div>
                                 </div>
@@ -330,7 +308,7 @@ export default function ContactFormCTA({
                                 {/* Service Type Selection (Optional) */}
                                 {serviceOptions && serviceOptions.length > 0 && (
                                     <div>
-                                        <label className="text-xs text-gray-500 uppercase tracking-widest font-bold mb-3 block">Service Interest *</label>
+                                        <label className="text-xs text-gray-500 uppercase tracking-widest font-bold mb-3 block">{t.cta.form.labels.service}</label>
                                         <div className="flex flex-wrap gap-3">
                                             {serviceOptions.map((opt) => {
                                                 const isActive = formData.serviceType === opt.value;
@@ -386,7 +364,7 @@ export default function ContactFormCTA({
 
                                 {/* Message */}
                                 <div>
-                                    <label className="text-xs text-gray-500 uppercase tracking-widest font-bold mb-1 block">What are your primary concerns? (Optional)</label>
+                                    <label className="text-xs text-gray-500 uppercase tracking-widest font-bold mb-1 block">{t.cta.form.labels.concerns}</label>
                                     <div className="relative">
                                         <MessageSquare className="absolute left-3 top-3 w-4 h-4 text-gray-600" />
                                         <textarea
@@ -395,7 +373,7 @@ export default function ContactFormCTA({
                                             onChange={handleChange}
                                             rows={3}
                                             className="w-full bg-white/5 border border-white/10 rounded-lg py-3 pl-10 pr-4 text-white placeholder-gray-600 focus:border-red-500/50 focus:outline-none focus:ring-1 focus:ring-red-500/30 transition-all resize-none"
-                                            placeholder="E.g., We are concerned about supply chain risks and IT/OT convergence..."
+                                            placeholder={t.cta.form.placeholders.concerns}
                                         />
                                     </div>
                                 </div>
@@ -409,18 +387,18 @@ export default function ContactFormCTA({
                                     {isSubmitting ? (
                                         <>
                                             <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
-                                            Submitting...
+                                            {t.cta.form.submitting}
                                         </>
                                     ) : (
                                         <>
                                             <Send className="w-5 h-5" />
-                                            Request Threat Briefing
+                                            {t.cta.form.submit}
                                         </>
                                     )}
                                 </button>
 
                                 <p className="text-xs text-gray-600 text-center">
-                                    By submitting, you agree to a confidential, no-obligation conversation with our team.
+                                    {t.cta.form.disclaimer}
                                 </p>
                             </form>
                         </div>
@@ -428,7 +406,7 @@ export default function ContactFormCTA({
                         {/* Micro-Urgency */}
                         <div className="mt-6 flex items-center justify-center gap-2 text-xs text-gray-500">
                             <Zap className="w-3 h-3 text-yellow-500" />
-                            <span>Average response time: <span className="text-white font-bold">Under 4 hours</span></span>
+                            <span>{t.cta.urgency.label} <span className="text-white font-bold">{t.cta.urgency.value}</span></span>
                         </div>
                     </motion.div>
                 </div>

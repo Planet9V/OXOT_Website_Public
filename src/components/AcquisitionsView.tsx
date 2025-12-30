@@ -25,8 +25,10 @@ import SupplyChainRadar from './SupplyChainRadar';
 // Dynamic imports
 const CriticalSustenance3D = dynamic(() => import('./CriticalSustenance3D'), { ssr: false });
 const GoldTeamGraph = dynamic(() => import('./GoldTeamGraph'), { ssr: false });
+import { useTranslations } from '@/i18n'
 
 export default function AcquisitionsView() {
+    const { t } = useTranslations()
     const { scrollYProgress } = useScroll();
     const scaleX = useTransform(scrollYProgress, [0, 1], [0, 1]);
 
@@ -153,12 +155,12 @@ export default function AcquisitionsView() {
                 <div className="mt-40">
                     <ContactFormCTA
                         variant="blue"
-                        headline="Detect Cyber Lemons Before You Buy"
-                        subheadline="OXOT's M&A Cyber Due Diligence Engine (MCDE) uses physics-based simulation to quantify hidden cyber liabilities. Turn qualitative risk into dollar-denominated valuation adjustments."
+                        headline={t.acquisitions.cta.headline}
+                        subheadline={t.acquisitions.cta.subheadline}
                         serviceOptions={[
-                            { value: 'mcde-full', label: 'Full MCDE Analysis ($100K)', color: 'cyan' },
-                            { value: 'mcde-lite', label: 'MCDE Lite Screening ($25K)', color: 'yellow' },
-                            { value: 'mcde-premium', label: 'MCDE Premium + Red Team ($250K)', color: 'red' }
+                            { value: 'mcde-full', label: t.acquisitions.cta.serviceOptions.full, color: 'cyan' },
+                            { value: 'mcde-lite', label: t.acquisitions.cta.serviceOptions.lite, color: 'yellow' },
+                            { value: 'mcde-premium', label: t.acquisitions.cta.serviceOptions.premium, color: 'red' }
                         ]}
                     />
                 </div>

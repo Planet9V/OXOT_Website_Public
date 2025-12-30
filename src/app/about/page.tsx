@@ -8,6 +8,7 @@ import {
     Linkedin, Mail, ArrowRight
 } from 'lucide-react'
 import ContactFormCTA from '@/components/ContactFormCTA'
+import { useTranslations } from '@/i18n'
 import GlobalPresenceMap from '@/components/GlobalPresenceMap'
 import Link from 'next/link'
 
@@ -45,6 +46,7 @@ const LEADERSHIP = [
 
 // ==================== MAIN COMPONENT ====================
 export default function AboutPage() {
+    const { t } = useTranslations()
     return (
         <div className="max-w-7xl mx-auto space-y-32 pb-20">
 
@@ -381,13 +383,13 @@ export default function AboutPage() {
             <div id="contact-cta">
                 <ContactFormCTA
                     variant="blue"
-                    headline="Begin Your Sovereign Journey."
-                    subheadline="Partner with Amsterdam's Premier Cyber Defense Practice."
+                    headline={t.about.cta.headline}
+                    subheadline={t.about.cta.subheadline}
                     serviceOptions={[
-                        { value: 'blue', label: 'Blue Team Defense', color: 'cyan' },
-                        { value: 'gold', label: 'Gold Strategic Advisory', color: 'yellow' },
-                        { value: 'red', label: 'Red Team Offensive', color: 'red' },
-                        { value: 'other', label: 'General Inquiry', color: 'gray' }
+                        { value: 'blue', label: t.about.cta.serviceOptions.blue, color: 'cyan' },
+                        { value: 'gold', label: t.about.cta.serviceOptions.gold, color: 'yellow' },
+                        { value: 'red', label: t.about.cta.serviceOptions.red, color: 'red' },
+                        { value: 'other', label: t.about.cta.serviceOptions.general, color: 'gray' }
                     ]}
                 />
             </div>

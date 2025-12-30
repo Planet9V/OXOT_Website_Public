@@ -11,6 +11,7 @@ import ContactFormCTA from '@/components/ContactFormCTA'
 import TelemetryTicker from '@/components/TelemetryTicker'
 import AdvancedEngineeringCanvas from '@/components/AdvancedEngineeringCanvas'
 import IECFoundationalRequirementsGrid from '@/components/IECFoundationalRequirementsGrid'
+import { useTranslations } from '@/i18n'
 
 // Dynamically import heavy SOC components
 const EngineeringCanvas = dynamic(() => import('@/components/EngineeringCanvas'), { ssr: false })
@@ -18,6 +19,7 @@ const DatacenterDigitalTwin = dynamic(() => import('@/components/DatacenterDigit
 
 // ==================== MAIN COMPONENT ====================
 export default function WorkshopPortalPage() {
+  const { t } = useTranslations()
 
   return (
     <div className="min-h-screen bg-transparent text-gray-100 relative">
@@ -250,11 +252,11 @@ export default function WorkshopPortalPage() {
       <section className="max-w-7xl mx-auto px-6 pb-32">
         <ContactFormCTA
           variant="gold"
-          headline="Ready for Hands-On Training?"
-          subheadline="Get expert-led workshops using these tools with your actual systems."
+          headline={t.workshop.cta.headline}
+          subheadline={t.workshop.cta.subheadline}
           serviceOptions={[
-            { value: 'gold', label: 'IEC 62443 Workshop', color: 'yellow' },
-            { value: 'blue', label: 'Custom Training Program', color: 'cyan' }
+            { value: 'gold', label: t.workshop.cta.serviceOptions.workshop, color: 'yellow' },
+            { value: 'blue', label: t.workshop.cta.serviceOptions.program, color: 'cyan' }
           ]}
         />
       </section>

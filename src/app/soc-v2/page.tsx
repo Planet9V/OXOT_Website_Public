@@ -9,6 +9,7 @@ import {
 } from 'lucide-react'
 import dynamic from 'next/dynamic'
 import ContactFormCTA from '@/components/ContactFormCTA'
+import { useTranslations } from '@/i18n'
 
 // Dynamically import heavy components if needed from original page
 const EngineeringCanvas = dynamic(() => import('@/components/EngineeringCanvas'), { ssr: false })
@@ -19,6 +20,7 @@ import { CoreLinkProvider } from '@/components/CoreLinkContext'
 import EquationSolver from '@/components/core/EquationSolver'
 
 export default function SOCHybridPage() {
+    const { t } = useTranslations()
     const [activeMode, setActiveMode] = useState<'copilot' | 'autopilot'>('copilot')
 
     return (
@@ -345,11 +347,11 @@ export default function SOCHybridPage() {
                 <div id="contact-cta" className="px-6">
                     <ContactFormCTA
                         variant="blue"
-                        headline="Co-Pilot or Autopilot?"
-                        subheadline="Choose the engagement model that fits your maturity. Both are powered by Agent Blue."
+                        headline={t.socV2.cta.headline}
+                        subheadline={t.socV2.cta.subheadline}
                         serviceOptions={[
-                            { value: 'copilot', label: 'Co-Pilot (Enhancement)', color: 'cyan' },
-                            { value: 'autopilot', label: 'Autopilot (Managed)', color: 'yellow' }
+                            { value: 'copilot', label: t.socV2.cta.serviceOptions.copilot, color: 'cyan' },
+                            { value: 'autopilot', label: t.socV2.cta.serviceOptions.autopilot, color: 'yellow' }
                         ]}
                     />
                 </div >

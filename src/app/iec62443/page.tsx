@@ -12,6 +12,7 @@ import CybersecurityLifecycle from '@/components/CybersecurityLifecycle'
 import IECFoundationalRequirementsGrid from '@/components/IECFoundationalRequirementsGrid'
 import TelemetryTicker from '@/components/TelemetryTicker'
 import ContactFormCTA from '@/components/ContactFormCTA'
+import { useTranslations } from '@/i18n'
 
 import OXOTToolkit from '@/components/OXOTToolkit'
 import IECFrameworkMatrix from '@/components/IECFrameworkMatrix'
@@ -24,6 +25,7 @@ const HierarchyExplorer = dynamic(() => import('@/components/HierarchyExplorer')
 
 // ==================== MAIN COMPONENT ====================
 export default function IEC62443Page() {
+    const { t } = useTranslations()
     return (
         <div className="min-h-screen bg-transparent text-gray-100 relative">
 
@@ -229,11 +231,11 @@ export default function IEC62443Page() {
                 <section>
                     <ContactFormCTA
                         variant="gold"
-                        headline="Ready to Get Certified?"
-                        subheadline="70% of IEC 62443 failures come from misunderstood requirements. Get expert-led preparation."
+                        headline={t.iec62443.cta.headline}
+                        subheadline={t.iec62443.cta.subheadline}
                         serviceOptions={[
-                            { value: 'gold', label: 'IEC 62443 Certification Prep', color: 'yellow' },
-                            { value: 'blue', label: 'OT Security Assessment', color: 'cyan' }
+                            { value: 'gold', label: t.iec62443.cta.serviceOptions.prep, color: 'yellow' },
+                            { value: 'blue', label: t.iec62443.cta.serviceOptions.assessment, color: 'cyan' }
                         ]}
                     />
                 </section>

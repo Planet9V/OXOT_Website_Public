@@ -8,6 +8,7 @@ import {
   FileSearch, GitBranch, ShieldCheck, Workflow
 } from 'lucide-react'
 import ContactFormCTA from '@/components/ContactFormCTA'
+import { useTranslations } from '@/i18n'
 
 const PRACTICES = [
   {
@@ -75,6 +76,7 @@ const TimelineDot = ({ isActive, color }: { isActive: boolean, color: string }) 
 );
 
 export default function ManufacturerPlaybookPage() {
+  const { t } = useTranslations()
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({ target: containerRef });
   const lineHeight = useTransform(scrollYProgress, [0, 1], ['0%', '100%']);
@@ -231,11 +233,11 @@ export default function ManufacturerPlaybookPage() {
         <section id="contact-cta" className="pt-32">
           <ContactFormCTA
             variant="gold"
-            headline="No SDL = No Market Access."
-            subheadline="Global buyers demand IEC 62443-4-1 certified products. Build it in or get locked out."
+            headline={t.playbookManufacturer.cta.headline}
+            subheadline={t.playbookManufacturer.cta.subheadline}
             serviceOptions={[
-              { value: 'gold', label: 'SDL Certification Advisory', color: 'yellow' },
-              { value: 'blue', label: 'Product Security Review', color: 'cyan' }
+              { value: 'gold', label: t.playbookManufacturer.cta.serviceOptions.advisory, color: 'yellow' },
+              { value: 'blue', label: t.playbookManufacturer.cta.serviceOptions.review, color: 'cyan' }
             ]}
           />
         </section>

@@ -62,8 +62,496 @@
         "whyOxotHighlight": "Elite-Architekten.",
         "whyOxotDescription": "Wir kombinieren tiefgreifende OT/ICS-Expertise mit KI-gestützten Analysefähigkeiten, die keine traditionelle Beratung bieten kann."
     },
+    "vision": {
+        "cta": {
+            "headline": "Vision wird Realität.",
+            "subheadline": "Bauen Sie Ihren digitalen Zwilling heute.",
+            "serviceOptions": {
+                "vision": "Vision Workshop",
+                "strategy": "Strategische Planung"
+            }
+        }
+    },
+    "agentBlue": {
+        "cta": {
+            "headline": "Aktive Verteidigung beginnt hier.",
+            "subheadline": "Stärken Sie Ihr Blue Team mit Agent Blue.",
+            "serviceOptions": {
+                "deployment": "Agent Blue Einsatz",
+                "demo": "Live Demo"
+            }
+        }
+    },
+    "agentRed": {
+        "cta": {
+            "headline": "Kennen Sie Ihre Schwachstellen?",
+            "subheadline": "Bevor es die Angreifer tun.",
+            "serviceOptions": {
+                "assessment": "Red Team Assessment",
+                "simulation": "Angriffssimulation"
+            }
+        }
+    },
+    "goldTeam": {
+        "cta": {
+            "headline": "Strategische Souveränität.",
+            "subheadline": "Führung auf Vorstandsebene.",
+            "serviceOptions": {
+                "advisory": "Gold Team Beratung",
+                "governance": "Governance Review"
+            }
+        },
+        "features": [
+            "Vorstands-Berichterstattung",
+            "M&A Due Diligence",
+            "Krisenmanagement"
+        ]
+    },
+    "nis2": {
+        "cta": {
+            "headline": "NIS2 ist Gesetz.",
+            "subheadline": "Vermeiden Sie persönliche Haftung.",
+            "serviceOptions": {
+                "assessment": "NIS2 Beurteilung",
+                "implementation": "Implementierung",
+                "audit": "Vorab-Audit"
+            }
+        }
+    },
+    "iec62443": {
+        "cta": {
+            "headline": "Bereit für die Zertifizierung?",
+            "subheadline": "70% der Fehler basieren auf Missverständnissen.",
+            "serviceOptions": {
+                "prep": "Zertifizierungsvorbereitung",
+                "assessment": "OT Sicherheitsbewertung"
+            }
+        }
+    },
+    "workshop": {
+        "cta": {
+            "headline": "Bereit für praxisnahes Training?",
+            "subheadline": "Lernen Sie von Experten an Ihren eigenen Systemen.",
+            "serviceOptions": {
+                "workshop": "IEC 62443 Workshop",
+                "program": "Individuelles Trainingsprogramm"
+            }
+        }
+    },
+    "playbookOperator": {
+        "cta": {
+            "headline": "Jede Lücke ist ein Risiko.",
+            "subheadline": "IEC 62443 ist das Fundament.",
+            "serviceOptions": {
+                "advisory": "IEC 62443 Beratung",
+                "operations": "Blue Team Betrieb"
+            }
+        }
+    },
+    "playbookManufacturer": {
+        "cta": {
+            "headline": "Kein SDL = Kein Zugang.",
+            "subheadline": "Käufer verlangen Zertifizierung.",
+            "serviceOptions": {
+                "advisory": "SDL Beratung",
+                "review": "Produkt-Check"
+            }
+        }
+    },
+    "about": {
+        "cta": {
+            "headline": "Starten Sie Ihre Reise.",
+            "subheadline": "Mit Amsterdams führenden Experten.",
+            "serviceOptions": {
+                "blue": "Blue Team Verteidigung",
+                "gold": "Gold Strategie",
+                "red": "Red Team Angriff",
+                "general": "Allgemeine Anfrage"
+            }
+        }
+    },
+    "socV2": {
+        "cta": {
+            "headline": "Co-Pilot oder Autopilot?",
+            "subheadline": "Wählen Sie Ihr Modell.",
+            "serviceOptions": {
+                "copilot": "Co-Pilot (Erweiterung)",
+                "autopilot": "Autopilot (Managed)"
+            }
+        }
+    },
+    "acquisitions": {
+        "cta": {
+            "headline": "Vermeiden Sie Fehlkäufe.",
+            "subheadline": "Quantifizieren Sie Risiken in Dollar.",
+            "serviceOptions": {
+                "full": "Vollständige Analyse",
+                "lite": "Schnellcheck",
+                "premium": "Premium + Red Team"
+            }
+        }
+    },
+    "strategic": {
+        "cta": {
+            "headline": "Transformieren Sie Ihre Sicherheit?",
+            "subheadline": "Vorhersehen statt Reagieren.",
+            "serviceOptions": {
+                "pilot": "Pilotprojekt",
+                "assessment": "Strategische Bewertung",
+                "briefing": "Executive Briefing"
+            }
+        }
+    },
     "cta": {
-        "headline": "Ihr Vorstand Stellt Schwierige Fragen.",
-        "subheadline": "Haben Sie die Antworten, die Sie Brauchen?"
+        "defaultHeadline": "Ihr Vorstand Stellt Schwierige Fragen.",
+        "defaultSubheadline": "Haben Sie die Antworten, die Sie Brauchen?",
+        "success": {
+            "title": "Privilegierte Kommunikation Etabliert",
+            "message": "Ihre Anfrage wurde sicher an unser Team übermittelt. Ein Senior-Partner wird Sie innerhalb von 2 Stunden über OOB-Kanäle kontaktieren."
+        },
+        "threatAdvisory": {
+            "label": "Aktive Bedrohungswarnung",
+            "message": "Erhöhte OT-Targeting-Aktivität in EMEA-Energienetzen beobachtet."
+        },
+        "briefingRequest": {
+            "prefix": "Führungskräfte-Briefing",
+            "link": "anfordern",
+            "description": "Erhalten Sie eine maßgeschneiderte Bedrohungsanalyse für Ihren Sektor."
+        },
+        "trustSignals": {
+            "standards": {
+                "title": "EU-Standards",
+                "desc": "NIS2 & IEC 62443 Konform"
+            },
+            "sectors": {
+                "title": "Kritische Sektoren",
+                "desc": "Energie, Fertigung, Verkehr"
+            },
+            "engagements": {
+                "title": "Aktive Mandate",
+                "desc": "12+ Aktive Verteidigungen"
+            }
+        },
+        "quote": {
+            "text": "Die einzige Sicherheitsfirma, die die Physik industrieller Steuerungssysteme genauso gut versteht wie den Code, der sie angreift.",
+            "author": "Dr. Arjan Van Der Berg",
+            "authorTitle": "CISO, National Grid Initiative",
+            "verified": "Verifizierter Kunde"
+        },
+        "form": {
+            "title": "Sichere Uplink-Initialisierung",
+            "labels": {
+                "name": "Vollständiger Name",
+                "title": "Berufsbezeichnung",
+                "email": "Geschäftliche E-Mail",
+                "org": "Organisation",
+                "sector": "Sektor",
+                "region": "Region",
+                "service": "Prioritätsservice",
+                "concerns": "Spezifische Bedenken"
+            },
+            "placeholders": {
+                "name": "z.B. Jan de Vries",
+                "title": "z.B. CISO / Werksleiter",
+                "email": "name@organisation.com",
+                "org": "Name der Organisation",
+                "concerns": "Beschreiben Sie kurz Ihre Situation...",
+                "selectSector": "Sektor Wählen",
+                "selectRegion": "Region Wählen"
+            },
+            "submit": "Verschlüsselte Übertragung Starten",
+            "submitting": "Wird gesendet...",
+            "disclaimer": "Alle Übertragungen sind Ende-zu-Ende verschlüsselt und werden unter strengster NDA behandelt."
+        },
+        "urgency": {
+            "label": "Antwortzeit-SLA",
+            "value": "< 2 Stunden"
+        },
+        "sectors": [
+            "Energie",
+            "Fertigung",
+            "Logistik",
+            "Finanzen",
+            "Gesundheitswesen"
+        ],
+        "regions": [
+            "Europa",
+            "Nordamerika",
+            "Naher Osten",
+            "Asien-Pazifik"
+        ]
+    },
+    "soc": {
+        "hero": {
+            "badge": "Service_ID: 05 // SOC_Kommando",
+            "title": "OXOT Ästhetisches Verteidigungs",
+            "titleHighlight": "Netzwerk",
+            "subtitle": "Jenseits von Warnermüdung. Echtes situationales Bewusstsein.",
+            "stats": {
+                "coverage": "ABDECKUNG",
+                "mttd": "MTTD (ERKENNUNG)",
+                "noiseRef": "RAUSCHUNTERDRÜCKUNG"
+            },
+            "scroll": "INIT_SYSTEM_VIEW"
+        },
+        "modules": {
+            "title": "Aktive Verteidigungsmodule",
+            "status": "STATUS: AKTIV",
+            "telemetry": {
+                "title": "Agent Telemetrie",
+                "desc": "Echtzeit-Datenstream"
+            },
+            "hunting": {
+                "title": "Bedrohungsjagd",
+                "desc": "Proaktive Suche"
+            },
+            "detection": {
+                "title": "Erkennungsmotor",
+                "desc": "KI-getrieben"
+            },
+            "psychometrics": {
+                "title": "Psychometrische Profilerstellung",
+                "desc": "Anreicherung von Standardindikatoren mit Angreiferpsychologie. Verstehen Sie NICHT nur 'was' Sie getroffen hat, sondern 'warum', 'wer' und 'was sie als nächstes tun werden'."
+            },
+            "blueAI": {
+                "title": "Blue Team KI",
+                "desc": "Verbessert die menschliche Erfahrung mit Playbooks, Chat und konversationellen Sprachinteraktionen. Arbeitet autonom vor Ort und eskaliert an AEON Core."
+            },
+            "redLeader": {
+                "title": "Red Leader Validierung",
+                "desc": "Kontinuierliche Validierung mittels Red Squadron Leader – szenariobasierte Emulation über alle Raffinesse-Ebenen, von opportunistischen Hackern bis hin zu staatlichen APTs."
+            }
+        },
+        "features": {
+            "title": "Architektur-Highlights",
+            "description": "Unser SOC ist nicht nur ein Raum mit Bildschirmen. Es ist ein lebender Organismus.",
+            "list": [
+                {
+                    "title": "Echtzeit-Reaktion",
+                    "desc": "Sofortiges Handeln bei Bedrohungen."
+                },
+                {
+                    "title": "Integration",
+                    "desc": "Nahtlose Einbindung in bestehende Systeme."
+                },
+                {
+                    "title": "Skalierbarkeit",
+                    "desc": "Wächst mit Ihren Anforderungen."
+                }
+            ]
+        },
+        "cta": {
+            "headline": "Sichern Sie Ihre Zukunft.",
+            "subheadline": "Schließen Sie sich dem AEON-Netzwerk an.",
+            "options": {
+                "blue": "Blue Team Operationen",
+                "gold": "Gold Team Beratung"
+            }
+        },
+        "tags": {
+            "telemetry": [
+                "Splunk",
+                "Sentinel",
+                "Elastic"
+            ],
+            "hunting": [
+                "APT29",
+                "Lazarus",
+                "Volt Typhoon"
+            ],
+            "detection": [
+                "Sigma",
+                "YARA",
+                "Snort"
+            ],
+            "psychometrics": [
+                "Big 5 Merkmale",
+                "Dunkle Triade"
+            ],
+            "blueAI": [
+                "Sprach-KI",
+                "Playbooks",
+                "Auto-Eskalation"
+            ],
+            "redLeader": [
+                "Rotes Geschwader",
+                "APT Emulation",
+                "Nationalstaat"
+            ]
+        },
+        "architectureLegend": {
+            "aeonCloud": {
+                "title": "AEON Cloud",
+                "desc": "Kern, Red/Gold Team, Threat Intel, Simulations-Engine"
+            },
+            "blueServer": {
+                "title": "Blue Team Server",
+                "desc": "Lokaler Zwilling, Telemetriespeicher, Entscheidungsmaschine, Kollektor"
+            },
+            "dataDiode": {
+                "title": "Datendiode",
+                "desc": "Unidirektionales Gateway für Threat Intel in OT-Umgebung"
+            },
+            "otAssets": {
+                "title": "OT Assets",
+                "desc": "SCADA, SPS, HMI, Generatoren, Kühler, BMS, PDUs"
+            }
+        },
+        "framework": {
+            "title": "Entscheidungsrahmen",
+            "desc": "Wie AEON Core Telemetrie verarbeitet und kritische Aktionen in Echtzeit bestimmt.",
+            "now": {
+                "title": "JETZT",
+                "sub": "SOFORTIGE MASSNAHME ERFORDERLICH",
+                "action": "AKTION: AUTOMATISCHE BLOCKIERUNG / ISOLIERUNG",
+                "bullets": [
+                    "Aktive Ausnutzung in Kundentelemetrie erkannt",
+                    "EPSS > 10% UND Asset im kritischen Pfad",
+                    "Red Team bestätigte Ausnutzbarkeit im digitalen Zwilling",
+                    "Sicherheitssystem (SIS/SIL) mit bekannter Schwachstelle"
+                ]
+            },
+            "next": {
+                "title": "NÄCHSTES",
+                "sub": "GEPLANTE BEHEBUNG",
+                "action": "AKTION: TICKET ERSTELLUNG / PATCHING",
+                "bullets": [
+                    "Steigender EPSS-Trend (1-10%) mit Angriffspfadpotenzial",
+                    "SBOM-Abhängigkeit mit Upstream-Schwachstelle",
+                    "Asset im Bedrohungsmodell, aber keine aktive Ausnutzung",
+                    "Umrüstungsgelegenheit passt zum Wartungsfenster"
+                ]
+            },
+            "never": {
+                "title": "NIE",
+                "sub": "RISIKOAKZEPTANZ / ÜBERWACHUNG",
+                "action": "AKTION: NUR PROTOKOLLIERUNG / ÜBERWACHUNG",
+                "bullets": [
+                    "EPSS < 1% ohne Angriffspfad im Bedrohungsmodell",
+                    "Netzwerkisoliertes Asset mit kompensierenden Kontrollen",
+                    "Theoretische CVE ohne Waffe in freier Wildbahn",
+                    "Geschäftsauswirkung unter Risikoappetitschwelle"
+                ]
+            },
+            "inputs": {
+                "title": "INTELLIGENZ-EINGABEN"
+            },
+            "inputsLegend": {
+                "blue": {
+                    "title": "Blue Team",
+                    "desc": "Threat Intel, CVE/EPSS, APT Profile"
+                },
+                "red": {
+                    "title": "Red Team",
+                    "desc": "Angriffspfadvalidierung, Ausnutzbarkeit"
+                },
+                "gold": {
+                    "title": "Gold Team",
+                    "desc": "Geschäftskontext, ROI, Umrüstungspläne"
+                },
+                "twin": {
+                    "title": "Digitaler Zwilling",
+                    "desc": "Asset-Modelle, SBOMs, Telemetrie"
+                }
+            },
+            "note": "Hinweis: Menschliche Analysten geben die endgültige Autorisierung für hochwirksame Blockieraktionen in OT-Umgebungen."
+        },
+        "meta": {
+            "serviceId": "Service_ID: 05 // SOC_Kommando",
+            "decisionFramework": "Entscheidungsrahmen",
+            "globalDeployment": "GLOBALE BEREITSTELLUNG",
+            "primaryService": "Primärer Dienst"
+        },
+        "architecture": {
+            "title": "AEON Cyber Digitaler Zwilling Architektur",
+            "layer": "SCHICHT_0: Infrastruktur-Modellierung auf Komponentenebene",
+            "zones": {
+                "title": "Zonen & Leitungen",
+                "desc": "Visualisieren Sie IEC 62443 Sicherheitszonen mit SL-Farbkodierung. Klicken Sie auf Komponenten für SBOM-Details."
+            },
+            "sbom": {
+                "title": "SBOM Rückverfolgbarkeit",
+                "desc": "Verfolgen Sie Schwachstellen von CVE → Bibliothek → Schnittstelle → Subkomponente → System → Anlage."
+            },
+            "epss": {
+                "title": "EPSS Integration",
+                "desc": "Echtzeit-Wahrscheinlichkeitsbewertungen für Exploits für jede Bibliothek in Ihrer OT-Infrastruktur."
+            },
+            "twinCore": "Digitaler Zwilling Kern // TIER III",
+            "canvas": {
+                "title": "Interaktives Engineering-Canvas",
+                "desc": "Eine vollständige <span class=\"text-white font-bold\">IEC 62443 Zonenarchitektur</span> mit 45+ Assets in 8 Sicherheitszonen.",
+                "interaction": "<strong class=\"text-oxot-blue-light\">Interaktion:</strong> Ziehen zum Verschieben • Scrollen zum Zoomen • Klicken für Details."
+            },
+            "hierarchy": "Hierarchie-Navigator",
+            "framework": {
+                "title": "JETZT / NÄCHSTES / NIE",
+                "desc": "Ein <span class=\"text-white font-bold\">strategischer Priorisierungsrahmen</span>, angetrieben vom vollen AEON Cyber Digital Twin.",
+                "now": {
+                    "title": "JETZT",
+                    "sub": "SOFORTIGE MASSNAHME",
+                    "action": "AKTION: Notfalländerung / OpEx gerechtfertigt"
+                },
+                "next": {
+                    "title": "NÄCHSTES",
+                    "sub": "GEPLANTE BEHEBUNG",
+                    "action": "AKTION: CapEx Planung / Nächster Umrüstungszyklus"
+                },
+                "never": {
+                    "title": "NIE",
+                    "sub": "RISIKO AKZEPTIEREN / BACKLOG",
+                    "action": "AKTION: Risikoakzeptanz dokumentieren / Überwachen"
+                },
+                "inputs": {
+                    "title": "Entscheidungseingaben von AEON Core"
+                },
+                "note": "<strong class=\"text-oxot-blue-light\">Menschliche Entscheidungen verbessern, nicht ersetzen.</strong> AEON synthetisiert riesige Datenmengen zu handlungsrelevanter Intelligenz."
+            }
+        },
+        "engagement": {
+            "title": "Interaktionsmodelle",
+            "desc": "SOC-fokussierte Engagement-Optionen zur Transformation Ihrer Sicherheitsoperationen.",
+            "models": {
+                "blue": {
+                    "title": "BLUE SERVICES",
+                    "sub": "PRÄDIKTIVE VERTEIDIGUNGSOPERATIONEN",
+                    "desc": "Transformieren Sie Ihr SOC von reaktiv zu präkognitiv. Wählen Sie Ihr Bereitstellungsmodell basierend auf operativen Anforderungen.",
+                    "optionA": {
+                        "title": "Option A: SOC-Erweiterung",
+                        "desc": "Wir hosten die AEON Engine und integrieren sie in Ihr bestehendes SOC/SIEM, um es mit Agent Blue Vorhersageintelligenz zu verbessern."
+                    },
+                    "optionB": {
+                        "title": "Option B: Managed SOC",
+                        "desc": "Vollständig verwaltetes SOC mit AEON Cyber Digital Twin, On-Premise Blue Team Docker-Satelliten und 24/7 menschlicher Überwachung."
+                    },
+                    "features": [
+                        "Kontinuierliche Bedrohungsjagd (293 APT Profile)",
+                        "Echtzeit-EPSS Risikopriorisierung",
+                        "Sigma/YARA Erkennungstechnik",
+                        "Incident Response (4 Std. SLA)",
+                        "Monatliche Purple Team Validierung"
+                    ],
+                    "cta": "Blue Team Einsetzen"
+                },
+                "gold": {
+                    "title": "GOLD SERVICES",
+                    "sub": "ERGÄNZENDE BERATUNG",
+                    "desc": "Strategische Dienste, die Ihre SOC-Operationen ergänzen. Beschleunigen Sie die Reife und optimieren Sie Ihre Sicherheitslage.",
+                    "advisory": {
+                        "title": "SOC-Fokussierte Beratung",
+                        "desc": "Gold Team Dienste zur Verbesserung Ihrer Blue Team Operationen – von Architektur bis Compliance."
+                    },
+                    "features": [
+                        "SOC-Modernisierungsstrategie",
+                        "Erkennungstechnik-Beratung",
+                        "Krisen-Planspiele & Tabletop-Übungen",
+                        "IEC 62443 Architektur & Zertifizierung",
+                        "Führungskräfte- & Vorstandsberatung",
+                        "Regulatorische Compliance (NERC CIP, NIS2)"
+                    ],
+                    "cta": "Beratung Vereinbaren"
+                }
+            }
+        }
     }
 }

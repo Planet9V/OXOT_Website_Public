@@ -10,12 +10,14 @@ import {
 import Link from 'next/link';
 import { BackgroundEffect } from './BackgroundEffect';
 import ContactFormCTA from './ContactFormCTA';
+import { useTranslations } from '@/i18n'
 
 import { services, marketSummary, getPriorityServices } from '@/data/services-portfolio';
 import { expertPersonas, strategicConsensus } from '@/data/expert-personas';
 import { enhancementStats, tiers } from '@/data/enhancements-index';
 
 export default function OXOTStrategicView() {
+    const { t } = useTranslations()
     const { scrollYProgress } = useScroll();
     const scaleX = useTransform(scrollYProgress, [0, 1], [0, 1]);
     const [activePersona, setActivePersona] = useState(0);
@@ -86,12 +88,12 @@ export default function OXOTStrategicView() {
                 <div className="mt-40">
                     <ContactFormCTA
                         variant="gold"
-                        headline="Ready to Transform Your Security Posture?"
-                        subheadline="OXOT's AEON Cyber Digital Twin provides predictive threat intelligence that anticipates attacks before they happen."
+                        headline={t.strategic.cta.headline}
+                        subheadline={t.strategic.cta.subheadline}
                         serviceOptions={[
-                            { value: 'pilot', label: '90-Day Proof of Value Pilot', color: 'cyan' },
-                            { value: 'assessment', label: 'Strategic Portfolio Assessment', color: 'yellow' },
-                            { value: 'briefing', label: 'Executive Briefing', color: 'red' }
+                            { value: 'pilot', label: t.strategic.cta.serviceOptions.pilot, color: 'cyan' },
+                            { value: 'assessment', label: t.strategic.cta.serviceOptions.assessment, color: 'yellow' },
+                            { value: 'briefing', label: t.strategic.cta.serviceOptions.briefing, color: 'red' }
                         ]}
                     />
                 </div>

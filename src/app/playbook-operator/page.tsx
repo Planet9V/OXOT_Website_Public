@@ -9,6 +9,7 @@ import {
 } from 'lucide-react'
 import { TypewriterEquation } from '@/components/TypewriterEquation'
 import ContactFormCTA from '@/components/ContactFormCTA'
+import { useTranslations } from '@/i18n'
 
 const DOSSIERS = [
   {
@@ -68,6 +69,7 @@ Incident Response — Develop and maintain an incident response plan specific to
 ];
 
 export default function OperatorPlaybookPage() {
+  const { t } = useTranslations()
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({ target: containerRef });
   const lineHeight = useTransform(scrollYProgress, [0, 1], ['0%', '100%']);
@@ -277,11 +279,11 @@ export default function OperatorPlaybookPage() {
         <section id="contact-cta" className="pt-32">
           <ContactFormCTA
             variant="gold"
-            headline="Every Compliance Gap Is an Attack Surface."
-            subheadline="IEC 62443 isn't paperwork—it's your operational foundation. Let's close the gaps."
+            headline={t.playbookOperator.cta.headline}
+            subheadline={t.playbookOperator.cta.subheadline}
             serviceOptions={[
-              { value: 'gold', label: 'IEC 62443 Advisory', color: 'yellow' },
-              { value: 'blue', label: 'Blue Team Operations', color: 'cyan' }
+              { value: 'gold', label: t.playbookOperator.cta.serviceOptions.advisory, color: 'yellow' },
+              { value: 'blue', label: t.playbookOperator.cta.serviceOptions.operations, color: 'cyan' }
             ]}
           />
         </section>

@@ -12,6 +12,7 @@ import NowNextNeverTimeline from './NowNextNeverTimeline';
 import { OXOTLogo } from './branding/OXOTLogo';
 import { OXOTBadge } from './branding/OXOTBadge';
 import { PageHeader } from './branding/PageHeader';
+import { useTranslations } from '@/i18n';
 
 // Mock hook for now to avoid dependency hell, can be replaced with real hook if available
 const useEPSS = (cve: string) => ({ score: { epss: 0.965 }, loading: false });
@@ -36,6 +37,7 @@ const DEFENSIVE_CONCEPTS = [
 ];
 
 export default function AgentBluePage() {
+    const { t } = useTranslations();
     const containerRef = useRef<HTMLDivElement>(null);
     const { scrollYProgress } = useScroll({ target: containerRef });
     const opacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
@@ -792,8 +794,8 @@ export default function AgentBluePage() {
             {/* CTA Section */}
             <ContactFormCTA
                 variant="blue"
-                headline="Every Hour Without Predictive Defense Is a Blind Spot."
-                subheadline="CISOs can't protect what they can't predict. Get ahead of the threat curve."
+                headline={t.agentBlue.cta.headline}
+                subheadline={t.agentBlue.cta.subheadline}
             />
 
         </div >
