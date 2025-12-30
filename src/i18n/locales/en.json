@@ -81,6 +81,153 @@
         }
     },
     "goldTeam": {
+        "hero": {
+            "title": "GOLD TEAM",
+            "tagline": "Strategic. Certified. Sovereign.",
+            "subtitle": "Elite Advisory Practice",
+            "subtitleHighlight": "",
+            "description": "World-class IEC 62443 consulting for critical infrastructure. We architect security, guide digital transformation, and deliver board-level strategic advisory where compliance meets executive liability.",
+            "scroll": "Scroll to Explore"
+        },
+        "why": {
+            "badge": "WHY OXOT",
+            "title": "Not Just Consultants.",
+            "highlight": "Elite Architects.",
+            "description": "We combine deep OT/ICS expertise with AI-augmented analysis capabilities that no traditional consultancy can match.",
+            "cards": {
+                "expert": {
+                    "title": "Deep OT/ICS Expertise",
+                    "desc": "Not just IT security—true operational technology specialists with hands-on SCADA, PLC, and ICS experience."
+                },
+                "ai": {
+                    "title": "AI-Augmented Analysis",
+                    "desc": "Every engagement is powered by the AEON Digital Twin, providing insights impossible through manual assessment alone."
+                },
+                "global": {
+                    "title": "Global Infrastructure",
+                    "desc": "Experience across 5 continents securing power grids, rail systems, water utilities, and national defense installations."
+                },
+                "executive": {
+                    "title": "Executive Fluency",
+                    "desc": "Board-ready deliverables, CISO-level strategic advisory, and risk translation that resonates with leadership."
+                }
+            }
+        },
+        "services": {
+            "title": "Strategic Services",
+            "iec": {
+                "title": "IEC 62443 Architecture",
+                "desc": "Design security zones and conduits compliant with the gold standard for industrial cybersecurity. From gap analysis to certification readiness.",
+                "link": "Explore Architecture"
+            },
+            "nis2": {
+                "title": "NIS2 Directive & Board Liability",
+                "desc": "Ensure compliance for \"Essential\" and \"Important\" entities. We address cybersecurity risk management, incident reporting, and the new ",
+                "personalLiability": "personal management liability",
+                "link": "Explore Compliance",
+                "badges": {
+                    "article": "Article 20",
+                    "liability": "Liability"
+                }
+            },
+            "ma": {
+                "title": "M&A Cyber Due Diligence",
+                "desc": "Know exactly what you're inheriting. We map hidden liabilities in 72 hours."
+            },
+            "warGaming": {
+                "title": "Crisis War Gaming",
+                "desc": "Live-fire simulations. Stress your team against realistic nation-state adversaries."
+            },
+            "soc": {
+                "title": "SOC Modernization",
+                "desc": "Transform from 'Alert Fatigue' to 'Predictive Intelligence' in 90 days."
+            },
+            "digital": {
+                "title": "Digital Transformation",
+                "desc": "Secure migration to cloud-enabled OT infrastructure."
+            }
+        },
+        "program": {
+            "badge": "FULL LIFECYCLE SUPPORT",
+            "title": "IEC 62443",
+            "highlight": "Program Management",
+            "description": "We manage complete IEC 62443 cybersecurity programs for large-scale projects—from initial high-level design and requirements setting through to the final",
+            "report": "Security Report",
+            "plan": "Cybersecurity Management Plan",
+            "handover": "Handover documentation",
+            "note": "Our AI-enabled IEC 62443 Workshop application is tied directly to AEON Core, ensuring efficient, consistent, and auditable IEC 62443 processes, artifacts, and outcomes.",
+            "lifecycleTitle": "Program Lifecycle",
+            "phases": [
+                {
+                    "phase": "1. High-Level Design",
+                    "desc": "System architecture, zone/conduit definition, SL-T targets"
+                },
+                {
+                    "phase": "2. Requirements Specification",
+                    "desc": "FR mapping, SRS development, risk-based requirements"
+                },
+                {
+                    "phase": "3. Design & Implementation",
+                    "desc": "Detailed design, vendor coordination, security controls"
+                },
+                {
+                    "phase": "4. Verification & Validation",
+                    "desc": "Testing, penetration testing, compliance verification"
+                },
+                {
+                    "phase": "5. Security Report",
+                    "desc": "Final assessment, residual risk documentation"
+                },
+                {
+                    "phase": "6. CSMS & Handover",
+                    "desc": "Cybersecurity Management Plan, operational handover"
+                }
+            ]
+        },
+        "testing": {
+            "product": {
+                "title": "Product Testing (IEC 62443-4-2)",
+                "desc": "Independent security testing of OT/ICS products against IEC 62443-4-2 component requirements. We help vendors achieve certification readiness and identify vulnerabilities before market release.",
+                "badges": [
+                    "PLCs",
+                    "HMIs",
+                    "RTUs",
+                    "Embedded Devices"
+                ]
+            },
+            "integrator": {
+                "title": "Integrator/Builder Assessment (IEC 62443-2-4)",
+                "desc": "Security capability assessments for system integrators and automation builders. We verify secure development practices, project delivery processes, and maintenance procedures.",
+                "badges": [
+                    "SDLC Review",
+                    "Project Delivery",
+                    "Maintenance",
+                    "Certification Prep"
+                ]
+            }
+        },
+        "sectors": {
+            "title": "Critical Infrastructure Expertise",
+            "desc": "Sector-specific experience where security is not optional—it's existential.",
+            "list": {
+                "energy": "Energy & Utilities",
+                "rail": "Transportation & Rail",
+                "water": "Water & Wastewater",
+                "manufacturing": "Manufacturing",
+                "defense": "National Defense"
+            }
+        },
+        "lattice": {
+            "badge": "STRATEGIC LATTICE",
+            "title": "Governance Meets",
+            "highlight": "Intelligence",
+            "description": "Gold Team consultants don't work in isolation. Every engagement is informed by the AEON Digital Twin—providing real-time threat intelligence, asset visibility, and predictive risk modeling that transforms advisory from reactive to proactive.",
+            "badges": {
+                "compliance": "NIS2 / IEC 62443",
+                "zeroTrust": "Zero Trust Ready"
+            },
+            "liveLabel": "LIVE: Strategic Lattice Interconnect"
+        },
         "cta": {
             "headline": "Your Board Is Asking Hard Questions.",
             "subheadline": "Do You Have the Answers They Need?"

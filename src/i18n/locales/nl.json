@@ -81,9 +81,156 @@
         }
     },
     "goldTeam": {
+        "hero": {
+            "title": "GOLD TEAM",
+            "tagline": "Strategisch. Gecertificeerd. Soeverein.",
+            "subtitle": "Elite Adviespraktijk",
+            "subtitleHighlight": "",
+            "description": "Wereldklasse IEC 62443 consultancy voor kritieke infrastructuur. Wij ontwerpen beveiliging, begeleiden digitale transformatie en leveren strategisch advies op bestuursniveau waar compliance en bestuurdersaansprakelijkheid samenkomen.",
+            "scroll": "Scroll om te Verkennen"
+        },
+        "why": {
+            "badge": "WAAROM OXOT",
+            "title": "Niet Zomaar Consultants.",
+            "highlight": "Elite Architecten.",
+            "description": "Wij combineren diepgaande OT/ICS-expertise met AI-augmented analyse die geen enkel traditioneel adviesbureau kan evenaren.",
+            "cards": {
+                "expert": {
+                    "title": "Diepgaande OT/ICS Expertise",
+                    "desc": "Niet alleen IT-beveiliging—echte operationele technologie specialisten met hands-on SCADA, PLC en ICS ervaring."
+                },
+                "ai": {
+                    "title": "AI-Ondersteunde Analyse",
+                    "desc": "Elke opdracht wordt aangedreven door de AEON Digital Twin, wat inzichten biedt die onmogelijk zijn via handmatige beoordeling alleen."
+                },
+                "global": {
+                    "title": "Wereldwijde Infrastructuur",
+                    "desc": "Ervaring op 5 continenten met het beveiligen van energienetten, railsystemen, watervoorzieningen en nationale defensie-installaties."
+                },
+                "executive": {
+                    "title": "Bestuurlijke Relevantie",
+                    "desc": "Leveringen op bestuursniveau, strategisch advies voor CISO's en risiovertaling die resoneert met leiderschap."
+                }
+            }
+        },
+        "services": {
+            "title": "Strategische Diensten",
+            "iec": {
+                "title": "IEC 62443 Architectuur",
+                "desc": "Ontwerp veiligheidszones en conduits conform de gouden standaard voor industriële cybersecurity. Van gap-analyse tot certificeringsgereedheid.",
+                "link": "Bekijk Architectuur"
+            },
+            "nis2": {
+                "title": "NIS2 Richtlijn & Bestuurdersaansprakelijkheid",
+                "desc": "Zorg voor compliance voor \"Essentiële\" en \"Belangrijke\" entiteiten. Wij behandelen risicobeheer, incidentrapportage en de nieuwe ",
+                "personalLiability": "persoonlijke bestuurdersaansprakelijkheid",
+                "link": "Bekijk Compliance",
+                "badges": {
+                    "article": "Artikel 20",
+                    "liability": "Aansprakelijkheid"
+                }
+            },
+            "ma": {
+                "title": "M&A Cyber Due Diligence",
+                "desc": "Weet precies wat u erft. Wij brengen verborgen aansprakelijkheden in kaart binnen 72 uur."
+            },
+            "warGaming": {
+                "title": "Crisis War Gaming",
+                "desc": "Live-fire simulaties. Test uw team tegen realistische statelijke actoren."
+            },
+            "soc": {
+                "title": "SOC Modernisering",
+                "desc": "Transformeer van 'Alert Fatigue' naar 'Voorspellende Intelligentie' in 90 dagen."
+            },
+            "digital": {
+                "title": "Digitale Transformatie",
+                "desc": "Veilige migratie naar cloud-enabled OT-infrastructuur."
+            }
+        },
+        "program": {
+            "badge": "VOLLEDIGE LEVENSYCLUS ONDERSTEUNING",
+            "title": "IEC 62443",
+            "highlight": "Programma Management",
+            "description": "Wij beheren complete IEC 62443 cybersecurityprogramma's voor grootschalige projecten—van initieel ontwerp en eisenstelling tot het uiteindelijke",
+            "report": "Veiligheidsrapport",
+            "plan": "Cybersecurity Management Plan",
+            "handover": "Overdrachtsdocumentatie",
+            "note": "Onze AI-gestuurde IEC 62443 Workshop applicatie is direct gekoppeld aan AEON Core, wat zorgt voor efficiënte, consistente en auditeerbare processen, artefacten en resultaten.",
+            "lifecycleTitle": "Programma Levenscyclus",
+            "phases": [
+                {
+                    "phase": "1. High-Level Design",
+                    "desc": "Systeemarchitectuur, zone/conduit definitie, SL-T doelen"
+                },
+                {
+                    "phase": "2. Requirements Specificatie",
+                    "desc": "FR mapping, SRS ontwikkeling, risico-gebaseerde eisen"
+                },
+                {
+                    "phase": "3. Ontwerp & Implementatie",
+                    "desc": "Gedetailleerd ontwerp, leverancierscoördinatie, beveiligingsmaatregelen"
+                },
+                {
+                    "phase": "4. Verificatie & Validatie",
+                    "desc": "Testen, penetratietesten, compliance verificatie"
+                },
+                {
+                    "phase": "5. Veiligheidsrapport",
+                    "desc": "Eindbeoordeling, restrisico documentatie"
+                },
+                {
+                    "phase": "6. CSMS & Overdracht",
+                    "desc": "Cybersecurity Management Plan, operationele overdracht"
+                }
+            ]
+        },
+        "testing": {
+            "product": {
+                "title": "Product Testen (IEC 62443-4-2)",
+                "desc": "Onafhankelijke veiligheidstests van OT/ICS-producten tegen IEC 62443-4-2 componentvereisten. Wij helpen leveranciers certificeringsgereedheid te bereiken en kwetsbaarheden te identificeren vóór marktintroductie.",
+                "badges": [
+                    "PLC's",
+                    "HMI's",
+                    "RTU's",
+                    "Embedded Apparaten"
+                ]
+            },
+            "integrator": {
+                "title": "Integrator/Builder Beoordeling (IEC 62443-2-4)",
+                "desc": "Beoordeling van beveiligingscapaciteiten voor systeemintegrators en automatiseerders. Wij verifiëren veilige ontwikkelpraktijken, projectleveringsprocessen en onderhoudsprocedures.",
+                "badges": [
+                    "SDLC Review",
+                    "Projectlevering",
+                    "Onderhoud",
+                    "Certificering Prep"
+                ]
+            }
+        },
+        "sectors": {
+            "title": "Kritieke Infrastructuur Expertise",
+            "desc": "Sectorspecifieke ervaring waar veiligheid niet optioneel is—het is existentieel.",
+            "list": {
+                "energy": "Energie & Nutsbedrijven",
+                "rail": "Transport & Spoor",
+                "water": "Water & Afvalwater",
+                "manufacturing": "Productie",
+                "defense": "Nationale Defensie"
+            }
+        },
+        "lattice": {
+            "badge": "STRATEGISCH ROOSTER",
+            "title": "Bestuur Ontmoet",
+            "highlight": "Intelligentie",
+            "description": "Gold Team consultants werken niet in isolatie. Elke opdracht wordt geïnformeerd door de AEON Digital Twin—biedt real-time dreigingsinformatie, zichtbaarheid van activa en voorspellende risicomodellering die advies transformeert van reactief naar proactief.",
+            "badges": {
+                "compliance": "NIS2 / IEC 62443",
+                "zeroTrust": "Zero Trust Gereed"
+            },
+            "liveLabel": "LIVE: Strategisch Rooster Interconnect"
+        },
         "cta": {
-            "headline": "Uw bestuur stelt moeilijke vragen.",
-            "subheadline": "Heeft u de antwoorden die zij nodig hebben?"
+            "headline": "Uw Bestuur Stelt Lastige Vragen.",
+            "subheadline": "Heeft U de Antwoorden Die Ze Nodig Hebben?"
         }
     },
     "nis2": {

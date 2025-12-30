@@ -265,6 +265,91 @@ export interface AgentRedTranslations {
 }
 
 export interface GoldTeamTranslations {
+    hero: {
+        title: string;
+        tagline: string;
+        subtitle: string;
+        subtitleHighlight: string;
+        description: string;
+        scroll: string;
+    };
+    why: {
+        badge: string;
+        title: string;
+        highlight: string;
+        description: string;
+        cards: {
+            expert: { title: string; desc: string; };
+            ai: { title: string; desc: string; };
+            global: { title: string; desc: string; };
+            executive: { title: string; desc: string; };
+        };
+    };
+    services: {
+        title: string;
+        iec: {
+            title: string;
+            desc: string;
+            link: string;
+        };
+        nis2: {
+            title: string;
+            desc: string;
+            personalLiability: string;
+            link: string;
+            badges: { article: string; liability: string; };
+        };
+        ma: { title: string; desc: string; };
+        warGaming: { title: string; desc: string; };
+        soc: { title: string; desc: string; };
+        digital: { title: string; desc: string; };
+    };
+    program: {
+        badge: string;
+        title: string;
+        highlight: string;
+        description: string;
+        report: string;
+        plan: string;
+        handover: string;
+        note: string;
+        lifecycleTitle: string;
+        phases: { phase: string; desc: string; }[];
+    };
+    testing: {
+        product: {
+            title: string;
+            desc: string;
+            badges: string[];
+        };
+        integrator: {
+            title: string;
+            desc: string;
+            badges: string[];
+        };
+    };
+    sectors: {
+        title: string;
+        desc: string;
+        list: {
+            energy: string;
+            rail: string;
+            water: string;
+            manufacturing: string;
+            defense: string;
+        };
+    };
+    lattice: {
+        badge: string;
+        title: string;
+        highlight: string;
+        description: string;
+        badges: {
+            compliance: string;
+            zeroTrust: string;
+        };
+        liveLabel: string;
+    };
     cta: {
         headline: string;
         subheadline: string;

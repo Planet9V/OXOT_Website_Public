@@ -54,7 +54,7 @@ export const GoldTeamView = () => {
                         transition={{ duration: 0.8, delay: 0.2 }}
                         className="text-2xl md:text-3xl font-black tracking-tighter mb-4 text-white leading-none uppercase"
                     >
-                        GOLD TEAM
+                        {t.goldTeam.hero.title}
                     </motion.h1>
 
                     <motion.div
@@ -64,10 +64,10 @@ export const GoldTeamView = () => {
                         className="max-w-4xl mx-auto"
                     >
                         <p className="text-lg md:text-xl text-gray-400 font-light leading-tight mb-6">
-                            <span className="text-oxot-gold font-medium">Elite Advisory Practice</span> — Strategic. Certified. Sovereign.
+                            <span className="text-oxot-gold font-medium">{t.goldTeam.hero.subtitle}</span> — {t.goldTeam.hero.tagline}
                         </p>
                         <p className="text-base text-gray-500 max-w-2xl mx-auto leading-relaxed">
-                            World-class IEC 62443 consulting for critical infrastructure. We architect security, guide digital transformation, and deliver board-level strategic advisory where compliance meets executive liability.
+                            {t.goldTeam.hero.description}
                         </p>
                     </motion.div>
                 </motion.div>
@@ -78,7 +78,7 @@ export const GoldTeamView = () => {
                     transition={{ delay: 1, duration: 1 }}
                     className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-gray-600"
                 >
-                    <span className="text-[10px] tracking-[0.2em] uppercase">Scroll to Explore</span>
+                    <span className="text-[10px] tracking-[0.2em] uppercase">{t.goldTeam.hero.scroll}</span>
                     <ChevronDown className="w-4 h-4 animate-bounce" />
                 </motion.div>
             </section>
@@ -101,7 +101,7 @@ export const GoldTeamView = () => {
                             viewport={{ once: true }}
                             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-oxot-gold/10 border border-oxot-gold/20 text-oxot-gold text-xs font-mono tracking-widest mb-6"
                         >
-                            <Award className="w-3 h-3" /> WHY OXOT
+                            <Award className="w-3 h-3" /> {t.goldTeam.why.badge}
                         </motion.div>
                         <motion.h2
                             initial={{ opacity: 0, y: 20 }}
@@ -109,7 +109,7 @@ export const GoldTeamView = () => {
                             viewport={{ once: true }}
                             className="text-xl md:text-2xl font-bold text-white mb-4"
                         >
-                            Not Just Consultants. <span className="text-oxot-gold">Elite Architects.</span>
+                            {t.goldTeam.why.title} <span className="text-oxot-gold">{t.goldTeam.why.highlight}</span>
                         </motion.h2>
                         <motion.p
                             initial={{ opacity: 0, y: 20 }}
@@ -118,7 +118,7 @@ export const GoldTeamView = () => {
                             viewport={{ once: true }}
                             className="text-gray-400 max-w-3xl mx-auto text-sm"
                         >
-                            We combine deep OT/ICS expertise with AI-augmented analysis capabilities that no traditional consultancy can match.
+                            {t.goldTeam.why.description}
                         </motion.p>
                     </div>
 
@@ -130,26 +130,26 @@ export const GoldTeamView = () => {
                         {[
                             {
                                 icon: <Shield size={18} />,
-                                title: "Deep OT/ICS Expertise",
-                                desc: "Not just IT security—true operational technology specialists with hands-on SCADA, PLC, and ICS experience.",
+                                title: t.goldTeam.why.cards.expert.title,
+                                desc: t.goldTeam.why.cards.expert.desc,
                                 color: "oxot-blue"
                             },
                             {
                                 icon: <Zap size={18} />,
-                                title: "AI-Augmented Analysis",
-                                desc: "Every engagement is powered by the AEON Digital Twin, providing insights impossible through manual assessment alone.",
+                                title: t.goldTeam.why.cards.ai.title,
+                                desc: t.goldTeam.why.cards.ai.desc,
                                 color: "oxot-gold"
                             },
                             {
                                 icon: <Globe size={18} />,
-                                title: "Global Infrastructure",
-                                desc: "Experience across 5 continents securing power grids, rail systems, water utilities, and national defense installations.",
+                                title: t.goldTeam.why.cards.global.title,
+                                desc: t.goldTeam.why.cards.global.desc,
                                 color: "oxot-gold"
                             },
                             {
                                 icon: <GraduationCap size={18} />,
-                                title: "Executive Fluency",
-                                desc: "Board-ready deliverables, CISO-level strategic advisory, and risk translation that resonates with leadership.",
+                                title: t.goldTeam.why.cards.executive.title,
+                                desc: t.goldTeam.why.cards.executive.desc,
                                 color: "oxot-red"
                             }
                         ].map((item, i) => (
@@ -181,7 +181,7 @@ export const GoldTeamView = () => {
                 <section>
                     <div className="flex items-center gap-4 mb-12">
                         <div className="h-px bg-gradient-to-r from-transparent via-white/20 to-transparent flex-grow"></div>
-                        <h2 className="text-xl font-black text-white uppercase tracking-[0.15em]">Strategic Services</h2>
+                        <h2 className="text-xl font-black text-white uppercase tracking-[0.15em]">{t.goldTeam.services.title}</h2>
                         <div className="h-px bg-gradient-to-r from-transparent via-white/20 to-transparent flex-grow"></div>
                     </div>
 
@@ -202,14 +202,14 @@ export const GoldTeamView = () => {
                                             <div className="p-2 rounded-lg bg-oxot-gold/10 border border-oxot-gold/20 text-oxot-gold">
                                                 <Ruler size={18} />
                                             </div>
-                                            <h3 className="text-sm font-bold text-white group-hover:text-oxot-gold transition-colors">IEC 62443 Architecture</h3>
+                                            <h3 className="text-sm font-bold text-white group-hover:text-oxot-gold transition-colors">{t.goldTeam.services.iec.title}</h3>
                                         </div>
                                         <p className="text-gray-400 text-sm leading-relaxed mb-6 pl-1">
-                                            Design security zones and conduits compliant with the gold standard for industrial cybersecurity. From gap analysis to certification readiness.
+                                            {t.goldTeam.services.iec.desc}
                                         </p>
                                         <div className="flex items-center gap-4 pl-1">
                                             <span className="inline-flex items-center gap-2 text-xs font-bold text-oxot-gold group-hover:gap-3 transition-all">
-                                                Explore Architecture <ArrowRight size={14} />
+                                                {t.goldTeam.services.iec.link} <ArrowRight size={14} />
                                             </span>
                                         </div>
                                     </div>
@@ -233,18 +233,18 @@ export const GoldTeamView = () => {
                                             <div className="p-2 rounded-lg bg-oxot-blue/10 border border-oxot-blue/20 text-oxot-blue-light">
                                                 <Scale size={18} />
                                             </div>
-                                            <h3 className="text-sm font-bold text-white group-hover:text-oxot-blue-light transition-colors">NIS2 Directive & Board Liability</h3>
+                                            <h3 className="text-sm font-bold text-white group-hover:text-oxot-blue-light transition-colors">{t.goldTeam.services.nis2.title}</h3>
                                         </div>
                                         <p className="text-gray-400 text-sm leading-relaxed mb-6 pl-1">
-                                            Ensure compliance for "Essential" and "Important" entities. We address cybersecurity risk management, incident reporting, and the new <span className="text-oxot-blue-light font-bold">personal management liability</span> provisions.
+                                            {t.goldTeam.services.nis2.desc} <span className="text-oxot-blue-light font-bold">{t.goldTeam.services.nis2.personalLiability}</span>.
                                         </p>
                                         <div className="flex items-center gap-4 pl-1">
                                             <span className="inline-flex items-center gap-2 text-xs font-bold text-oxot-blue-light group-hover:gap-3 transition-all">
-                                                Explore Compliance <ArrowRight size={14} />
+                                                {t.goldTeam.services.nis2.link} <ArrowRight size={14} />
                                             </span>
                                             <div className="flex gap-2">
-                                                <span className="px-2 py-1 text-[9px] bg-oxot-blue/10 text-oxot-blue-light rounded">Article 20</span>
-                                                <span className="px-2 py-1 text-[9px] bg-oxot-red/10 text-oxot-red-light rounded">Liability</span>
+                                                <span className="px-2 py-1 text-[9px] bg-oxot-blue/10 text-oxot-blue-light rounded">{t.goldTeam.services.nis2.badges.article}</span>
+                                                <span className="px-2 py-1 text-[9px] bg-oxot-red/10 text-oxot-red-light rounded">{t.goldTeam.services.nis2.badges.liability}</span>
                                             </div>
                                         </div>
                                     </div>
@@ -271,10 +271,10 @@ export const GoldTeamView = () => {
                                             <div className="p-2 rounded-lg bg-oxot-gold/10 text-oxot-gold">
                                                 <Briefcase size={18} />
                                             </div>
-                                            <h4 className="text-white text-sm font-bold group-hover:text-oxot-gold transition-colors">M&A Cyber Due Diligence</h4>
+                                            <h4 className="text-white text-sm font-bold group-hover:text-oxot-gold transition-colors">{t.goldTeam.services.ma.title}</h4>
                                         </div>
                                         <p className="text-gray-500 text-xs leading-relaxed pl-1">
-                                            Know exactly what you're inheriting. We map hidden liabilities in 72 hours.
+                                            {t.goldTeam.services.ma.desc}
                                         </p>
                                     </div>
                                 </div>
@@ -296,10 +296,10 @@ export const GoldTeamView = () => {
                                             <div className="p-2 rounded-lg bg-oxot-red/10 text-oxot-red">
                                                 <Activity size={18} />
                                             </div>
-                                            <h4 className="text-white text-sm font-bold group-hover:text-oxot-red transition-colors">Crisis War Gaming</h4>
+                                            <h4 className="text-white text-sm font-bold group-hover:text-oxot-red transition-colors">{t.goldTeam.services.warGaming.title}</h4>
                                         </div>
                                         <p className="text-gray-500 text-xs leading-relaxed pl-1">
-                                            Live-fire simulations. Stress your team against realistic nation-state adversaries.
+                                            {t.goldTeam.services.warGaming.desc}
                                         </p>
                                     </div>
                                 </div>
@@ -321,10 +321,10 @@ export const GoldTeamView = () => {
                                             <div className="p-2 rounded-lg bg-oxot-blue/10 text-oxot-blue-light">
                                                 <Users size={18} />
                                             </div>
-                                            <h4 className="text-white text-sm font-bold group-hover:text-oxot-blue-light transition-colors">SOC Modernization</h4>
+                                            <h4 className="text-white text-sm font-bold group-hover:text-oxot-blue-light transition-colors">{t.goldTeam.services.soc.title}</h4>
                                         </div>
                                         <p className="text-gray-500 text-xs leading-relaxed pl-1">
-                                            Transform from 'Alert Fatigue' to 'Predictive Intelligence' in 90 days.
+                                            {t.goldTeam.services.soc.desc}
                                         </p>
                                     </div>
                                 </div>
@@ -346,10 +346,10 @@ export const GoldTeamView = () => {
                                             <div className="p-2 rounded-lg bg-oxot-gold/10 text-oxot-gold">
                                                 <TrendingUp size={18} />
                                             </div>
-                                            <h4 className="text-white text-sm font-bold group-hover:text-oxot-gold transition-colors">Digital Transformation</h4>
+                                            <h4 className="text-white text-sm font-bold group-hover:text-oxot-gold transition-colors">{t.goldTeam.services.digital.title}</h4>
                                         </div>
                                         <p className="text-gray-500 text-xs leading-relaxed pl-1">
-                                            Secure migration to cloud-enabled OT infrastructure.
+                                            {t.goldTeam.services.digital.desc}
                                         </p>
                                     </div>
                                 </div>
@@ -364,21 +364,19 @@ export const GoldTeamView = () => {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
                         <div>
                             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-oxot-gold/10 border border-oxot-gold/20 text-oxot-gold text-[10px] font-mono tracking-widest mb-4">
-                                <Scale className="w-3 h-3" /> FULL LIFECYCLE SUPPORT
+                                <Scale className="w-3 h-3" /> {t.goldTeam.program.badge}
                             </div>
                             <h2 className="text-lg font-bold text-white mb-4 leading-tight">
-                                IEC 62443 <span className="text-oxot-gold">Program Management</span>
+                                {t.goldTeam.program.title} <span className="text-oxot-gold">{t.goldTeam.program.highlight}</span>
                             </h2>
                             <p className="text-gray-400 text-sm mb-6 leading-relaxed">
-                                We manage complete IEC 62443 cybersecurity programs for large-scale projects—from
-                                initial high-level design and requirements setting through to the final
-                                <span className="text-white font-bold"> Security Report</span>,
-                                <span className="text-white font-bold"> Cybersecurity Management Plan</span>, and
-                                <span className="text-white font-bold"> Handover documentation</span>.
+                                {t.goldTeam.program.description}
+                                <span className="text-white font-bold"> {t.goldTeam.program.report}</span>,
+                                <span className="text-white font-bold"> {t.goldTeam.program.plan}</span>, {t.common.close === "Sluiten" ? "en" : t.common.close === "Schließen" ? "und" : "and"}
+                                <span className="text-white font-bold"> {t.goldTeam.program.handover}</span>.
                             </p>
                             <p className="text-gray-500 text-xs mb-6 italic border-l-2 border-oxot-gold/50 pl-3">
-                                Our AI-enabled <span className="text-oxot-gold">IEC 62443 Workshop application</span> is tied directly to
-                                AEON Core, ensuring efficient, consistent, and auditable IEC 62443 processes, artifacts, and outcomes.
+                                {t.goldTeam.program.note}
                             </p>
                             <div className="flex flex-wrap gap-3">
                                 <div className="px-3 py-1.5 bg-oxot-gold/10 border border-oxot-gold/30 rounded text-[10px] text-oxot-gold font-bold">NIS2</div>
@@ -389,17 +387,10 @@ export const GoldTeamView = () => {
                         </div>
                         <div className="bg-black/40 border border-white/10 rounded-xl p-5">
                             <h4 className="text-white font-bold text-sm mb-4 flex items-center gap-2">
-                                <Layers className="text-oxot-gold" size={16} /> Program Lifecycle
+                                <Layers className="text-oxot-gold" size={16} /> {t.goldTeam.program.lifecycleTitle}
                             </h4>
                             <div className="space-y-3 text-xs">
-                                {[
-                                    { phase: "1. High-Level Design", desc: "System architecture, zone/conduit definition, SL-T targets" },
-                                    { phase: "2. Requirements Specification", desc: "FR mapping, SRS development, risk-based requirements" },
-                                    { phase: "3. Design & Implementation", desc: "Detailed design, vendor coordination, security controls" },
-                                    { phase: "4. Verification & Validation", desc: "Testing, penetration testing, compliance verification" },
-                                    { phase: "5. Security Report", desc: "Final assessment, residual risk documentation" },
-                                    { phase: "6. CSMS & Handover", desc: "Cybersecurity Management Plan, operational handover" }
-                                ].map((step, i) => (
+                                {t.goldTeam.program.phases.map((step, i) => (
                                     <div key={i} className="flex items-start gap-3 p-2 bg-white/5 rounded border border-white/5">
                                         <div className="w-6 h-6 rounded-full bg-oxot-gold/20 flex items-center justify-center text-oxot-gold font-bold text-[10px] shrink-0">{i + 1}</div>
                                         <div>
@@ -418,33 +409,29 @@ export const GoldTeamView = () => {
                     <div className="bg-white/5 border border-white/10 rounded-xl p-6 hover:border-oxot-red/30 transition-colors">
                         <div className="flex items-center gap-3 mb-4">
                             <ShieldCheck className="text-oxot-red" size={24} />
-                            <h3 className="text-white font-bold text-sm">Product Testing (IEC 62443-4-2)</h3>
+                            <h3 className="text-white font-bold text-sm">{t.goldTeam.testing.product.title}</h3>
                         </div>
                         <p className="text-gray-400 text-xs mb-4 leading-relaxed">
-                            Independent security testing of OT/ICS products against IEC 62443-4-2 component requirements.
-                            We help vendors achieve certification readiness and identify vulnerabilities before market release.
+                            {t.goldTeam.testing.product.desc}
                         </p>
                         <div className="flex flex-wrap gap-2 text-[9px]">
-                            <span className="px-2 py-1 bg-oxot-red/10 text-oxot-red-light rounded">PLCs</span>
-                            <span className="px-2 py-1 bg-oxot-red/10 text-oxot-red-light rounded">HMIs</span>
-                            <span className="px-2 py-1 bg-oxot-red/10 text-oxot-red-light rounded">RTUs</span>
-                            <span className="px-2 py-1 bg-oxot-red/10 text-oxot-red-light rounded">Embedded Devices</span>
+                            {t.goldTeam.testing.product.badges.map((badge, i) => (
+                                <span key={i} className="px-2 py-1 bg-oxot-red/10 text-oxot-red-light rounded">{badge}</span>
+                            ))}
                         </div>
                     </div>
                     <div className="bg-white/5 border border-white/10 rounded-xl p-6 hover:border-oxot-blue/30 transition-colors">
                         <div className="flex items-center gap-3 mb-4">
                             <Factory className="text-oxot-blue-light" size={24} />
-                            <h3 className="text-white font-bold text-sm">Integrator/Builder Assessment (IEC 62443-2-4)</h3>
+                            <h3 className="text-white font-bold text-sm">{t.goldTeam.testing.integrator.title}</h3>
                         </div>
                         <p className="text-gray-400 text-xs mb-4 leading-relaxed">
-                            Security capability assessments for system integrators and automation builders.
-                            We verify secure development practices, project delivery processes, and maintenance procedures.
+                            {t.goldTeam.testing.integrator.desc}
                         </p>
                         <div className="flex flex-wrap gap-2 text-[9px]">
-                            <span className="px-2 py-1 bg-oxot-blue/10 text-oxot-blue-light rounded">SDLC Review</span>
-                            <span className="px-2 py-1 bg-oxot-blue/10 text-oxot-blue-light rounded">Project Delivery</span>
-                            <span className="px-2 py-1 bg-oxot-blue/10 text-oxot-blue-light rounded">Maintenance</span>
-                            <span className="px-2 py-1 bg-oxot-blue/10 text-oxot-blue-light rounded">Certification Prep</span>
+                            {t.goldTeam.testing.integrator.badges.map((badge, i) => (
+                                <span key={i} className="px-2 py-1 bg-oxot-blue/10 text-oxot-blue-light rounded">{badge}</span>
+                            ))}
                         </div>
                     </div>
                 </section>
@@ -452,17 +439,17 @@ export const GoldTeamView = () => {
                 {/* INDUSTRY VERTICALS */}
                 <section className="bg-black/30 border border-white/10 rounded-2xl p-10">
                     <div className="text-center mb-12">
-                        <h2 className="text-xl font-bold text-white mb-4">Critical Infrastructure Expertise</h2>
-                        <p className="text-gray-400 max-w-2xl mx-auto text-sm">Sector-specific experience where security is not optional—it's existential.</p>
+                        <h2 className="text-xl font-bold text-white mb-4">{t.goldTeam.sectors.title}</h2>
+                        <p className="text-gray-400 max-w-2xl mx-auto text-sm">{t.goldTeam.sectors.desc}</p>
                     </div>
 
                     <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
                         {[
-                            { icon: <Zap className="w-6 h-6" />, name: "Energy & Utilities" },
-                            { icon: <Train className="w-6 h-6" />, name: "Transportation & Rail" },
-                            { icon: <Droplets className="w-6 h-6" />, name: "Water & Wastewater" },
-                            { icon: <Factory className="w-6 h-6" />, name: "Manufacturing" },
-                            { icon: <Shield className="w-6 h-6" />, name: "National Defense" }
+                            { icon: <Zap className="w-6 h-6" />, name: t.goldTeam.sectors.list.energy },
+                            { icon: <Train className="w-6 h-6" />, name: t.goldTeam.sectors.list.rail },
+                            { icon: <Droplets className="w-6 h-6" />, name: t.goldTeam.sectors.list.water },
+                            { icon: <Factory className="w-6 h-6" />, name: t.goldTeam.sectors.list.manufacturing },
+                            { icon: <Shield className="w-6 h-6" />, name: t.goldTeam.sectors.list.defense }
                         ].map((sector, i) => (
                             <div key={i} className="bg-white/5 border border-white/10 rounded-lg p-4 text-center hover:border-oxot-gold/30 transition-colors">
                                 <div className="text-oxot-gold mb-2 flex justify-center">{sector.icon}</div>
@@ -482,22 +469,22 @@ export const GoldTeamView = () => {
                             viewport={{ once: true }}
                         >
                             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-oxot-gold/10 border border-oxot-gold/20 text-oxot-gold text-xs font-mono tracking-widest mb-6">
-                                <Layers className="w-3 h-3" /> STRATEGIC LATTICE
+                                <Layers className="w-3 h-3" /> {t.goldTeam.lattice.badge}
                             </div>
                             <h2 className="text-xl md:text-2xl font-bold text-white mb-6 leading-tight">
-                                Governance Meets <span className="text-oxot-gold">Intelligence</span>
+                                {t.goldTeam.lattice.title} <span className="text-oxot-gold">{t.goldTeam.lattice.highlight}</span>
                             </h2>
                             <p className="text-gray-400 mb-6 leading-relaxed">
-                                Gold Team consultants don't work in isolation. Every engagement is informed by the AEON Digital Twin—providing real-time threat intelligence, asset visibility, and predictive risk modeling that transforms advisory from reactive to proactive.
+                                {t.goldTeam.lattice.description}
                             </p>
                             <div className="flex gap-6">
                                 <div className="flex items-center gap-2">
                                     <Scale className="w-5 h-5 text-oxot-gold" />
-                                    <span className="text-gray-400 text-sm">NIS2 / IEC 62443</span>
+                                    <span className="text-gray-400 text-sm">{t.goldTeam.lattice.badges.compliance}</span>
                                 </div>
                                 <div className="flex items-center gap-2">
                                     <ShieldCheck className="w-5 h-5 text-oxot-gold" />
-                                    <span className="text-gray-400 text-sm">Zero Trust Ready</span>
+                                    <span className="text-gray-400 text-sm">{t.goldTeam.lattice.badges.zeroTrust}</span>
                                 </div>
                             </div>
                         </motion.div>
@@ -511,7 +498,7 @@ export const GoldTeamView = () => {
                         >
                             <GoldTeamGraph />
                             <div className="absolute bottom-4 left-4 right-4 bg-black/80 backdrop-blur border border-white/10 p-3 rounded text-xs font-mono text-gray-500">
-                                <span className="text-oxot-gold font-bold">LIVE:</span> Strategic Lattice Interconnect
+                                <span className="text-oxot-gold font-bold">{t.goldTeam.lattice.liveLabel}</span>
                             </div>
                         </motion.div>
                     </div >
