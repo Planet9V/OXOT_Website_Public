@@ -1,7 +1,7 @@
 'use client';
 
 import { create } from 'zustand';
-import { persist } from 'zustand/middleware';
+import { persist, createJSONStorage } from 'zustand/middleware';
 import type { Locale, Translations } from './types';
 
 // Import translation files
@@ -17,42 +17,46 @@ const translations: Record<Locale, Translations> = {
 
 interface I18nState {
     locale: Locale;
-    t: Translations;
     setLocale: (locale: Locale) => void;
     availableLocales: { code: Locale; name: string; flag: string }[];
+    _hasHydrated: boolean;
+    setHasHydrated: (state: boolean) => void;
 }
 
-export const useI18n = create<I18nState>()(
+// Create the store with proper hydration handling
+export const useI18nStore = create<I18nState>()(
     persist(
         (set) => ({
             locale: 'en',
-            t: translations.en,
             availableLocales: [
                 { code: 'en', name: 'English', flag: '🇬🇧' },
                 { code: 'nl', name: 'Nederlands', flag: '🇳🇱' },
                 { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
             ],
-            setLocale: (locale: Locale) =>
-                set({
-                    locale,
-                    t: translations[locale],
-                }),
+            _hasHydrated: false,
+            setHasHydrated: (state: boolean) => set({ _hasHydrated: state }),
+            setLocale: (locale: Locale) => set({ locale }),
         }),
         {
             name: 'oxot-locale',
+            storage: createJSONStorage(() => localStorage),
             partialize: (state) => ({ locale: state.locale }),
             onRehydrateStorage: () => (state) => {
-                // Rehydrate translations after loading persisted locale
-                if (state) {
-                    state.t = translations[state.locale];
-                }
+                state?.setHasHydrated(true);
             },
         }
     )
 );
 
-// Utility hook for SSR-safe locale access
+// Derived hook that computes translations from locale
 export const useTranslations = () => {
-    const { t, locale, setLocale, availableLocales } = useI18n();
-    return { t, locale, setLocale, availableLocales };
+    const { locale, setLocale, availableLocales, _hasHydrated } = useI18nStore();
+
+    // Get translations based on current locale
+    const t = translations[locale];
+
+    return { t, locale, setLocale, availableLocales, isHydrated: _hasHydrated };
 };
+
+// Re-export for backwards compatibility
+export const useI18n = useTranslations;
