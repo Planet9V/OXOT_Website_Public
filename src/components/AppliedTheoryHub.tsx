@@ -121,10 +121,10 @@ const CAPABILITY_CATEGORIES = [
                 id: "RSCH-39",
                 path: "/theory/musical-psychometrics",
                 title: "MUSICAL PSYCHOMETRIC NOTATION",
-                subtitle: "MPN Calculus",
-                description: "Translating psychometric dynamics into musical notation for pattern recognition.",
-                math: "\\mathcal{M}(\\Psi) \\to \\text{Score}",
-                features: ["Neo-Riemannian", "Pattern Encoding", "Harmonic Analysis"]
+                subtitle: "McKenney-Lacan Symphonic Calculus",
+                description: "Translating the Real-Symbolic-Imaginary registers into orchestral scores. Lacanian topology becomes audible through Neo-Riemannian transformations.",
+                math: "\\mathcal{M}(\\Psi_{RSI}) \\to \\text{Score}",
+                features: ["Conductor Score", "Tonnetz Grid", "Lab & Reference"]
             }
         ]
     },

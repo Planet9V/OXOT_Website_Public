@@ -144,6 +144,81 @@ export default function MusicalPsychometricsPage() {
                     <MPNChatEngine />
                 </motion.div>
 
+                {/* LIVE APPLICATIONS SECTION */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="mb-24"
+                >
+                    <div className="flex items-center gap-3 mb-8">
+                        <div className="h-px bg-oxot-gold/50 flex-1" />
+                        <span className="text-oxot-gold font-mono text-xs uppercase tracking-widest border border-oxot-gold/30 px-3 py-1 rounded bg-oxot-gold/10">
+                            Live MPN Applications
+                        </span>
+                        <div className="h-px bg-oxot-gold/50 flex-1" />
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        {/* MPN Lab */}
+                        <Link
+                            href="/mpn-lab"
+                            className="group p-6 bg-black/40 border border-white/10 rounded-2xl hover:border-teal-500/50 transition-all hover:scale-[1.02]"
+                        >
+                            <div className="flex items-center gap-3 mb-4">
+                                <div className="p-3 rounded-xl bg-teal-500/10 border border-teal-500/30">
+                                    <Terminal size={20} className="text-teal-400" />
+                                </div>
+                                <div>
+                                    <h4 className="text-sm font-black uppercase tracking-tight text-white group-hover:text-teal-400 transition-colors">MPN Lab</h4>
+                                    <div className="text-[10px] text-gray-500 font-mono">Experiments & Visualizations</div>
+                                </div>
+                            </div>
+                            <p className="text-xs text-gray-400 leading-relaxed">
+                                Explore the Dialectic Graph, Lorenz Attractor, Tonnetz Grid, and other psychometric visualizations driven by literary scenarios.
+                            </p>
+                        </Link>
+
+                        {/* MPN Conductor */}
+                        <Link
+                            href="/mpn-conductor"
+                            className="group p-6 bg-black/40 border border-white/10 rounded-2xl hover:border-oxot-gold/50 transition-all hover:scale-[1.02]"
+                        >
+                            <div className="flex items-center gap-3 mb-4">
+                                <div className="p-3 rounded-xl bg-oxot-gold/10 border border-oxot-gold/30">
+                                    <Music size={20} className="text-oxot-gold" />
+                                </div>
+                                <div>
+                                    <h4 className="text-sm font-black uppercase tracking-tight text-white group-hover:text-oxot-gold transition-colors">Conductor's Score</h4>
+                                    <div className="text-[10px] text-gray-500 font-mono">Orchestration Engine</div>
+                                </div>
+                            </div>
+                            <p className="text-xs text-gray-400 leading-relaxed">
+                                Multi-stave orchestral score generation from psychometric analysis. Each actor receives a unique stave driven by DISC, OCEAN, and Dark Triad profiles.
+                            </p>
+                        </Link>
+
+                        {/* MPN Reference */}
+                        <Link
+                            href="/mpn-reference"
+                            className="group p-6 bg-black/40 border border-white/10 rounded-2xl hover:border-cyan-500/50 transition-all hover:scale-[1.02]"
+                        >
+                            <div className="flex items-center gap-3 mb-4">
+                                <div className="p-3 rounded-xl bg-cyan-500/10 border border-cyan-500/30">
+                                    <Info size={20} className="text-cyan-400" />
+                                </div>
+                                <div>
+                                    <h4 className="text-sm font-black uppercase tracking-tight text-white group-hover:text-cyan-400 transition-colors">MPN Reference</h4>
+                                    <div className="text-[10px] text-gray-500 font-mono">Notation Dictionary</div>
+                                </div>
+                            </div>
+                            <p className="text-xs text-gray-400 leading-relaxed">
+                                Complete dictionary mapping DISC traits to instruments, OCEAN to modes, Dark Triad to harmonic functions, and cognitive biases to ornamentations.
+                            </p>
+                        </Link>
+                    </div>
+                </motion.div>
+
                 {/* Main Content */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
 
