@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useRef, useEffect } from 'react';
+import { useCallback, useRef, useEffect, useMemo } from 'react';
 import * as Tone from 'tone';
 
 // Musical constants
@@ -386,14 +386,14 @@ export function useMPNSynthesizer() {
         synthRef.current?.stopAll();
     }, []);
 
-    return {
+    return useMemo(() => ({
         initialize,
         playFullOrchestra,
         playScore,
         playCrisisAlert,
         setVolume,
         stopAll,
-    };
+    }), [initialize, playFullOrchestra, playScore, playCrisisAlert, setVolume, stopAll]);
 }
 
 export default MPNSynthesizer;
