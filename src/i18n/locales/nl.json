@@ -1459,194 +1459,6 @@
             "footer": {
                 "title": "AEON INLICHTINGENDIENST",
                 "endOfReport": "EINDE RAPPORT // OFFICIEEL GEVERIFIEERD"
-            },
-            "intelligence": {
-                "title": "Bedrijfsinlichtingen",
-                "subtitle": "Geconsolideerd inlichtingenoverzicht van Olam Food Ingredients (ofi) - structuur, schaal, strategie en risicolandschap",
-                "executive": {
-                    "title": "Management Samenvatting",
-                    "identity": "Olam Food Ingredients (ofi) - onderscheidende bedrijfsgroep binnen Olam Group Limited, opgericht in 2020",
-                    "purpose": "\"De verandering zijn voor goed voedsel en een gezonde toekomst\"",
-                    "platforms": {
-                        "cocoa": "Cacao",
-                        "coffee": "Koffie",
-                        "dairy": "Zuivel",
-                        "nuts": "Noten",
-                        "spices": "Specerijen"
-                    },
-                    "scale": {
-                        "plants": "Fabrieken",
-                        "innovation": "Innovatiecentra",
-                        "farmers": "Boeren"
-                    }
-                },
-                "entities": {
-                    "title": "Belangrijkste Operationele Entiteiten",
-                    "ofi": {
-                        "role": "Voornaamste bedrijfsgroep",
-                        "focus": "Ingrediënten met toegevoegde waarde via 5 platforms"
-                    },
-                    "mindsprint": {
-                        "role": "Interne technologiemotor",
-                        "focus": "3.200+ professionals, AI, cyberbeveiliging (GuardianEye)"
-                    },
-                    "jiva": {
-                        "role": "Digitaal dienstenplatform voor boeren (GESLOTEN aug 2025)",
-                        "focus": "Kasconservatie, 606 werknemers getroffen"
-                    },
-                    "terrascope": {
-                        "role": "SaaS voor koolstofmeting",
-                        "focus": "ESG-diensten, land/natuur/net-zero"
-                    }
-                },
-                "subsidiaries": {
-                    "title": "Netwerk van Dochterondernemingen",
-                    "headers": {
-                        "name": "Dochteronderneming",
-                        "location": "Locatie",
-                        "function": "Functie"
-                    },
-                    "list": {
-                        "clubCoffee": {
-                            "function": "Toonaangevende koffiebrander op maat in Noord-Amerika"
-                        },
-                        "seda": {
-                            "function": "Fabriek voor oploskoffie"
-                        },
-                        "unicao": {
-                            "function": "Cacaoverwerking"
-                        },
-                        "macao": {
-                            "function": "Cacaomaling en laboratoriumfaciliteit"
-                        },
-                        "na": {
-                            "function": "Verenigd hoofdkantoor VS"
-                        },
-                        "cocoaBV": {
-                            "function": "Belangrijke Europese dochteronderneming"
-                        },
-                        "cocoaDE": {
-                            "function": "Belangrijke Europese dochteronderneming"
-                        },
-                        "locations": {
-                            "toronto": "Toronto, Canada",
-                            "palencia": "Palencia, Spanje",
-                            "abidjan": "Abidjan, Ivoorkust",
-                            "valencia": "Valencia, Spanje",
-                            "chicago": "Chicago, VS",
-                            "netherlands": "Nederland",
-                            "germany": "Duitsland"
-                        }
-                    }
-                },
-                "facilities": {
-                    "title": "Operationele Voetafdruk",
-                    "regions": {
-                        "na": "Noord-Amerika",
-                        "europe": "Europa",
-                        "apac": "Azië-Pacific",
-                        "africaLatam": "Afrika & Latijns-Amerika"
-                    }
-                },
-                "chronology": {
-                    "title": "Chronologie van Belangrijke Gebeurtenissen",
-                    "events": {
-                        "compass": "Lancering Cocoa Compass duurzaamheidsinitiatief",
-                        "ofiEst": "ofi formeel opgericht als bedrijfsgroep",
-                        "tokoroa": "Fase 1 van Tokoroa Zuivelfabriek geopend (Nieuw-Zeeland)",
-                        "mightyEarth": "Mighty Earth rapport over cacao-uitdagingen in Ghana",
-                        "salic": "Verkoop van 44,58% belang in Olam Agri aan SALIC",
-                        "jivaClose": "Strategische sluiting van Jiva Ag platform",
-                        "eudr": "deadline voor EUDR-naleving (KRITIEK)"
-                    }
-                },
-                "discrepancies": {
-                    "title": "Brontegenstrijdigheden",
-                    "intro": "Tegenstrijdige informatie geïdentificeerd in openbare bronnen:",
-                    "fields": {
-                        "employees": "Aantal Werknemers",
-                        "farmers": "Boerennetwerk",
-                        "innovation": "Innovatiecentra"
-                    }
-                }
-            },
-            "groupStructure": {
-                "header": {
-                    "title": "GROEPSSTRUCTUUR",
-                    "subtitle": "Bedrijfsanatomie & Analyse Dochterondernemingen",
-                    "back": "Terug naar OSINT Rapport"
-                },
-                "hierarchy": {
-                    "title": "Analyse Bedrijfsstructuur",
-                    "desc": "Olam Group Limited reorganiseerde in 2020 in drie afzonderlijke bedrijfsgroepen om langetermijnwaarde te ontsluiten: <strong> ofi (Olam Food Ingredients)</strong>, <strong>Olam Agri</strong> en de <strong>Resterende Olam Group</strong>. Deze scheiding heeft geleid tot verschillende operationele technologische voetafdrukken en cyberrisicoprofielen voor elke entiteit."
-                },
-                "digitalLayer": {
-                    "title": "Digitale & Innovatielaag",
-                    "desc": "<strong>Mindsprint (voorheen OTBS)</strong> fungeert als de digitale motor voor de groep en levert IT, cyberbeveiliging (GuardianEye) en gedeelde diensten. Het is een cruciaal knooppunt in de digitale supply chain van de groep en bedient zowel ofi als Olam Agri.",
-                    "link": "Bekijk Technologie Stack"
-                },
-                "geoComplexity": {
-                    "title": "Geografische Complexiteit",
-                    "desc": "De groep is actief in meer dan 60 landen. <strong>ofi</strong> heeft een sterke aanwezigheid in Europa en Noord- en Zuid-Amerika (ingrediënten met toegevoegde waarde), terwijl <strong>Olam Agri</strong> domineert in Azië en Afrika (voedingsmiddelen met groot volume). EUDR en NIS2-regelgeving hebben specifiek invloed op de Europese verwerkingshubs.",
-                    "link": "Bekijk Nalevingsstatus"
-                }
-            },
-            "orgMap": {
-                "root": {
-                    "label": "Olam Group Limited",
-                    "role": "Holdingmaatschappij"
-                },
-                "ofi": {
-                    "label": "ofi (Olam Food Ingredients)",
-                    "role": "Ingrediënten met Toegevoegde Waarde"
-                },
-                "agri": {
-                    "label": "Olam Agri",
-                    "role": "Voedselzekerheid & Logistiek"
-                },
-                "remaining": {
-                    "label": "Resterende Olam Group",
-                    "role": "Incubator & Nalatenschap"
-                },
-                "divisions": {
-                    "cocoa": {
-                        "label": "Cacao",
-                        "role": "Verwerking & Innovatie"
-                    },
-                    "coffee": {
-                        "label": "Koffie",
-                        "role": "Oplosbaar & Supply Chain"
-                    },
-                    "dairy": {
-                        "label": "Zuivel",
-                        "role": "Wereldwijde Verwerking"
-                    },
-                    "spices": {
-                        "label": "Specerijen",
-                        "role": "Productie"
-                    },
-                    "grains": {
-                        "label": "Granen & Oliën",
-                        "role": "Handel & Maling"
-                    },
-                    "freight": {
-                        "label": "Vrachtbeheer",
-                        "role": "Logistieke Derivaten"
-                    },
-                    "cotton": {
-                        "label": "Vezel & Katoen",
-                        "role": "Ginning & Opslag"
-                    },
-                    "mindsprint": {
-                        "label": "Mindsprint",
-                        "role": "Digitale Diensten & Cyber"
-                    },
-                    "nupo": {
-                        "label": "Nupo Ventures",
-                        "role": "Incubatie (Jiva, Terrascope)"
-                    }
-                },
-                "interaction": "INTERACTIEVE HIERARCHIE KAART // KLIK OP KNOPEN OM TE VOUWEN OF NAVIGEREN"
             }
         },
         "executive": {
@@ -1788,89 +1600,277 @@
                     "stock": "LeadIQ identificeert 'TEAF' onjuist als ofi's symbool. ofi is in privébezit en bereidt zich voor op beursgang."
                 }
             }
-        }
-    },
-    "security": {
-        "title": "CYBERSECURITY RISICO BEOORDELING",
-        "subtitle": "Dreigingslandschap, kwetsbaarheden en nalevingsstatus voor OFI-operaties",
-        "backLink": "Terug naar OSINT Rapport",
-        "overview": {
-            "riskLevel": "HOOG",
-            "sectorAttacks": "Sector Aanvallen (2024)",
-            "mitreTechniques": "MITRE ICS Technieken",
-            "criticalCves": "Kritieke CVEs",
-            "iecStatus": "IEC 62443 Status",
-            "statusInProgress": "In Uitvoering",
-            "statusPending": "In Afwachting",
-            "statusCertified": "Gecertificeerd"
         },
-        "threatActors": {
-            "title": "Actieve Bedreigingsactoren (2024-2025)",
-            "description": "Het vierde kwartaal van 2024 zag een <span class='text-red-400 font-semibold'>118% piek</span> in ransomware-aanvallen tegen Voedsel & Landbouw. Dubbele afpersingstactieken domineren, waarbij groepen OT/ICS-systemen viseren voor maximale impact."
-        },
-        "techRisks": {
-            "title": "Samenvatting Technologierisico",
-            "risks": {
-                "braincube": {
-                    "reason": "Directe PLC-toegang, supply chain vector"
+        "intelligence": {
+            "title": "Bedrijfsinlichtingen",
+            "subtitle": "Geconsolideerd inlichtingenoverzicht van Olam Food Ingredients (ofi) - structuur, schaal, strategie en risicolandschap",
+            "executive": {
+                "title": "Management Samenvatting",
+                "identity": "Olam Food Ingredients (ofi) - onderscheidende bedrijfsgroep binnen Olam Group Limited, opgericht in 2020",
+                "purpose": "\"De verandering zijn voor goed voedsel en een gezonde toekomst\"",
+                "platforms": {
+                    "cocoa": "Cacao",
+                    "coffee": "Koffie",
+                    "dairy": "Zuivel",
+                    "nuts": "Noten",
+                    "spices": "Specerijen"
                 },
-                "rockwell": {
-                    "reason": "8 CVEs (CVSS tot 9.3)"
+                "scale": {
+                    "plants": "Fabrieken",
+                    "innovation": "Innovatiecentra",
+                    "farmers": "Boeren"
+                }
+            },
+            "entities": {
+                "title": "Belangrijkste Operationele Entiteiten",
+                "ofi": {
+                    "role": "Voornaamste bedrijfsgroep",
+                    "focus": "Ingrediënten met toegevoegde waarde via 5 platforms"
                 },
-                "sap": {
-                    "reason": "IT/OT grens API-blootstelling"
+                "mindsprint": {
+                    "role": "Interne technologiemotor",
+                    "focus": "3.200+ professionals, AI, cyberbeveiliging (GuardianEye)"
                 },
-                "siemens": {
-                    "reason": "Verouderde kwetsbaarheden"
+                "jiva": {
+                    "role": "Digitaal dienstenplatform voor boeren (GESLOTEN aug 2025)",
+                    "focus": "Kasconservatie, 606 werknemers getroffen"
+                },
+                "terrascope": {
+                    "role": "SaaS voor koolstofmeting",
+                    "focus": "ESG-diensten, land/natuur/net-zero"
+                }
+            },
+            "subsidiaries": {
+                "title": "Netwerk van Dochterondernemingen",
+                "headers": {
+                    "name": "Dochteronderneming",
+                    "location": "Locatie",
+                    "function": "Functie"
+                },
+                "list": {
+                    "clubCoffee": {
+                        "function": "Toonaangevende koffiebrander op maat in Noord-Amerika"
+                    },
+                    "seda": {
+                        "function": "Fabriek voor oploskoffie"
+                    },
+                    "unicao": {
+                        "function": "Cacaoverwerking"
+                    },
+                    "macao": {
+                        "function": "Cacaomaling en laboratoriumfaciliteit"
+                    },
+                    "na": {
+                        "function": "Verenigd hoofdkantoor VS"
+                    },
+                    "cocoaBV": {
+                        "function": "Belangrijke Europese dochteronderneming"
+                    },
+                    "cocoaDE": {
+                        "function": "Belangrijke Europese dochteronderneming"
+                    },
+                    "locations": {
+                        "toronto": "Toronto, Canada",
+                        "palencia": "Palencia, Spanje",
+                        "abidjan": "Abidjan, Ivoorkust",
+                        "valencia": "Valencia, Spanje",
+                        "chicago": "Chicago, VS",
+                        "netherlands": "Nederland",
+                        "germany": "Duitsland"
+                    }
+                }
+            },
+            "facilities": {
+                "title": "Operationele Voetafdruk",
+                "regions": {
+                    "na": "Noord-Amerika",
+                    "europe": "Europa",
+                    "apac": "Azië-Pacific",
+                    "africaLatam": "Afrika & Latijns-Amerika"
+                }
+            },
+            "chronology": {
+                "title": "Chronologie van Belangrijke Gebeurtenissen",
+                "events": {
+                    "compass": "Lancering Cocoa Compass duurzaamheidsinitiatief",
+                    "ofiEst": "ofi formeel opgericht als bedrijfsgroep",
+                    "tokoroa": "Fase 1 van Tokoroa Zuivelfabriek geopend (Nieuw-Zeeland)",
+                    "mightyEarth": "Mighty Earth rapport over cacao-uitdagingen in Ghana",
+                    "salic": "Verkoop van 44,58% belang in Olam Agri aan SALIC",
+                    "jivaClose": "Strategische sluiting van Jiva Ag platform",
+                    "eudr": "deadline voor EUDR-naleving (KRITIEK)"
+                }
+            },
+            "discrepancies": {
+                "title": "Brontegenstrijdigheden",
+                "intro": "Tegenstrijdige informatie geïdentificeerd in openbare bronnen:",
+                "fields": {
+                    "employees": "Aantal Werknemers",
+                    "farmers": "Boerennetwerk",
+                    "innovation": "Innovatiecentra"
                 }
             }
         },
-        "criticalAlert": {
-            "title": "KRITIEK: Braincube Derde partij Risico",
-            "description": "Braincube AI-platform heeft directe PLC-toegang in 120+ faciliteiten voor productie-optimalisatie. Dit creëert een potentiële supply chain aanvalsvector vergelijkbaar met SolarWinds.",
-            "tags": {
-                "poisoning": "AI Model Vergiftiging",
-                "injection": "Commando-injectie naar PLCs",
-                "exfiltration": "Formule Exfiltratie",
-                "supplyChain": "Supply Chain Aanval"
+        "groupStructure": {
+            "header": {
+                "title": "GROEPSSTRUCTUUR",
+                "subtitle": "Bedrijfsanatomie & Analyse Dochterondernemingen",
+                "back": "Terug naar OSINT Rapport"
+            },
+            "hierarchy": {
+                "title": "Analyse Bedrijfsstructuur",
+                "desc": "Olam Group Limited reorganiseerde in 2020 in drie afzonderlijke bedrijfsgroepen om langetermijnwaarde te ontsluiten: <strong> ofi (Olam Food Ingredients)</strong>, <strong>Olam Agri</strong> en de <strong>Resterende Olam Group</strong>. Deze scheiding heeft geleid tot verschillende operationele technologische voetafdrukken en cyberrisicoprofielen voor elke entiteit."
+            },
+            "digitalLayer": {
+                "title": "Digitale & Innovatielaag",
+                "desc": "<strong>Mindsprint (voorheen OTBS)</strong> fungeert als de digitale motor voor de groep en levert IT, cyberbeveiliging (GuardianEye) en gedeelde diensten. Het is een cruciaal knooppunt in de digitale supply chain van de groep en bedient zowel ofi als Olam Agri.",
+                "link": "Bekijk Technologie Stack"
+            },
+            "geoComplexity": {
+                "title": "Geografische Complexiteit",
+                "desc": "De groep is actief in meer dan 60 landen. <strong>ofi</strong> heeft een sterke aanwezigheid in Europa en Noord- en Zuid-Amerika (ingrediënten met toegevoegde waarde), terwijl <strong>Olam Agri</strong> domineert in Azië en Afrika (voedingsmiddelen met groot volume). EUDR en NIS2-regelgeving hebben specifiek invloed op de Europese verwerkingshubs.",
+                "link": "Bekijk Nalevingsstatus"
             }
         },
-        "subpages": {
-            "header": "GEDETAILLEERDE RAPPORTEN",
-            "mitre": {
-                "title": "MITRE ATT&CK Profiel",
-                "description": "ICS, Enterprise & Mobiele aanvalsmatrices"
+        "orgMap": {
+            "root": {
+                "label": "Olam Group Limited",
+                "role": "Holdingmaatschappij"
             },
-            "sectors": {
-                "title": "Sector Bedreigingen",
-                "description": "Maandelijkse aanvalsrapporten per industrie"
+            "ofi": {
+                "label": "ofi (Olam Food Ingredients)",
+                "role": "Ingrediënten met Toegevoegde Waarde"
             },
-            "technology": {
-                "title": "Technologie Risico's",
-                "description": "CVE database voor OFI tech stack"
+            "agri": {
+                "label": "Olam Agri",
+                "role": "Voedselzekerheid & Logistiek"
             },
-            "iec62443": {
-                "title": "IEC 62443 Naleving",
-                "description": "Shanghai CSC vereisten"
+            "remaining": {
+                "label": "Resterende Olam Group",
+                "role": "Incubator & Nalatenschap"
             },
-            "attacker": {
-                "title": "Red Team Dossier",
-                "description": "Tegenstander analyse & risico's aangepaste apps"
-            }
+            "divisions": {
+                "cocoa": {
+                    "label": "Cacao",
+                    "role": "Verwerking & Innovatie"
+                },
+                "coffee": {
+                    "label": "Koffie",
+                    "role": "Oplosbaar & Supply Chain"
+                },
+                "dairy": {
+                    "label": "Zuivel",
+                    "role": "Wereldwijde Verwerking"
+                },
+                "spices": {
+                    "label": "Specerijen",
+                    "role": "Productie"
+                },
+                "grains": {
+                    "label": "Granen & Oliën",
+                    "role": "Handel & Maling"
+                },
+                "freight": {
+                    "label": "Vrachtbeheer",
+                    "role": "Logistieke Derivaten"
+                },
+                "cotton": {
+                    "label": "Vezel & Katoen",
+                    "role": "Ginning & Opslag"
+                },
+                "mindsprint": {
+                    "label": "Mindsprint",
+                    "role": "Digitale Diensten & Cyber"
+                },
+                "nupo": {
+                    "label": "Nupo Ventures",
+                    "role": "Incubatie (Jiva, Terrascope)"
+                }
+            },
+            "interaction": "INTERACTIEVE HIERARCHIE KAART // KLIK OP KNOPEN OM TE VOUWEN OF NAVIGEREN"
         },
-        "compliance": {
-            "title": "Nalevingsstatus",
-            "iec": {
-                "label": "IEC 62443",
-                "desc": "Shanghai CSC doel: Q2 2026"
+        "security": {
+            "title": "CYBERSECURITY RISICO BEOORDELING",
+            "subtitle": "Dreigingslandschap, kwetsbaarheden en nalevingsstatus voor OFI-operaties",
+            "backLink": "Terug naar OSINT Rapport",
+            "overview": {
+                "riskLevel": "HOOG",
+                "sectorAttacks": "Sector Aanvallen (2024)",
+                "mitreTechniques": "MITRE ICS Technieken",
+                "criticalCves": "Kritieke CVEs",
+                "iecStatus": "IEC 62443 Status",
+                "statusInProgress": "In Uitvoering",
+                "statusPending": "In Afwachting",
+                "statusCertified": "Gecertificeerd"
             },
-            "nis2": {
-                "label": "EU NIS2",
-                "desc": "EU faciliteiten (NL, DE, ES) binnen scope"
+            "threatActors": {
+                "title": "Actieve Bedreigingsactoren (2024-2025)",
+                "description": "Het vierde kwartaal van 2024 zag een <span class='text-red-400 font-semibold'>118% piek</span> in ransomware-aanvallen tegen Voedsel & Landbouw. Dubbele afpersingstactieken domineren, waarbij groepen OT/ICS-systemen viseren voor maximale impact."
             },
-            "fssc": {
-                "label": "FSSC 22000",
-                "desc": "Voedselveiligheidscertificering actief"
+            "techRisks": {
+                "title": "Samenvatting Technologierisico",
+                "risks": {
+                    "braincube": {
+                        "reason": "Directe PLC-toegang, supply chain vector"
+                    },
+                    "rockwell": {
+                        "reason": "8 CVEs (CVSS tot 9.3)"
+                    },
+                    "sap": {
+                        "reason": "IT/OT grens API-blootstelling"
+                    },
+                    "siemens": {
+                        "reason": "Verouderde kwetsbaarheden"
+                    }
+                }
+            },
+            "criticalAlert": {
+                "title": "KRITIEK: Braincube Derde partij Risico",
+                "description": "Braincube AI-platform heeft directe PLC-toegang in 120+ faciliteiten voor productie-optimalisatie. Dit creëert een potentiële supply chain aanvalsvector vergelijkbaar met SolarWinds.",
+                "tags": {
+                    "poisoning": "AI Model Vergiftiging",
+                    "injection": "Commando-injectie naar PLCs",
+                    "exfiltration": "Formule Exfiltratie",
+                    "supplyChain": "Supply Chain Aanval"
+                }
+            },
+            "subpages": {
+                "header": "GEDETAILLEERDE RAPPORTEN",
+                "mitre": {
+                    "title": "MITRE ATT&CK Profiel",
+                    "description": "ICS, Enterprise & Mobiele aanvalsmatrices"
+                },
+                "sectors": {
+                    "title": "Sector Bedreigingen",
+                    "description": "Maandelijkse aanvalsrapporten per industrie"
+                },
+                "technology": {
+                    "title": "Technologie Risico's",
+                    "description": "CVE database voor OFI tech stack"
+                },
+                "iec62443": {
+                    "title": "IEC 62443 Naleving",
+                    "description": "Shanghai CSC vereisten"
+                },
+                "attacker": {
+                    "title": "Red Team Dossier",
+                    "description": "Tegenstander analyse & risico's aangepaste apps"
+                }
+            },
+            "compliance": {
+                "title": "Nalevingsstatus",
+                "iec": {
+                    "label": "IEC 62443",
+                    "desc": "Shanghai CSC doel: Q2 2026"
+                },
+                "nis2": {
+                    "label": "EU NIS2",
+                    "desc": "EU faciliteiten (NL, DE, ES) binnen scope"
+                },
+                "fssc": {
+                    "label": "FSSC 22000",
+                    "desc": "Voedselveiligheidscertificering actief"
+                }
             }
         }
     }

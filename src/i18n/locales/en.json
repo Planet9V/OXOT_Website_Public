@@ -1459,194 +1459,6 @@
             "footer": {
                 "title": "AEON INTELLIGENCE UNIT",
                 "endOfReport": "END OF REPORT // OFFICIALLY VERIFIED"
-            },
-            "intelligence": {
-                "title": "Corporate Intelligence",
-                "subtitle": "Consolidated intelligence overview of Olam Food Ingredients (ofi) - structure, scale, strategy, and risk landscape",
-                "executive": {
-                    "title": "Executive Summary",
-                    "identity": "Olam Food Ingredients (ofi) - distinct operating group within Olam Group Limited, created 2020",
-                    "purpose": "\"Be the change for good food and a healthy future\"",
-                    "platforms": {
-                        "cocoa": "Cocoa",
-                        "coffee": "Coffee",
-                        "dairy": "Dairy",
-                        "nuts": "Nuts",
-                        "spices": "Spices"
-                    },
-                    "scale": {
-                        "plants": "Plants",
-                        "innovation": "CSCs/IECs",
-                        "farmers": "Farmers"
-                    }
-                },
-                "entities": {
-                    "title": "Key Operating Entities",
-                    "ofi": {
-                        "role": "Principal operating group",
-                        "focus": "Value-added ingredients across 5 platforms"
-                    },
-                    "mindsprint": {
-                        "role": "In-house technology engine",
-                        "focus": "3,200+ professionals, AI, cybersecurity (GuardianEye)"
-                    },
-                    "jiva": {
-                        "role": "Digital farmer services (CLOSED Aug 2025)",
-                        "focus": "Cash conservation, 606 employees affected"
-                    },
-                    "terrascope": {
-                        "role": "Carbon measurement SaaS",
-                        "focus": "ESG services, land/nature/net-zero"
-                    }
-                },
-                "subsidiaries": {
-                    "title": "Subsidiary Network",
-                    "headers": {
-                        "name": "Subsidiary",
-                        "location": "Location",
-                        "function": "Function"
-                    },
-                    "list": {
-                        "clubCoffee": {
-                            "function": "Leading custom coffee roaster in North America"
-                        },
-                        "seda": {
-                            "function": "Soluble coffee factory"
-                        },
-                        "unicao": {
-                            "function": "Cocoa processing"
-                        },
-                        "macao": {
-                            "function": "Cocoa milling and lab facility"
-                        },
-                        "na": {
-                            "function": "Unified US headquarters"
-                        },
-                        "cocoaBV": {
-                            "function": "Key European subsidiary"
-                        },
-                        "cocoaDE": {
-                            "function": "Key European subsidiary"
-                        },
-                        "locations": {
-                            "toronto": "Toronto, Canada",
-                            "palencia": "Palencia, Spain",
-                            "abidjan": "Abidjan, Côte d'Ivoire",
-                            "valencia": "Valencia, Spain",
-                            "chicago": "Chicago, USA",
-                            "netherlands": "Netherlands",
-                            "germany": "Germany"
-                        }
-                    }
-                },
-                "facilities": {
-                    "title": "Operational Footprint",
-                    "regions": {
-                        "na": "North America",
-                        "europe": "Europe",
-                        "apac": "Asia-Pacific",
-                        "africaLatam": "Africa & LATAM"
-                    }
-                },
-                "chronology": {
-                    "title": "Key Events Chronology",
-                    "events": {
-                        "compass": "Launched Cocoa Compass sustainability initiative",
-                        "ofiEst": "ofi formally established as operating group",
-                        "tokoroa": "Tokoroa Dairy Plant Phase 1 opened (New Zealand)",
-                        "mightyEarth": "Mighty Earth report on Ghana cocoa challenges",
-                        "salic": "Sale of 44.58% Olam Agri stake to SALIC",
-                        "jivaClose": "Strategic closure of Jiva Ag platform",
-                        "eudr": "EUDR compliance deadline (CRITICAL)"
-                    }
-                },
-                "discrepancies": {
-                    "title": "Source Discrepancies",
-                    "intro": "Conflicting information identified across public sources:",
-                    "fields": {
-                        "employees": "Employee Count",
-                        "farmers": "Farmer Network",
-                        "innovation": "Innovation Centers"
-                    }
-                }
-            },
-            "groupStructure": {
-                "header": {
-                    "title": "GROUP STRUCTURE",
-                    "subtitle": "Corporate Anatomy & Subsidiary Network Analysis",
-                    "back": "Back to OSINT Report"
-                },
-                "hierarchy": {
-                    "title": "Corporate Hierarchy Analysis",
-                    "desc": "Olam Group Limited reorganized in 2020 into three distinct operating groups to unlock long-term value: <strong> ofi (Olam Food Ingredients)</strong>, <strong>Olam Agri</strong>, and the <strong>Remaining Olam Group</strong>. This separation has created distinct operational technology footprints and cyber risk profiles for each entity."
-                },
-                "digitalLayer": {
-                    "title": "Digital & Innovation Layer",
-                    "desc": "<strong>Mindsprint (formerly OTBS)</strong> acts as the digital engine for the group, providing IT, cybersecurity (GuardianEye), and shared services. It is a critical node in the group's digital supply chain, servicing both ofi and Olam Agri.",
-                    "link": "View Technology Stack"
-                },
-                "geoComplexity": {
-                    "title": "Geographic Complexity",
-                    "desc": "The group operates in over 60 countries. <strong>ofi</strong> has a strong footprint in Europe and the Americas (Value-added ingredients), while <strong>Olam Agri</strong> dominates in Asia and Africa (High-volume food staples). EUDR and NIS2 regulations specifically impact the European processing hubs.",
-                    "link": "View Compliance Status"
-                }
-            },
-            "orgMap": {
-                "root": {
-                    "label": "Olam Group Limited",
-                    "role": "Holding Company"
-                },
-                "ofi": {
-                    "label": "ofi (Olam Food Ingredients)",
-                    "role": "Value-Added Ingredients"
-                },
-                "agri": {
-                    "label": "Olam Agri",
-                    "role": "Food Security & Logistics"
-                },
-                "remaining": {
-                    "label": "Remaining Olam Group",
-                    "role": "Incubator & Legacy"
-                },
-                "divisions": {
-                    "cocoa": {
-                        "label": "Cocoa",
-                        "role": "Processing & Innovation"
-                    },
-                    "coffee": {
-                        "label": "Coffee",
-                        "role": "Soluble & Supply Chain"
-                    },
-                    "dairy": {
-                        "label": "Dairy",
-                        "role": "Global Processing"
-                    },
-                    "spices": {
-                        "label": "Spices",
-                        "role": "Manufacturing"
-                    },
-                    "grains": {
-                        "label": "Grains & Oils",
-                        "role": "Trading & Milling"
-                    },
-                    "freight": {
-                        "label": "Freight Management",
-                        "role": "Logistics Derivatives"
-                    },
-                    "cotton": {
-                        "label": "Fibre & Cotton",
-                        "role": "Ginning & Warehousing"
-                    },
-                    "mindsprint": {
-                        "label": "Mindsprint",
-                        "role": "Digital Services & Cyber"
-                    },
-                    "nupo": {
-                        "label": "Nupo Ventures",
-                        "role": "Incubation (Jiva, Terrascope)"
-                    }
-                },
-                "interaction": "INTERACTIVE HIERARCHY MAP // CLICK NODES TO EXPAND OR NAVIGATE"
             }
         },
         "executive": {
@@ -1872,6 +1684,194 @@
                     "desc": "Food safety certification maintained"
                 }
             }
+        },
+        "intelligence": {
+            "title": "Corporate Intelligence",
+            "subtitle": "Consolidated intelligence overview of Olam Food Ingredients (ofi) - structure, scale, strategy, and risk landscape",
+            "executive": {
+                "title": "Executive Summary",
+                "identity": "Olam Food Ingredients (ofi) - distinct operating group within Olam Group Limited, created 2020",
+                "purpose": "\"Be the change for good food and a healthy future\"",
+                "platforms": {
+                    "cocoa": "Cocoa",
+                    "coffee": "Coffee",
+                    "dairy": "Dairy",
+                    "nuts": "Nuts",
+                    "spices": "Spices"
+                },
+                "scale": {
+                    "plants": "Plants",
+                    "innovation": "CSCs/IECs",
+                    "farmers": "Farmers"
+                }
+            },
+            "entities": {
+                "title": "Key Operating Entities",
+                "ofi": {
+                    "role": "Principal operating group",
+                    "focus": "Value-added ingredients across 5 platforms"
+                },
+                "mindsprint": {
+                    "role": "In-house technology engine",
+                    "focus": "3,200+ professionals, AI, cybersecurity (GuardianEye)"
+                },
+                "jiva": {
+                    "role": "Digital farmer services (CLOSED Aug 2025)",
+                    "focus": "Cash conservation, 606 employees affected"
+                },
+                "terrascope": {
+                    "role": "Carbon measurement SaaS",
+                    "focus": "ESG services, land/nature/net-zero"
+                }
+            },
+            "subsidiaries": {
+                "title": "Subsidiary Network",
+                "headers": {
+                    "name": "Subsidiary",
+                    "location": "Location",
+                    "function": "Function"
+                },
+                "list": {
+                    "clubCoffee": {
+                        "function": "Leading custom coffee roaster in North America"
+                    },
+                    "seda": {
+                        "function": "Soluble coffee factory"
+                    },
+                    "unicao": {
+                        "function": "Cocoa processing"
+                    },
+                    "macao": {
+                        "function": "Cocoa milling and lab facility"
+                    },
+                    "na": {
+                        "function": "Unified US headquarters"
+                    },
+                    "cocoaBV": {
+                        "function": "Key European subsidiary"
+                    },
+                    "cocoaDE": {
+                        "function": "Key European subsidiary"
+                    },
+                    "locations": {
+                        "toronto": "Toronto, Canada",
+                        "palencia": "Palencia, Spain",
+                        "abidjan": "Abidjan, Côte d'Ivoire",
+                        "valencia": "Valencia, Spain",
+                        "chicago": "Chicago, USA",
+                        "netherlands": "Netherlands",
+                        "germany": "Germany"
+                    }
+                }
+            },
+            "facilities": {
+                "title": "Operational Footprint",
+                "regions": {
+                    "na": "North America",
+                    "europe": "Europe",
+                    "apac": "Asia-Pacific",
+                    "africaLatam": "Africa & LATAM"
+                }
+            },
+            "chronology": {
+                "title": "Key Events Chronology",
+                "events": {
+                    "compass": "Launched Cocoa Compass sustainability initiative",
+                    "ofiEst": "ofi formally established as operating group",
+                    "tokoroa": "Tokoroa Dairy Plant Phase 1 opened (New Zealand)",
+                    "mightyEarth": "Mighty Earth report on Ghana cocoa challenges",
+                    "salic": "Sale of 44.58% Olam Agri stake to SALIC",
+                    "jivaClose": "Strategic closure of Jiva Ag platform",
+                    "eudr": "EUDR compliance deadline (CRITICAL)"
+                }
+            },
+            "discrepancies": {
+                "title": "Source Discrepancies",
+                "intro": "Conflicting information identified across public sources:",
+                "fields": {
+                    "employees": "Employee Count",
+                    "farmers": "Farmer Network",
+                    "innovation": "Innovation Centers"
+                }
+            }
+        },
+        "groupStructure": {
+            "header": {
+                "title": "GROUP STRUCTURE",
+                "subtitle": "Corporate Anatomy & Subsidiary Network Analysis",
+                "back": "Back to OSINT Report"
+            },
+            "hierarchy": {
+                "title": "Corporate Hierarchy Analysis",
+                "desc": "Olam Group Limited reorganized in 2020 into three distinct operating groups to unlock long-term value: <strong> ofi (Olam Food Ingredients)</strong>, <strong>Olam Agri</strong>, and the <strong>Remaining Olam Group</strong>. This separation has created distinct operational technology footprints and cyber risk profiles for each entity."
+            },
+            "digitalLayer": {
+                "title": "Digital & Innovation Layer",
+                "desc": "<strong>Mindsprint (formerly OTBS)</strong> acts as the digital engine for the group, providing IT, cybersecurity (GuardianEye), and shared services. It is a critical node in the group's digital supply chain, servicing both ofi and Olam Agri.",
+                "link": "View Technology Stack"
+            },
+            "geoComplexity": {
+                "title": "Geographic Complexity",
+                "desc": "The group operates in over 60 countries. <strong>ofi</strong> has a strong footprint in Europe and the Americas (Value-added ingredients), while <strong>Olam Agri</strong> dominates in Asia and Africa (High-volume food staples). EUDR and NIS2 regulations specifically impact the European processing hubs.",
+                "link": "View Compliance Status"
+            }
+        },
+        "orgMap": {
+            "root": {
+                "label": "Olam Group Limited",
+                "role": "Holding Company"
+            },
+            "ofi": {
+                "label": "ofi (Olam Food Ingredients)",
+                "role": "Value-Added Ingredients"
+            },
+            "agri": {
+                "label": "Olam Agri",
+                "role": "Food Security & Logistics"
+            },
+            "remaining": {
+                "label": "Remaining Olam Group",
+                "role": "Incubator & Legacy"
+            },
+            "divisions": {
+                "cocoa": {
+                    "label": "Cocoa",
+                    "role": "Processing & Innovation"
+                },
+                "coffee": {
+                    "label": "Coffee",
+                    "role": "Soluble & Supply Chain"
+                },
+                "dairy": {
+                    "label": "Dairy",
+                    "role": "Global Processing"
+                },
+                "spices": {
+                    "label": "Spices",
+                    "role": "Manufacturing"
+                },
+                "grains": {
+                    "label": "Grains & Oils",
+                    "role": "Trading & Milling"
+                },
+                "freight": {
+                    "label": "Freight Management",
+                    "role": "Logistics Derivatives"
+                },
+                "cotton": {
+                    "label": "Fibre & Cotton",
+                    "role": "Ginning & Warehousing"
+                },
+                "mindsprint": {
+                    "label": "Mindsprint",
+                    "role": "Digital Services & Cyber"
+                },
+                "nupo": {
+                    "label": "Nupo Ventures",
+                    "role": "Incubation (Jiva, Terrascope)"
+                }
+            },
+            "interaction": "INTERACTIVE HIERARCHY MAP // CLICK NODES TO EXPAND OR NAVIGATE"
         }
     }
 }

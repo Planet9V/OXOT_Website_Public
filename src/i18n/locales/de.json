@@ -402,19 +402,157 @@
         }
     },
     "goldTeam": {
-        "cta": {
-            "headline": "Strategische Souveränität.",
-            "subheadline": "Führung auf Vorstandsebene.",
-            "serviceOptions": {
-                "advisory": "Gold Team Beratung",
-                "governance": "Governance Review"
+        "hero": {
+            "title": "GOLD TEAM",
+            "tagline": "Strategisch. Zertifiziert. Souverän.",
+            "subtitle": "Elite-Beratungspraxis",
+            "subtitleHighlight": "",
+            "description": "Weltklasse IEC 62443-Beratung für kritische Infrastrukturen. Wir entwerfen Sicherheitsarchitekturen, leiten die digitale Transformation und bieten strategische Beratung auf Vorstandsebene, wo Compliance auf Haftung trifft.",
+            "scroll": "Zum Erkunden scrollen"
+        },
+        "why": {
+            "badge": "WARUM OXOT",
+            "title": "Nicht nur Berater.",
+            "highlight": "Elite-Architekten.",
+            "description": "Wir kombinieren tiefgreifende OT/ICS-Expertise mit KI-gestützten Analysefunktionen, die kein traditionelles Beratungsunternehmen erreichen kann.",
+            "cards": {
+                "expert": {
+                    "title": "Tiefe OT/ICS-Expertise",
+                    "desc": "Nicht nur IT-Sicherheit – echte Spezialisten für Betriebstechnologie mit praktischer Erfahrung in SCADA, PLC und ICS."
+                },
+                "ai": {
+                    "title": "KI-gestützte Analyse",
+                    "desc": "Jedes Engagement wird durch den AEON Digital Twin unterstützt und bietet Einblicke, die durch manuelle Bewertung allein unmöglich sind."
+                },
+                "global": {
+                    "title": "Globale Infrastruktur",
+                    "desc": "Erfahrung auf 5 Kontinenten bei der Sicherung von Energienetzen, Bahnsystemen, Wasserversorgern und nationalen Verteidigungsanlagen."
+                },
+                "executive": {
+                    "title": "Vorstandsebene",
+                    "desc": "Vorstandsgerechte Ergebnisse, strategische CISO-Beratung und Risikoübersetzung, die bei der Führungsebene ankommt."
+                }
             }
         },
-        "features": [
-            "Vorstands-Berichterstattung",
-            "M&A Due Diligence",
-            "Krisenmanagement"
-        ]
+        "services": {
+            "title": "Strategische Dienstleistungen",
+            "iec": {
+                "title": "IEC 62443 Architektur",
+                "desc": "Entwerfen Sie Sicherheitszonen und Conduits gemäß dem Goldstandard für industrielle Cybersicherheit. Von der Gap-Analyse bis zur Zertifizierungsreife.",
+                "link": "Architektur erkunden"
+            },
+            "nis2": {
+                "title": "NIS2-Richtlinie & Vorstandshaftung",
+                "desc": "Sicherstellung der Compliance für „Wesentliche“ und „Wichtige“ Einrichtungen. Wir adressieren Risikomanagement, Meldewesen und die neue ",
+                "personalLiability": "persönliche Managementhaftung",
+                "link": "Compliance erkunden",
+                "badges": {
+                    "article": "Artikel 20",
+                    "liability": "Haftung"
+                }
+            },
+            "ma": {
+                "title": "M&A Cyber Due Diligence",
+                "desc": "Wissen Sie genau, was Sie erben. Wir decken versteckte Verbindlichkeiten in 72 Stunden auf."
+            },
+            "warGaming": {
+                "title": "Krisen-Planspiele",
+                "desc": "Live-Fire-Simulationen. Testen Sie Ihr Team gegen realistische staatliche Akteure unter extremen Bedingungen."
+            },
+            "soc": {
+                "title": "SOC-Modernisierung",
+                "desc": "Verwandeln Sie sich in 90 Tagen von „Alarmmüdigkeit“ zu „Vorausschauender Intelligenz“."
+            },
+            "digital": {
+                "title": "Digitale Transformation",
+                "desc": "Sichere Migration zu Cloud-fähiger OT-Infrastruktur."
+            }
+        },
+        "program": {
+            "badge": "UNTERSTÜTZUNG DES GESAMTEN LEBENSZYKLUS",
+            "title": "IEC 62443",
+            "highlight": "Programm-Management",
+            "description": "Wir verwalten komplette IEC 62443-Cybersicherheitsprogramme für Großprojekte – vom ersten High-Level-Design und der Anforderungsdefinition bis hin zum",
+            "report": "Sicherheitsbericht",
+            "plan": "Cybersecurity-Management-Plan",
+            "handover": "Übergabedokumentation",
+            "note": "Unsere KI-gestützte IEC 62443 Workshop-Anwendung ist direkt mit AEON Core verbunden und gewährleistet effiziente, konsistente und prüfbare Prozesse und Ergebnisse.",
+            "lifecycleTitle": "Programm-Lebenszyklus",
+            "phases": [
+                {
+                    "phase": "1. High-Level Design",
+                    "desc": "Systemarchitektur, Zonen/Conduit-Definition, SL-T Ziele"
+                },
+                {
+                    "phase": "2. Anforderungsspezifikation",
+                    "desc": "FR-Mapping, SRS-Entwicklung, risikobasierte Anforderungen"
+                },
+                {
+                    "phase": "3. Design & Implementierung",
+                    "desc": "Detailliertes Design, Lieferantenkoordination, Sicherheitskontrollen"
+                },
+                {
+                    "phase": "4. Verifikation & Validierung",
+                    "desc": "Tests, Penetrationstests, Compliance-Verifikation"
+                },
+                {
+                    "phase": "5. Sicherheitsbericht",
+                    "desc": "Abschließende Bewertung, Restrisiko-Dokumentation"
+                },
+                {
+                    "phase": "6. CSMS & Übergabe",
+                    "desc": "Cybersecurity-Management-Plan, operative Übergabe"
+                }
+            ]
+        },
+        "testing": {
+            "product": {
+                "title": "Produkttests (IEC 62443-4-2)",
+                "desc": "Unabhängige Sicherheitstests von OT/ICS-Produkten gegen IEC 62443-4-2 Komponentenanforderungen. Wir helfen Herstellern, die Zertifizierungsreife zu erreichen.",
+                "badges": [
+                    "SPS",
+                    "HMI",
+                    "RTU",
+                    "Embedded Devices"
+                ]
+            },
+            "integrator": {
+                "title": "Integrator-Bewertung (IEC 62443-2-4)",
+                "desc": "Bewertung der Sicherheitsfähigkeiten für Systemintegratoren und Automatisierer. Wir überprüfen sichere Entwicklungspraktiken und Projektabläufe.",
+                "badges": [
+                    "SDLC Review",
+                    "Projektlieferung",
+                    "Wartung",
+                    "Zertifizierungsvorbereitung"
+                ]
+            }
+        },
+        "sectors": {
+            "title": "Expertise für Kritische Infrastrukturen",
+            "desc": "Branchenspezifische Erfahrung, wo Sicherheit nicht optional ist – sie ist existenzsichernd.",
+            "list": {
+                "energy": "Energie & Versorgung",
+                "rail": "Verkehr & Schiene",
+                "water": "Wasser & Abwasser",
+                "manufacturing": "Fertigung",
+                "defense": "Nationale Verteidigung"
+            }
+        },
+        "lattice": {
+            "badge": "STRATEGISCHES GITTER",
+            "title": "Governance trifft",
+            "highlight": "Intelligenz",
+            "description": "Gold Team-Berater arbeiten nicht isoliert. Jedes Engagement wird durch den AEON Digital Twin informiert – bietet Echtzeit-Bedrohungsdaten und vorausschauende Risikomodellierung.",
+            "badges": {
+                "compliance": "NIS2 / IEC 62443",
+                "zeroTrust": "Zero Trust Bereit"
+            },
+            "liveLabel": "LIVE: Strategisches Gitter Interconnect"
+        },
+        "cta": {
+            "headline": "Ihr Vorstand stellt schwierige Fragen.",
+            "subheadline": "Haben Sie die Antworten, die er braucht?"
+        }
     },
     "nis2": {
         "hero": {
@@ -801,260 +939,6 @@
         }
     },
     "acquisitions": {
-        "cta": {
-            "headline": "Vermeiden Sie Fehlkäufe.",
-            "subheadline": "Quantifizieren Sie Risiken in Dollar.",
-            "serviceOptions": {
-                "full": "Vollständige Analyse",
-                "lite": "Schnellcheck",
-                "premium": "Premium + Red Team"
-            }
-        }
-    },
-    "strategic": {
-        "cta": {
-            "headline": "Transformieren Sie Ihre Sicherheit?",
-            "subheadline": "Vorhersehen statt Reagieren.",
-            "serviceOptions": {
-                "pilot": "Pilotprojekt",
-                "assessment": "Strategische Bewertung",
-                "briefing": "Executive Briefing"
-            }
-        }
-    },
-    "goldTeam": {
-        "hero": {
-            "title": "GOLD TEAM",
-            "tagline": "Strategisch. Zertifiziert. Souverän.",
-            "subtitle": "Elite-Beratungspraxis",
-            "subtitleHighlight": "",
-            "description": "Weltklasse IEC 62443-Beratung für kritische Infrastrukturen. Wir entwerfen Sicherheitsarchitekturen, leiten die digitale Transformation und bieten strategische Beratung auf Vorstandsebene, wo Compliance auf Haftung trifft.",
-            "scroll": "Zum Erkunden scrollen"
-        },
-        "why": {
-            "badge": "WARUM OXOT",
-            "title": "Nicht nur Berater.",
-            "highlight": "Elite-Architekten.",
-            "description": "Wir kombinieren tiefgreifende OT/ICS-Expertise mit KI-gestützten Analysefunktionen, die kein traditionelles Beratungsunternehmen erreichen kann.",
-            "cards": {
-                "expert": {
-                    "title": "Tiefe OT/ICS-Expertise",
-                    "desc": "Nicht nur IT-Sicherheit – echte Spezialisten für Betriebstechnologie mit praktischer Erfahrung in SCADA, PLC und ICS."
-                },
-                "ai": {
-                    "title": "KI-gestützte Analyse",
-                    "desc": "Jedes Engagement wird durch den AEON Digital Twin unterstützt und bietet Einblicke, die durch manuelle Bewertung allein unmöglich sind."
-                },
-                "global": {
-                    "title": "Globale Infrastruktur",
-                    "desc": "Erfahrung auf 5 Kontinenten bei der Sicherung von Energienetzen, Bahnsystemen, Wasserversorgern und nationalen Verteidigungsanlagen."
-                },
-                "executive": {
-                    "title": "Vorstandsebene",
-                    "desc": "Vorstandsgerechte Ergebnisse, strategische CISO-Beratung und Risikoübersetzung, die bei der Führungsebene ankommt."
-                }
-            }
-        },
-        "services": {
-            "title": "Strategische Dienstleistungen",
-            "iec": {
-                "title": "IEC 62443 Architektur",
-                "desc": "Entwerfen Sie Sicherheitszonen und Conduits gemäß dem Goldstandard für industrielle Cybersicherheit. Von der Gap-Analyse bis zur Zertifizierungsreife.",
-                "link": "Architektur erkunden"
-            },
-            "nis2": {
-                "title": "NIS2-Richtlinie & Vorstandshaftung",
-                "desc": "Sicherstellung der Compliance für „Wesentliche“ und „Wichtige“ Einrichtungen. Wir adressieren Risikomanagement, Meldewesen und die neue ",
-                "personalLiability": "persönliche Managementhaftung",
-                "link": "Compliance erkunden",
-                "badges": {
-                    "article": "Artikel 20",
-                    "liability": "Haftung"
-                }
-            },
-            "ma": {
-                "title": "M&A Cyber Due Diligence",
-                "desc": "Wissen Sie genau, was Sie erben. Wir decken versteckte Verbindlichkeiten in 72 Stunden auf."
-            },
-            "warGaming": {
-                "title": "Krisen-Planspiele",
-                "desc": "Live-Fire-Simulationen. Testen Sie Ihr Team gegen realistische staatliche Akteure unter extremen Bedingungen."
-            },
-            "soc": {
-                "title": "SOC-Modernisierung",
-                "desc": "Verwandeln Sie sich in 90 Tagen von „Alarmmüdigkeit“ zu „Vorausschauender Intelligenz“."
-            },
-            "digital": {
-                "title": "Digitale Transformation",
-                "desc": "Sichere Migration zu Cloud-fähiger OT-Infrastruktur."
-            }
-        },
-        "program": {
-            "badge": "UNTERSTÜTZUNG DES GESAMTEN LEBENSZYKLUS",
-            "title": "IEC 62443",
-            "highlight": "Programm-Management",
-            "description": "Wir verwalten komplette IEC 62443-Cybersicherheitsprogramme für Großprojekte – vom ersten High-Level-Design und der Anforderungsdefinition bis hin zum",
-            "report": "Sicherheitsbericht",
-            "plan": "Cybersecurity-Management-Plan",
-            "handover": "Übergabedokumentation",
-            "note": "Unsere KI-gestützte IEC 62443 Workshop-Anwendung ist direkt mit AEON Core verbunden und gewährleistet effiziente, konsistente und prüfbare Prozesse und Ergebnisse.",
-            "lifecycleTitle": "Programm-Lebenszyklus",
-            "phases": [
-                {
-                    "phase": "1. High-Level Design",
-                    "desc": "Systemarchitektur, Zonen/Conduit-Definition, SL-T Ziele"
-                },
-                {
-                    "phase": "2. Anforderungsspezifikation",
-                    "desc": "FR-Mapping, SRS-Entwicklung, risikobasierte Anforderungen"
-                },
-                {
-                    "phase": "3. Design & Implementierung",
-                    "desc": "Detailliertes Design, Lieferantenkoordination, Sicherheitskontrollen"
-                },
-                {
-                    "phase": "4. Verifikation & Validierung",
-                    "desc": "Tests, Penetrationstests, Compliance-Verifikation"
-                },
-                {
-                    "phase": "5. Sicherheitsbericht",
-                    "desc": "Abschließende Bewertung, Restrisiko-Dokumentation"
-                },
-                {
-                    "phase": "6. CSMS & Übergabe",
-                    "desc": "Cybersecurity-Management-Plan, operative Übergabe"
-                }
-            ]
-        },
-        "testing": {
-            "product": {
-                "title": "Produkttests (IEC 62443-4-2)",
-                "desc": "Unabhängige Sicherheitstests von OT/ICS-Produkten gegen IEC 62443-4-2 Komponentenanforderungen. Wir helfen Herstellern, die Zertifizierungsreife zu erreichen.",
-                "badges": [
-                    "SPS",
-                    "HMI",
-                    "RTU",
-                    "Embedded Devices"
-                ]
-            },
-            "integrator": {
-                "title": "Integrator-Bewertung (IEC 62443-2-4)",
-                "desc": "Bewertung der Sicherheitsfähigkeiten für Systemintegratoren und Automatisierer. Wir überprüfen sichere Entwicklungspraktiken und Projektabläufe.",
-                "badges": [
-                    "SDLC Review",
-                    "Projektlieferung",
-                    "Wartung",
-                    "Zertifizierungsvorbereitung"
-                ]
-            }
-        },
-        "sectors": {
-            "title": "Expertise für Kritische Infrastrukturen",
-            "desc": "Branchenspezifische Erfahrung, wo Sicherheit nicht optional ist – sie ist existenzsichernd.",
-            "list": {
-                "energy": "Energie & Versorgung",
-                "rail": "Verkehr & Schiene",
-                "water": "Wasser & Abwasser",
-                "manufacturing": "Fertigung",
-                "defense": "Nationale Verteidigung"
-            }
-        },
-        "lattice": {
-            "badge": "STRATEGISCHES GITTER",
-            "title": "Governance trifft",
-            "highlight": "Intelligenz",
-            "description": "Gold Team-Berater arbeiten nicht isoliert. Jedes Engagement wird durch den AEON Digital Twin informiert – bietet Echtzeit-Bedrohungsdaten und vorausschauende Risikomodellierung.",
-            "badges": {
-                "compliance": "NIS2 / IEC 62443",
-                "zeroTrust": "Zero Trust Bereit"
-            },
-            "liveLabel": "LIVE: Strategisches Gitter Interconnect"
-        },
-        "cta": {
-            "headline": "Ihr Vorstand stellt schwierige Fragen.",
-            "subheadline": "Haben Sie die Antworten, die er braucht?"
-        }
-    },
-    "cta": {
-        "defaultHeadline": "Ihr Vorstand Stellt Schwierige Fragen.",
-        "defaultSubheadline": "Haben Sie die Antworten, die Sie Brauchen?",
-        "success": {
-            "title": "Privilegierte Kommunikation Etabliert",
-            "message": "Ihre Anfrage wurde sicher an unser Team übermittelt. Ein Senior-Partner wird Sie innerhalb von 2 Stunden über OOB-Kanäle kontaktieren."
-        },
-        "threatAdvisory": {
-            "label": "Aktive Bedrohungswarnung",
-            "message": "Erhöhte OT-Targeting-Aktivität in EMEA-Energienetzen beobachtet."
-        },
-        "briefingRequest": {
-            "prefix": "Führungskräfte-Briefing",
-            "link": "anfordern",
-            "description": "Erhalten Sie eine maßgeschneiderte Bedrohungsanalyse für Ihren Sektor."
-        },
-        "trustSignals": {
-            "standards": {
-                "title": "EU-Standards",
-                "desc": "NIS2 & IEC 62443 Konform"
-            },
-            "sectors": {
-                "title": "Kritische Sektoren",
-                "desc": "Energie, Fertigung, Verkehr"
-            },
-            "engagements": {
-                "title": "Aktive Mandate",
-                "desc": "12+ Aktive Verteidigungen"
-            }
-        },
-        "quote": {
-            "text": "Die einzige Sicherheitsfirma, die die Physik industrieller Steuerungssysteme genauso gut versteht wie den Code, der sie angreift.",
-            "author": "Dr. Arjan Van Der Berg",
-            "authorTitle": "CISO, National Grid Initiative",
-            "verified": "Verifizierter Kunde"
-        },
-        "form": {
-            "title": "Sichere Uplink-Initialisierung",
-            "labels": {
-                "name": "Vollständiger Name",
-                "title": "Berufsbezeichnung",
-                "email": "Geschäftliche E-Mail",
-                "org": "Organisation",
-                "sector": "Sektor",
-                "region": "Region",
-                "service": "Prioritätsservice",
-                "concerns": "Spezifische Bedenken"
-            },
-            "placeholders": {
-                "name": "z.B. Jan de Vries",
-                "title": "z.B. CISO / Werksleiter",
-                "email": "name@organisation.com",
-                "org": "Name der Organisation",
-                "concerns": "Beschreiben Sie kurz Ihre Situation...",
-                "selectSector": "Sektor Wählen",
-                "selectRegion": "Region Wählen"
-            },
-            "submit": "Verschlüsselte Übertragung Starten",
-            "submitting": "Wird gesendet...",
-            "disclaimer": "Alle Übertragungen sind Ende-zu-Ende verschlüsselt und werden unter strengster NDA behandelt."
-        },
-        "urgency": {
-            "label": "Antwortzeit-SLA",
-            "value": "< 2 Stunden"
-        },
-        "sectors": [
-            "Energie",
-            "Fertigung",
-            "Logistik",
-            "Finanzen",
-            "Gesundheitswesen"
-        ],
-        "regions": [
-            "Europa",
-            "Nordamerika",
-            "Naher Osten",
-            "Asien-Pazifik"
-        ]
-    },
-    "acquisitions": {
         "hero": {
             "badge": "AEON Cyber Digital Twin • M&A Due Diligence",
             "title": "Der Zitronendetektor",
@@ -1139,6 +1023,85 @@
                 "briefing": "Executive Briefing"
             }
         }
+    },
+    "cta": {
+        "defaultHeadline": "Ihr Vorstand Stellt Schwierige Fragen.",
+        "defaultSubheadline": "Haben Sie die Antworten, die Sie Brauchen?",
+        "success": {
+            "title": "Privilegierte Kommunikation Etabliert",
+            "message": "Ihre Anfrage wurde sicher an unser Team übermittelt. Ein Senior-Partner wird Sie innerhalb von 2 Stunden über OOB-Kanäle kontaktieren."
+        },
+        "threatAdvisory": {
+            "label": "Aktive Bedrohungswarnung",
+            "message": "Erhöhte OT-Targeting-Aktivität in EMEA-Energienetzen beobachtet."
+        },
+        "briefingRequest": {
+            "prefix": "Führungskräfte-Briefing",
+            "link": "anfordern",
+            "description": "Erhalten Sie eine maßgeschneiderte Bedrohungsanalyse für Ihren Sektor."
+        },
+        "trustSignals": {
+            "standards": {
+                "title": "EU-Standards",
+                "desc": "NIS2 & IEC 62443 Konform"
+            },
+            "sectors": {
+                "title": "Kritische Sektoren",
+                "desc": "Energie, Fertigung, Verkehr"
+            },
+            "engagements": {
+                "title": "Aktive Mandate",
+                "desc": "12+ Aktive Verteidigungen"
+            }
+        },
+        "quote": {
+            "text": "Die einzige Sicherheitsfirma, die die Physik industrieller Steuerungssysteme genauso gut versteht wie den Code, der sie angreift.",
+            "author": "Dr. Arjan Van Der Berg",
+            "authorTitle": "CISO, National Grid Initiative",
+            "verified": "Verifizierter Kunde"
+        },
+        "form": {
+            "title": "Sichere Uplink-Initialisierung",
+            "labels": {
+                "name": "Vollständiger Name",
+                "title": "Berufsbezeichnung",
+                "email": "Geschäftliche E-Mail",
+                "org": "Organisation",
+                "sector": "Sektor",
+                "region": "Region",
+                "service": "Prioritätsservice",
+                "concerns": "Spezifische Bedenken"
+            },
+            "placeholders": {
+                "name": "z.B. Jan de Vries",
+                "title": "z.B. CISO / Werksleiter",
+                "email": "name@organisation.com",
+                "org": "Name der Organisation",
+                "concerns": "Beschreiben Sie kurz Ihre Situation...",
+                "selectSector": "Sektor Wählen",
+                "selectRegion": "Region Wählen"
+            },
+            "submit": "Verschlüsselte Übertragung Starten",
+            "submitting": "Wird gesendet...",
+            "disclaimer": "Alle Übertragungen sind Ende-zu-Ende verschlüsselt und werden unter strengster NDA behandelt."
+        },
+        "urgency": {
+            "label": "Antwortzeit-SLA",
+            "value": "< 2 Stunden"
+        },
+        "sectors": [
+            "Energie",
+            "Fertigung",
+            "Logistik",
+            "Finanzen",
+            "Gesundheitswesen"
+        ],
+        "regions": [
+            "Europa",
+            "Nordamerika",
+            "Naher Osten",
+            "Asien-Pazifik"
+        ]
     },
     "soc": {
         "hero": {
@@ -1505,194 +1468,6 @@
             "footer": {
                 "title": "AEON NACHRICHTENDIENST",
                 "endOfReport": "ENDE DES BERICHTS // OFFIZIELL GEPRÜFT"
-            },
-            "intelligence": {
-                "title": "Unternehmensaufklärung",
-                "subtitle": "Konsolidierte Aufklärungsübersicht zu Olam Food Ingredients (ofi) – Struktur, Größe, Strategie und Risikolandschaft",
-                "executive": {
-                    "title": "Zusammenfassung der Geschäftsleitung",
-                    "identity": "Olam Food Ingredients (ofi) – eigenständige Geschäftsgruppe innerhalb der Olam Group Limited, gegründet 2020",
-                    "purpose": "\"Wir gestalten den Wandel für gute Lebensmittel und eine gesunde Zukunft\"",
-                    "platforms": {
-                        "cocoa": "Kakao",
-                        "coffee": "Kaffee",
-                        "dairy": "Molkerei",
-                        "nuts": "Nüsse",
-                        "spices": "Gewürze"
-                    },
-                    "scale": {
-                        "plants": "Werke",
-                        "innovation": "Innovationszentren",
-                        "farmers": "Landwirte"
-                    }
-                },
-                "entities": {
-                    "title": "Wichtige operative Einheiten",
-                    "ofi": {
-                        "role": "Hauptgeschäftsgruppe",
-                        "focus": "Zutaten mit Mehrwert über 5 Plattformen"
-                    },
-                    "mindsprint": {
-                        "role": "Interne Technologie-Engine",
-                        "focus": "3.200+ Fachleute, KI, Cybersicherheit (GuardianEye)"
-                    },
-                    "jiva": {
-                        "role": "Digitale Landwirte-Dienste (GESCHLOSSEN Aug 2025)",
-                        "focus": "Bargeldkonservierung, 606 Mitarbeiter betroffen"
-                    },
-                    "terrascope": {
-                        "role": "SaaS zur CO2-Messung",
-                        "focus": "ESG-Dienstleistungen, Land/Natur/Net-Zero"
-                    }
-                },
-                "subsidiaries": {
-                    "title": "Tochtergesellschaftsnetzwerk",
-                    "headers": {
-                        "name": "Tochtergesellschaft",
-                        "location": "Standort",
-                        "function": "Funktion"
-                    },
-                    "list": {
-                        "clubCoffee": {
-                            "function": "Führender Spezialkaffeeröster in Nordamerika"
-                        },
-                        "seda": {
-                            "function": "Fabrik für löslichen Kaffee"
-                        },
-                        "unicao": {
-                            "function": "Kakaoverarbeitung"
-                        },
-                        "macao": {
-                            "function": "Kakaomühle und Laboranlage"
-                        },
-                        "na": {
-                            "function": "Einheitlicher US-Hauptsitz"
-                        },
-                        "cocoaBV": {
-                            "function": "Wichtige europäische Tochtergesellschaft"
-                        },
-                        "cocoaDE": {
-                            "function": "Wichtige europäische Tochtergesellschaft"
-                        },
-                        "locations": {
-                            "toronto": "Toronto, Kanada",
-                            "palencia": "Palencia, Spanien",
-                            "abidjan": "Abidjan, Elfenbeinküste",
-                            "valencia": "Valencia, Spanien",
-                            "chicago": "Chicago, USA",
-                            "netherlands": "Niederlande",
-                            "germany": "Deutschland"
-                        }
-                    }
-                },
-                "facilities": {
-                    "title": "Operativer Fußabdruck",
-                    "regions": {
-                        "na": "Nordamerika",
-                        "europe": "Europa",
-                        "apac": "Asien-Pazifik",
-                        "africaLatam": "Afrika & Lateinamerika"
-                    }
-                },
-                "chronology": {
-                    "title": "Chronologie wichtiger Ereignisse",
-                    "events": {
-                        "compass": "Start der Nachhaltigkeitsinitiative Cocoa Compass",
-                        "ofiEst": "ofi formell als Geschäftsgruppe gegründet",
-                        "tokoroa": "Eröffnung von Phase 1 des Molkereibergwerks Tokoroa (Neuseeland)",
-                        "mightyEarth": "Mighty Earth-Bericht über Kakao-Herausforderungen in Ghana",
-                        "salic": "Verkauf von 44,58 % der Anteile an Olam Agri an SALIC",
-                        "jivaClose": "Strategische Schließung der Jiva Ag-Plattform",
-                        "eudr": "Frist für EUDR-Konformität (KRITISCH)"
-                    }
-                },
-                "discrepancies": {
-                    "title": "Quellenwidersprüche",
-                    "intro": "Widersprüchliche Informationen in öffentlichen Quellen identifiziert:",
-                    "fields": {
-                        "employees": "Mitarbeiterzahl",
-                        "farmers": "Landwirte-Netzwerk",
-                        "innovation": "Innovationszentren"
-                    }
-                }
-            },
-            "groupStructure": {
-                "header": {
-                    "title": "KONZERNSTRUKTUR",
-                    "subtitle": "Unternehmensanatomie & Analyse des Tochtergesellschaftsnetzwerks",
-                    "back": "Zurück zum OSINT-Bericht"
-                },
-                "hierarchy": {
-                    "title": "Analyse der Unternehmensstruktur",
-                    "desc": "Olam Group Limited reorganisierte sich 2020 in drei verschiedene Geschäftsgruppen, um langfristigen Wert zu erschließen: <strong> ofi (Olam Food Ingredients)</strong>, <strong>Olam Agri</strong> und die <strong>Übrige Olam Group</strong>. Diese Trennung hat zu unterschiedlichen operativen technologischen Fußabdrücken und Cyber-Risikoprofilen für jede Einheit."
-                },
-                "digitalLayer": {
-                    "title": "Digitale & Innovationsschicht",
-                    "desc": "<strong>Mindsprint (ehemals OTBS)</strong> fungiert als digitaler Motor für die Gruppe und bietet IT, Cybersicherheit (GuardianEye) und gemeinsame Dienste an. Es ist ein kritischer Knotenpunkt in der digitalen Lieferkette der Gruppe und bedient sowohl ofi als auch Olam Agri.",
-                    "link": "Technologie-Stack anzeigen"
-                },
-                "geoComplexity": {
-                    "title": "Geografische Komplexität",
-                    "desc": "Die Gruppe ist in über 60 Ländern tätig. <strong>ofi</strong> hat eine starke Präsenz in Europa und Amerika (Zutaten mit Mehrwert), während <strong>Olam Agri</strong> in Asien und Afrika (nahrungsmittelbasierte Grundnahrungsmittel) dominiert. EUDR- und NIS2-Vorschriften betreffen insbesondere die europäischen Verarbeitungszentren.",
-                    "link": "Konformitätsstatus anzeigen"
-                }
-            },
-            "orgMap": {
-                "root": {
-                    "label": "Olam Group Limited",
-                    "role": "Holdinggesellschaft"
-                },
-                "ofi": {
-                    "label": "ofi (Olam Food Ingredients)",
-                    "role": "Zutaten mit Mehrwert"
-                },
-                "agri": {
-                    "label": "Olam Agri",
-                    "role": "Ernährungssicherheit & Logistik"
-                },
-                "remaining": {
-                    "label": "Übrige Olam Group",
-                    "role": "Inkubator & Vermächtnis"
-                },
-                "divisions": {
-                    "cocoa": {
-                        "label": "Kakao",
-                        "role": "Verarbeitung & Innovation"
-                    },
-                    "coffee": {
-                        "label": "Kaffee",
-                        "role": "Löslich & Lieferkette"
-                    },
-                    "dairy": {
-                        "label": "Molkerei",
-                        "role": "Globale Verarbeitung"
-                    },
-                    "spices": {
-                        "label": "Gewürze",
-                        "role": "Herstellung"
-                    },
-                    "grains": {
-                        "label": "Getreide & Öle",
-                        "role": "Handel & Mühlen"
-                    },
-                    "freight": {
-                        "label": "Frachtmanagement",
-                        "role": "Logistikderivate"
-                    },
-                    "cotton": {
-                        "label": "Faser & Baumwolle",
-                        "role": "Entkernung & Lagerung"
-                    },
-                    "mindsprint": {
-                        "label": "Mindsprint",
-                        "role": "Digitale Dienste & Cyber"
-                    },
-                    "nupo": {
-                        "label": "Nupo Ventures",
-                        "role": "Inkubation (Jiva, Terrascope)"
-                    }
-                },
-                "interaction": "INTERAKTIVE HIERARCHIE-KARTE // KNOTEN KLICKEN ZUM ERWEITERN ODER NAVIGIEREN"
             }
         },
         "executive": {
@@ -1834,89 +1609,277 @@
                     "stock": "LeadIQ identifiziert fälschlicherweise 'TEAF' als ofis Symbol. ofi ist in Privatbesitz und bereitet den Börsengang vor."
                 }
             }
-        }
-    },
-    "security": {
-        "title": "CYBERSICHERHEITS-RISIKOBEWERTUNG",
-        "subtitle": "Bedrohungslandschaft, Schwachstellen und Compliance-Status für OFI-Betriebe",
-        "backLink": "Zurück zum OSINT-Bericht",
-        "overview": {
-            "riskLevel": "HOCH",
-            "sectorAttacks": "Sektor-Angriffe (2024)",
-            "mitreTechniques": "MITRE ICS-Techniken",
-            "criticalCves": "Kritische CVEs",
-            "iecStatus": "IEC 62443 Status",
-            "statusInProgress": "In Bearbeitung",
-            "statusPending": "Ausstehend",
-            "statusCertified": "Zertifiziert"
         },
-        "threatActors": {
-            "title": "Aktive Bedrohungsakteure (2024-2025)",
-            "description": "Das vierte Quartal 2024 verzeichnete einen <span class='text-red-400 font-semibold'>Anstieg um 118%</span> bei Ransomware-Angriffen auf Lebensmittel & Landwirtschaft. Doppelte Erpressungstaktiken dominieren, wobei Gruppen OT/ICS-Systeme für maximale Wirkung ins Visier nehmen."
-        },
-        "techRisks": {
-            "title": "Zusammenfassung Technologierisiken",
-            "risks": {
-                "braincube": {
-                    "reason": "Direkter SPS-Zugriff, Lieferkettenvektor"
+        "intelligence": {
+            "title": "Unternehmensaufklärung",
+            "subtitle": "Konsolidierte Aufklärungsübersicht zu Olam Food Ingredients (ofi) – Struktur, Größe, Strategie und Risikolandschaft",
+            "executive": {
+                "title": "Zusammenfassung der Geschäftsleitung",
+                "identity": "Olam Food Ingredients (ofi) – eigenständige Geschäftsgruppe innerhalb der Olam Group Limited, gegründet 2020",
+                "purpose": "\"Wir gestalten den Wandel für gute Lebensmittel und eine gesunde Zukunft\"",
+                "platforms": {
+                    "cocoa": "Kakao",
+                    "coffee": "Kaffee",
+                    "dairy": "Molkerei",
+                    "nuts": "Nüsse",
+                    "spices": "Gewürze"
                 },
-                "rockwell": {
-                    "reason": "8 CVEs (CVSS bis zu 9.3)"
+                "scale": {
+                    "plants": "Werke",
+                    "innovation": "Innovationszentren",
+                    "farmers": "Landwirte"
+                }
+            },
+            "entities": {
+                "title": "Wichtige operative Einheiten",
+                "ofi": {
+                    "role": "Hauptgeschäftsgruppe",
+                    "focus": "Zutaten mit Mehrwert über 5 Plattformen"
                 },
-                "sap": {
-                    "reason": "IT/OT-Schnittstellen API-Exposition"
+                "mindsprint": {
+                    "role": "Interne Technologie-Engine",
+                    "focus": "3.200+ Fachleute, KI, Cybersicherheit (GuardianEye)"
                 },
-                "siemens": {
-                    "reason": "Veraltete Schwachstellen"
+                "jiva": {
+                    "role": "Digitale Landwirte-Dienste (GESCHLOSSEN Aug 2025)",
+                    "focus": "Bargeldkonservierung, 606 Mitarbeiter betroffen"
+                },
+                "terrascope": {
+                    "role": "SaaS zur CO2-Messung",
+                    "focus": "ESG-Dienstleistungen, Land/Natur/Net-Zero"
+                }
+            },
+            "subsidiaries": {
+                "title": "Tochtergesellschaftsnetzwerk",
+                "headers": {
+                    "name": "Tochtergesellschaft",
+                    "location": "Standort",
+                    "function": "Funktion"
+                },
+                "list": {
+                    "clubCoffee": {
+                        "function": "Führender Spezialkaffeeröster in Nordamerika"
+                    },
+                    "seda": {
+                        "function": "Fabrik für löslichen Kaffee"
+                    },
+                    "unicao": {
+                        "function": "Kakaoverarbeitung"
+                    },
+                    "macao": {
+                        "function": "Kakaomühle und Laboranlage"
+                    },
+                    "na": {
+                        "function": "Einheitlicher US-Hauptsitz"
+                    },
+                    "cocoaBV": {
+                        "function": "Wichtige europäische Tochtergesellschaft"
+                    },
+                    "cocoaDE": {
+                        "function": "Wichtige europäische Tochtergesellschaft"
+                    },
+                    "locations": {
+                        "toronto": "Toronto, Kanada",
+                        "palencia": "Palencia, Spanien",
+                        "abidjan": "Abidjan, Elfenbeinküste",
+                        "valencia": "Valencia, Spanien",
+                        "chicago": "Chicago, USA",
+                        "netherlands": "Niederlande",
+                        "germany": "Deutschland"
+                    }
+                }
+            },
+            "facilities": {
+                "title": "Operativer Fußabdruck",
+                "regions": {
+                    "na": "Nordamerika",
+                    "europe": "Europa",
+                    "apac": "Asien-Pazifik",
+                    "africaLatam": "Afrika & Lateinamerika"
+                }
+            },
+            "chronology": {
+                "title": "Chronologie wichtiger Ereignisse",
+                "events": {
+                    "compass": "Start der Nachhaltigkeitsinitiative Cocoa Compass",
+                    "ofiEst": "ofi formell als Geschäftsgruppe gegründet",
+                    "tokoroa": "Eröffnung von Phase 1 des Molkereibergwerks Tokoroa (Neuseeland)",
+                    "mightyEarth": "Mighty Earth-Bericht über Kakao-Herausforderungen in Ghana",
+                    "salic": "Verkauf von 44,58 % der Anteile an Olam Agri an SALIC",
+                    "jivaClose": "Strategische Schließung der Jiva Ag-Plattform",
+                    "eudr": "Frist für EUDR-Konformität (KRITISCH)"
+                }
+            },
+            "discrepancies": {
+                "title": "Quellenwidersprüche",
+                "intro": "Widersprüchliche Informationen in öffentlichen Quellen identifiziert:",
+                "fields": {
+                    "employees": "Mitarbeiterzahl",
+                    "farmers": "Landwirte-Netzwerk",
+                    "innovation": "Innovationszentren"
                 }
             }
         },
-        "criticalAlert": {
-            "title": "KRITISCH: Braincube Drittanbieter-Risiko",
-            "description": "Die Braincube KI-Plattform hat direkten SPS-Zugriff in 120+ Anlagen zur Fertigungsoptimierung. Dies schafft einen potenziellen Lieferketten-Angriffsvektor ähnlich wie SolarWinds.",
-            "tags": {
-                "poisoning": "KI-Modell-Vergiftung",
-                "injection": "Befehlsinjektion in SPS",
-                "exfiltration": "Rezeptur-Exfiltration",
-                "supplyChain": "Lieferkettenangriff"
+        "groupStructure": {
+            "header": {
+                "title": "KONZERNSTRUKTUR",
+                "subtitle": "Unternehmensanatomie & Analyse des Tochtergesellschaftsnetzwerks",
+                "back": "Zurück zum OSINT-Bericht"
+            },
+            "hierarchy": {
+                "title": "Analyse der Unternehmensstruktur",
+                "desc": "Olam Group Limited reorganisierte sich 2020 in drei verschiedene Geschäftsgruppen, um langfristigen Wert zu erschließen: <strong> ofi (Olam Food Ingredients)</strong>, <strong>Olam Agri</strong> und die <strong>Übrige Olam Group</strong>. Diese Trennung hat zu unterschiedlichen operativen technologischen Fußabdrücken und Cyber-Risikoprofilen für jede Einheit."
+            },
+            "digitalLayer": {
+                "title": "Digitale & Innovationsschicht",
+                "desc": "<strong>Mindsprint (ehemals OTBS)</strong> fungiert als digitaler Motor für die Gruppe und bietet IT, Cybersicherheit (GuardianEye) und gemeinsame Dienste an. Es ist ein kritischer Knotenpunkt in der digitalen Lieferkette der Gruppe und bedient sowohl ofi als auch Olam Agri.",
+                "link": "Technologie-Stack anzeigen"
+            },
+            "geoComplexity": {
+                "title": "Geografische Komplexität",
+                "desc": "Die Gruppe ist in über 60 Ländern tätig. <strong>ofi</strong> hat eine starke Präsenz in Europa und Amerika (Zutaten mit Mehrwert), während <strong>Olam Agri</strong> in Asien und Afrika (nahrungsmittelbasierte Grundnahrungsmittel) dominiert. EUDR- und NIS2-Vorschriften betreffen insbesondere die europäischen Verarbeitungszentren.",
+                "link": "Konformitätsstatus anzeigen"
             }
         },
-        "subpages": {
-            "header": "DETAILLIERTE BERICHTE",
-            "mitre": {
-                "title": "MITRE ATT&CK Profil",
-                "description": "ICS, Enterprise & Mobile Angriffsmatrizen"
+        "orgMap": {
+            "root": {
+                "label": "Olam Group Limited",
+                "role": "Holdinggesellschaft"
             },
-            "sectors": {
-                "title": "Sektor-Bedrohungen",
-                "description": "Monatliche Angriffsberichte nach Branche"
+            "ofi": {
+                "label": "ofi (Olam Food Ingredients)",
+                "role": "Zutaten mit Mehrwert"
             },
-            "technology": {
-                "title": "Technologie-Risiken",
-                "description": "CVE-Datenbank für OFI Tech-Stack"
+            "agri": {
+                "label": "Olam Agri",
+                "role": "Ernährungssicherheit & Logistik"
             },
-            "iec62443": {
-                "title": "IEC 62443 Compliance",
-                "description": "Shanghai CSC Anforderungen"
+            "remaining": {
+                "label": "Übrige Olam Group",
+                "role": "Inkubator & Vermächtnis"
             },
-            "attacker": {
-                "title": "Red Team Dossier",
-                "description": "Gegnerische Analyse & Risiken benutzerspezifischer Apps"
-            }
+            "divisions": {
+                "cocoa": {
+                    "label": "Kakao",
+                    "role": "Verarbeitung & Innovation"
+                },
+                "coffee": {
+                    "label": "Kaffee",
+                    "role": "Löslich & Lieferkette"
+                },
+                "dairy": {
+                    "label": "Molkerei",
+                    "role": "Globale Verarbeitung"
+                },
+                "spices": {
+                    "label": "Gewürze",
+                    "role": "Herstellung"
+                },
+                "grains": {
+                    "label": "Getreide & Öle",
+                    "role": "Handel & Mühlen"
+                },
+                "freight": {
+                    "label": "Frachtmanagement",
+                    "role": "Logistikderivate"
+                },
+                "cotton": {
+                    "label": "Faser & Baumwolle",
+                    "role": "Entkernung & Lagerung"
+                },
+                "mindsprint": {
+                    "label": "Mindsprint",
+                    "role": "Digitale Dienste & Cyber"
+                },
+                "nupo": {
+                    "label": "Nupo Ventures",
+                    "role": "Inkubation (Jiva, Terrascope)"
+                }
+            },
+            "interaction": "INTERAKTIVE HIERARCHIE-KARTE // KNOTEN KLICKEN ZUM ERWEITERN ODER NAVIGIEREN"
         },
-        "compliance": {
-            "title": "Compliance-Status",
-            "iec": {
-                "label": "IEC 62443",
-                "desc": "Shanghai CSC Ziel: Q2 2026"
+        "security": {
+            "title": "CYBERSICHERHEITS-RISIKOBEWERTUNG",
+            "subtitle": "Bedrohungslandschaft, Schwachstellen und Compliance-Status für OFI-Betriebe",
+            "backLink": "Zurück zum OSINT-Bericht",
+            "overview": {
+                "riskLevel": "HOCH",
+                "sectorAttacks": "Sektor-Angriffe (2024)",
+                "mitreTechniques": "MITRE ICS-Techniken",
+                "criticalCves": "Kritische CVEs",
+                "iecStatus": "IEC 62443 Status",
+                "statusInProgress": "In Bearbeitung",
+                "statusPending": "Ausstehend",
+                "statusCertified": "Zertifiziert"
             },
-            "nis2": {
-                "label": "EU NIS2",
-                "desc": "EU-Anlagen (NL, DE, ES) im Geltungsbereich"
+            "threatActors": {
+                "title": "Aktive Bedrohungsakteure (2024-2025)",
+                "description": "Das vierte Quartal 2024 verzeichnete einen <span class='text-red-400 font-semibold'>Anstieg um 118%</span> bei Ransomware-Angriffen auf Lebensmittel & Landwirtschaft. Doppelte Erpressungstaktiken dominieren, wobei Gruppen OT/ICS-Systeme für maximale Wirkung ins Visier nehmen."
             },
-            "fssc": {
-                "label": "FSSC 22000",
-                "desc": "Lebensmittelsicherheitszertifizierung aktiv"
+            "techRisks": {
+                "title": "Zusammenfassung Technologierisiken",
+                "risks": {
+                    "braincube": {
+                        "reason": "Direkter SPS-Zugriff, Lieferkettenvektor"
+                    },
+                    "rockwell": {
+                        "reason": "8 CVEs (CVSS bis zu 9.3)"
+                    },
+                    "sap": {
+                        "reason": "IT/OT-Schnittstellen API-Exposition"
+                    },
+                    "siemens": {
+                        "reason": "Veraltete Schwachstellen"
+                    }
+                }
+            },
+            "criticalAlert": {
+                "title": "KRITISCH: Braincube Drittanbieter-Risiko",
+                "description": "Die Braincube KI-Plattform hat direkten SPS-Zugriff in 120+ Anlagen zur Fertigungsoptimierung. Dies schafft einen potenziellen Lieferketten-Angriffsvektor ähnlich wie SolarWinds.",
+                "tags": {
+                    "poisoning": "KI-Modell-Vergiftung",
+                    "injection": "Befehlsinjektion in SPS",
+                    "exfiltration": "Rezeptur-Exfiltration",
+                    "supplyChain": "Lieferkettenangriff"
+                }
+            },
+            "subpages": {
+                "header": "DETAILLIERTE BERICHTE",
+                "mitre": {
+                    "title": "MITRE ATT&CK Profil",
+                    "description": "ICS, Enterprise & Mobile Angriffsmatrizen"
+                },
+                "sectors": {
+                    "title": "Sektor-Bedrohungen",
+                    "description": "Monatliche Angriffsberichte nach Branche"
+                },
+                "technology": {
+                    "title": "Technologie-Risiken",
+                    "description": "CVE-Datenbank für OFI Tech-Stack"
+                },
+                "iec62443": {
+                    "title": "IEC 62443 Compliance",
+                    "description": "Shanghai CSC Anforderungen"
+                },
+                "attacker": {
+                    "title": "Red Team Dossier",
+                    "description": "Gegnerische Analyse & Risiken benutzerspezifischer Apps"
+                }
+            },
+            "compliance": {
+                "title": "Compliance-Status",
+                "iec": {
+                    "label": "IEC 62443",
+                    "desc": "Shanghai CSC Ziel: Q2 2026"
+                },
+                "nis2": {
+                    "label": "EU NIS2",
+                    "desc": "EU-Anlagen (NL, DE, ES) im Geltungsbereich"
+                },
+                "fssc": {
+                    "label": "FSSC 22000",
+                    "desc": "Lebensmittelsicherheitszertifizierung aktiv"
+                }
             }
         }
     }
