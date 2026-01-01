@@ -6,8 +6,6 @@ __pycache__
 mpn_engine/__pycache__
 mpn_engine/core/__pycache__
 test_audio.mp3
-*.mp3
-*.wav
 Customer_OFI
 mckenney-lacan_theory
 knowledgebase
