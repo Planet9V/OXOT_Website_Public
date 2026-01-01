@@ -1,13 +1,56 @@
 'use client';
 
-import React from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
-import { ChevronDown, Download, Palette, FileText, Layers, Award } from 'lucide-react';
+import React, { useState } from 'react';
+import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
+import {
+    ChevronDown, Download, Palette, FileText, Layers, Award,
+    Globe, Codesandbox, Activity, Terminal, Cpu, Database, Lock, Server
+} from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { BackgroundEffect } from './BackgroundEffect';
 import { PageHeader } from './branding/PageHeader';
 import { OXOTLogo } from './branding/OXOTLogo';
+
+interface AccordionProps {
+    title: string;
+    icon: React.ReactNode;
+    children: React.ReactNode;
+    defaultOpen?: boolean;
+}
+
+function Accordion({ title, icon, children, defaultOpen = false }: AccordionProps) {
+    const [isOpen, setIsOpen] = useState(defaultOpen);
+    return (
+        <div className="border border-white/10 rounded-xl overflow-hidden mb-4 bg-white/5">
+            <button
+                onClick={() => setIsOpen(!isOpen)}
+                className="w-full flex items-center justify-between p-4 hover:bg-white/10 transition-colors"
+            >
+                <div className="flex items-center gap-3">
+                    <div className="text-oxot-gold">{icon}</div>
+                    <span className="text-white font-semibold text-left">{title}</span>
+                </div>
+                <motion.div animate={{ rotate: isOpen ? 180 : 0 }} transition={{ duration: 0.2 }}>
+                    <ChevronDown className="text-gray-500" size={20} />
+                </motion.div>
+            </button>
+            <AnimatePresence>
+                {isOpen && (
+                    <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: 'auto', opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="overflow-hidden"
+                    >
+                        <div className="p-6 border-t border-white/5">{children}</div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+        </div>
+    );
+}
 
 interface BrandAsset {
     title: string;
@@ -214,8 +257,8 @@ export default function BrandingShowcaseView() {
                                         {/* Category Badge */}
                                         <div className="absolute top-4 left-4 z-10">
                                             <div className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-mono tracking-wider uppercase ${asset.background === 'dark'
-                                                    ? 'bg-white/10 text-white/70'
-                                                    : 'bg-black/10 text-black/70'
+                                                ? 'bg-white/10 text-white/70'
+                                                : 'bg-black/10 text-black/70'
                                                 }`}>
                                                 <CategoryIcon className="w-3 h-3" />
                                                 {categoryMeta[asset.category].label}
@@ -235,8 +278,8 @@ export default function BrandingShowcaseView() {
 
                                         {/* Info Footer */}
                                         <div className={`p-6 border-t ${asset.background === 'dark'
-                                                ? 'border-white/5 bg-black/50'
-                                                : 'border-black/5 bg-gray-50'
+                                            ? 'border-white/5 bg-black/50'
+                                            : 'border-black/5 bg-gray-50'
                                             }`}>
                                             <h3 className={`text-lg font-bold mb-2 ${asset.background === 'dark' ? 'text-white' : 'text-gray-900'
                                                 }`}>
@@ -250,8 +293,8 @@ export default function BrandingShowcaseView() {
                                                 href={asset.src}
                                                 download
                                                 className={`inline-flex items-center gap-2 text-xs font-mono tracking-wider uppercase ${asset.background === 'dark'
-                                                        ? 'text-oxot-gold hover:text-amber-300'
-                                                        : 'text-amber-700 hover:text-amber-600'
+                                                    ? 'text-oxot-gold hover:text-amber-300'
+                                                    : 'text-amber-700 hover:text-amber-600'
                                                     } transition-colors`}
                                             >
                                                 <Download className="w-3 h-3" />
@@ -327,6 +370,197 @@ export default function BrandingShowcaseView() {
                                     </li>
                                 </ul>
                             </div>
+                        </div>
+                    </motion.div>
+                </section>
+
+                {/* MOVED CONTENT: Deep OSINT & Architecture */}
+                {/* Section 2: Data Layers */}
+                <section className="py-20 border-t border-white/5">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                    >
+                        <div className="flex items-center gap-3 mb-12 justify-center">
+                            <Layers className="text-cyan-400" size={24} />
+                            <h2 className="text-2xl font-bold text-white font-mono">ARCHITECTURE OF DEEP OSINT</h2>
+                        </div>
+
+                        <div className="space-y-4 max-w-4xl mx-auto">
+                            <Accordion title="Layer 1: Kinetic & Logical Infrastructure ('The Plumbing')" icon={<Globe size={18} />} defaultOpen>
+                                <div className="grid md:grid-cols-2 gap-8">
+                                    <div>
+                                        <p className="text-white text-sm mb-4">Answers: Where does this entity live and how does it connect?</p>
+                                        <ul className="space-y-2 text-xs text-gray-400 font-mono">
+                                            <li className="text-cyan-400">• ASNs (Autonomous System Numbers)</li>
+                                            <li className="text-cyan-400">• IP Prefixes (CIDR Blocks)</li>
+                                            <li className="text-cyan-400">• BGP Routing Tables (Hijacking/Leak detection)</li>
+                                            <li className="text-cyan-400">• Geolocation (Data Sovereignty)</li>
+                                        </ul>
+                                    </div>
+                                    <div className="bg-black/40 p-4 rounded border border-white/10">
+                                        <h4 className="text-gray-500 text-xs uppercase mb-2">Visualization Implication</h4>
+                                        <p className="text-white text-sm">Requires <span className="text-cyan-400">Force-Directed Graphs</span> for topology and <span className="text-cyan-400">3D Geospatial Maps (deck.gl)</span> for physical locations.</p>
+                                    </div>
+                                </div>
+                            </Accordion>
+
+                            <Accordion title="Layer 2: Software Supply Chain ('The Code')" icon={<Codesandbox size={18} />}>
+                                <div className="grid md:grid-cols-2 gap-8">
+                                    <div>
+                                        <p className="text-white text-sm mb-4">Domain of SBOM (Software Bill of Materials) analysis.</p>
+                                        <ul className="space-y-2 text-xs text-gray-400 font-mono">
+                                            <li className="text-purple-400">• Tech Stack Fingerprinting (CMS, Web Servers)</li>
+                                            <li className="text-purple-400">• Dependency Trees (Libraries, Frameworks)</li>
+                                            <li className="text-purple-400">• Vulnerability Correlation (CVE Mapping)</li>
+                                        </ul>
+                                    </div>
+                                    <div className="bg-black/40 p-4 rounded border border-white/10">
+                                        <h4 className="text-gray-500 text-xs uppercase mb-2">Visualization Implication</h4>
+                                        <p className="text-white text-sm">Hierarchical and fractal. Requires <span className="text-purple-400">Sunburst Charts</span>, <span className="text-purple-400">Treemaps</span>, and Dendrograms.</p>
+                                    </div>
+                                </div>
+                            </Accordion>
+
+                            <Accordion title="Layer 3: Comparative Risk & Intelligence ('The Context')" icon={<Activity size={18} />}>
+                                <div className="grid md:grid-cols-2 gap-8">
+                                    <div>
+                                        <p className="text-white text-sm mb-4">Benchmarking against industry peers.</p>
+                                        <ul className="space-y-2 text-xs text-gray-400 font-mono">
+                                            <li className="text-oxot-gold">• Peer Grouping (NAICS, Revenue)</li>
+                                            <li className="text-oxot-gold">• Statistical Baselines (Mean/Std Dev)</li>
+                                            <li className="text-oxot-gold">• Dark Web Signals (Credential Dumps)</li>
+                                        </ul>
+                                    </div>
+                                    <div className="bg-black/40 p-4 rounded border border-white/10">
+                                        <h4 className="text-gray-500 text-xs uppercase mb-2">Visualization Implication</h4>
+                                        <p className="text-white text-sm">Statistical and relativistic. Requires <span className="text-oxot-gold">Radar Charts</span> and <span className="text-oxot-gold">Box-and-Whisker Plots</span>.</p>
+                                    </div>
+                                </div>
+                            </Accordion>
+                        </div>
+                    </motion.div>
+                </section>
+
+                {/* Section 3: Industrial Design */}
+                <section className="py-20 bg-white/5 border-y border-white/5">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="max-w-6xl mx-auto"
+                    >
+                        <div className="flex items-center gap-3 mb-12 justify-center">
+                            <Terminal className="text-emerald-400" size={24} />
+                            <h2 className="text-2xl font-bold text-white font-mono">"INDUSTRIAL CLEAN" DESIGN SYSTEM</h2>
+                        </div>
+
+                        <div className="grid md:grid-cols-3 gap-6">
+                            <div className="p-8 border border-white/10 bg-black/40 rounded-xl">
+                                <h3 className="text-emerald-400 font-mono text-sm mb-3">CHROMOPHOBIA</h3>
+                                <p className="text-gray-400 text-sm leading-relaxed">
+                                    Dark interfaces to reduce eye strain. Color is strictly semantic.
+                                    <br /><span className="text-red-500">Red = Danger</span>
+                                    <br /><span className="text-orange-400">Orange = Warning</span>
+                                    <br /><span className="text-cyan-400">Cyan = Active Data</span>
+                                </p>
+                            </div>
+                            <div className="p-8 border border-white/10 bg-black/40 rounded-xl">
+                                <h3 className="text-emerald-400 font-mono text-sm mb-3">GRID IS GOD</h3>
+                                <p className="text-gray-400 text-sm leading-relaxed">
+                                    Rigid, visible grids. Data contained in demarcated "cells" or "panels." Helps the eye parse complex layouts quickly.
+                                </p>
+                            </div>
+                            <div className="p-8 border border-white/10 bg-black/40 rounded-xl">
+                                <h3 className="text-emerald-400 font-mono text-sm mb-3">TYPOGRAPHY</h3>
+                                <p className="text-gray-400 text-sm leading-relaxed">
+                                    Monospace fonts for all data (IPs, hashes, dates). Ensures vertical alignment and easy scanning for anomalies.
+                                </p>
+                            </div>
+                        </div>
+                    </motion.div>
+                </section>
+
+                {/* Section 4: Visualization Layouts */}
+                <section className="py-20">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="max-w-4xl mx-auto"
+                    >
+                        <div className="flex items-center gap-3 mb-12 justify-center">
+                            <Cpu className="text-purple-400" size={24} />
+                            <h2 className="text-2xl font-bold text-white font-mono">STRATEGIC VISUALIZATION LAYOUTS</h2>
+                        </div>
+
+                        <div className="space-y-6">
+                            <h3 className="text-white font-mono text-sm border-b border-white/10 pb-2 mb-4">CORE INTELLIGENCE VIEWS</h3>
+
+                            <div className="grid gap-4">
+                                {[
+                                    { name: 'Supply Chain Kinetic Flow', desc: 'Sankey flows showing risk propagation through supplier tiers.', tech: 'Nivo / ECharts' },
+                                    { name: 'Global Infrastructure Hologram', desc: 'Dark 3D globe with extruded data pillars for physical assets.', tech: 'deck.gl / Mapbox' },
+                                    { name: 'Dependency Fractal', desc: 'Zoomable Sunburst chart for software supply chain depth.', tech: 'D3.js' },
+                                    { name: 'Threat Horizon HUD', desc: 'Real-time sparklines and scrolling tickers for signal velocity.', tech: 'uPlot / SSE' },
+                                    { name: 'Comparative Risk Radar', desc: '6-axis radar charts benchmarking against peer cohorts.', tech: 'Recharts' },
+                                    { name: 'Network Topology Circuit', desc: 'Orthogonal node-link graph for BGP/Routing paths.', tech: 'React Flow' },
+                                    { name: 'Attack Path Knowledge Graph', desc: 'DAG showing causal chains from internet to critical assets.', tech: 'Cytoscape.js' }
+                                ].map((layout, i) => (
+                                    <div key={i} className="flex items-start gap-4 p-4 border border-white/5 rounded-lg hover:bg-white/5 transition-colors">
+                                        <div className="text-purple-400 font-mono text-xs whitespace-nowrap pt-1">LAYOUT {i + 1}</div>
+                                        <div>
+                                            <h4 className="text-white font-bold text-sm">{layout.name}</h4>
+                                            <p className="text-gray-400 text-xs mt-1">{layout.desc}</p>
+                                            <span className="text-[10px] text-white/40 font-mono mt-2 block">Stack: {layout.tech}</span>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </motion.div>
+                </section>
+
+                {/* Section 5: Tech Stack Table */}
+                <section className="py-20 bg-white/5 border-t border-white/5">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="max-w-5xl mx-auto"
+                    >
+                        <div className="flex items-center gap-3 mb-12 justify-center">
+                            <Database className="text-blue-400" size={24} />
+                            <h2 className="text-2xl font-bold text-white font-mono">TECHNOLOGY IMPLEMENTATION</h2>
+                        </div>
+
+                        <div className="overflow-x-auto rounded-xl border border-white/10">
+                            <table className="w-full text-sm text-left">
+                                <thead className="bg-black/50 text-blue-400 font-mono text-xs uppercase">
+                                    <tr>
+                                        <th className="p-4">Component</th>
+                                        <th className="p-4">Technology Stack</th>
+                                        <th className="p-4">Purpose</th>
+                                    </tr>
+                                </thead>
+                                <tbody className="text-gray-400 text-xs font-mono bg-black/20">
+                                    {[
+                                        { comp: 'Frontend Framework', stack: 'React 19', purp: 'Concurrent rendering, Server Components, Suspense' },
+                                        { comp: 'Styling Engine', stack: 'Tailwind CSS', purp: 'Industrial Clean design system, rigid grids' },
+                                        { comp: 'Graph Viz', stack: 'Cosmograph / React Flow', purp: 'Rendering 100k+ node topologies via WebGL' },
+                                        { comp: 'Geospatial Viz', stack: 'deck.gl / Kepler.gl', purp: '3D globes for infrastructure mapping' },
+                                        { comp: 'Statistical Viz', stack: 'Recharts / Nivo', purp: 'Radar charts & Box plots for benchmarking' },
+                                        { comp: 'Performance', stack: 'Web Workers', purp: 'Offloading physics calculations from main thread' },
+                                    ].map((row, i) => (
+                                        <tr key={i} className="border-b last:border-0 border-white/5 hover:bg-white/5 transition-colors">
+                                            <td className="p-4 text-white font-semibold">{row.comp}</td>
+                                            <td className="p-4 text-cyan-400">{row.stack}</td>
+                                            <td className="p-4">{row.purp}</td>
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </table>
                         </div>
                     </motion.div>
                 </section>
