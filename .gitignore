@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# API Keys - keep local only
+mckenney-lacan_theory/OXOT_API Keys 2026-1.txt
+*.txt

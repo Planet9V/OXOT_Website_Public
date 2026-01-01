@@ -30,7 +30,11 @@
             "aboutOxot": "Über OXOT",
             "strategicPlanning": "Strategische Planung",
             "servicesPortfolio": "Dienstleistungsportfolio",
-            "apiEnhancements": "API Erweiterungen"
+            "apiEnhancements": "API Erweiterungen",
+            "brandingGuidelines": "Markenrichtlinien",
+            "businessPitchDeck": "Geschäftspräsentation",
+            "chatBot": "KI-Assistent",
+            "osintReport": "OSINT Bericht"
         }
     },
     "brand": {
@@ -63,12 +67,18 @@
         "whyOxotDescription": "Wir kombinieren tiefgreifende OT/ICS-Expertise mit KI-gestützten Analysefähigkeiten, die keine traditionelle Beratung bieten kann."
     },
     "vision": {
+        "hero": {
+            "title": "AEON CYBER DIGITAL TWIN",
+            "subtitle": "Das Betriebssystem für Souveräne Kritische Infrastruktur.",
+            "versionStatus": "OXOT TITAN // v2.4.1 [ONLINE]"
+        },
         "cta": {
-            "headline": "Vision wird Realität.",
-            "subheadline": "Bauen Sie Ihren digitalen Zwilling heute.",
+            "headline": "Die Zukunft gehört den Vorbereiteten.",
+            "subheadline": "Schließen Sie sich Organisationen an, die souveräne digitale Immunität aufbauen.",
             "serviceOptions": {
-                "vision": "Vision Workshop",
-                "strategy": "Strategische Planung"
+                "consult": "Strategische Beratung",
+                "demo": "Plattform Demo",
+                "access": "Early Access Programm"
             }
         }
     },
@@ -83,13 +93,312 @@
         }
     },
     "agentRed": {
+        "hero": {
+            "title": "AGENT RED LEADER",
+            "subtitle": "SUBMIND ORCHESTRATOR // Autonom. Zielorientiert. Unerbittlich.",
+            "description": "Ein vollständig autonomer, gegnerischer Submind, ausgestattet mit den vollen Fähigkeiten von Kali Linux. Geben Sie ihm ein Ziel, legen Sie die Rules of Engagement fest, und er <span class=\"text-red-500 font-bold border-b border-red-500/50\">wird</span> einen Weg finden.",
+            "scroll": "Scrollen zum Initialisieren"
+        },
+        "predator": {
+            "badge": "ADVERSARIAL CORE",
+            "title": "DER ULTIMATIVE",
+            "titleHighlight": "PREDATOR.",
+            "description": "Red Leader ist kein Skript. Es ist eine dynamische, denkende Entität. Es erstellt benutzerdefinierte Bedrohungsmodelle basierend auf der spezifischen Architektur des Ziels und nutzt dann den AEON Core, um Angriffsvektoren mithilfe von Gated Graph Neural Networks zu brainstormen.",
+            "cards": {
+                "kali": {
+                    "title": "Volles Kali Linux Arsenal",
+                    "desc": "Nativer Zugriff auf Metasploit, Nmap, Burp Suite und benutzerdefinierte Exploits. Es führt nicht nur Tools aus; es versteht deren Ausgabe und verkettet sie."
+                },
+                "gnn": {
+                    "title": "gGNN Brainstorming",
+                    "desc": "Nutzt Gated Graph Neural Networks, um die Zustandsausbreitung über die Zieltopologie zu modellieren und identifiziert nicht offensichtliche Angriffspfade, die Standard-Traversal übersieht."
+                },
+                "swarm": {
+                    "title": "Schwarm-Divergenz-Theorie",
+                    "desc": "Setzt diverse UAV-neuronale Netzwerke mit divergenten Agenten ein. Verwendet adaptive Konsensus-Algorithmen, um lokale Optima zu vermeiden und garantiert mathematisch Konvergenz auf dem verheerendsten Angriffspfad."
+                }
+            },
+            "terminal": {
+                "init": "$ init_sequence --target=\"Energie_Sektor_Netz_A\"",
+                "target": "[+] Ziel Erfasst: Industrielles Steuerungssystem (ICS)",
+                "analysis": "[+] Architekturanalyse: Siemens S7-1500 Erkannt",
+                "scan": "[+] Schwachstellenscan: CVE-2024-XXXX (Kritisch)",
+                "optimization": "[!] GNN Optimierung: Angriffspfad #472 Ausgewählt (Wahrscheinlichkeit: 98.2%)",
+                "instantiating": "[>] Submind Initialisierung: \"Signal Phantom\" für Drahtlosen Zugang..."
+            }
+        },
+        "squad": {
+            "tickerLabel": "LIVE BEDROHUNGS-FEED",
+            "ticker": {
+                "critical": "KRITISCH: Seitliche Bewegung von APT29 in Sektor 4 erkannt",
+                "warning": "WARNUNG: Zero-Day-Exploit in OpenSSL 3.0.1 identifiziert",
+                "alert": "ALARM: Neue Ransomware-Variante 'BlackBastion' zielt auf Gesundheitswesen ab",
+                "system": "SYSTEM: Neukalibrierung des neuronalen Gitters im Gange...",
+                "intel": "INTEL: Darknet-Chatter deutet auf bevorstehenden Angriff auf das Energienetz hin"
+            },
+            "title": "RED LEADER GESCHWADER",
+            "sections": {
+                "personas": {
+                    "title": "AUTONOME SUBMIND PERSONAS",
+                    "desc": "Agent Red führt nicht nur Skripte aus; er erschafft <strong>Subminds</strong>. Dies sind autonome Agenten mit unterschiedlichen Persönlichkeiten, Zielen und Fähigkeiten, passend für den Zweck.",
+                    "agents": {
+                        "wraith": {
+                            "role": "Externer Pivot",
+                            "desc": "Spezialisiert auf Cloud-Infrastruktur. Erstellt 'Drive-by'-Websites und kompromittierte S3-Buckets, um Ziele anzulocken."
+                        },
+                        "phantom": {
+                            "role": "Drahtloser Interceptor",
+                            "desc": "Setzt 'Evil Twin' SSIDs ein. Fängt Handshakes ab und täuscht Benutzer auf gefälschte Unternehmensportale."
+                        },
+                        "mole": {
+                            "role": "Interner Pivot",
+                            "desc": "Living off the land. Führt Responder & Bloodhound aus, um AD-Pfade abzubilden. Bewegt sich lateral ohne Malware."
+                        },
+                        "sandbox": {
+                            "role": "Virtualisierungs-Engine",
+                            "desc": "Erstellt exakte Repliken der Zielhardware für sichere Exploit-Tests vor dem Live-Einsatz."
+                        }
+                    }
+                },
+                "provisioning": {
+                    "title": "SELBST-BEREITSTELLENDE INFRASTRUKTUR",
+                    "desc": "Die Subminds haben die Befugnis, ihre eigene Infrastruktur in der realen Welt bereitzustellen und kleine Subminds auf kompromittierter Infrastruktur zu installieren, um sich lateral zu bewegen.",
+                    "items": {
+                        "global": {
+                            "title": "Globale Präsenz",
+                            "desc": "Ein Red One Leader kann einen Submind in einer bestimmten AWS-Region (z.B. us-east-1) starten, um einen Angreifer aus dieser Geografie zu simulieren."
+                        },
+                        "tool": {
+                            "title": "Tool-Synthese",
+                            "desc": "Der Submind kann Tools herunterladen (nmap, metasploit, sqlmap), Abhängigkeiten installieren und seine eigene Umgebung konfigurieren."
+                        },
+                        "code": {
+                            "title": "Code-Synthese",
+                            "desc": "Mithilfe eines eingebetteten LLM, das für offensive Sicherheit optimiert ist, kann der Submind im laufenden Betrieb benutzerdefinierte Python-, Go- oder Rust-Skripte schreiben."
+                        }
+                    }
+                },
+                "simulation": {
+                    "title": "BACKEND ZIELSIMULATION (DIE CYBER RANGE)",
+                    "desc": "Wenn eine Zielumgebung identifiziert wird (z.B. ein spezifisches GitHub-Repo, ein Container-Image oder ein Firmware-Blob), startet Agent Red eine <strong>tatsächliche Replik</strong> des Zielservers im Backend.",
+                    "cards": {
+                        "sandbox": {
+                            "title": "Sandboxed Analyse",
+                            "desc": "Führt vollständige Quellcodeanalyse und dynamische Tests in einer sicheren, isolierten Umgebung durch."
+                        },
+                        "exploit": {
+                            "title": "Exploit-Verifizierung",
+                            "desc": "Findet Schwachstellen und testet Exploits gegen die Replik, <em>bevor</em> sie gegen das Live-Ziel eingesetzt werden."
+                        },
+                        "validation": {
+                            "title": "Null-Risiko-Validierung",
+                            "desc": "Dies stellt sicher, dass \"destruktive\" Tests durchgeführt werden können, ohne die tatsächliche Produktionsumgebung zu gefährden."
+                        }
+                    }
+                }
+            }
+        },
+        "graph": {
+            "title": "TIEFE WISSENS",
+            "titleHighlight": "GRAPH INTEGRATION",
+            "cards": {
+                "osint": {
+                    "title": "TIEFE OSINT & DARK WEB",
+                    "items": {
+                        "rfp": {
+                            "title": "Öffentliche RFPs:",
+                            "desc": "Analysiert RFPs, um spezifische Technologien zu identifizieren (z.B. \"Suche nach Cisco ISE Anbieter\")."
+                        },
+                        "jobs": {
+                            "title": "Stellenangebote:",
+                            "desc": "Scrapt Jobbörsen, um Tech-Stacks abzuleiten (z.B. \"Suche: Kubernetes Experte\")."
+                        },
+                        "profiling": {
+                            "title": "Mitarbeiterprofiling:",
+                            "desc": "Bildet das Organigramm via LinkedIn ab, um wichtige Ziele zu identifizieren."
+                        },
+                        "darkweb": {
+                            "title": "Dark Web:",
+                            "desc": "Überwacht Marktplätze auf gestohlene Zugangsdaten und \"Zugang zum Verkauf\"."
+                        }
+                    }
+                },
+                "supply": {
+                    "title": "SUPPLY CHAIN INTELLIGENCE",
+                    "items": {
+                        "suppliers": {
+                            "title": "Gemeinsame Lieferanten:",
+                            "desc": "Kennt das \"Geteilte Schicksal\" des Sektors. Wenn SolarWinds getroffen wird, weiß es, wer betroffen ist."
+                        },
+                        "manuals": {
+                            "title": "Betriebshandbücher:",
+                            "desc": "Verarbeitet Tausende von PDF-Handbüchern auf der Suche nach Standardpasswörtern (admin/1234) und versteckten Debug-Ports."
+                        }
+                    }
+                }
+            },
+            "sectors": {
+                "title": "DIE 16 KRITISCHEN INFRASTRUKTURSEKTOREN",
+                "desc": "Agent Red verfügt über eine vorinstallierte Bibliothek von Architekturmustern für alle 16 Sektoren. Es \"weiß\", wie eine typische Einrichtung aussieht, einschließlich Ausrüstung, Prozesse, Lieferanten, Betrieb, Anlagenlayouts und häufiger Schwachstellen."
+            }
+        },
+        "traversal": {
+            "badge": "AEON CORE FÄHIGKEIT",
+            "title": "20-Hop",
+            "titleHighlight": "Wissensgraph",
+            "suffix": "Traversierung",
+            "description": "Der AEON Digital Twin unterhält einen lebenden Wissensgraphen von <span class=\"text-white\">Millionen von Entitäten</span>—Bibliotheken, CVEs, Ausrüstung, Systeme, Anwendungen, Lieferanten und Kommunikationswege. Unser <span class=\"text-red-400\">Gated Graph Neural Network (GGNN)</span> navigiert bis zu 20 Beziehung-Hops, um Angriffspfade zu entdecken, die kein menschlicher Analyst verfolgen könnte.",
+            "cards": {
+                "l0": {
+                    "title": "Referenzarchitektur",
+                    "desc": "Sektorspezifische Vorlagen: Stromnetze, Wasseraufbereitung, Bahnsysteme—die Basis-Designmuster für kritische Infrastruktur."
+                },
+                "l1": {
+                    "title": "Ihre Tatsächliche Umgebung",
+                    "desc": "Ihre Ausrüstung, Ihre Architektur, Ihr Betrieb—jede SPS, jede Bibliothek, jede Lieferantenbeziehung abgebildet und kontextualisiert."
+                },
+                "ggnn": {
+                    "title": "McKenney-Lacan Calculus",
+                    "desc": "KI-gestützte Graph-Traversierung, die Angreiferverhalten modelliert, exponentielle Beziehungskomplexität nutzt und 20-Hop-Angriffsketten vorhersagt."
+                }
+            },
+            "complexity": {
+                "title": "Exponentielle Angriffsflächenerkennung",
+                "l1": {
+                    "label": "1 Bibliothek",
+                    "desc": "→ 10 direkte Abhängigkeiten"
+                },
+                "l5": {
+                    "label": "5 Hops",
+                    "desc": "→ 10.000 Entitätsbeziehungen"
+                },
+                "l10": {
+                    "label": "10 Hops",
+                    "desc": "→ 1M+ potenzielle Pfade"
+                },
+                "l20": {
+                    "label": "20 Hops",
+                    "desc": "→ Milliarden von Angriffsvektoren"
+                },
+                "hops": "Schlussfolgerungs-Hops",
+                "hopsDesc": "Von einer einzelnen verwundbaren Bibliothek bis zum physischen Prozessausfall—entdeckt in Millisekunden."
+            },
+            "chain": {
+                "title": "Beispiel: Supply Chain → SCADA Angriffspfad",
+                "steps": {
+                    "vuln": "Verwundb Bib",
+                    "deps": "Transitive Abh",
+                    "servers": "App Server",
+                    "bridge": "OT Brücke",
+                    "impact": "SPS Auswirkung"
+                }
+            }
+        },
+        "scenarios": {
+            "badge": "ANGRIFFSSIMULATIONS-BIBLIOTHEK",
+            "title": "GOLDEN",
+            "titleHighlight": "SCENARIOS",
+            "description": "Vorgefertigte, hochgenaue Angriffssimulationen, die auf echte gegnerische Tradecraft abgebildet sind. Jedes Szenario ist so konzipiert, dass es spezifische Erkennungs-, Reaktions- und Wiederherstellungsfähigkeiten einem Stresstest unterzieht.",
+            "killChainTitle": "Kill Chain Ausführung",
+            "impactTitle": "Strategische Auswirkung",
+            "cards": {
+                "supply": {
+                    "title": "Supply Chain Injektion",
+                    "desc": "Simuliert einen Angreifer, der Ihre Software-Lieferkette über typosquatted NPM/PyPI-Pakete kompromittiert. Das schädliche Paket wird von Ihrer CI/CD-Pipeline aufgenommen, was dem Angreifer Codeausführung auf Build-Servern und letztendlich Produktionsumgebungen gewährt.",
+                    "steps": {
+                        "recon": {
+                            "label": "RECON",
+                            "desc": "Identifizieren Sie interne Paketnamen über geleakte package-lock.json oder Stellenanzeigen, die bestimmte Bibliotheken erwähnen."
+                        },
+                        "weaponize": {
+                            "label": "WAFFEN",
+                            "desc": "Veröffentlichen Sie ein typosquatted Paket (z.B. `lodasg` statt `lodash`) mit einem schädlichen `postinstall`-Skript."
+                        },
+                        "deliver": {
+                            "label": "LIEFERN",
+                            "desc": "Warten Sie, bis ein Entwickler oder CI/CD-System das schädliche Paket installiert (`npm install`)."
+                        },
+                        "exploit": {
+                            "label": "EXPLOIT",
+                            "desc": "Erlangen Sie RCE auf dem Build-Server, exfiltrieren Sie Geheimnisse (AWS-Schlüssel, API-Token) und injizieren Sie Backdoors in Produktionsartefakte."
+                        }
+                    },
+                    "impact": "Testet SCA-Tools, Überprüfung von Abhängigkeiten und CI/CD-Härtung. Deckt Lücken in Softwareherkunft und SBOM-Integrität auf."
+                },
+                "insider": {
+                    "title": "Die Insider-Bedrohung",
+                    "desc": "Simuliert einen unzufriedenen oder kompromittierten Mitarbeiter mit legitimen Zugangsdaten. Der \"Insider\" nutzt seinen gültigen Zugang, um über Wochen hinweg langsam sensible Daten zu exfiltrieren und sich in den normalen Netzwerkverkehr einzufügen, um der Erkennung durch DLP- und SIEM-Systeme zu entgehen.",
+                    "steps": {
+                        "access": {
+                            "label": "ZUGANG",
+                            "desc": "Verwenden Sie gültige Anmeldeinformationen (T1078). Keine Ausnutzung erforderlich; der Angreifer ist bereits drin."
+                        },
+                        "collection": {
+                            "label": "SAMMLUNG",
+                            "desc": "Zugriff auf SharePoint, Confluence und interne Git-Repos. Laden Sie sensible Entwurfsdokumente und Kundenlisten herunter."
+                        },
+                        "staging": {
+                            "label": "STAGING",
+                            "desc": "Archivieren Sie gesammelte Daten in verschlüsselten ZIPs. Benennen Sie Dateien in gutartige Namen um (`meeting_notes.zip`)."
+                        },
+                        "exfil": {
+                            "label": "EXFIL",
+                            "desc": "Exfiltration über HTTPS zu einem persönlichen Cloud-Speicher (Dropbox, Google Drive) während der normalen Geschäftszeiten."
+                        }
+                    },
+                    "impact": "Testet UEBA, DLP-Effektivität und Datenklassifizierungsrichtlinien. Deckt blinde Flecken bei der Überwachung privilegierter Zugriffe auf."
+                },
+                "ransomware": {
+                    "title": "Ransomware Blitz",
+                    "desc": "Eine Full-Speed-Simulation. Der Angreifer verschafft sich Erstzugang, deaktiviert Verteidigungsmaßnahmen und startet gleichzeitige Verschlüsselungsroutinen im gesamten Netzwerk. Entwickelt, um EDR \"Time to Detect\" und IR-Playbook-Ausführungsgeschwindigkeit einem Stresstest zu unterziehen.",
+                    "steps": {
+                        "access": {
+                            "label": "ZUGANG",
+                            "desc": "Nutzen Sie eine öffentlich zugängliche Webanwendung aus (T1190) oder verwenden Sie gephischte Anmeldeinformationen für VPN-Zugang."
+                        },
+                        "lateral": {
+                            "label": "LATERAL",
+                            "desc": "Verwenden Sie PsExec/WMI für schnelle Verbreitung über Windows-Endpunkte via SMB (T1021.002)."
+                        },
+                        "inhibit": {
+                            "label": "HEMMEN",
+                            "desc": "Stoppen Sie Backup-Dienste (Veeam, Acronis), entfernen Sie Schattenkopien (vssadmin) und deaktivieren Sie AV (T1489)."
+                        },
+                        "impact": {
+                            "label": "IMPACT",
+                            "desc": "Stellen Sie Ransomware-Payload bereit. Verschlüsseln Sie alle zugänglichen Dateifreigaben und hinterlassen Sie eine Lösegeldforderung."
+                        }
+                    },
+                    "impact": "Misst Mean Time To Detect (MTTD) und Mean Time To Respond (MTTR). Validiert Backup-Integrität und Netzwerksegmentierung."
+                },
+                "ot": {
+                    "title": "OT/ICS Brückensprung",
+                    "desc": "Simuliert einen Angreifer, der vom Unternehmens-IT-Netzwerk zu Operational Technology (OT)-Netzwerken wechselt, die physische Prozesse steuern. Das Ziel ist es, SCADA/ICS-Systeme über dual-homed Engineering-Workstations oder falsch konfigurierte Netzwerkpfade zu erreichen.",
+                    "steps": {
+                        "access": {
+                            "label": "ZUGANG",
+                            "desc": "Spearphish einen OT-Ingenieur mit einem maßgeschneiderten Köder (gefälschtes P&ID-Diagramm, Patch-Hinweis des Herstellers)."
+                        },
+                        "discovery": {
+                            "label": "ENTDECKUNG",
+                            "desc": "Scannen Sie das interne Netzwerk, um dual-homed Hosts zu identifizieren, die IT/OT überbrücken (Historian-Server, Jump Hosts)."
+                        },
+                        "pivot": {
+                            "label": "PIVOT",
+                            "desc": "Kompromittieren Sie den Jump Host. Verwenden Sie seine OT-seitige NIC, um auf das SCADA-Netzwerksegment zuzugreifen."
+                        },
+                        "control": {
+                            "label": "KONTROLLE",
+                            "desc": "Senden Sie unbefugte Befehle an eine SPS (T0836), was eine physische Prozessstörung verursacht (z.B. Ventil öffnen)."
+                        }
+                    },
+                    "impact": "Validiert IT/OT-Segmentierung, DMZ-Integrität und ICS-spezifische Überwachung. Deckt Risiken in konvergierten Umgebungen gemäß IEC 62443 auf."
+                }
+            }
+        },
         "cta": {
             "headline": "Kennen Sie Ihre Schwachstellen?",
-            "subheadline": "Bevor es die Angreifer tun.",
-            "serviceOptions": {
-                "assessment": "Red Team Assessment",
-                "simulation": "Angriffssimulation"
-            }
+            "subheadline": "Bevor es die Angreifer tun."
         }
     },
     "goldTeam": {
@@ -108,6 +417,44 @@
         ]
     },
     "nis2": {
+        "hero": {
+            "badge": "EU NIS2 Richtlinien-Compliance",
+            "title": "Der Neue Standard",
+            "subtitle": "für Kritische Resilienz.",
+            "description": "Seit Oktober 2024 schreibt NIS2 Cybersicherheitsmaßnahmen für wesentliche und wichtige Einrichtungen vor. Wir sorgen dafür, dass Sie nicht nur compliant, sondern rechtssicher sind."
+        },
+        "services": {
+            "gap": {
+                "title": "Lückenanalyse & Bereitschaft",
+                "desc": "Umfassende Bewertung Ihrer aktuellen Cybersicherheitslage gegenüber NIS2-Anforderungen"
+            },
+            "policy": {
+                "title": "Richtlinien & Verfahrensentwicklung",
+                "desc": "Entwicklung konformer Sicherheitsrichtlinien, Verfahren und Governance-Rahmenwerke"
+            },
+            "tech": {
+                "title": "Technische Implementierung",
+                "desc": "Einsatz von Sicherheitskontrollen, Überwachungssystemen und Schutzmaßnahmen"
+            },
+            "incident": {
+                "title": "Incident Response Programm",
+                "desc": "Aufbau und Test von Fähigkeiten zur Erkennung, Reaktion und Meldung von Vorfällen"
+            },
+            "supply": {
+                "title": "Lieferketten-Risikomanagement",
+                "desc": "Bewertung und Steuerung von Sicherheitsrisiken durch Dritte und Lieferanten"
+            },
+            "audit": {
+                "title": "Audit & Zertifizierungsunterstützung",
+                "desc": "Vorbereitung auf behördliche Audits und Compliance-Zertifizierungen"
+            }
+        },
+        "differentiators": {
+            "experience": "Jahre OT/ICS Sicherheitserfahrung",
+            "certified": "Zertifizierte Expertise",
+            "clients": "Kritische Infrastruktur Kunden",
+            "response": "Incident Response Fähigkeit"
+        },
         "cta": {
             "headline": "NIS2 ist Gesetz.",
             "subheadline": "Vermeiden Sie persönliche Haftung.",
@@ -119,6 +466,27 @@
         }
     },
     "iec62443": {
+        "hero": {
+            "badge": "IEC 62443 Bildungsübersicht",
+            "title": "Der Weltweite Standard",
+            "highlight": "für Industrielle Sicherheit.",
+            "subtitle": "",
+            "stats": {
+                "documents": {
+                    "value": "14",
+                    "label": "Verknüpfte Dokumente in 4 Serien."
+                },
+                "level": {
+                    "value": "SL-4",
+                    "label": "Maximales Sicherheitsniveau für staatliche Bedrohungen."
+                },
+                "requirements": {
+                    "value": "7 FRs",
+                    "label": "Grundlegende Anforderungen von Zugang bis Verfügbarkeit."
+                }
+            },
+            "scroll": "Zum Erkunden scrollen"
+        },
         "cta": {
             "headline": "Bereit für die Zertifizierung?",
             "subheadline": "70% der Fehler basieren auf Missverständnissen.",
@@ -129,6 +497,69 @@
         }
     },
     "workshop": {
+        "hero": {
+            "badge": "Interactive Training Platform",
+            "title": "IEC 62443",
+            "titleHighlight": "Workshop Portal",
+            "subtitle": "Hands-on tools for risk assessment, architecture design, and compliance management. Explore the suite of AEON Cyber Digital Twin artifacts below."
+        },
+        "architecture": {
+            "title": "Digital Twin Architecture",
+            "subtitle": "LAYER_0: Component-Level Infrastructure Modeling",
+            "cards": {
+                "zones": {
+                    "title": "Zones & Conduits",
+                    "desc": "Visualize IEC 62443 security zones with SL color-coding. Click components to drill into SBOM details."
+                },
+                "traceability": {
+                    "title": "SBOM Traceability",
+                    "desc": "Trace vulnerabilities from CVE → Library → Interface → Sub-Component → System → Facility."
+                },
+                "epss": {
+                    "title": "EPSS Integration",
+                    "desc": "Real-time exploit probability scores for every library in your OT infrastructure."
+                }
+            },
+            "twinCore": {
+                "label": "Digital Twin Core // TIER III"
+            }
+        },
+        "workflow": {
+            "title": "IEC 62443 Workflow Architect",
+            "desc": "A dedicated Kanban-style tool for Suppliers and Integrators to manage Asset Risk, Implementation, and Verification phases.",
+            "badge": "SUPPORTING_ARTIFACT_02"
+        },
+        "canvas": {
+            "title": "Interactive Engineering Canvas",
+            "desc": "A complete IEC 62443 zone architecture with 45+ assets across 8 security zones. The canvas shows the integration between AEON Cloud (Digital Twin Core), the on-premise Blue Team Server, and the customer's IT/OT infrastructure from enterprise DMZ down to Level 0 process equipment.",
+            "legend": {
+                "aeon": {
+                    "title": "AEON Cloud",
+                    "desc": "Core, Red/Gold Team, Threat Intel, Simulation Engine"
+                },
+                "blue": {
+                    "title": "Blue Team Server",
+                    "desc": "Local Twin, Telemetry Store, Decision Engine, Collector"
+                },
+                "diode": {
+                    "title": "Data Diode",
+                    "desc": "Unidirectional gateway for threat intel into OT environment"
+                },
+                "ot": {
+                    "title": "OT Assets",
+                    "desc": "SCADA, PLCs, HMIs, Generators, Chillers, BMS, PDUs"
+                }
+            },
+            "interaction": "Interaction: Drag to pan • Scroll to zoom • Click any asset for details. The Blue Team Server autonomously processes telemetry and makes local decisions, while syncing insights to AEON Cloud for advanced simulation, research, and crisis management support."
+        },
+        "editor": {
+            "title": "Zone & Conduit Editor",
+            "desc": "Design your own secure zones and validate protocols against the reference library."
+        },
+        "compliance": {
+            "title": "Compliance Matrix",
+            "desc": "IEC 62443-3-3 System Requirements aligned with Foundational Requirements."
+        },
         "cta": {
             "headline": "Bereit für praxisnahes Training?",
             "subheadline": "Lernen Sie von Experten an Ihren eigenen Systemen.",
@@ -159,18 +590,207 @@
         }
     },
     "about": {
+        "hero": {
+            "badge": "Souveräne Intelligenz // Amsterdam, Niederlande",
+            "title": "Über",
+            "titleHighlight": "OXOT",
+            "description": "Aus dem Herzen Europas bauen wir das Immunsystem für die kritischste Infrastruktur der Welt.",
+            "locations": {
+                "hq": "Amsterdam HQ",
+                "global": "Globale Operationen",
+                "sectors": "16 Kritische Sektoren"
+            }
+        },
+        "origin": {
+            "title": "Unser Ursprung",
+            "subtitle": "EINE MISSION, KEIN JOB",
+            "p1": "OXOT entstand aus der Erkenntnis in europäischen Verteidigungskreisen: Bestehende Cybersicherheitstools waren reaktiv, fragmentiert und den Bedrohungen grundlegend unterlegen.",
+            "p2": "Wir haben uns entschieden, etwas anderes zu bauen – einen Digitalen Zwilling, der Angriffe vorhersagen kann, indem er Millionen von Szenarien pro Sekunde simuliert.",
+            "p3": "Heute schützen wir nationale Stromnetze, globale Logistikketten und Finanzsysteme mit einer Plattform, die Angriffe nicht nur blockiert, sondern anticipeert."
+        },
+        "leadership": {
+            "title": "Führung",
+            "subtitle": "VETERANEN DER CYBERKRIEGSFÜHRUNG",
+            "roles": {
+                "ceo": {
+                    "name": "Dr. Adriaan van der Berg",
+                    "title": "Gründer & CEO",
+                    "bio": "Ehemaliges NATO Cyber Command. 15+ Jahre Schutz europäischer kritischer Infrastruktur. PhD in Computergestützter Bedrohungsmodellierung.",
+                    "credibility": "Ex-NATO Cyber Command"
+                },
+                "cto": {
+                    "name": "Elena Kowalski",
+                    "title": "Chief Technology Officer",
+                    "bio": "Ehemalige Chefingenieurin bei einem Fortune 50 Rüstungsunternehmen. Entwicklerin der E27 Vorhersagemaschine. Autorin von 12 Patenten in feindlichem ML.",
+                    "credibility": "12 Patente in KI/ML"
+                },
+                "cio": {
+                    "name": "Marcus Chen",
+                    "title": "Chief Intelligence Officer",
+                    "bio": "20 Jahre in der Fernmeldeaufklärung (SIGINT) bei Five Eyes Nationen. Pionierarbeit bei psychometrischer Profilerstellung für Cyber-Attribution.",
+                    "credibility": "Ex-Five Eyes Intel"
+                },
+                "coo": {
+                    "name": "Ingrid Müller",
+                    "title": "Chief Operations Officer",
+                    "bio": "Ehemalige SOC-Direktorin für einen europäischen Netzbetreiber. Leitete Incident Response während mehrerer staatlicher Angriffe. ICS/SCADA-Spezialistin.",
+                    "credibility": "Netzwerksicherheits-Experte"
+                }
+            }
+        },
+        "values": {
+            "title": "Unsere Werte",
+            "subtitle": "DER KODEX, NACH DEM WIR LEBEN",
+            "list": {
+                "sovereignty": {
+                    "title": "Souveränität Zuerst",
+                    "desc": "Wir glauben, dass Nationen und kritische Organisationen ihre eigene Aufklärungs- und Sicherheitsarchitektur besitzen müssen."
+                },
+                "privacy": {
+                    "title": "Privacy by Design",
+                    "desc": "Unser Digitaler Zwilling modelliert Metadaten und Verhalten, keine PII. Wir schützen Systeme, ohne die Rechte der Menschen zu beeinträchtigen."
+                },
+                "resilience": {
+                    "title": "Radikale Resilienz",
+                    "desc": "Systeme müssen so konzipiert sein, dass sie sicher ausfallen und sich sofort erholen. Wir bauen immer für das Worst-Case-Szenario."
+                },
+                "transparency": {
+                    "title": "Transparenz",
+                    "desc": "Keine Black Boxen. Unsere Kunden verstehen genau, wie unsere KI zu Schlussfolgerungen kommt, was Rechenschaftspflicht und Vertrauen gewährleistet."
+                }
+            }
+        },
         "cta": {
-            "headline": "Starten Sie Ihre Reise.",
-            "subheadline": "Mit Amsterdams führenden Experten.",
+            "headline": "Beginnen Sie Ihre Souveräne Reise.",
+            "subheadline": "Partnern Sie mit Amsterdams führender Cyber-Verteidigungspraxis.",
             "serviceOptions": {
                 "blue": "Blue Team Verteidigung",
-                "gold": "Gold Strategie",
-                "red": "Red Team Angriff",
+                "gold": "Gold Strategische Beratung",
+                "red": "Red Team Offensive",
                 "general": "Allgemeine Anfrage"
             }
         }
     },
     "socV2": {
+        "hero": {
+            "mind": {
+                "badge": "The Symbolic Order // Cloud Strategy",
+                "title": "AEON Core",
+                "subtitle": "Mathematically Perfected Strategy • Massive Compute • Borromean Stability"
+            },
+            "synapse": {
+                "predictive": "Predictive Models",
+                "telemetry": "Telemetry"
+            },
+            "body": {
+                "badge": "The Real Register // Edge Physics",
+                "title": "Agent Blue",
+                "subtitle": "Autonomous Reflex • Millisecond Response • Data Sovereignty"
+            },
+            "overlay": {
+                "bicameral": "Bi-Cameral",
+                "defense": "Defense"
+            }
+        },
+        "origins": {
+            "badge": "Industrial Origins",
+            "title": "The 'Factory Model' of Cybersecurity",
+            "p1": "In modern Smart Manufacturing (e.g., at Olam Food Ingredients or Siemens factories), there is a critical distinction between \"Edge Autonomy\" and \"Cloud Analytics\".",
+            "p2": "A robotic arm on an assembly line cannot wait for the cloud to tell it to stop if a safety sensor is tripped—it must have a spinal reflex (Edge). However, the decision to retool the line for a new product requires massive data analysis (Cloud).",
+            "p3": "AEON applies this exact physics to cybersecurity. Agent Blue is the \"Factory Floor\" reflex—stopping attacks in milliseconds. AEON Core is the \"Headquarters\" strategy—analyzing global patterns to predict the next war.",
+            "card": {
+                "title": "Edge-Cloud Duality",
+                "edge": {
+                    "label": "EDGE (The Real):",
+                    "desc": "Reflex Actions (<5ms)"
+                },
+                "cloud": {
+                    "label": "CLOUD (The Symbolic):",
+                    "desc": "Strategic Calculus (Global)"
+                }
+            }
+        },
+        "calculus": {
+            "badge": "McKenney-Lacan Psychometrics",
+            "title": "The Calculus of Defense",
+            "desc": "Traditional security ignores the \"Real\" Register — the traumatic, invisible breaches that evade symbolic logs. AEON's Bi-Cameral Architecture is mathematically proven to maintain topological stability.",
+            "real": {
+                "label": "THE REAL (R)",
+                "desc": "The \"impossible\" breach that Agent Blue intercepts before it becomes a symbol."
+            },
+            "stability": {
+                "label": "BORROMEAN STABILITY",
+                "desc": "Ensuring R, S, and I registers remain interlocked to prevent Seldon Crises."
+            }
+        },
+        "multiplier": {
+            "title": "The",
+            "titleHighlight": "Force Multiplier",
+            "desc": "We don't just replace; we augment. Whether you have 0 analysts or 50, AEON integrates to exponentially increase your defensive capacity.",
+            "toggles": {
+                "copilot": "Mode A: Co-Pilot",
+                "autopilot": "Mode B: Autopilot"
+            },
+            "copilot": {
+                "badge": "Augmentation Protocol",
+                "title": "Supercharge Your Team",
+                "desc": "Agent Blue connects to your existing SIEM (Splunk, Sentinel, QRadar). It acts as a \"Tier 3 Analyst in a Box\", whispering answers to your human team.",
+                "features": [
+                    "Automated Threat Hunting",
+                    "Auto-Generated Incident Reports",
+                    "False Positive Reduction (-70%)"
+                ],
+                "stat": {
+                    "value": "5x",
+                    "label": "Analyst Capacity"
+                }
+            },
+            "autopilot": {
+                "badge": "Replacement Protocol",
+                "title": "We Take The Keys.",
+                "desc": "You hand the keys to us. Agent Blue handles the site, AEON Core handles the strategy, and our SOC watches the glass. Zero operational overhead for you.",
+                "features": [
+                    "Full Managed Detection & Response",
+                    "Liability Shift & Insurance",
+                    "Guaranteed 15-min Response"
+                ],
+                "stat": {
+                    "value": "24/7",
+                    "label": "Coverage"
+                }
+            }
+        },
+        "modules": {
+            "title": "Active Defense Modules",
+            "badge": "SYS.MOD.LOADED",
+            "cards": {
+                "telemetry": {
+                    "title": "Telemetrie-Spiegelung",
+                    "desc": "Direkte High-Fidelity-Telemetrie-Injektion von Ihrem SIEM in die E27 Prediction Engine.",
+                    "tags": [
+                        "Splunk",
+                        "Sentinel",
+                        "Elastic"
+                    ]
+                },
+                "profiling": {
+                    "title": "Psychometrisches Profiling",
+                    "desc": "Erweitern Sie Standardindikatoren um Gegnerpsychologie. Verstehen Sie das 'Wer' und 'Warum'.",
+                    "tags": [
+                        "Big 5 Merkmale",
+                        "Dunkle Triade"
+                    ]
+                },
+                "validation": {
+                    "title": "Red Leader Validierung",
+                    "desc": "Kontinuierliche Validierung durch Red Squadron Leader – szenariobasierte Emulation.",
+                    "tags": [
+                        "APT-Emulation",
+                        "Staatliche Akteure"
+                    ]
+                }
+            }
+        },
         "cta": {
             "headline": "Co-Pilot oder Autopilot?",
             "subheadline": "Wählen Sie Ihr Modell.",
@@ -790,6 +1410,513 @@
                     ],
                     "cta": "Beratung Vereinbaren"
                 }
+            }
+        }
+    },
+    "osint": {
+        "navigation": {
+            "securityIntelligence": "Sicherheitsaufklärung",
+            "strategicAnalysis": "Strategische Analyse",
+            "corporateStructure": "Unternehmensstruktur",
+            "technicalDeepDives": "Technische Tiefenanalysen",
+            "securityHub": "Sicherheits-Hub",
+            "securityHubDesc": "Risikobewertung & Bedrohungsmodellierung",
+            "redTeamDossier": "Red Team Dossier",
+            "redTeamDossierDesc": "Gegnerische Perspektive & Angriffsvektoren",
+            "technologyIntel": "Technologie-Infos",
+            "technologyIntelDesc": "Tech Stack & Schwachstellenanalyse",
+            "strategicMindMap": "Strategische Mind Map",
+            "strategicMindMapDesc": "Interaktives Strategisches Ausrichtungscanvas",
+            "nis2": "NIS2/Panopticon",
+            "nis2Desc": "Lieferketten-Compliance-Protokoll",
+            "gtmStrategy": "GTM-Strategie",
+            "gtmStrategyDesc": "AEON Service-Ausrichtung",
+            "cyberThreatGtm": "Cyber Bedrohung GTM",
+            "cyberThreatGtmDesc": "Industrielle Cyber-Resilienz-Strategie",
+            "executiveReport": "Vorstandsbericht",
+            "executiveReportDesc": "Konsolidierte Nachrichtenübersicht",
+            "shanghaiFeed": "Shanghai FEED Specs",
+            "shanghaiFeedDesc": "IEC 62443 Designanforderungen",
+            "groupStructure": "Konzernstruktur",
+            "groupStructureDesc": "Olam Group Tochtergesellschaften & Reorganisation",
+            "structureIntel": "Struktur-Aufklärung",
+            "structureIntelDesc": "Detaillierte Unternehmensanatomie & Fußabdruck",
+            "aiPartnerships": "KI-Partnerschaften",
+            "aiPartnershipsDesc": "Technologiepartner & Cybersicherheit",
+            "braincube": "Braincube Analyse",
+            "braincubeDesc": "IIoT-Plattform & Sicherheitsbewertung",
+            "thirdPartyRisk": "Drittanbieterrisiko",
+            "thirdPartyRiskDesc": "Braincube OT-Angriffsvektor",
+            "dairyFacility": "Molkerei-Anlagenarchitektur",
+            "dairyFacilityDesc": "NZ/AU Verarbeitungsanlagen-Engineering",
+            "menuTitle": "INTEL_NAVIGATOR",
+            "menuSubtitle": "OFI OSINT Berichtsmodule",
+            "returnToOverview": "ZURÜCK ZUR OSINT-ÜBERSICHT",
+            "new": "NEU"
+        },
+        "report": {
+            "title": "OSINT-BERICHT",
+            "subtitle": "AUFKLÄRUNGS-DASHBOARD",
+            "company": {
+                "name": "Olam Food Ingredients (ofi)",
+                "shortName": "ofi",
+                "industry": "Lebensmittelzutaten & Landwirtschaftliche Verarbeitung",
+                "sector": "Landwirtschaft & Lebensmittelherstellung",
+                "founded": "1989 (Olam Group)",
+                "incorporated": "Singapur",
+                "headquarters": "Singapur (Global) / London (Kommerziell)",
+                "employees": "12.000+",
+                "revenue": "S$10.5Mrd (2024)",
+                "ebit": "S$1.07Mrd (2024)",
+                "parent": "Olam Group Limited",
+                "website": "www.ofi.com",
+                "classification": "OSINT // NICHT KLASSIFIZIERT // KOMMERZIELL",
+                "reportDate": "01.01.2025",
+                "reportId": "OSINT-OFI-2025-001"
+            },
+            "labels": {
+                "companyOverview": "UNTERNEHMENSÜBERSICHT",
+                "financialHealth": "FINANZIELLE GESUNDHEIT",
+                "globalFootprint": "GLOBALER FUSSABDRUCK",
+                "digitalRiskProfile": "DIGITALES RISIKOPROFIL",
+                "keyLeadership": "SCHLÜSSELFÜHRUNG",
+                "strategicPriorities": "STRATEGISCHE PRIORITÄTEN",
+                "subsidiaries": "TOCHTERGESELLSCHAFTEN",
+                "techStack": "TECH STACK",
+                "riskAssessment": "RISIKOBEWERTUNG"
+            },
+            "metrics": {
+                "revenue": "Umsatz",
+                "ebit": "EBIT (2024)",
+                "employees": "Mitarbeiter",
+                "countries": "Länder",
+                "processingFacilities": "Verarbeitungsanlagen",
+                "innovationCentres": "Innovationszentren",
+                "externalIPs": "Externe IPs",
+                "exposedServices": "Exponierte Dienste",
+                "leakedCredentials": "Geleakte Zugangsdaten"
+            },
+            "risk": {
+                "critical": "KRITISCH",
+                "high": "HOCH",
+                "medium": "MITTEL",
+                "low": "NIEDRIG"
+            },
+            "footer": {
+                "title": "AEON NACHRICHTENDIENST",
+                "endOfReport": "ENDE DES BERICHTS // OFFIZIELL GEPRÜFT"
+            },
+            "intelligence": {
+                "title": "Unternehmensaufklärung",
+                "subtitle": "Konsolidierte Aufklärungsübersicht zu Olam Food Ingredients (ofi) – Struktur, Größe, Strategie und Risikolandschaft",
+                "executive": {
+                    "title": "Zusammenfassung der Geschäftsleitung",
+                    "identity": "Olam Food Ingredients (ofi) – eigenständige Geschäftsgruppe innerhalb der Olam Group Limited, gegründet 2020",
+                    "purpose": "\"Wir gestalten den Wandel für gute Lebensmittel und eine gesunde Zukunft\"",
+                    "platforms": {
+                        "cocoa": "Kakao",
+                        "coffee": "Kaffee",
+                        "dairy": "Molkerei",
+                        "nuts": "Nüsse",
+                        "spices": "Gewürze"
+                    },
+                    "scale": {
+                        "plants": "Werke",
+                        "innovation": "Innovationszentren",
+                        "farmers": "Landwirte"
+                    }
+                },
+                "entities": {
+                    "title": "Wichtige operative Einheiten",
+                    "ofi": {
+                        "role": "Hauptgeschäftsgruppe",
+                        "focus": "Zutaten mit Mehrwert über 5 Plattformen"
+                    },
+                    "mindsprint": {
+                        "role": "Interne Technologie-Engine",
+                        "focus": "3.200+ Fachleute, KI, Cybersicherheit (GuardianEye)"
+                    },
+                    "jiva": {
+                        "role": "Digitale Landwirte-Dienste (GESCHLOSSEN Aug 2025)",
+                        "focus": "Bargeldkonservierung, 606 Mitarbeiter betroffen"
+                    },
+                    "terrascope": {
+                        "role": "SaaS zur CO2-Messung",
+                        "focus": "ESG-Dienstleistungen, Land/Natur/Net-Zero"
+                    }
+                },
+                "subsidiaries": {
+                    "title": "Tochtergesellschaftsnetzwerk",
+                    "headers": {
+                        "name": "Tochtergesellschaft",
+                        "location": "Standort",
+                        "function": "Funktion"
+                    },
+                    "list": {
+                        "clubCoffee": {
+                            "function": "Führender Spezialkaffeeröster in Nordamerika"
+                        },
+                        "seda": {
+                            "function": "Fabrik für löslichen Kaffee"
+                        },
+                        "unicao": {
+                            "function": "Kakaoverarbeitung"
+                        },
+                        "macao": {
+                            "function": "Kakaomühle und Laboranlage"
+                        },
+                        "na": {
+                            "function": "Einheitlicher US-Hauptsitz"
+                        },
+                        "cocoaBV": {
+                            "function": "Wichtige europäische Tochtergesellschaft"
+                        },
+                        "cocoaDE": {
+                            "function": "Wichtige europäische Tochtergesellschaft"
+                        },
+                        "locations": {
+                            "toronto": "Toronto, Kanada",
+                            "palencia": "Palencia, Spanien",
+                            "abidjan": "Abidjan, Elfenbeinküste",
+                            "valencia": "Valencia, Spanien",
+                            "chicago": "Chicago, USA",
+                            "netherlands": "Niederlande",
+                            "germany": "Deutschland"
+                        }
+                    }
+                },
+                "facilities": {
+                    "title": "Operativer Fußabdruck",
+                    "regions": {
+                        "na": "Nordamerika",
+                        "europe": "Europa",
+                        "apac": "Asien-Pazifik",
+                        "africaLatam": "Afrika & Lateinamerika"
+                    }
+                },
+                "chronology": {
+                    "title": "Chronologie wichtiger Ereignisse",
+                    "events": {
+                        "compass": "Start der Nachhaltigkeitsinitiative Cocoa Compass",
+                        "ofiEst": "ofi formell als Geschäftsgruppe gegründet",
+                        "tokoroa": "Eröffnung von Phase 1 des Molkereibergwerks Tokoroa (Neuseeland)",
+                        "mightyEarth": "Mighty Earth-Bericht über Kakao-Herausforderungen in Ghana",
+                        "salic": "Verkauf von 44,58 % der Anteile an Olam Agri an SALIC",
+                        "jivaClose": "Strategische Schließung der Jiva Ag-Plattform",
+                        "eudr": "Frist für EUDR-Konformität (KRITISCH)"
+                    }
+                },
+                "discrepancies": {
+                    "title": "Quellenwidersprüche",
+                    "intro": "Widersprüchliche Informationen in öffentlichen Quellen identifiziert:",
+                    "fields": {
+                        "employees": "Mitarbeiterzahl",
+                        "farmers": "Landwirte-Netzwerk",
+                        "innovation": "Innovationszentren"
+                    }
+                }
+            },
+            "groupStructure": {
+                "header": {
+                    "title": "KONZERNSTRUKTUR",
+                    "subtitle": "Unternehmensanatomie & Analyse des Tochtergesellschaftsnetzwerks",
+                    "back": "Zurück zum OSINT-Bericht"
+                },
+                "hierarchy": {
+                    "title": "Analyse der Unternehmensstruktur",
+                    "desc": "Olam Group Limited reorganisierte sich 2020 in drei verschiedene Geschäftsgruppen, um langfristigen Wert zu erschließen: <strong> ofi (Olam Food Ingredients)</strong>, <strong>Olam Agri</strong> und die <strong>Übrige Olam Group</strong>. Diese Trennung hat zu unterschiedlichen operativen technologischen Fußabdrücken und Cyber-Risikoprofilen für jede Einheit."
+                },
+                "digitalLayer": {
+                    "title": "Digitale & Innovationsschicht",
+                    "desc": "<strong>Mindsprint (ehemals OTBS)</strong> fungiert als digitaler Motor für die Gruppe und bietet IT, Cybersicherheit (GuardianEye) und gemeinsame Dienste an. Es ist ein kritischer Knotenpunkt in der digitalen Lieferkette der Gruppe und bedient sowohl ofi als auch Olam Agri.",
+                    "link": "Technologie-Stack anzeigen"
+                },
+                "geoComplexity": {
+                    "title": "Geografische Komplexität",
+                    "desc": "Die Gruppe ist in über 60 Ländern tätig. <strong>ofi</strong> hat eine starke Präsenz in Europa und Amerika (Zutaten mit Mehrwert), während <strong>Olam Agri</strong> in Asien und Afrika (nahrungsmittelbasierte Grundnahrungsmittel) dominiert. EUDR- und NIS2-Vorschriften betreffen insbesondere die europäischen Verarbeitungszentren.",
+                    "link": "Konformitätsstatus anzeigen"
+                }
+            },
+            "orgMap": {
+                "root": {
+                    "label": "Olam Group Limited",
+                    "role": "Holdinggesellschaft"
+                },
+                "ofi": {
+                    "label": "ofi (Olam Food Ingredients)",
+                    "role": "Zutaten mit Mehrwert"
+                },
+                "agri": {
+                    "label": "Olam Agri",
+                    "role": "Ernährungssicherheit & Logistik"
+                },
+                "remaining": {
+                    "label": "Übrige Olam Group",
+                    "role": "Inkubator & Vermächtnis"
+                },
+                "divisions": {
+                    "cocoa": {
+                        "label": "Kakao",
+                        "role": "Verarbeitung & Innovation"
+                    },
+                    "coffee": {
+                        "label": "Kaffee",
+                        "role": "Löslich & Lieferkette"
+                    },
+                    "dairy": {
+                        "label": "Molkerei",
+                        "role": "Globale Verarbeitung"
+                    },
+                    "spices": {
+                        "label": "Gewürze",
+                        "role": "Herstellung"
+                    },
+                    "grains": {
+                        "label": "Getreide & Öle",
+                        "role": "Handel & Mühlen"
+                    },
+                    "freight": {
+                        "label": "Frachtmanagement",
+                        "role": "Logistikderivate"
+                    },
+                    "cotton": {
+                        "label": "Faser & Baumwolle",
+                        "role": "Entkernung & Lagerung"
+                    },
+                    "mindsprint": {
+                        "label": "Mindsprint",
+                        "role": "Digitale Dienste & Cyber"
+                    },
+                    "nupo": {
+                        "label": "Nupo Ventures",
+                        "role": "Inkubation (Jiva, Terrascope)"
+                    }
+                },
+                "interaction": "INTERAKTIVE HIERARCHIE-KARTE // KNOTEN KLICKEN ZUM ERWEITERN ODER NAVIGIEREN"
+            }
+        },
+        "executive": {
+            "title": "OFI-Führungsbericht",
+            "subtitle": "Konsolidierter Nachrichtenüberblick",
+            "backButton": "Zurück zum OSINT-Bericht",
+            "summary": {
+                "title": "1. ZUSAMMENFASSUNG",
+                "intro": "Dieser Bericht bietet einen konsolidierten Überblick über <span class=\"text-white font-semibold\">Olam Food Ingredients (ofi)</span>, eine bedeutende und sich entwickelnde Einheit auf dem globalen Markt für Lebensmittelzutaten. Durch eine strategische Reorganisation der Olam Group hat sich ofi als spezialisierter, kundenorientierter Anbieter von Zutatenlösungen mit Mehrwert etabliert.",
+                "coreIdentity": {
+                    "title": "Kernidentität",
+                    "desc": "Getrennter Geschäftsbereich der Olam Group Limited (2020). Kerngeschäft: Kakao, Kaffee, Milchprodukte, Nüsse und Gewürze. Zweck: \"Der Wandel für bewusste Ernährung und eine gesunde Zukunft sein.\""
+                },
+                "operationalScale": {
+                    "title": "Betriebsmaßstab",
+                    "desc": "120+ Produktionsstätten, 19 Innovationszentren, Netzwerk von ~2,4 Millionen Landwirten. Vertikal integriert von der Erzeugung bis zur fortschrittlichen Verarbeitung."
+                },
+                "strategicDirection": {
+                    "title": "Strategische Ausrichtung",
+                    "desc": "Ausbau des Segments \"Ingredients & Solutions\", AtSource-Nachhaltigkeitsplattform, aktive Vorbereitung auf den Börsengang an der London Stock Exchange."
+                },
+                "keyRisks": {
+                    "title": "Hauptrisiken",
+                    "desc": "Regulierungsdruck durch EUDR und NIS2, Rohstoffpreisvolatilität (Kakao/Kaffee), industrielle Cyberbedrohungen. 29% EBIT-Wachstum zeigt Widerstandsfähigkeit."
+                }
+            },
+            "anatomy": {
+                "title": "2. UNTERNEHMENSANATOMIE",
+                "hierarchy": {
+                    "title": "2.1 Organisationshierarchie und Hauptgeschäftsgruppen",
+                    "desc": "Nach einer Unternehmensreorganisation wurde ofi im Jahr 2020 offiziell als wichtige operative Gruppe der Olam Group Limited etabliert, neben ihrer Schwestergesellschaft Olam Agri."
+                },
+                "leadership": {
+                    "title": "2.2 Führungsebene",
+                    "columns": {
+                        "name": "NAME",
+                        "title": "TITEL",
+                        "unit": "ZUGEHÖRIGE EINHEIT"
+                    }
+                }
+            },
+            "footprint": {
+                "title": "3. BETRIEBLICHE PRÄSENZ",
+                "hq": {
+                    "title": "3.1 Globaler Hauptsitz",
+                    "corporate": {
+                        "title": "Unternehmenszentrale",
+                        "desc": "7 Straits View, Marina One East Tower, Singapur"
+                    },
+                    "na": {
+                        "title": "Hauptsitz Nordamerika",
+                        "desc": "Chicago, Illinois (vereinigter Hauptsitz)"
+                    },
+                    "csc": {
+                        "title": "Kundenzentren (CSCs)"
+                    }
+                },
+                "subsidiaries": {
+                    "title": "Regionale Tochtergesellschaften"
+                }
+            },
+            "tech": {
+                "title": "4. TECHNISCHE & BETRIEBLICHE BEWERTUNG",
+                "it": {
+                    "title": "4.1 Unternehmenstechnologie (IT)",
+                    "sap": {
+                        "title": "SAP S/4HANA",
+                        "desc": "Cloud Private Edition auf AWS, verwaltet von Mindsprint"
+                    },
+                    "atSource": {
+                        "title": "AtSource-Plattform",
+                        "desc": "Nachhaltigkeit & Rückverfolgbarkeit für EUDR-Compliance"
+                    },
+                    "guardian": {
+                        "title": "GuardianEye",
+                        "desc": "KI-gestützte Cyberabwehr & Bedrohungserkennung"
+                    }
+                },
+                "ot": {
+                    "title": "4.2 Industrie- & Betriebstechnik (OT)",
+                    "braincube": {
+                        "title": "Braincube IIoT",
+                        "desc": "6,5% Ertragssteigerung, 25% Durchsatzverbesserung, 100% Qualitätswerte"
+                    },
+                    "rockwell": {
+                        "title": "Rockwell PlantPAx DCS",
+                        "desc": "Prozessleitsystem für die Fertigung"
+                    },
+                    "aveva": {
+                        "title": "AVEVA/Wonderware SCADA",
+                        "desc": "Überwachungs-HMI/SCADA-Systeme"
+                    }
+                }
+            },
+            "chronology": {
+                "title": "5. CHRONOLOGIE DER EREIGNISSE"
+            },
+            "discrepancies": {
+                "title": "6. QUELLENABWEICHUNGEN",
+                "intro": "In jeder nachrichtendienstlichen Zusammenstellung, die auf unterschiedlichen öffentlichen und internen Quellen basiert, können Diskrepanzen auftreten. Dieser Abschnitt weist transparent auf widersprüchliche Informationen in den bereitgestellten Dokumenten hin."
+            },
+            "data": {
+                "orgEntities": {
+                    "ofi": {
+                        "desc": "Hauptgeschäftsbereich, fokussiert auf die Lieferung von Zutatenlösungen mit Mehrwert für Lebensmittel und Getränke über Kakao-, Kaffee-, Milch-, Nuss- und Gewürzplattformen hinweg."
+                    },
+                    "mindsprint": {
+                        "desc": "Interner Technologie- und Digitaldienstleister mit über 3.200 Fachleuten. Bietet KI-Lösungen, intelligenten Geschäftsbetrieb und Cybersicherheitsdienste über die GuardianEye-Plattform."
+                    },
+                    "jiva": {
+                        "desc": "Digitale Dienstleistungsplattform für Landwirte, entwickelt von Nupo Ventures. Olam kündigte die Schließung im August 2025 an, betroffen sind 606 Mitarbeiter, vor allem in Indonesien."
+                    },
+                    "terrascope": {
+                        "desc": "Softwareplattform für Kohlenstoffmessung und Dekarbonisierung von Nupo Ventures, bedient Unternehmen in den Bereichen Landnutzung, Natur und Netto-Null-Wirtschaft."
+                    }
+                },
+                "subsidiaries": {
+                    "clubCoffee": "Spezialkaffeerösterei in Nordamerika",
+                    "seda": "Fabrik für löslichen Kaffee",
+                    "unicao": "Kakaoverarbeitungsanlagen",
+                    "spain": "Kakaoverarbeitung der Marke Macao",
+                    "na": "US-Geschäft mit vereinigtem Hauptsitz",
+                    "cocoaBV": "Wichtige Kakao-Tochtergesellschaft",
+                    "cocoaDE": "Wichtige Kakao-Tochtergesellschaft"
+                },
+                "chronology": {
+                    "compass": "Cocoa Compass-Initiative gestartet",
+                    "ofiEst": "ofi offiziell als eigenständige Geschäftsgruppe etabliert",
+                    "tokoroa": "Phase 1 der Tokoroa-Molkerei (NZ) eröffnet",
+                    "mightyEarth": "Mighty Earth Ghana Kakaobericht veröffentlicht",
+                    "salic": "44,58% Anteil an Olam Agri an SALIC verkauft",
+                    "jivaClose": "Schließung von Jiva Ag angekündigt",
+                    "eudr": "EUDR-Compliance-Frist"
+                },
+                "discrepancies": {
+                    "employee": "Olam International Factsheet gibt 14.975 an vs. LeadIQ Schätzung von ~10.000.",
+                    "farmer": "Jahresbericht 2024 nennt ~2,4 Millionen Landwirte vs. Factsheet-Angabe von 3,5 Millionen.",
+                    "innovation": "Quellen nennen 12, 15-19 und 19 (Jahresbericht 2024) als unterschiedliche Zahlen.",
+                    "stock": "LeadIQ identifiziert fälschlicherweise 'TEAF' als ofis Symbol. ofi ist in Privatbesitz und bereitet den Börsengang vor."
+                }
+            }
+        }
+    },
+    "security": {
+        "title": "CYBERSICHERHEITS-RISIKOBEWERTUNG",
+        "subtitle": "Bedrohungslandschaft, Schwachstellen und Compliance-Status für OFI-Betriebe",
+        "backLink": "Zurück zum OSINT-Bericht",
+        "overview": {
+            "riskLevel": "HOCH",
+            "sectorAttacks": "Sektor-Angriffe (2024)",
+            "mitreTechniques": "MITRE ICS-Techniken",
+            "criticalCves": "Kritische CVEs",
+            "iecStatus": "IEC 62443 Status",
+            "statusInProgress": "In Bearbeitung",
+            "statusPending": "Ausstehend",
+            "statusCertified": "Zertifiziert"
+        },
+        "threatActors": {
+            "title": "Aktive Bedrohungsakteure (2024-2025)",
+            "description": "Das vierte Quartal 2024 verzeichnete einen <span class='text-red-400 font-semibold'>Anstieg um 118%</span> bei Ransomware-Angriffen auf Lebensmittel & Landwirtschaft. Doppelte Erpressungstaktiken dominieren, wobei Gruppen OT/ICS-Systeme für maximale Wirkung ins Visier nehmen."
+        },
+        "techRisks": {
+            "title": "Zusammenfassung Technologierisiken",
+            "risks": {
+                "braincube": {
+                    "reason": "Direkter SPS-Zugriff, Lieferkettenvektor"
+                },
+                "rockwell": {
+                    "reason": "8 CVEs (CVSS bis zu 9.3)"
+                },
+                "sap": {
+                    "reason": "IT/OT-Schnittstellen API-Exposition"
+                },
+                "siemens": {
+                    "reason": "Veraltete Schwachstellen"
+                }
+            }
+        },
+        "criticalAlert": {
+            "title": "KRITISCH: Braincube Drittanbieter-Risiko",
+            "description": "Die Braincube KI-Plattform hat direkten SPS-Zugriff in 120+ Anlagen zur Fertigungsoptimierung. Dies schafft einen potenziellen Lieferketten-Angriffsvektor ähnlich wie SolarWinds.",
+            "tags": {
+                "poisoning": "KI-Modell-Vergiftung",
+                "injection": "Befehlsinjektion in SPS",
+                "exfiltration": "Rezeptur-Exfiltration",
+                "supplyChain": "Lieferkettenangriff"
+            }
+        },
+        "subpages": {
+            "header": "DETAILLIERTE BERICHTE",
+            "mitre": {
+                "title": "MITRE ATT&CK Profil",
+                "description": "ICS, Enterprise & Mobile Angriffsmatrizen"
+            },
+            "sectors": {
+                "title": "Sektor-Bedrohungen",
+                "description": "Monatliche Angriffsberichte nach Branche"
+            },
+            "technology": {
+                "title": "Technologie-Risiken",
+                "description": "CVE-Datenbank für OFI Tech-Stack"
+            },
+            "iec62443": {
+                "title": "IEC 62443 Compliance",
+                "description": "Shanghai CSC Anforderungen"
+            },
+            "attacker": {
+                "title": "Red Team Dossier",
+                "description": "Gegnerische Analyse & Risiken benutzerspezifischer Apps"
+            }
+        },
+        "compliance": {
+            "title": "Compliance-Status",
+            "iec": {
+                "label": "IEC 62443",
+                "desc": "Shanghai CSC Ziel: Q2 2026"
+            },
+            "nis2": {
+                "label": "EU NIS2",
+                "desc": "EU-Anlagen (NL, DE, ES) im Geltungsbereich"
+            },
+            "fssc": {
+                "label": "FSSC 22000",
+                "desc": "Lebensmittelsicherheitszertifizierung aktiv"
             }
         }
     }

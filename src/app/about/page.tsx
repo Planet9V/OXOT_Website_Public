@@ -12,41 +12,46 @@ import { useTranslations } from '@/i18n'
 import GlobalPresenceMap from '@/components/GlobalPresenceMap'
 import Link from 'next/link'
 
-// ==================== LEADERSHIP DATA ====================
-const LEADERSHIP = [
-    {
-        name: "Dr. Adriaan van der Berg",
-        title: "Founder & CEO",
-        bio: "Former NATO Cyber Command. 15+ years protecting European critical infrastructure. PhD in Computational Threat Modeling from TU Delft.",
-        credibility: "Ex-NATO Cyber Command",
-        image: null // Placeholder
-    },
-    {
-        name: "Elena Kowalski",
-        title: "Chief Technology Officer",
-        bio: "Former Principal Engineer at a Fortune 50 defense contractor. Creator of the E27 Prediction Engine. Author of 12 patents in adversarial ML.",
-        credibility: "12 Patents in AI/ML",
-        image: null
-    },
-    {
-        name: "Marcus Chen",
-        title: "Chief Intelligence Officer",
-        bio: "20 years in signals intelligence across Five Eyes nations. Pioneered psychometric profiling for cyber attribution. Fluent in Mandarin, Russian, Arabic.",
-        credibility: "Ex-Five Eyes Intel",
-        image: null
-    },
-    {
-        name: "Ingrid Müller",
-        title: "Chief Operations Officer",
-        bio: "Former SOC Director for a European energy grid operator. Led incident response during multiple nation-state attacks. ICS/SCADA specialist.",
-        credibility: "Grid Security Expert",
-        image: null
-    }
-]
+// Data moved inside component for translation access
 
 // ==================== MAIN COMPONENT ====================
 export default function AboutPage() {
     const { t } = useTranslations()
+
+    const LEADERSHIP = [
+        {
+            name: t.about.leadership.roles.ceo.name,
+            title: t.about.leadership.roles.ceo.title,
+            bio: t.about.leadership.roles.ceo.bio,
+            credibility: t.about.leadership.roles.ceo.credibility,
+        },
+        {
+            name: t.about.leadership.roles.cto.name,
+            title: t.about.leadership.roles.cto.title,
+            bio: t.about.leadership.roles.cto.bio,
+            credibility: t.about.leadership.roles.cto.credibility,
+        },
+        {
+            name: t.about.leadership.roles.cio.name,
+            title: t.about.leadership.roles.cio.title,
+            bio: t.about.leadership.roles.cio.bio,
+            credibility: t.about.leadership.roles.cio.credibility,
+        },
+        {
+            name: t.about.leadership.roles.coo.name,
+            title: t.about.leadership.roles.coo.title,
+            bio: t.about.leadership.roles.coo.bio,
+            credibility: t.about.leadership.roles.coo.credibility,
+        }
+    ]
+
+    const VALUES = [
+        { title: t.about.values.list.sovereignty.title, desc: t.about.values.list.sovereignty.desc, icon: Lock, color: 'text-oxot-gold', border: 'hover:border-oxot-gold/30' },
+        { title: t.about.values.list.privacy.title, desc: t.about.values.list.privacy.desc, icon: Eye, color: 'text-oxot-blue', border: 'hover:border-oxot-blue/30' },
+        { title: t.about.values.list.resilience.title, desc: t.about.values.list.resilience.desc, icon: Shield, color: 'text-oxot-red', border: 'hover:border-oxot-red/30' },
+        { title: t.about.values.list.transparency.title, desc: t.about.values.list.transparency.desc, icon: CheckCircle, color: 'text-gray-200', border: 'hover:border-white/30' }
+    ]
+
     return (
         <div className="max-w-7xl mx-auto space-y-32 pb-20">
 
@@ -58,28 +63,37 @@ export default function AboutPage() {
                     transition={{ duration: 0.8 }}
                     className="max-w-4xl mx-auto"
                 >
+                    {/* OXOT Logo */}
+                    <motion.img
+                        src="/Logos_OXOT_Gold_White/OXOT_GW_Dark.svg"
+                        alt="OXOT"
+                        className="h-24 md:h-32 mx-auto mb-8"
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.6, delay: 0.2 }}
+                    />
+
                     <div className="text-xs font-mono text-white/60 uppercase tracking-[0.2em] mb-6">
-                        Sovereign Intelligence // Amsterdam, Netherlands
+                        {t.about.hero.badge}
                     </div>
 
                     <h1 className="text-6xl md:text-8xl font-black text-white uppercase tracking-tighter mb-8">
-                        About <span className="text-transparent bg-clip-text bg-gradient-to-r from-oxot-gold-light via-oxot-gold to-yellow-600">OXOT</span>
+                        {t.about.hero.title} <span className="text-transparent bg-clip-text bg-gradient-to-r from-oxot-gold-light via-oxot-gold to-yellow-600">{t.about.hero.titleHighlight}</span>
                     </h1>
 
                     <p className="text-xl md:text-2xl text-gray-300 font-light max-w-3xl mx-auto leading-relaxed">
-                        From the heart of Europe, we build the <span className="text-white font-bold">immune system</span> for
-                        the world's most critical infrastructure.
+                        {t.about.hero.description}
                     </p>
 
                     <div className="flex justify-center gap-6 mt-12">
                         <div className="flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full text-xs font-mono uppercase tracking-widest text-gray-400">
-                            <MapPin size={14} className="text-oxot-blue" /> Amsterdam HQ
+                            <MapPin size={14} className="text-oxot-blue" /> {t.about.hero.locations.hq}
                         </div>
                         <div className="flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full text-xs font-mono uppercase tracking-widest text-gray-400">
-                            <Globe size={14} className="text-oxot-gold" /> Global Operations
+                            <Globe size={14} className="text-oxot-gold" /> {t.about.hero.locations.global}
                         </div>
                         <div className="flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full text-xs font-mono uppercase tracking-widest text-gray-400">
-                            <Shield size={14} className="text-oxot-red" /> 16 Critical Sectors
+                            <Shield size={14} className="text-oxot-red" /> {t.about.hero.locations.sectors}
                         </div>
                     </div>
                 </motion.div>
@@ -95,26 +109,20 @@ export default function AboutPage() {
             {/* ========== ORIGIN STORY ========== */}
             <section className="space-y-12">
                 <div className="flex items-end justify-between border-b border-white/10 pb-4">
-                    <h2 className="text-3xl font-bold uppercase tracking-tight text-white">Our Origin</h2>
-                    <div className="text-xs font-mono text-gray-500">A MISSION, NOT A JOB</div>
+                    <h2 className="text-3xl font-bold uppercase tracking-tight text-white">{t.about.origin.title}</h2>
+                    <div className="text-xs font-mono text-gray-500">{t.about.origin.subtitle}</div>
                 </div>
 
                 <div className="grid lg:grid-cols-2 gap-16 items-center">
                     <div className="space-y-6">
                         <p className="text-lg text-gray-300 leading-relaxed">
-                            OXOT was born from a simple but urgent truth: <span className="text-white font-bold">the world's critical infrastructure is incredibly fragile</span>—and AI is accelerating the risks toward a tipping point.
+                            {t.about.origin.p1}
                         </p>
                         <p className="text-gray-400 leading-relaxed">
-                            Two Netherlands natives and one American, we spent years working closely together across the globe—power grids, water treatment facilities, manufacturing plants, transportation networks. We saw firsthand how interconnected and vulnerable these systems really are.
+                            {t.about.origin.p2}
                         </p>
                         <p className="text-gray-400 leading-relaxed">
-                            When AI arrived, we didn't see opportunity for replacement. We saw <span className="text-oxot-red-light font-medium">acceleration of risk</span>. A state change—potentially for the worse. We worry about reliable energy, clean water, and healthy food for our children and grandchildren. <span className="text-white font-medium">This is not a joke to us.</span>
-                        </p>
-                        <p className="text-gray-400 leading-relaxed">
-                            So we came together with a different vision: <span className="text-white font-medium">enhance human expertise and capabilities, not replace them</span>. Use mathematics and formulas—the McKenney-Lacan Calculus—to shift from reactive to proactive. Analyze massive amounts of information to calculate probabilities. Focus not just on technology, but on <span className="text-oxot-gold font-medium">people and psychology</span>.
-                        </p>
-                        <p className="text-gray-400 leading-relaxed">
-                            We built <span className="text-oxot-blue font-bold">AEON</span>: our AI-powered Digital Twin with specialized subminds—Red, Blue, and Gold domains of expertise—and a curious nature. AEON exists to assist and complement our team and our customers, helping critical infrastructure organizations worldwide become <span className="text-white font-medium">anti-fragile</span>.
+                            {t.about.origin.p3}
                         </p>
                     </div>
 
@@ -153,43 +161,28 @@ export default function AboutPage() {
             {/* ========== PHILOSOPHY: THE AEON MANIFESTO ========== */}
             <section className="space-y-12">
                 <div className="flex items-end justify-between border-b border-white/10 pb-4">
-                    <h2 className="text-3xl font-bold uppercase tracking-tight text-white">The AEON Philosophy</h2>
-                    <div className="text-xs font-mono text-gray-500">THINK CREATIVELY // ACT DECISIVELY</div>
+                    <h2 className="text-3xl font-bold uppercase tracking-tight text-white">{t.about.values.title}</h2>
+                    <div className="text-xs font-mono text-gray-500">{t.about.values.subtitle}</div>
                 </div>
 
-                <div className="grid md:grid-cols-3 gap-8">
-                    <div className="p-8 bg-white/5 border border-white/10 rounded-2xl hover:border-oxot-blue/30 transition-colors">
-                        <Eye className="text-oxot-blue mb-4" size={32} />
-                        <h3 className="text-xl font-bold text-white mb-3">Predictive Over Reactive</h3>
-                        <p className="text-sm text-gray-400 leading-relaxed">
-                            Traditional security waits for attacks. We simulate thousands of attack scenarios before
-                            adversaries even begin reconnaissance. The Digital Twin sees what's coming.
-                        </p>
-                    </div>
-                    <div className="p-8 bg-white/5 border border-white/10 rounded-2xl hover:border-oxot-red/30 transition-colors">
-                        <Users className="text-oxot-red mb-4" size={32} />
-                        <h3 className="text-xl font-bold text-white mb-3">Adversary Psychology</h3>
-                        <p className="text-sm text-gray-400 leading-relaxed">
-                            We profile threat actors like behavioral scientists. Understanding cognitive biases,
-                            cultural patterns, and psychological triggers lets us predict their next move.
-                        </p>
-                    </div>
-                    <div className="p-8 bg-white/5 border border-white/10 rounded-2xl hover:border-oxot-gold/30 transition-colors">
-                        <Lock className="text-oxot-gold mb-4" size={32} />
-                        <h3 className="text-xl font-bold text-white mb-3">Sovereign Control</h3>
-                        <p className="text-sm text-gray-400 leading-relaxed">
-                            Your data stays yours. EU-hosted, GDPR-native, with on-premise deployment options.
-                            We believe critical infrastructure deserves digital sovereignty.
-                        </p>
-                    </div>
+                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    {VALUES.map((value, i) => (
+                        <div key={i} className={`p-8 bg-white/5 border border-white/10 rounded-2xl ${value.border} transition-colors`}>
+                            <value.icon className={`${value.color} mb-4`} size={32} />
+                            <h3 className="text-xl font-bold text-white mb-3">{value.title}</h3>
+                            <p className="text-sm text-gray-400 leading-relaxed">
+                                {value.desc}
+                            </p>
+                        </div>
+                    ))}
                 </div>
             </section>
 
             {/* ========== LEADERSHIP TEAM ========== */}
             <section className="space-y-12">
                 <div className="flex items-end justify-between border-b border-white/10 pb-4">
-                    <h2 className="text-3xl font-bold uppercase tracking-tight text-white">Leadership</h2>
-                    <div className="text-xs font-mono text-gray-500">THE HUMANS BEHIND THE TWIN</div>
+                    <h2 className="text-3xl font-bold uppercase tracking-tight text-white">{t.about.leadership.title}</h2>
+                    <div className="text-xs font-mono text-gray-500">{t.about.leadership.subtitle}</div>
                 </div>
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">

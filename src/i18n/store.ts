@@ -42,7 +42,11 @@ export const useI18nStore = create<I18nState>()(
             storage: createJSONStorage(() => localStorage),
             partialize: (state) => ({ locale: state.locale }),
             onRehydrateStorage: () => (state) => {
-                state?.setHasHydrated(true);
+                // Use queueMicrotask to defer state update until after component mount
+                // This prevents "Can't perform a React state update on an unmounted component" error
+                queueMicrotask(() => {
+                    state?.setHasHydrated(true);
+                });
             },
         }
     )

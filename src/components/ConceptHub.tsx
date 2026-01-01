@@ -52,14 +52,14 @@ export default function ConceptHub() {
             features: ["Energy Grid", "Water Safety", "Transport Logistics"]
         },
         {
-            path: "/logic",
-            title: "E27 ENGINE CORE",
-            subtitle: "Mathematical Core",
+            path: "/core",
+            title: "AEON CORE",
+            subtitle: "Neural Physics Engine",
             description: "The mathematical framework of the Psychohistory Engine. State evolution, entropy, and influence equations.",
-            icon: <Sigma size={48} className="text-oxot-red" />,
-            color: "text-oxot-red",
+            icon: <Sigma size={48} className="text-oxot-blue" />,
+            color: "text-oxot-blue",
             math: "S = -k_B \\sum p_i \\ln p_i",
-            features: ["State Evolution", "Entropy", "Influence Propagation"]
+            features: ["McKenney-Lacan Calculus", "Neural Networks", "7-Layer Twin"]
         },
         {
             path: "/acquisitions",

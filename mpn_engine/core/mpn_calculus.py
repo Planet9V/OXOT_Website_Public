@@ -11,6 +11,7 @@ Core implementation of the Symphonic Calculus metrics:
 from dataclasses import dataclass
 from typing import Optional
 import re
+from .ner_client import NerClient
 
 
 @dataclass
@@ -65,6 +66,17 @@ class MPNCalculus:
         'grief': 0.4, 'sorrow': 0.4, 'pain': 0.4, 'suffer': 0.4,
         'weep': 0.3, 'cry': 0.3, 'tears': 0.3
     }
+
+    # NER Label Weights for Psychometric Impact
+    NER_TRAUMA_WEIGHTS = {
+        'COGNITIVE_BIAS': 0.15,
+        'THREAT_PERCEPTION': 0.25,
+        'LACANIAN': 0.20,
+        'PERSONALITY': 0.10,   # Assuming negative context or volatility
+        'IMPACT': 0.15,
+        'HAZARD_ANALYSIS': 0.15,
+        'THREAT_MODELING': 0.20
+    }
     
     def __init__(self, 
                  base_trauma: float = 0.0,
@@ -81,6 +93,7 @@ class MPNCalculus:
         self.base_trauma = base_trauma
         self.trauma_progress_weight = trauma_progress_weight
         self.trauma_keyword_weight = trauma_keyword_weight
+        self.ner_client = NerClient()
     
     def calculate_trauma_R(self, beat: int, total_beats: int, text: str) -> float:
         """
@@ -108,6 +121,13 @@ class MPNCalculus:
             # Count occurrences
             count = len(re.findall(rf'\b{word}\w*\b', text_lower))
             trauma_score += count * weight * self.trauma_keyword_weight
+            
+        # Add NER-based psychometric impact
+        ner_entities = self.ner_client.analyze_text(text)
+        for entity in ner_entities:
+            if entity.label in self.NER_TRAUMA_WEIGHTS:
+                # Add weight directly for each found entity
+                trauma_score += self.NER_TRAUMA_WEIGHTS[entity.label]
         
         R = base_R + trauma_score
         return min(1.0, max(0.0, R))  # Clamp to [0, 1]

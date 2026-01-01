@@ -22,55 +22,56 @@ const NIS2PenaltiesChart = dynamic(() => import('@/components/NIS2PenaltiesChart
 const NIS2ComplianceTimeline = dynamic(() => import('@/components/NIS2ComplianceTimeline'), { ssr: false })
 
 // OXOT Services for NIS2
-const OXOT_SERVICES = [
-    {
-        icon: Target,
-        title: 'Gap Assessment & Readiness',
-        description: 'Comprehensive evaluation of your current cybersecurity posture against NIS2 requirements',
-        color: '#3B82F6' // Blue
-    },
-    {
-        icon: FileText,
-        title: 'Policy & Procedure Development',
-        description: 'Development of compliant security policies, procedures, and governance frameworks',
-        color: '#22c55e'
-    },
-    {
-        icon: Lock,
-        title: 'Technical Implementation',
-        description: 'Deployment of security controls, monitoring systems, and protective measures',
-        color: '#3b82f6'
-    },
-    {
-        icon: Activity,
-        title: 'Incident Response Program',
-        description: 'Building and testing incident detection, response, and notification capabilities',
-        color: '#D4AF37' // Gold (was red)
-    },
-    {
-        icon: Layers,
-        title: 'Supply Chain Risk Management',
-        description: 'Assessment and management of third-party and supplier security risks',
-        color: '#f59e0b'
-    },
-    {
-        icon: Award,
-        title: 'Audit & Certification Support',
-        description: 'Preparation for regulatory audits and compliance certification',
-        color: '#d4af37'
-    }
-]
-
-// Why OXOT differentiators
-const DIFFERENTIATORS = [
-    { stat: '15+', label: 'Years OT/ICS Security Experience' },
-    { stat: 'IEC 62443', label: 'Certified Expertise' },
-    { stat: '50+', label: 'Critical Infrastructure Clients' },
-    { stat: '24/7', label: 'Incident Response Capability' }
-]
+// Constants moved inside component for translation
 
 export default function NIS2Page() {
     const { t } = useTranslations()
+
+    const services = [
+        {
+            icon: Target,
+            title: t.nis2.services.gap.title,
+            description: t.nis2.services.gap.desc,
+            color: '#3B82F6'
+        },
+        {
+            icon: FileText,
+            title: t.nis2.services.policy.title,
+            description: t.nis2.services.policy.desc,
+            color: '#22c55e'
+        },
+        {
+            icon: Lock,
+            title: t.nis2.services.tech.title,
+            description: t.nis2.services.tech.desc,
+            color: '#3b82f6'
+        },
+        {
+            icon: Activity,
+            title: t.nis2.services.incident.title,
+            description: t.nis2.services.incident.desc,
+            color: '#D4AF37'
+        },
+        {
+            icon: Layers,
+            title: t.nis2.services.supply.title,
+            description: t.nis2.services.supply.desc,
+            color: '#f59e0b'
+        },
+        {
+            icon: Award,
+            title: t.nis2.services.audit.title,
+            description: t.nis2.services.audit.desc,
+            color: '#d4af37'
+        }
+    ]
+
+    const differentiators = [
+        { stat: '15+', label: t.nis2.differentiators.experience },
+        { stat: 'IEC 62443', label: t.nis2.differentiators.certified },
+        { stat: '50+', label: t.nis2.differentiators.clients },
+        { stat: '24/7', label: t.nis2.differentiators.response }
+    ]
     return (
         <div className="min-h-screen bg-transparent text-gray-100 relative">
 
@@ -100,8 +101,8 @@ export default function NIS2Page() {
                         transition={{ duration: 0.8 }}
                         className="text-5xl md:text-7xl lg:text-8xl font-black text-white uppercase tracking-tighter leading-[0.9] mb-12"
                     >
-                        The <span className="text-transparent bg-clip-text bg-gradient-to-br from-oxot-blue to-blue-300">EU Cybersecurity</span><br />
-                        <span className="text-oxot-gold">Mandate.</span>
+                        {t.nis2.hero.title}<br />
+                        <span className="text-oxot-gold">{t.nis2.hero.subtitle}</span>
                     </motion.h1>
 
                     {/* Subtitle */}
@@ -111,8 +112,7 @@ export default function NIS2Page() {
                         transition={{ duration: 0.8, delay: 0.2 }}
                         className="text-xl text-gray-400 max-w-2xl mb-12"
                     >
-                        The Network and Information Security Directive 2 (NIS2) is the EU's most comprehensive
-                        cybersecurity legislation. Non-compliance means massive fines and personal liability for executives.
+                        {t.nis2.hero.description}
                     </motion.p>
 
                     {/* Stats */}
@@ -275,7 +275,7 @@ export default function NIS2Page() {
 
                     {/* Why OXOT */}
                     <div className="grid md:grid-cols-4 gap-4 mb-12">
-                        {DIFFERENTIATORS.map((diff, i) => (
+                        {differentiators.map((diff, i) => (
                             <motion.div
                                 key={i}
                                 initial={{ opacity: 0, y: 20 }}
@@ -292,7 +292,7 @@ export default function NIS2Page() {
 
                     {/* Service Cards */}
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {OXOT_SERVICES.map((service, i) => {
+                        {services.map((service, i) => {
                             const Icon = service.icon
                             return (
                                 <motion.div

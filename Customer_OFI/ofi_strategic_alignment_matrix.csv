@@ -1,0 +1,41 @@
+Strategic Initiative,Specific Cybersecurity Need,Your Service Solution,Annual Value,Timeline / Urgency,Key Stakeholder,Competitive Advantage
+"IPO Preparation
+(London Stock Exchange)",Demonstrate security governance framework to investors/underwriters,"IEC 62443 Certification Program (system-level, external audit)",$2-4M,Q1-Q2 2026 (IPO target),"CFO, Board, Investors",IEC 62443 expertise (not generic ISO 27001)
+"IPO Preparation
+(London Stock Exchange)",Provide audit evidence of 24/7 threat monitoring capabilities,24/7 SOC Deployment (IT + OT monitoring with quarterly exec reports),$3-6M,Immediate (Q4 2025 start),Deputy CISO (Felix Mathew),Food manufacturing OT specialization
+"IPO Preparation
+(London Stock Exchange)",Quantify cyber risk exposure for prospectus disclosures,Cyber Risk Assessment & Quantification Workshop,$150-300K,Q4 2025 (for prospectus),"CFO, Chief Risk Officer",Risk quantification methodology
+"IPO Preparation
+(London Stock Exchange)",Board-level cybersecurity reporting and KPI dashboards,Executive Dashboard & Board Reporting Package,$50-100K,Ongoing (monthly),Board of Directors,Executive-level reporting experience
+"Digital Transformation
+'Hyper Everything'",Secure SAP S/4HANA + Joule AI integration with OT systems,SOC Use Case: SAP API → SCADA anomaly detection,Included in SOC,Ongoing (2025-2027),"Group CIO/CTO, Deputy CISO",IT/OT convergence expertise (vs. pure IT firms)
+"Digital Transformation
+'Hyper Everything'",Monitor Braincube AI connections to 120+ plant PLCs,SOC Use Case: Braincube API call monitoring + behavioral baselining,Included in SOC,Immediate (Braincube live),OT Security Engineers (new hires),MES/AI security knowledge (Braincube-specific)
+"Digital Transformation
+'Hyper Everything'",Protect AWS/Azure hybrid cloud from IT→OT lateral movement,Cloud Security Posture Management + network segmentation design,$500K-1M,Q1 2026 (Azure migration),Head of Cloud Operations,Multi-cloud + OT integration experience
+"Digital Transformation
+'Hyper Everything'",Secure edge computing deployments at plant level,Edge Security Architecture Consulting + hardening guides,$300-500K,Q1-Q2 2026,Plant IT/OT Teams,Edge + ICS combination (rare skillset)
+"Digital Transformation
+'Hyper Everything'","Vet third-party digital vendors (Ai Palette, Terrascope, etc.)",Supplier Risk Assessment Program (Tier 1 vendors: deep audits),$500K-1M,Q4 2025-Q1 2026,"Procurement, Legal",Food industry vendor landscape knowledge
+"Financial Growth
+(29% EBIT, 573% Profit)",Prevent ransomware attacks that could halt 120 facilities,Incident Response Planning + Ransomware Tabletop Exercises,$150-300K,Immediate (continuous),"CFO, Deputy CISO",Food manufacturing IR playbooks (vs. generic)
+"Financial Growth
+(29% EBIT, 573% Profit)","Protect revenue-generating customer relationships (Nestlé, Hershey's)",Customer Data Protection Validation (Salesforce + integrations),Included in SOC,Ongoing (retention focus),CCO (Chief Customer Officer),Customer IP protection experience
+"Financial Growth
+(29% EBIT, 573% Profit)",Reduce cyber insurance premiums to improve EBITDA margins,IEC 62443 Certification → Insurance Premium Negotiation Support,$0 (ROI benefit),Post-certification (2026),"CFO, Insurance Brokers",Insurance partnership network
+"New Facilities
+Expansion","Security-by-design for Chicago CSC, Shanghai CSC facilities",Greenfield Security Design (IEC 62443 from ground up),$500K-1M,"Chicago live 2024, Shanghai 2024",Regional Plant Managers,Greenfield OT design (vs. retrofit-only)
+"New Facilities
+Expansion",Standardized OT security architecture across new dairy plants,OT Security Standards Library (templates for global consistency),$200-400K,Ongoing (standardization),Group IT Architecture,Global template approach (consistency)
+"New Facilities
+Expansion",Pre-deployment security testing for new SCADA/PLC systems,"Pre-Deployment ICS Testing Lab (PLCs, HMIs, SCADA before install)",$300-600K,Per new facility (as needed),OT Security Engineers,ICS testing lab capability (physical testing)
+"New Facilities
+Expansion",Secure farmer platform expansion (Olam Direct to new regions),"Mobile App Pen Testing (Olam Direct, OFIS apps)",$200-400K,Q1 2026 (expansion phase),Digital Olam Team,Mobile app + farmer platform expertise
+"Regulatory
+Compliance",Ensure AtSource traceability data integrity for EUDR (Dec 2025),Data Integrity Monitoring for AtSource Platform (blockchain validation),$200-400K,"CRITICAL: Dec 30, 2025 EUDR","Sustainability Team, Legal",Traceability system security (unique)
+"Regulatory
+Compliance",Validate food safety ICS cannot be tampered (FSSC 22000),"Food Safety System Pen Testing (pasteurization, roasting controls)",$150-300K,Ongoing (annual audits),"Quality Assurance, Compliance",Food safety + cyber convergence (rare)
+"Regulatory
+Compliance",Protect 2.8M farmer geolocation data (GDPR compliance),Farmer Data Privacy Audit (GDPR Article 30 compliance),$100-200K,Immediate (GDPR enforcement),"Chief Privacy Officer, Legal",Agri-food data privacy specialization
+"Regulatory
+Compliance",Audit-ready security controls for regulatory inspections,Compliance Evidence Package (documentation for FSSC 22000 cyber),$100-200K,Q1-Q2 2026 (audit season),"Internal Audit, FSSC Lead",FSSC 22000 + cyber documentation know-how

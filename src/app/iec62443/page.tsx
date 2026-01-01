@@ -45,7 +45,7 @@ export default function IEC62443Page() {
                         className="inline-flex items-center gap-3 px-4 py-2 bg-white/5 border border-white/10 rounded-full text-white/60 text-xs font-mono tracking-[0.2em] mb-8 uppercase"
                     >
                         <span className="w-2 h-2 rounded-full bg-oxot-gold animate-pulse"></span>
-                        IEC 62443 Educational Overview
+                        {t.iec62443.hero.badge}
                     </motion.div>
 
                     {/* Large Typography */}
@@ -55,8 +55,8 @@ export default function IEC62443Page() {
                         transition={{ duration: 0.8 }}
                         className="text-5xl md:text-7xl lg:text-8xl font-black text-white uppercase tracking-tighter leading-[0.9] mb-12"
                     >
-                        The <span className="text-transparent bg-clip-text bg-gradient-to-br from-white to-slate-500">Global Standard</span><br />
-                        <span className="text-oxot-blue-light">for Industrial Security.</span>
+                        {t.iec62443.hero.title}<br />
+                        <span className="text-oxot-blue-light">{t.iec62443.hero.highlight}</span>
                     </motion.h1>
 
                     {/* Stats */}
@@ -68,23 +68,23 @@ export default function IEC62443Page() {
                     >
                         <div className="space-y-4 relative group">
                             <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-oxot-gold to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                            <div className="text-4xl font-black text-white group-hover:text-oxot-gold transition-colors">14</div>
+                            <div className="text-4xl font-black text-white group-hover:text-oxot-gold transition-colors">{t.iec62443.hero.stats.documents.value}</div>
                             <p className="text-sm text-gray-400 leading-relaxed font-light">
-                                Interlinked documents across <strong className="text-white">4 series</strong>.
+                                <span dangerouslySetInnerHTML={{ __html: t.iec62443.hero.stats.documents.label }} />
                             </p>
                         </div>
                         <div className="space-y-4 relative group">
                             <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-oxot-blue to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                            <div className="text-4xl font-black text-white group-hover:text-oxot-blue transition-colors">SL-4</div>
+                            <div className="text-4xl font-black text-white group-hover:text-oxot-blue transition-colors">{t.iec62443.hero.stats.level.value}</div>
                             <p className="text-sm text-gray-400 leading-relaxed font-light">
-                                Maximum Security Level for <strong className="text-white">nation-state</strong> threats.
+                                <span dangerouslySetInnerHTML={{ __html: t.iec62443.hero.stats.level.label }} />
                             </p>
                         </div>
                         <div className="space-y-4 relative group">
                             <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-oxot-red to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                            <div className="text-4xl font-black text-white group-hover:text-oxot-red transition-colors">7 FRs</div>
+                            <div className="text-4xl font-black text-white group-hover:text-oxot-red transition-colors">{t.iec62443.hero.stats.requirements.value}</div>
                             <p className="text-sm text-gray-400 leading-relaxed font-light">
-                                Foundational Requirements covering <strong className="text-white">access to availability</strong>.
+                                <span dangerouslySetInnerHTML={{ __html: t.iec62443.hero.stats.requirements.label }} />
                             </p>
                         </div>
                     </motion.div>
@@ -97,7 +97,7 @@ export default function IEC62443Page() {
                     transition={{ delay: 1, duration: 1 }}
                     className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-gray-600"
                 >
-                    <span className="text-[10px] tracking-[0.2em] uppercase">Scroll to Explore</span>
+                    <span className="text-[10px] tracking-[0.2em] uppercase">{t.iec62443.hero.scroll}</span>
                     <ChevronDown className="w-4 h-4 animate-bounce" />
                 </motion.div>
             </section>

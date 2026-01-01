@@ -9,31 +9,47 @@ import {
 } from 'lucide-react';
 import { services, ServiceData, calculateTotalARR } from '@/data/services-portfolio';
 
-interface ProjectConfig {
+export interface ProjectConfig {
+    portfolioName?: string;
     clientSize: 'small' | 'medium' | 'enterprise';
     contractLength: 12 | 24 | 36; // months
     paymentTerms: 'annual' | 'quarterly' | 'monthly';
     pilotDiscount: boolean;
     bundleDiscount: boolean;
+    timelineDay?: number;
 }
 
-interface SelectedService {
+export interface SelectedService {
     service: ServiceData;
     customPrice?: number;
+    customName?: string;
     notes?: string;
 }
 
-export default function ServicePricingCalculator() {
-    const [selectedServices, setSelectedServices] = useState<Map<number, SelectedService>>(new Map());
-    const [config, setConfig] = useState<ProjectConfig>({
-        clientSize: 'medium',
-        contractLength: 24,
-        paymentTerms: 'annual',
-        pilotDiscount: false,
-        bundleDiscount: false
-    });
+interface ServicePricingCalculatorProps {
+    selectedServices: Map<number, SelectedService>;
+    config: ProjectConfig;
+    setConfig: (config: ProjectConfig) => void;
+    onUpdatePrice: (serviceId: number, price: number | undefined) => void;
+    onUpdateName: (serviceId: number, name: string) => void;
+    onToggleService: (service: ServiceData) => void; // Provided by parent to remove
+    onReset: () => void;
+}
+
+
+export default function ServicePricingCalculator({
+    selectedServices,
+    config,
+    setConfig,
+    onUpdatePrice,
+    onUpdateName,
+    onToggleService,
+    onReset
+}: ServicePricingCalculatorProps) {
+    // Internal state only for UI toggles, not business logic
     const [expandedService, setExpandedService] = useState<number | null>(null);
     const [showTimeline, setShowTimeline] = useState(true);
+
 
     // Calculate totals
     const calculations = useMemo(() => {
@@ -87,35 +103,9 @@ export default function ServicePricingCalculator() {
         };
     }, [selectedServices, config]);
 
-    const toggleService = (service: ServiceData) => {
-        const newMap = new Map(selectedServices);
-        if (newMap.has(service.id)) {
-            newMap.delete(service.id);
-        } else {
-            newMap.set(service.id, { service });
-        }
-        setSelectedServices(newMap);
-    };
+    // State management functions toggleService, updateServicePrice, resetAll removed
+    // They are now passed as props: onToggleService, onUpdatePrice, onReset
 
-    const updateServicePrice = (serviceId: number, price: number | undefined) => {
-        const newMap = new Map(selectedServices);
-        const item = newMap.get(serviceId);
-        if (item) {
-            newMap.set(serviceId, { ...item, customPrice: price });
-            setSelectedServices(newMap);
-        }
-    };
-
-    const resetAll = () => {
-        setSelectedServices(new Map());
-        setConfig({
-            clientSize: 'medium',
-            contractLength: 24,
-            paymentTerms: 'annual',
-            pilotDiscount: false,
-            bundleDiscount: false
-        });
-    };
 
     const tierGroups = {
         Gold: services.filter(s => s.tier === 'Gold'),
@@ -134,11 +124,11 @@ export default function ServicePricingCalculator() {
             {/* Header with Reset */}
             <div className="flex items-center justify-between">
                 <div>
-                    <h3 className="text-2xl font-bold text-white">Service Portfolio Calculator</h3>
-                    <p className="text-gray-400 text-sm">Model service packages for leadership discussions</p>
+                    <h3 className="text-xl font-bold text-white mb-2">Project Configuration</h3>
+                    <p className="text-gray-400 text-sm">Model service packages and define portfolio identity</p>
                 </div>
                 <button
-                    onClick={resetAll}
+                    onClick={onReset}
                     className="flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-gray-400 hover:bg-white/10 transition-all"
                 >
                     <RotateCcw className="w-4 h-4" />
@@ -149,6 +139,18 @@ export default function ServicePricingCalculator() {
             <div className="grid lg:grid-cols-3 gap-8">
                 {/* Left Panel: Service Selection */}
                 <div className="lg:col-span-2 space-y-6">
+                    {/* Portfolio Name Input */}
+                    <div className="bg-white/5 border border-white/10 rounded-xl p-6">
+                        <label className="block text-sm text-gray-400 mb-2">Portfolio Name</label>
+                        <input
+                            type="text"
+                            value={config.portfolioName || ''}
+                            onChange={(e) => setConfig({ ...config, portfolioName: e.target.value })}
+                            placeholder="e.g. Q1 2025 Cyber Defense Strategy"
+                            className="w-full bg-black/50 border border-white/20 rounded-lg px-4 py-3 text-white focus:border-blue-500/50 outline-none font-medium text-lg placeholder:text-gray-600"
+                        />
+                    </div>
+
                     {/* Configuration Panel */}
                     <div className="p-6 bg-white/5 border border-white/10 rounded-2xl">
                         <h4 className="text-lg font-bold text-white mb-4 flex items-center gap-2">
@@ -156,7 +158,8 @@ export default function ServicePricingCalculator() {
                             Project Configuration
                         </h4>
 
-                        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                        {/* Global Settings Grid */}
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                             {/* Client Size */}
                             <div>
                                 <label className="text-xs text-gray-500 uppercase tracking-wider block mb-2">
@@ -258,7 +261,7 @@ export default function ServicePricingCalculator() {
                                             <div
                                                 className={`p-4 flex items-center gap-4 cursor-pointer transition-all ${isSelected ? 'bg-white/10' : 'hover:bg-white/5'
                                                     }`}
-                                                onClick={() => toggleService(service)}
+                                                onClick={() => onToggleService(service)}
                                             >
                                                 {/* Checkbox */}
                                                 <div className={`w-6 h-6 rounded-md border-2 flex items-center justify-center transition-all ${isSelected
@@ -268,18 +271,33 @@ export default function ServicePricingCalculator() {
                                                     {isSelected && <Check className={`w-4 h-4 ${tierColors[tier].text}`} />}
                                                 </div>
 
-                                                {/* Service Info */}
+                                                {/* Service Info / Rename Input */}
                                                 <div className="flex-1 min-w-0">
-                                                    <div className="flex items-center gap-2">
-                                                        <span className="font-medium text-white">{service.name}</span>
-                                                        <span className={`text-xs px-2 py-0.5 rounded ${service.priority === 'P1' ? 'bg-green-500/20 text-green-400' :
-                                                            service.priority === 'P2' ? 'bg-blue-500/20 text-blue-400' :
-                                                                'bg-gray-500/20 text-gray-400'
-                                                            }`}>
-                                                            {service.priority}
-                                                        </span>
-                                                    </div>
-                                                    <div className="text-xs text-gray-500 truncate">{service.description}</div>
+                                                    {isSelected ? (
+                                                        <div className="flex flex-col gap-1" onClick={(e) => e.stopPropagation()}>
+                                                            <input
+                                                                type="text"
+                                                                value={selectedItem?.customName ?? service.name}
+                                                                onChange={(e) => onUpdateName(service.id, e.target.value)}
+                                                                placeholder="Service Name"
+                                                                className="bg-transparent border-b border-white/20 focus:border-blue-500 text-white font-medium text-sm w-full py-1 outline-none"
+                                                            />
+                                                            <span className="text-xs text-blue-400/80">
+                                                                ID: {service.id} · Original: {service.name}
+                                                            </span>
+                                                        </div>
+                                                    ) : (
+                                                        <>
+                                                            <span className="font-medium text-white">{service.name}</span>
+                                                            <span className={`text-xs px-2 py-0.5 rounded ${service.priority === 'P1' ? 'bg-green-500/20 text-green-400' :
+                                                                service.priority === 'P2' ? 'bg-blue-500/20 text-blue-400' :
+                                                                    'bg-gray-500/20 text-gray-400'
+                                                                }`}>
+                                                                {service.priority}
+                                                            </span>
+                                                            <div className="text-xs text-gray-500 truncate">{service.description}</div>
+                                                        </>
+                                                    )}
                                                 </div>
 
                                                 {/* Price Range */}
@@ -321,7 +339,7 @@ export default function ServicePricingCalculator() {
                                                                     <input
                                                                         type="number"
                                                                         value={selectedItem?.customPrice ?? ''}
-                                                                        onChange={(e) => updateServicePrice(service.id, e.target.value ? parseInt(e.target.value) : undefined)}
+                                                                        onChange={(e) => onUpdatePrice(service.id, e.target.value ? parseInt(e.target.value) : undefined)}
                                                                         placeholder={`${displayPrice.toLocaleString()}`}
                                                                         className="w-full bg-black/50 border border-white/20 rounded-lg px-3 py-2 text-white focus:border-amber-500/50 outline-none font-mono"
                                                                         onClick={(e) => e.stopPropagation()}
@@ -330,7 +348,7 @@ export default function ServicePricingCalculator() {
                                                                         <button
                                                                             onClick={(e) => {
                                                                                 e.stopPropagation();
-                                                                                updateServicePrice(service.id, undefined);
+                                                                                onUpdatePrice(service.id, undefined);
                                                                             }}
                                                                             className="p-2 hover:bg-white/10 rounded-lg"
                                                                         >
@@ -539,6 +557,7 @@ export default function ServicePricingCalculator() {
             </div>
 
             {/* Timeline Visualization */}
+            {/* Timeline Visualization */}
             {calculations.serviceCount > 0 && showTimeline && (
                 <div className="p-6 bg-white/5 border border-white/10 rounded-2xl">
                     <div className="flex items-center justify-between mb-6">
@@ -554,31 +573,89 @@ export default function ServicePricingCalculator() {
                         </button>
                     </div>
 
-                    <div className="relative">
-                        {/* Timeline Header */}
-                        <div className="grid grid-cols-4 gap-4 mb-4 text-center">
-                            <div className="text-xs text-gray-500 uppercase">Service</div>
-                            <div className="text-xs text-green-400 uppercase">3 Months</div>
-                            <div className="text-xs text-blue-400 uppercase">9 Months</div>
-                            <div className="text-xs text-amber-400 uppercase">1 Year</div>
+                    <div className="space-y-6">
+                        {/* Interactive Slider */}
+                        <div>
+                            <div className="flex justify-between text-sm mb-2">
+                                <span className="text-gray-400">Project Duration</span>
+                                <span className="text-amber-400 font-mono font-bold">{config.timelineDay || 30} Days</span>
+                            </div>
+                            <input
+                                type="range"
+                                min="30"
+                                max="365"
+                                step="30"
+                                value={config.timelineDay || 30}
+                                onChange={(e) => setConfig({ ...config, timelineDay: parseInt(e.target.value) })}
+                                className="w-full h-2 bg-white/10 rounded-lg appearance-none cursor-pointer accent-amber-500 hover:accent-amber-400"
+                            />
+                            <div className="flex justify-between text-xs text-gray-600 mt-1 font-mono">
+                                <span>Day 30</span>
+                                <span>Day 90 (Q1)</span>
+                                <span>Day 180 (Q2)</span>
+                                <span>Day 270 (Q3)</span>
+                                <span>Day 365 (Y1)</span>
+                            </div>
                         </div>
 
-                        {/* Timeline Rows */}
-                        <div className="space-y-3">
-                            {Array.from(selectedServices.values()).map(({ service }) => (
-                                <div key={service.id} className="grid grid-cols-4 gap-4 items-center">
-                                    <div className="text-sm text-gray-300 truncate">{service.name}</div>
-                                    <div className="p-2 bg-green-500/10 rounded text-xs text-green-400 text-center">
-                                        {service.timeline.threeMonths}
+                        {/* Dynamic Status Grid */}
+                        <div className="grid gap-3">
+                            <div className="grid grid-cols-12 gap-4 text-xs text-gray-500 uppercase tracking-wider px-4">
+                                <div className="col-span-4">Service</div>
+                                <div className="col-span-8">Status at {(config.timelineDay || 30)} Days</div>
+                            </div>
+
+                            {Array.from(selectedServices.values()).map(({ service }) => {
+                                const days = config.timelineDay || 30;
+                                let status = "Initiating Deployment";
+                                let statusColor = "text-gray-400";
+                                let progress = 10;
+                                let phase = "Phase 0";
+
+                                if (days >= 365) {
+                                    status = service.timeline.oneYear;
+                                    statusColor = "text-amber-400";
+                                    progress = 100;
+                                    phase = "Phase 3 (Maturity)";
+                                } else if (days >= 270) {
+                                    status = service.timeline.nineMonths;
+                                    statusColor = "text-blue-400";
+                                    progress = 75;
+                                    phase = "Phase 2 (Expansion)";
+                                } else if (days >= 90) {
+                                    status = service.timeline.threeMonths;
+                                    statusColor = "text-green-400";
+                                    progress = 25 + ((days - 90) / 180) * 50; // Linear interpolation between 90 and 270
+                                    phase = "Phase 1 (Operational)";
+                                } else {
+                                    progress = (days / 90) * 25;
+                                }
+
+                                return (
+                                    <div key={service.id} className="bg-black/30 rounded-xl p-4 grid grid-cols-12 gap-4 items-center">
+                                        <div className="col-span-4 border-r border-white/10 pr-4">
+                                            <div className="text-sm font-bold text-gray-200 truncate">{service.name}</div>
+                                            <div className="items-center gap-2 mt-1 hidden md:flex">
+                                                <div className="w-full bg-white/10 rounded-full h-1.5">
+                                                    <div
+                                                        className="bg-gradient-to-r from-blue-600 to-blue-400 h-1.5 rounded-full transition-all duration-500"
+                                                        style={{ width: `${progress}%` }}
+                                                    />
+                                                </div>
+                                                <span className="text-[10px] text-gray-500 font-mono w-8 text-right">{progress.toFixed(0)}%</span>
+                                            </div>
+                                        </div>
+                                        <div className="col-span-8 pl-2">
+                                            <div className="flex items-center justify-between mb-1">
+                                                <span className="text-xs text-gray-500 font-mono">{phase}</span>
+                                            </div>
+                                            <div className={`text-sm ${statusColor} transition-colors duration-300`}>
+                                                {status}
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div className="p-2 bg-blue-500/10 rounded text-xs text-blue-400 text-center">
-                                        {service.timeline.nineMonths}
-                                    </div>
-                                    <div className="p-2 bg-amber-500/10 rounded text-xs text-amber-400 text-center">
-                                        {service.timeline.oneYear}
-                                    </div>
-                                </div>
-                            ))}
+                                );
+                            })}
                         </div>
                     </div>
                 </div>

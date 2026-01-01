@@ -13,8 +13,8 @@ interface PageHeaderProps {
     subtitle?: string;
     /** Header variant style */
     variant?: PageHeaderVariant;
-    /** Accent color: 'red' | 'gold' | 'blue' */
-    accent?: 'red' | 'gold' | 'blue';
+    /** Accent color: 'red' | 'gold' | 'blue' | 'green' */
+    accent?: 'red' | 'gold' | 'blue' | 'green';
     /** Additional classes */
     className?: string;
     /** Children content (e.g., CTAs) */
@@ -25,12 +25,14 @@ const accentColors = {
     red: 'text-oxot-red border-oxot-red',
     gold: 'text-oxot-gold border-oxot-gold',
     blue: 'text-oxot-blue border-oxot-blue',
+    green: 'text-emerald-400 border-emerald-400',
 };
 
 const accentBg = {
     red: 'bg-oxot-red',
     gold: 'bg-oxot-gold',
     blue: 'bg-oxot-blue',
+    green: 'bg-emerald-400',
 };
 
 export const PageHeader: React.FC<PageHeaderProps> = ({

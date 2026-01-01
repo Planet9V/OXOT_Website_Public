@@ -8,7 +8,7 @@ import {
   Zap, Shield, Globe, Layers, Sigma,
   LayoutDashboard, Briefcase, Activity,
   Terminal, Menu, X, BookOpen, Cpu,
-  Eye, Radio, Box, Building, Brain
+  Eye, Radio, Box, Building, Brain, Palette, FileSearch
 } from 'lucide-react'
 import { BackgroundEffect } from './BackgroundEffect'
 import { LanguageSwitcher } from './ui/LanguageSwitcher'
@@ -54,7 +54,6 @@ const getNavGroups = (t: ReturnType<typeof useTranslations>['t']) => [
     links: [
       { name: t.nav.links.aeonCore, path: '/core', icon: <Activity size={16} /> },
       { name: t.nav.links.sevenLayerTwin, path: '/architecture', icon: <Layers size={16} /> },
-      { name: t.nav.links.sovereignLogic, path: '/logic', icon: <Sigma size={16} /> },
       { name: t.nav.links.conceptHub, path: '/concepts', icon: <Box size={16} /> },
       { name: t.nav.links.appliedTheory, path: '/theory', icon: <Brain size={16} /> },
     ]
@@ -66,7 +65,11 @@ const getNavGroups = (t: ReturnType<typeof useTranslations>['t']) => [
       { name: t.nav.links.aboutOxot, path: '/about', icon: <Building size={16} /> },
       { name: t.nav.links.strategicPlanning, path: '/corporate/strategic-planning', icon: <Briefcase size={16} />, customHover: "group-hover:text-amber-400 group-hover:drop-shadow-[0_0_8px_rgba(245,158,11,0.6)]" },
       { name: t.nav.links.servicesPortfolio, path: '/corporate/services-portfolio', icon: <Activity size={16} /> },
+      { name: t.nav.links.osintReport, path: '/corporate/osint-report', icon: <FileSearch size={16} />, customHover: "group-hover:text-amber-400 group-hover:drop-shadow-[0_0_8px_rgba(245,158,11,0.6)]" },
       { name: t.nav.links.apiEnhancements, path: '/corporate/enhancements', icon: <Zap size={16} /> },
+      { name: t.nav.links.brandingGuidelines, path: '/corporate/branding', icon: <Palette size={16} />, customHover: "group-hover:text-amber-400 group-hover:drop-shadow-[0_0_8px_rgba(245,158,11,0.6)]" },
+      { name: t.nav.links.businessPitchDeck, path: '/corporate/pitch-deck', icon: <Layers size={16} />, customHover: "group-hover:text-amber-400 group-hover:drop-shadow-[0_0_8px_rgba(245,158,11,0.6)]" },
+      { name: t.nav.links.chatBot, path: '/corporate/chat', icon: <Brain size={16} />, customHover: "group-hover:text-cyan-400 group-hover:drop-shadow-[0_0_8px_rgba(34,211,238,0.6)]" },
     ]
   }
 ]
@@ -103,7 +106,7 @@ export default function TerminalFrame({ children }: { children: React.ReactNode 
             <div className="mb-8">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/OXOT3Logo_Black.png"
+                src="/Logos_OXOT_Gold_White/OXOT_GW_Dark.svg"
                 alt="OXOT Sovereign Intelligence"
                 className="w-40 h-auto opacity-100 group-hover:opacity-100 transition-opacity duration-300"
               />
@@ -169,7 +172,7 @@ export default function TerminalFrame({ children }: { children: React.ReactNode 
         </nav>
 
         {/* Footer Mission */}
-        <div className="p-12 border-t border-white/5 bg-white/[0.02]">
+        <div className="p-6 border-t border-white/5 bg-white/[0.02]">
           <div className="text-[11px] font-mono text-grey uppercase tracking-widest leading-relaxed font-bold">
             {t.brand.mission}<br />
             <span className="text-white opacity-60 mt-1 block">{t.brand.missionSub}</span>

@@ -3,8 +3,15 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { ArrowLeft, Users, Music, Utensils, Zap, BarChart } from 'lucide-react';
+import dynamic from 'next/dynamic';
+import { ArrowLeft, Users, Music, Utensils, Zap, BarChart, ExternalLink } from 'lucide-react';
 import { TypewriterEquation } from '@/components/TypewriterEquation';
+
+// Dynamic import for R3F component (no SSR)
+const McKenneyLacanSimulator = dynamic(
+    () => import('@/components/McKenneyLacanSimulator'),
+    { ssr: false, loading: () => <div className="h-[600px] flex items-center justify-center text-gray-500">Loading 3D Engine...</div> }
+);
 
 export default function TeamCompositionPage() {
     return (
@@ -206,6 +213,18 @@ export default function TeamCompositionPage() {
                                     </tbody>
                                 </table>
                             </div>
+                        </section>
+
+                        {/* Interactive Simulator Section */}
+                        <section className="pt-8">
+                            <h2 className="text-3xl font-bold uppercase tracking-tight mb-6 flex items-center gap-3">
+                                <Users className="text-orange-400" />
+                                Interactive Simulation
+                            </h2>
+                            <p className="text-gray-400 mb-8">
+                                Experiment with team dynamics in real-time. Adjust DISC profiles, simulate new hires, and observe how the mathematical models predict team harmony and effectiveness.
+                            </p>
+                            <McKenneyLacanSimulator />
                         </section>
 
                     </div>

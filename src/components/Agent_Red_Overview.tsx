@@ -44,13 +44,7 @@ export default function AgentRedPage() {
     const { news, loading: newsLoading } = useLiveNews('cybersecurity threat');
 
     // Fallback ticker items if news is loading or empty
-    const defaultTickerItems = [
-        "CRITICAL: APT29 lateral movement detected in Sector 4",
-        "WARNING: Zero-day exploit identified in OpenSSL 3.0.1",
-        "ALERT: New ransomware variant 'BlackBastion' targeting healthcare",
-        "SYSTEM: Neural lattice re-calibration in progress...",
-        "INTEL: Dark web chatter indicates imminent attack on energy grid"
-    ];
+    const defaultTickerItems = t.agentRed.squad.ticker ? Object.values(t.agentRed.squad.ticker) : [];
 
     const tickerItems = news.length > 0
         ? news.map(n => `LIVE: ${n.title} - ${n.source.name}`)
@@ -96,26 +90,26 @@ export default function AgentRedPage() {
     const squad = [
         {
             name: "CLOUD WRAITH",
-            role: "External Pivot",
-            desc: "Specializes in cloud infrastructure. Sets up 'Drive-by' websites and compromised S3 buckets to lure targets.",
+            role: t.agentRed.squad.sections.personas.agents.wraith.role,
+            desc: t.agentRed.squad.sections.personas.agents.wraith.desc,
             icon: <Cloud className="w-8 h-8 text-oxot-blue" />
         },
         {
             name: "SIGNAL PHANTOM",
-            role: "Wireless Interceptor",
-            desc: "Deploys 'Evil Twin' SSIDs. Captures handshakes and tricks users into fake corporate portals.",
+            role: t.agentRed.squad.sections.personas.agents.phantom.role,
+            desc: t.agentRed.squad.sections.personas.agents.phantom.desc,
             icon: <Wifi className="w-8 h-8 text-oxot-gold" />
         },
         {
             name: "THE MOLE",
-            role: "Internal Pivot",
-            desc: "Living off the land. Runs Responder & Bloodhound to map AD paths. Moves laterally without malware.",
+            role: t.agentRed.squad.sections.personas.agents.mole.role,
+            desc: t.agentRed.squad.sections.personas.agents.mole.desc,
             icon: <GitBranch className="w-8 h-8 text-oxot-blue-light" />
         },
         {
             name: "SANDBOX ZERO",
-            role: "Virtualization Engine",
-            desc: "Spins up exact replicas of target hardware for safe exploit testing before live deployment.",
+            role: t.agentRed.squad.sections.personas.agents.sandbox.role,
+            desc: t.agentRed.squad.sections.personas.agents.sandbox.desc,
             icon: <BoxIcon className="w-8 h-8 text-oxot-red" />
         }
     ];
@@ -144,8 +138,8 @@ export default function AgentRedPage() {
                     </motion.div>
 
                     <PageHeader
-                        title="AGENT RED LEADER"
-                        subtitle="SUBMIND ORCHESTRATOR // Autonomous. Goal-Oriented. Unrelenting."
+                        title={t.agentRed.hero.title}
+                        subtitle={t.agentRed.hero.subtitle}
                         variant="hero"
                         accent="red"
                         className="mb-12"
@@ -157,10 +151,7 @@ export default function AgentRedPage() {
                         transition={{ duration: 0.8, delay: 0.4 }}
                         className="max-w-4xl mx-auto"
                     >
-                        <p className="text-lg text-gray-400 max-w-3xl mx-auto leading-relaxed font-mono">
-                            A fully autonomous adversarial submind equipped with the full capabilities of Kali Linux.
-                            Give it a goal, set the Rules of Engagement, and it <span className="text-red-500 font-bold border-b border-red-500/50">will</span> find a way.
-                        </p>
+                        <p className="text-lg text-gray-400 max-w-3xl mx-auto leading-relaxed font-mono" dangerouslySetInnerHTML={{ __html: t.agentRed.hero.description }} />
                     </motion.div>
                 </motion.div>
 
@@ -170,7 +161,7 @@ export default function AgentRedPage() {
                     transition={{ delay: 1, duration: 1 }}
                     className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-gray-600"
                 >
-                    <span className="text-[10px] tracking-[0.2em] uppercase">Scroll to Initialize</span>
+                    <span className="text-[10px] tracking-[0.2em] uppercase">{t.agentRed.hero.scroll}</span>
                     <ChevronDown className="w-4 h-4 animate-bounce" />
                 </motion.div>
             </section>
@@ -186,14 +177,14 @@ export default function AgentRedPage() {
                             viewport={{ once: true }}
                         >
                             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-950/30 border border-red-900/30 text-red-400 text-xs font-mono tracking-widest mb-8">
-                                <Zap className="w-3 h-3" /> ADVERSARIAL CORE
+                                <Zap className="w-3 h-3" /> {t.agentRed.predator.badge}
                             </div>
                             <h2 className="text-2xl font-black text-white mb-6 leading-tight">
-                                THE ULTIMATE<br />
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-600">PREDATOR.</span>
+                                {t.agentRed.predator.title}<br />
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-600">{t.agentRed.predator.titleHighlight}</span>
                             </h2>
                             <p className="text-lg text-gray-400 mb-8 leading-relaxed">
-                                Red Leader is not a script. It is a dynamic, thinking entity. It builds custom threat models based on the target's specific architecture, then leverages the AEON Core to brainstorm attack vectors using Gated Graph Neural Networks.
+                                {t.agentRed.predator.description}
                             </p>
 
                             <div className="space-y-8">
@@ -202,9 +193,9 @@ export default function AgentRedPage() {
                                         <Terminal className="w-6 h-6 text-red-500" />
                                     </div>
                                     <div>
-                                        <h3 className="text-xl font-bold text-white mb-2 group-hover:text-red-400 transition-colors">Full Kali Linux Arsenal</h3>
+                                        <h3 className="text-xl font-bold text-white mb-2 group-hover:text-red-400 transition-colors">{t.agentRed.predator.cards.kali.title}</h3>
                                         <p className="text-gray-500 leading-relaxed">
-                                            Native access to Metasploit, Nmap, Burp Suite, and custom exploits. It doesn't just run tools; it understands their output and chains them together.
+                                            {t.agentRed.predator.cards.kali.desc}
                                         </p>
                                     </div>
                                 </div>
@@ -214,9 +205,9 @@ export default function AgentRedPage() {
                                         <Network className="w-6 h-6 text-red-500" />
                                     </div>
                                     <div>
-                                        <h3 className="text-xl font-bold text-white mb-2 group-hover:text-red-400 transition-colors">gGNN Brainstorming</h3>
+                                        <h3 className="text-xl font-bold text-white mb-2 group-hover:text-red-400 transition-colors">{t.agentRed.predator.cards.gnn.title}</h3>
                                         <p className="text-gray-500 leading-relaxed">
-                                            Leverages Gated Graph Neural Networks to model state propagation across the target topology, identifying non-obvious attack paths that standard traversal misses.
+                                            {t.agentRed.predator.cards.gnn.desc}
                                         </p>
                                     </div>
                                 </div>
@@ -226,9 +217,9 @@ export default function AgentRedPage() {
                                         <GitMerge className="w-6 h-6 text-red-500" />
                                     </div>
                                     <div>
-                                        <h3 className="text-xl font-bold text-white mb-2 group-hover:text-red-400 transition-colors">Swarm Divergence Theory</h3>
+                                        <h3 className="text-xl font-bold text-white mb-2 group-hover:text-red-400 transition-colors">{t.agentRed.predator.cards.swarm.title}</h3>
                                         <p className="text-gray-500 leading-relaxed">
-                                            Deploys diverse UAV-neural networks with divergent agents. Uses adaptive consensus algorithms to avoid local optima, mathematically guaranteeing convergence on the most devastating attack path.
+                                            {t.agentRed.predator.cards.swarm.desc}
                                         </p>
                                     </div>
                                 </div>
@@ -253,12 +244,12 @@ export default function AgentRedPage() {
                                         <span className="ml-auto">red_leader@aeon-core:~</span>
                                     </div>
 
-                                    <div className="text-oxot-gold">$ init_sequence --target="Energy_Sector_Grid_A"</div>
-                                    <div className="text-gray-400">[+] Target Acquired: Industrial Control System (ICS)</div>
-                                    <div className="text-gray-400">[+] Architecture Analysis: Siemens S7-1500 Detected</div>
-                                    <div className="text-gray-400">[+] Vulnerability Scan: CVE-2024-XXXX (Critical)</div>
-                                    <div className="text-oxot-gold">[!] GNN Optimization: Attack Path #472 Selected (Probability: 98.2%)</div>
-                                    <div className="text-oxot-blue-light">[{">"}] Instantiating Submind: "Signal Phantom" for Wireless Entry...</div>
+                                    <div className="text-oxot-gold">{t.agentRed.predator.terminal.init}</div>
+                                    <div className="text-gray-400">{t.agentRed.predator.terminal.target}</div>
+                                    <div className="text-gray-400">{t.agentRed.predator.terminal.analysis}</div>
+                                    <div className="text-gray-400">{t.agentRed.predator.terminal.scan}</div>
+                                    <div className="text-oxot-gold">{t.agentRed.predator.terminal.optimization}</div>
+                                    <div className="text-oxot-blue-light">{t.agentRed.predator.terminal.instantiating}</div>
                                     <div className="text-gray-500 animate-pulse">_</div>
                                 </div>
                             </div>
@@ -294,7 +285,7 @@ export default function AgentRedPage() {
                     {/* Live Ticker */}
                     <div className="bg-red-950/20 border-y border-red-900/30 py-2 overflow-hidden flex items-center gap-4 mb-12">
                         <div className="px-4 text-xs font-bold bg-red-900 text-red-100 animate-pulse whitespace-nowrap">
-                            LIVE THREAT FEED
+                            {t.agentRed.squad.tickerLabel}
                         </div>
                         <div className="flex-1 overflow-hidden relative h-6">
                             <motion.div
@@ -314,17 +305,15 @@ export default function AgentRedPage() {
 
                     <h3 className="text-2xl font-bold text-white mb-8 flex items-center">
                         <span className="w-3 h-12 bg-primary mr-6 block rounded-full shadow-[0_0_15px_rgba(0,224,176,0.6)]"></span>
-                        RED LEADER SQUADRON
+                        {t.agentRed.squad.title}
                     </h3>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mb-16">
                         <div>
                             <h4 className="text-xl font-bold text-secondary mb-6 font-mono flex items-center gap-3">
-                                <span className="text-gray-600">01 //</span> AUTONOMOUS SUBMIND PERSONAS
+                                <span className="text-gray-600">01 //</span> {t.agentRed.squad.sections.personas.title}
                             </h4>
-                            <p className="mb-6 text-gray-400">
-                                Agent Red does not just run scripts; it births <strong>Subminds</strong>. These are autonomous agents with distinct personas, goals, and capabilities, fit for purpose.
-                            </p>
+                            <p className="mb-6 text-gray-400" dangerouslySetInnerHTML={{ __html: t.agentRed.squad.sections.personas.desc }} />
 
                             {/* Replaced Text List with Visual Cards */}
                             <div className="grid grid-cols-1 gap-4">
@@ -353,23 +342,23 @@ export default function AgentRedPage() {
                         </div>
                         <div>
                             <h4 className="text-xl font-bold text-secondary mb-6 font-mono flex items-center gap-3">
-                                <span className="text-gray-600">02 //</span> SELF-PROVISIONING INFRASTRUCTURE
+                                <span className="text-gray-600">02 //</span> {t.agentRed.squad.sections.provisioning.title}
                             </h4>
                             <p className="mb-6 text-gray-400">
-                                The Subminds have the authority to provision their own infrastructure in the real world and install small subminds on compromised infrastructure to move laterally.
+                                {t.agentRed.squad.sections.provisioning.desc}
                             </p>
                             <ul className="space-y-4 text-gray-400">
                                 <li className="bg-black/40 p-4 rounded border border-white/5 hover:border-primary/30 transition-colors">
-                                    <strong className="text-white block mb-1">Global Presence</strong>
-                                    A Red One Leader can spin up a submind in a specific AWS region (e.g., us-east-1) to simulate an attacker operating from that geography.
+                                    <strong className="text-white block mb-1">{t.agentRed.squad.sections.provisioning.items.global.title}</strong>
+                                    {t.agentRed.squad.sections.provisioning.items.global.desc}
                                 </li>
                                 <li className="bg-black/40 p-4 rounded border border-white/5 hover:border-primary/30 transition-colors">
-                                    <strong className="text-white block mb-1">Tool Synthesis</strong>
-                                    The submind can download tools (nmap, metasploit, sqlmap), install dependencies, and configure its own environment.
+                                    <strong className="text-white block mb-1">{t.agentRed.squad.sections.provisioning.items.tool.title}</strong>
+                                    {t.agentRed.squad.sections.provisioning.items.tool.desc}
                                 </li>
                                 <li className="bg-black/40 p-4 rounded border border-white/5 hover:border-primary/30 transition-colors">
-                                    <strong className="text-white block mb-1">Code Synthesis</strong>
-                                    Using an embedded LLM optimized for offensive security, the submind can write custom Python, Go, or Rust scripts on the fly.
+                                    <strong className="text-white block mb-1">{t.agentRed.squad.sections.provisioning.items.code.title}</strong>
+                                    {t.agentRed.squad.sections.provisioning.items.code.desc}
                                 </li>
                             </ul>
                         </div>
@@ -377,32 +366,30 @@ export default function AgentRedPage() {
 
                     <div className="border-t border-white/10 pt-12">
                         <h4 className="text-xl font-bold text-secondary mb-6 font-mono flex items-center gap-3">
-                            <span className="text-gray-600">03 //</span> BACKEND TARGET SIMULATION (THE CYBER RANGE)
+                            <span className="text-gray-600">03 //</span> {t.agentRed.squad.sections.simulation.title}
                         </h4>
-                        <p className="mb-8 text-gray-400 max-w-3xl">
-                            When a target environment is identified (e.g., a specific GitHub repo, a container image, or a firmware blob), Agent Red spins up an <strong>actual replica</strong> of the target server in the backend.
-                        </p>
+                        <p className="mb-8 text-gray-400 max-w-3xl" dangerouslySetInnerHTML={{ __html: t.agentRed.squad.sections.simulation.desc }} />
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
                             <div className="bg-black/40 p-6 border border-white/10 rounded-lg hover:border-primary/50 transition-all group">
                                 <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 text-primary">
                                     <Zap className="w-5 h-5" />
                                 </div>
-                                <strong className="text-white block mb-2 text-lg">Sandboxed Analysis</strong>
-                                It performs full source-code analysis and dynamic testing in a safe, isolated environment.
+                                <strong className="text-white block mb-2 text-lg">{t.agentRed.squad.sections.simulation.cards.sandbox.title}</strong>
+                                {t.agentRed.squad.sections.simulation.cards.sandbox.desc}
                             </div>
                             <div className="bg-black/40 p-6 border border-white/10 rounded-lg hover:border-primary/50 transition-all group">
                                 <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 text-primary">
                                     <Shield className="w-5 h-5" />
                                 </div>
-                                <strong className="text-white block mb-2 text-lg">Exploit Verification</strong>
-                                It finds vulnerabilities and tests exploits against the replica <em>before</em> deploying them against the live target.
+                                <strong className="text-white block mb-2 text-lg">{t.agentRed.squad.sections.simulation.cards.exploit.title}</strong>
+                                {t.agentRed.squad.sections.simulation.cards.exploit.desc}
                             </div>
                             <div className="bg-black/40 p-6 border border-white/10 rounded-lg hover:border-primary/50 transition-all group">
                                 <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 text-primary">
                                     <CheckCircle className="w-5 h-5" />
                                 </div>
-                                <strong className="text-white block mb-2 text-lg">Zero-Risk Validation</strong>
-                                This ensures that "destructive" tests can be run without risking the actual production environment.
+                                <strong className="text-white block mb-2 text-lg">{t.agentRed.squad.sections.simulation.cards.validation.title}</strong>
+                                {t.agentRed.squad.sections.simulation.cards.validation.desc}
                             </div>
                         </div>
                     </div>
@@ -411,8 +398,8 @@ export default function AgentRedPage() {
                 {/* Section 5: Deep Knowledge Graph */}
                 <section>
                     <h3 className="text-2xl font-black text-white mb-12 text-center tracking-tight leading-tight">
-                        DEEP KNOWLEDGE<br />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-600">GRAPH INTEGRATION</span>
+                        {t.agentRed.graph.title}<br />
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-600">{t.agentRed.graph.titleHighlight}</span>
                     </h3>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
@@ -424,13 +411,13 @@ export default function AgentRedPage() {
                                     <div className="p-3 bg-red-500/10 rounded-xl border border-red-500/20 group-hover:bg-red-500/20 transition-colors">
                                         <Globe className="w-8 h-8 text-red-500" />
                                     </div>
-                                    <h4 className="text-2xl font-bold text-white">DEEP OSINT & DARK WEB</h4>
+                                    <h4 className="text-2xl font-bold text-white">{t.agentRed.graph.cards.osint.title}</h4>
                                 </div>
                                 <ul className="space-y-4 text-sm text-gray-400">
-                                    <li className="flex gap-3"><span className="text-red-500 font-mono">01</span><span><strong className="text-white">Public RFPs:</strong> Analyzes RFPs to identify specific technologies (e.g., "Seeking Cisco ISE vendor").</span></li>
-                                    <li className="flex gap-3"><span className="text-red-500 font-mono">02</span><span><strong className="text-white">Job Listings:</strong> Scrapes job boards to infer tech stacks (e.g., "Hiring: Kubernetes Expert").</span></li>
-                                    <li className="flex gap-3"><span className="text-red-500 font-mono">03</span><span><strong className="text-white">Employee Profiling:</strong> Maps the org chart via LinkedIn to identify key targets.</span></li>
-                                    <li className="flex gap-3"><span className="text-red-500 font-mono">04</span><span><strong className="text-white">Dark Web:</strong> Monitors marketplaces for stolen credentials and "Access for Sale".</span></li>
+                                    <li className="flex gap-3"><span className="text-red-500 font-mono">01</span><span><strong className="text-white">{t.agentRed.graph.cards.osint.items.rfp.title}</strong> {t.agentRed.graph.cards.osint.items.rfp.desc}</span></li>
+                                    <li className="flex gap-3"><span className="text-red-500 font-mono">02</span><span><strong className="text-white">{t.agentRed.graph.cards.osint.items.jobs.title}</strong> {t.agentRed.graph.cards.osint.items.jobs.desc}</span></li>
+                                    <li className="flex gap-3"><span className="text-red-500 font-mono">03</span><span><strong className="text-white">{t.agentRed.graph.cards.osint.items.profiling.title}</strong> {t.agentRed.graph.cards.osint.items.profiling.desc}</span></li>
+                                    <li className="flex gap-3"><span className="text-red-500 font-mono">04</span><span><strong className="text-white">{t.agentRed.graph.cards.osint.items.darkweb.title}</strong> {t.agentRed.graph.cards.osint.items.darkweb.desc}</span></li>
                                 </ul>
                             </div>
                         </div>
@@ -443,11 +430,11 @@ export default function AgentRedPage() {
                                     <div className="p-3 bg-oxot-red/10 rounded-xl border border-oxot-red/20 group-hover:bg-oxot-red/20 transition-colors">
                                         <Network className="w-8 h-8 text-oxot-red" />
                                     </div>
-                                    <h4 className="text-2xl font-bold text-white">SUPPLY CHAIN INTEL</h4>
+                                    <h4 className="text-2xl font-bold text-white">{t.agentRed.graph.cards.supply.title}</h4>
                                 </div>
                                 <ul className="space-y-4 text-sm text-gray-400">
-                                    <li className="flex gap-3"><span className="text-oxot-red font-mono">01</span><span><strong className="text-white">Common Suppliers:</strong> Knows the "Shared Fate" of the sector. If SolarWinds is hit, it knows who is affected.</span></li>
-                                    <li className="flex gap-3"><span className="text-oxot-red font-mono">02</span><span><strong className="text-white">Operating Manuals:</strong> Ingests thousands of PDF manuals searching for default passwords (admin/1234) and hidden debug ports.</span></li>
+                                    <li className="flex gap-3"><span className="text-oxot-red font-mono">01</span><span><strong className="text-white">{t.agentRed.graph.cards.supply.items.suppliers.title}</strong> {t.agentRed.graph.cards.supply.items.suppliers.desc}</span></li>
+                                    <li className="flex gap-3"><span className="text-oxot-red font-mono">02</span><span><strong className="text-white">{t.agentRed.graph.cards.supply.items.manuals.title}</strong> {t.agentRed.graph.cards.supply.items.manuals.desc}</span></li>
                                 </ul>
                             </div>
                         </div>
@@ -455,9 +442,9 @@ export default function AgentRedPage() {
 
                     <div className="bg-dark-lighter/80 p-10 border border-white/5 rounded-xl relative overflow-hidden backdrop-blur-md">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-[80px]"></div>
-                        <h4 className="text-xl font-bold text-white mb-6 relative z-10">THE 16 CRITICAL INFRASTRUCTURE SECTORS</h4>
+                        <h4 className="text-xl font-bold text-white mb-6 relative z-10">{t.agentRed.graph.sectors.title}</h4>
                         <p className="text-gray-400 mb-8 relative z-10 max-w-2xl">
-                            Agent Red possesses a pre-loaded library of architectural patterns for all 16 sectors. It "knows" what a typical facility looks like, including equipment, processes, suppliers, operation, facility layouts, and common weak points.
+                            {t.agentRed.graph.sectors.desc}
                         </p>
 
                         {/* New Sector Grid Component */}
@@ -473,33 +460,30 @@ export default function AgentRedPage() {
                     {/* Header */}
                     <div className="relative z-10 mb-12">
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-500/10 border border-red-500/20 text-red-400 text-xs font-mono tracking-widest mb-6">
-                            <Network className="w-3 h-3" /> AEON CORE CAPABILITY
+                            <Network className="w-3 h-3" /> {t.agentRed.traversal.badge}
                         </div>
                         <h3 className="text-xl md:text-2xl font-bold text-white mb-4">
-                            20-Hop <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-400">Knowledge Graph</span> Traversal
+                            {t.agentRed.traversal.title} <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-400">{t.agentRed.traversal.titleHighlight}</span> {t.agentRed.traversal.suffix}
                         </h3>
-                        <p className="text-gray-400 max-w-4xl text-sm leading-relaxed">
-                            The AEON Digital Twin maintains a living knowledge graph of <span className="text-white">millions of entities</span>—libraries, CVEs, equipment, systems, applications, suppliers, and communication pathways.
-                            Our <span className="text-red-400">Gated Graph Neural Network (GGNN)</span> navigates up to 20 relationship hops to discover attack paths that no human analyst could trace.
-                        </p>
+                        <p className="text-gray-400 max-w-4xl text-sm leading-relaxed" dangerouslySetInnerHTML={{ __html: t.agentRed.traversal.description }} />
                     </div>
 
                     {/* The Core Value Proposition */}
                     <div className="relative z-10 grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
                         <div className="bg-black/40 border border-white/10 rounded-xl p-6">
                             <div className="text-red-500 text-3xl font-black mb-2">Level 0</div>
-                            <div className="text-white font-bold mb-2">Reference Architecture</div>
-                            <p className="text-gray-500 text-sm">Sector-specific templates: Power grids, water treatment, rail systems—the baseline design patterns for critical infrastructure.</p>
+                            <div className="text-white font-bold mb-2">{t.agentRed.traversal.cards.l0.title}</div>
+                            <p className="text-gray-500 text-sm">{t.agentRed.traversal.cards.l0.desc}</p>
                         </div>
                         <div className="bg-black/40 border border-white/10 rounded-xl p-6">
                             <div className="text-orange-500 text-3xl font-black mb-2">Level 1</div>
-                            <div className="text-white font-bold mb-2">Your Actual Environment</div>
-                            <p className="text-gray-500 text-sm">Your equipment, your architecture, your operations—every PLC, every library, every supplier relationship mapped and contextualized.</p>
+                            <div className="text-white font-bold mb-2">{t.agentRed.traversal.cards.l1.title}</div>
+                            <p className="text-gray-500 text-sm">{t.agentRed.traversal.cards.l1.desc}</p>
                         </div>
                         <div className="bg-black/40 border border-white/10 rounded-xl p-6">
                             <div className="text-oxot-gold text-3xl font-black mb-2">GGNN</div>
-                            <div className="text-white font-bold mb-2">McKenney-Lacan Calculus</div>
-                            <p className="text-gray-500 text-sm">AI-powered graph traversal that models attacker behavior, exploits exponential relationship complexity, and predicts 20-hop attack chains.</p>
+                            <div className="text-white font-bold mb-2">{t.agentRed.traversal.cards.ggnn.title}</div>
+                            <p className="text-gray-500 text-sm">{t.agentRed.traversal.cards.ggnn.desc}</p>
                         </div>
                     </div>
 
@@ -507,49 +491,49 @@ export default function AgentRedPage() {
                     <div className="relative z-10 bg-black/50 border border-white/10 rounded-xl p-8 mb-8">
                         <div className="flex flex-col lg:flex-row items-center gap-8">
                             <div className="flex-1">
-                                <h4 className="text-lg font-bold text-white mb-4">Exponential Attack Surface Discovery</h4>
+                                <h4 className="text-lg font-bold text-white mb-4">{t.agentRed.traversal.complexity.title}</h4>
                                 <div className="space-y-3 text-sm">
                                     <div className="flex items-center gap-4">
-                                        <span className="text-red-400 font-mono w-20">1 Library</span>
+                                        <span className="text-red-400 font-mono w-20">{t.agentRed.traversal.complexity.l1.label}</span>
                                         <div className="flex-1 bg-white/5 rounded-full h-2"><div className="bg-red-500 h-2 rounded-full" style={{ width: '5%' }}></div></div>
-                                        <span className="text-gray-500">→ 10 direct dependencies</span>
+                                        <span className="text-gray-500">{t.agentRed.traversal.complexity.l1.desc}</span>
                                     </div>
                                     <div className="flex items-center gap-4">
-                                        <span className="text-orange-400 font-mono w-20">5 Hops</span>
+                                        <span className="text-orange-400 font-mono w-20">{t.agentRed.traversal.complexity.l5.label}</span>
                                         <div className="flex-1 bg-white/5 rounded-full h-2"><div className="bg-orange-500 h-2 rounded-full" style={{ width: '25%' }}></div></div>
-                                        <span className="text-gray-500">→ 10,000 entity relationships</span>
+                                        <span className="text-gray-500">{t.agentRed.traversal.complexity.l5.desc}</span>
                                     </div>
                                     <div className="flex items-center gap-4">
-                                        <span className="text-oxot-gold font-mono w-20">10 Hops</span>
+                                        <span className="text-oxot-gold font-mono w-20">{t.agentRed.traversal.complexity.l10.label}</span>
                                         <div className="flex-1 bg-white/5 rounded-full h-2"><div className="bg-oxot-gold h-2 rounded-full" style={{ width: '50%' }}></div></div>
-                                        <span className="text-gray-500">→ 1M+ potential pathways</span>
+                                        <span className="text-gray-500">{t.agentRed.traversal.complexity.l10.desc}</span>
                                     </div>
                                     <div className="flex items-center gap-4">
-                                        <span className="text-white font-mono w-20 font-bold">20 Hops</span>
+                                        <span className="text-white font-mono w-20 font-bold">{t.agentRed.traversal.complexity.l20.label}</span>
                                         <div className="flex-1 bg-white/5 rounded-full h-2"><div className="bg-gradient-to-r from-oxot-red via-oxot-gold to-oxot-gold h-2 rounded-full" style={{ width: '100%' }}></div></div>
-                                        <span className="text-white font-bold">→ Billions of attack vectors</span>
+                                        <span className="text-white font-bold">{t.agentRed.traversal.complexity.l20.desc}</span>
                                     </div>
                                 </div>
                             </div>
                             <div className="w-px h-32 bg-white/10 hidden lg:block"></div>
                             <div className="lg:w-80 text-center lg:text-left">
                                 <div className="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-yellow-500">20</div>
-                                <div className="text-white font-bold">Reasoning Hops</div>
-                                <p className="text-gray-500 text-xs mt-2">From a single vulnerable library to physical process failure—discovered in milliseconds.</p>
+                                <div className="text-white font-bold">{t.agentRed.traversal.complexity.hops}</div>
+                                <p className="text-gray-500 text-xs mt-2">{t.agentRed.traversal.complexity.hopsDesc}</p>
                             </div>
                         </div>
                     </div>
 
                     {/* Example Attack Chain */}
                     <div className="relative z-10">
-                        <h4 className="text-sm font-mono text-red-400 mb-4 uppercase tracking-widest">Example: Supply Chain → SCADA Attack Path</h4>
+                        <h4 className="text-sm font-mono text-red-400 mb-4 uppercase tracking-widest">{t.agentRed.traversal.chain.title}</h4>
                         <div className="grid grid-cols-2 md:grid-cols-5 gap-2">
                             {[
-                                { hop: '1-3', label: 'Vuln Library', icon: <FileCode className="w-4 h-4" /> },
-                                { hop: '4-8', label: 'Transitive Deps', icon: <GitBranch className="w-4 h-4" /> },
-                                { hop: '9-12', label: 'App Servers', icon: <Database className="w-4 h-4" /> },
-                                { hop: '13-17', label: 'OT Bridge', icon: <Network className="w-4 h-4" /> },
-                                { hop: '18-20', label: 'PLC Impact', icon: <AlertTriangle className="w-4 h-4" /> }
+                                { hop: '1-3', label: t.agentRed.traversal.chain.steps.vuln, icon: <FileCode className="w-4 h-4" /> },
+                                { hop: '4-8', label: t.agentRed.traversal.chain.steps.deps, icon: <GitBranch className="w-4 h-4" /> },
+                                { hop: '9-12', label: t.agentRed.traversal.chain.steps.servers, icon: <Database className="w-4 h-4" /> },
+                                { hop: '13-17', label: t.agentRed.traversal.chain.steps.bridge, icon: <Network className="w-4 h-4" /> },
+                                { hop: '18-20', label: t.agentRed.traversal.chain.steps.impact, icon: <AlertTriangle className="w-4 h-4" /> }
                             ].map((step, i) => (
                                 <div key={i} className="bg-black/40 border border-white/10 rounded-lg p-3 text-center hover:border-red-500/50 transition-colors">
                                     <div className="text-red-400 font-mono text-xs mb-1">Hop {step.hop}</div>
@@ -567,13 +551,13 @@ export default function AgentRedPage() {
                 <section>
                     <div className="mb-12">
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-950/30 border border-red-900/20 text-red-400 text-xs font-mono tracking-widest mb-6">
-                            <Crosshair className="w-3 h-3" /> ATTACK SIMULATION LIBRARY
+                            <Crosshair className="w-3 h-3" /> {t.agentRed.scenarios.badge}
                         </div>
                         <h3 className="text-2xl font-black text-white mb-4">
-                            GOLDEN <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-500">SCENARIOS</span>
+                            {t.agentRed.scenarios.title} <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-500">{t.agentRed.scenarios.titleHighlight}</span>
                         </h3>
                         <p className="text-gray-400 max-w-3xl">
-                            Pre-built, high-fidelity attack simulations mapped to real-world adversary tradecraft. Each scenario is designed to stress-test specific detection, response, and recovery capabilities.
+                            {t.agentRed.scenarios.description}
                         </p>
                     </div>
 
@@ -586,7 +570,7 @@ export default function AgentRedPage() {
                                         <FileCode className="w-6 h-6 text-red-500" />
                                     </div>
                                     <div>
-                                        <h4 className="text-xl font-bold text-white">Supply Chain Injection</h4>
+                                        <h4 className="text-xl font-bold text-white">{t.agentRed.scenarios.cards.supply.title}</h4>
                                         <div className="text-xs font-mono text-red-400">MITRE ATT&CK: T1195.001</div>
                                     </div>
                                 </div>
@@ -594,22 +578,22 @@ export default function AgentRedPage() {
                             </div>
 
                             <p className="text-gray-400 text-sm mb-6 leading-relaxed">
-                                Simulates an attacker compromising your software supply chain via typosquatted NPM/PyPI packages. The malicious package is ingested by your CI/CD pipeline, granting the attacker code execution on build servers and, ultimately, production environments.
+                                {t.agentRed.scenarios.cards.supply.desc}
                             </p>
 
                             <div className="mb-6">
-                                <h5 className="text-xs font-mono text-gray-500 uppercase tracking-widest mb-3">Kill Chain Execution</h5>
+                                <h5 className="text-xs font-mono text-gray-500 uppercase tracking-widest mb-3">{t.agentRed.scenarios.killChainTitle}</h5>
                                 <div className="space-y-2">
-                                    <div className="flex gap-3 text-sm"><span className="text-red-500 font-mono font-bold">01</span><span className="text-gray-300"><strong className="text-white">RECON:</strong> Identify internal package names via leaked package-lock.json or job postings mentioning specific libraries.</span></div>
-                                    <div className="flex gap-3 text-sm"><span className="text-red-500 font-mono font-bold">02</span><span className="text-gray-300"><strong className="text-white">WEAPONIZE:</strong> Publish a typosquatted package (e.g., `lodasg` instead of `lodash`) with a malicious `postinstall` script.</span></div>
-                                    <div className="flex gap-3 text-sm"><span className="text-red-500 font-mono font-bold">03</span><span className="text-gray-300"><strong className="text-white">DELIVER:</strong> Wait for a developer or CI/CD system to `npm install` the malicious package.</span></div>
-                                    <div className="flex gap-3 text-sm"><span className="text-red-500 font-mono font-bold">04</span><span className="text-gray-300"><strong className="text-white">EXPLOIT:</strong> Gain RCE on the build server, exfiltrate secrets (AWS keys, API tokens), and inject backdoors into production artifacts.</span></div>
+                                    <div className="flex gap-3 text-sm"><span className="text-red-500 font-mono font-bold">01</span><span className="text-gray-300"><strong className="text-white">{t.agentRed.scenarios.cards.supply.steps.recon.label}:</strong> {t.agentRed.scenarios.cards.supply.steps.recon.desc}</span></div>
+                                    <div className="flex gap-3 text-sm"><span className="text-red-500 font-mono font-bold">02</span><span className="text-gray-300"><strong className="text-white">{t.agentRed.scenarios.cards.supply.steps.weaponize.label}:</strong> {t.agentRed.scenarios.cards.supply.steps.weaponize.desc}</span></div>
+                                    <div className="flex gap-3 text-sm"><span className="text-red-500 font-mono font-bold">03</span><span className="text-gray-300"><strong className="text-white">{t.agentRed.scenarios.cards.supply.steps.deliver.label}:</strong> {t.agentRed.scenarios.cards.supply.steps.deliver.desc}</span></div>
+                                    <div className="flex gap-3 text-sm"><span className="text-red-500 font-mono font-bold">04</span><span className="text-gray-300"><strong className="text-white">{t.agentRed.scenarios.cards.supply.steps.exploit.label}:</strong> {t.agentRed.scenarios.cards.supply.steps.exploit.desc}</span></div>
                                 </div>
                             </div>
 
                             <div className="bg-black/40 border border-white/5 rounded-lg p-4">
-                                <h5 className="text-xs font-mono text-red-400 uppercase tracking-widest mb-2">Strategic Impact</h5>
-                                <p className="text-gray-500 text-xs">Tests SCA tooling, dependency verification, and CI/CD hardening. Exposes gaps in software provenance and SBOM integrity.</p>
+                                <h5 className="text-xs font-mono text-red-400 uppercase tracking-widest mb-2">{t.agentRed.scenarios.impactTitle}</h5>
+                                <p className="text-gray-500 text-xs">{t.agentRed.scenarios.cards.supply.impact}</p>
                             </div>
                         </div>
 
@@ -621,7 +605,7 @@ export default function AgentRedPage() {
                                         <Eye className="w-6 h-6 text-orange-500" />
                                     </div>
                                     <div>
-                                        <h4 className="text-xl font-bold text-white">The Insider Threat</h4>
+                                        <h4 className="text-xl font-bold text-white">{t.agentRed.scenarios.cards.insider.title}</h4>
                                         <div className="text-xs font-mono text-orange-400">MITRE ATT&CK: T1020, T1078</div>
                                     </div>
                                 </div>
@@ -629,22 +613,22 @@ export default function AgentRedPage() {
                             </div>
 
                             <p className="text-gray-400 text-sm mb-6 leading-relaxed">
-                                Simulates a disgruntled or compromised employee with legitimate credentials. The "insider" uses their valid access to slowly exfiltrate sensitive data over weeks, blending into normal network traffic to avoid detection by DLP and SIEM systems.
+                                {t.agentRed.scenarios.cards.insider.desc}
                             </p>
 
                             <div className="mb-6">
-                                <h5 className="text-xs font-mono text-gray-500 uppercase tracking-widest mb-3">Kill Chain Execution</h5>
+                                <h5 className="text-xs font-mono text-gray-500 uppercase tracking-widest mb-3">{t.agentRed.scenarios.killChainTitle}</h5>
                                 <div className="space-y-2">
-                                    <div className="flex gap-3 text-sm"><span className="text-orange-500 font-mono font-bold">01</span><span className="text-gray-300"><strong className="text-white">ACCESS:</strong> Utilize valid credentials (T1078). No exploitation needed; the attacker is already inside.</span></div>
-                                    <div className="flex gap-3 text-sm"><span className="text-orange-500 font-mono font-bold">02</span><span className="text-gray-300"><strong className="text-white">COLLECTION:</strong> Access SharePoint, Confluence, and internal Git repos. Download sensitive design docs and customer lists.</span></div>
-                                    <div className="flex gap-3 text-sm"><span className="text-orange-500 font-mono font-bold">03</span><span className="text-gray-300"><strong className="text-white">STAGING:</strong> Archive collected data into encrypted ZIPs. Rename files to benign names (`meeting_notes.zip`).</span></div>
-                                    <div className="flex gap-3 text-sm"><span className="text-orange-500 font-mono font-bold">04</span><span className="text-gray-300"><strong className="text-white">EXFIL:</strong> Exfiltrate via HTTPS to a personal cloud storage (Dropbox, Google Drive) during normal business hours.</span></div>
+                                    <div className="flex gap-3 text-sm"><span className="text-orange-500 font-mono font-bold">01</span><span className="text-gray-300"><strong className="text-white">{t.agentRed.scenarios.cards.insider.steps.access.label}:</strong> {t.agentRed.scenarios.cards.insider.steps.access.desc}</span></div>
+                                    <div className="flex gap-3 text-sm"><span className="text-orange-500 font-mono font-bold">02</span><span className="text-gray-300"><strong className="text-white">{t.agentRed.scenarios.cards.insider.steps.collection.label}:</strong> {t.agentRed.scenarios.cards.insider.steps.collection.desc}</span></div>
+                                    <div className="flex gap-3 text-sm"><span className="text-orange-500 font-mono font-bold">03</span><span className="text-gray-300"><strong className="text-white">{t.agentRed.scenarios.cards.insider.steps.staging.label}:</strong> {t.agentRed.scenarios.cards.insider.steps.staging.desc}</span></div>
+                                    <div className="flex gap-3 text-sm"><span className="text-orange-500 font-mono font-bold">04</span><span className="text-gray-300"><strong className="text-white">{t.agentRed.scenarios.cards.insider.steps.exfil.label}:</strong> {t.agentRed.scenarios.cards.insider.steps.exfil.desc}</span></div>
                                 </div>
                             </div>
 
                             <div className="bg-black/40 border border-white/5 rounded-lg p-4">
-                                <h5 className="text-xs font-mono text-orange-400 uppercase tracking-widest mb-2">Strategic Impact</h5>
-                                <p className="text-gray-500 text-xs">Tests UEBA, DLP effectiveness, and data classification policies. Exposes blind spots in privileged access monitoring.</p>
+                                <h5 className="text-xs font-mono text-orange-400 uppercase tracking-widest mb-2">{t.agentRed.scenarios.impactTitle}</h5>
+                                <p className="text-gray-500 text-xs">{t.agentRed.scenarios.cards.insider.impact}</p>
                             </div>
                         </div>
 
@@ -656,7 +640,7 @@ export default function AgentRedPage() {
                                         <Zap className="w-6 h-6 text-oxot-gold" />
                                     </div>
                                     <div>
-                                        <h4 className="text-xl font-bold text-white">Ransomware Blitz</h4>
+                                        <h4 className="text-xl font-bold text-white">{t.agentRed.scenarios.cards.ransomware.title}</h4>
                                         <div className="text-xs font-mono text-oxot-gold">MITRE ATT&CK: T1486, T1489</div>
                                     </div>
                                 </div>
@@ -664,22 +648,22 @@ export default function AgentRedPage() {
                             </div>
 
                             <p className="text-gray-400 text-sm mb-6 leading-relaxed">
-                                A full-speed, "Burn the House Down" simulation. The attacker gains initial access, disables defenses, and launches simultaneous encryption routines across the network. Designed to stress-test EDR "Time to Detect" and IR playbook execution speed.
+                                {t.agentRed.scenarios.cards.ransomware.desc}
                             </p>
 
                             <div className="mb-6">
-                                <h5 className="text-xs font-mono text-gray-500 uppercase tracking-widest mb-3">Kill Chain Execution</h5>
+                                <h5 className="text-xs font-mono text-gray-500 uppercase tracking-widest mb-3">{t.agentRed.scenarios.killChainTitle}</h5>
                                 <div className="space-y-2">
-                                    <div className="flex gap-3 text-sm"><span className="text-oxot-gold font-mono font-bold">01</span><span className="text-gray-300"><strong className="text-white">ACCESS:</strong> Exploit a public-facing web application (T1190) or use phished credentials for VPN access.</span></div>
-                                    <div className="flex gap-3 text-sm"><span className="text-oxot-gold font-mono font-bold">02</span><span className="text-gray-300"><strong className="text-white">LATERAL:</strong> Use PsExec/WMI for rapid spread across Windows endpoints via SMB (T1021.002).</span></div>
-                                    <div className="flex gap-3 text-sm"><span className="text-oxot-gold font-mono font-bold">03</span><span className="text-gray-300"><strong className="text-white">INHIBIT:</strong> Stop backup services (Veeam, Acronis), delete shadow copies (vssadmin), and disable AV (T1489).</span></div>
-                                    <div className="flex gap-3 text-sm"><span className="text-oxot-gold font-mono font-bold">04</span><span className="text-gray-300"><strong className="text-white">IMPACT:</strong> Deploy ransomware payload. Encrypt all accessible file shares and drop ransom note.</span></div>
+                                    <div className="flex gap-3 text-sm"><span className="text-oxot-gold font-mono font-bold">01</span><span className="text-gray-300"><strong className="text-white">{t.agentRed.scenarios.cards.ransomware.steps.access.label}:</strong> {t.agentRed.scenarios.cards.ransomware.steps.access.desc}</span></div>
+                                    <div className="flex gap-3 text-sm"><span className="text-oxot-gold font-mono font-bold">02</span><span className="text-gray-300"><strong className="text-white">{t.agentRed.scenarios.cards.ransomware.steps.lateral.label}:</strong> {t.agentRed.scenarios.cards.ransomware.steps.lateral.desc}</span></div>
+                                    <div className="flex gap-3 text-sm"><span className="text-oxot-gold font-mono font-bold">03</span><span className="text-gray-300"><strong className="text-white">{t.agentRed.scenarios.cards.ransomware.steps.inhibit.label}:</strong> {t.agentRed.scenarios.cards.ransomware.steps.inhibit.desc}</span></div>
+                                    <div className="flex gap-3 text-sm"><span className="text-oxot-gold font-mono font-bold">04</span><span className="text-gray-300"><strong className="text-white">{t.agentRed.scenarios.cards.ransomware.steps.impact.label}:</strong> {t.agentRed.scenarios.cards.ransomware.steps.impact.desc}</span></div>
                                 </div>
                             </div>
 
                             <div className="bg-black/40 border border-white/5 rounded-lg p-4">
-                                <h5 className="text-xs font-mono text-oxot-gold uppercase tracking-widest mb-2">Strategic Impact</h5>
-                                <p className="text-gray-500 text-xs">Measures Mean Time To Detect (MTTD) and Mean Time To Respond (MTTR). Validates backup integrity and network segmentation.</p>
+                                <h5 className="text-xs font-mono text-oxot-gold uppercase tracking-widest mb-2">{t.agentRed.scenarios.impactTitle}</h5>
+                                <p className="text-gray-500 text-xs">{t.agentRed.scenarios.cards.ransomware.impact}</p>
                             </div>
                         </div>
 
@@ -691,7 +675,7 @@ export default function AgentRedPage() {
                                         <Network className="w-6 h-6 text-oxot-blue" />
                                     </div>
                                     <div>
-                                        <h4 className="text-xl font-bold text-white">OT/ICS Bridge Jump</h4>
+                                        <h4 className="text-xl font-bold text-white">{t.agentRed.scenarios.cards.ot.title}</h4>
                                         <div className="text-xs font-mono text-oxot-blue-light">MITRE ATT&CK for ICS: T0886</div>
                                     </div>
                                 </div>
@@ -699,22 +683,22 @@ export default function AgentRedPage() {
                             </div>
 
                             <p className="text-gray-400 text-sm mb-6 leading-relaxed">
-                                Simulates an attacker pivoting from the corporate IT network to Operational Technology (OT) networks controlling physical processes. The goal is to reach SCADA/ICS systems via dual-homed engineering workstations or misconfigured network paths.
+                                {t.agentRed.scenarios.cards.ot.desc}
                             </p>
 
                             <div className="mb-6">
-                                <h5 className="text-xs font-mono text-gray-500 uppercase tracking-widest mb-3">Kill Chain Execution</h5>
+                                <h5 className="text-xs font-mono text-gray-500 uppercase tracking-widest mb-3">{t.agentRed.scenarios.killChainTitle}</h5>
                                 <div className="space-y-2">
-                                    <div className="flex gap-3 text-sm"><span className="text-oxot-blue-light font-mono font-bold">01</span><span className="text-gray-300"><strong className="text-white">ACCESS:</strong> Spearphish an OT engineer with a tailored lure (fake P&ID diagram, vendor patch notice).</span></div>
-                                    <div className="flex gap-3 text-sm"><span className="text-oxot-blue-light font-mono font-bold">02</span><span className="text-gray-300"><strong className="text-white">DISCOVERY:</strong> Scan internal network to identify dual-homed hosts bridging IT/OT (Historian servers, Jump Hosts).</span></div>
-                                    <div className="flex gap-3 text-sm"><span className="text-oxot-blue-light font-mono font-bold">03</span><span className="text-gray-300"><strong className="text-white">PIVOT:</strong> Compromise the Jump Host. Use its OT-side NIC to access the SCADA network segment.</span></div>
-                                    <div className="flex gap-3 text-sm"><span className="text-oxot-blue-light font-mono font-bold">04</span><span className="text-gray-300"><strong className="text-white">CONTROL:</strong> Send unauthorized commands to a PLC (T0836), causing a physical process disruption (e.g., open a valve, trip a relay).</span></div>
+                                    <div className="flex gap-3 text-sm"><span className="text-oxot-blue-light font-mono font-bold">01</span><span className="text-gray-300"><strong className="text-white">{t.agentRed.scenarios.cards.ot.steps.access.label}:</strong> {t.agentRed.scenarios.cards.ot.steps.access.desc}</span></div>
+                                    <div className="flex gap-3 text-sm"><span className="text-oxot-blue-light font-mono font-bold">02</span><span className="text-gray-300"><strong className="text-white">{t.agentRed.scenarios.cards.ot.steps.discovery.label}:</strong> {t.agentRed.scenarios.cards.ot.steps.discovery.desc}</span></div>
+                                    <div className="flex gap-3 text-sm"><span className="text-oxot-blue-light font-mono font-bold">03</span><span className="text-gray-300"><strong className="text-white">{t.agentRed.scenarios.cards.ot.steps.pivot.label}:</strong> {t.agentRed.scenarios.cards.ot.steps.pivot.desc}</span></div>
+                                    <div className="flex gap-3 text-sm"><span className="text-oxot-blue-light font-mono font-bold">04</span><span className="text-gray-300"><strong className="text-white">{t.agentRed.scenarios.cards.ot.steps.control.label}:</strong> {t.agentRed.scenarios.cards.ot.steps.control.desc}</span></div>
                                 </div>
                             </div>
 
                             <div className="bg-black/40 border border-white/5 rounded-lg p-4">
-                                <h5 className="text-xs font-mono text-oxot-blue-light uppercase tracking-widest mb-2">Strategic Impact</h5>
-                                <p className="text-gray-500 text-xs">Validates IT/OT segmentation, DMZ integrity, and ICS-specific monitoring. Exposes risks in converged environments per IEC 62443.</p>
+                                <h5 className="text-xs font-mono text-oxot-blue-light uppercase tracking-widest mb-2">{t.agentRed.scenarios.impactTitle}</h5>
+                                <p className="text-gray-500 text-xs">{t.agentRed.scenarios.cards.ot.impact}</p>
                             </div>
                         </div>
                     </div>

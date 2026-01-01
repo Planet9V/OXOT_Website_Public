@@ -1,7 +1,5 @@
-'use client'
-
-import E27View from '@/components/E27View';
+import { redirect } from 'next/navigation';
 
 export default function LogicPage() {
-  return <E27View />;
+  redirect('/core');
 }

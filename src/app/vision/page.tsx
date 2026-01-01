@@ -83,8 +83,8 @@ export default function Home() {
           <div className="relative z-10 w-full max-w-[1600px] -mt-32">
 
             <PageHeader
-              title="AEON CYBER DIGITAL TWIN"
-              subtitle="The Operating System for Sovereign Critical Infrastructure."
+              title={t.vision.hero.title}
+              subtitle={t.vision.hero.subtitle}
               variant="hero"
               accent="gold"
               className="mb-12"
@@ -95,7 +95,7 @@ export default function Home() {
               <div className="mb-4 flex justify-center">
                 <span className="text-oxot-blue/60 text-[10px] font-mono font-bold tracking-[0.4em] flex items-center gap-3 uppercase">
                   <span className="w-1.5 h-1.5 bg-oxot-blue rounded-full animate-pulse"></span>
-                  OXOT TITAN // v2.4.1 [ONLINE]
+                  {t.vision.hero.versionStatus}
                 </span>
               </div>
 
@@ -179,6 +179,11 @@ export default function Home() {
           variant="blue"
           headline={t.vision.cta.headline}
           subheadline={t.vision.cta.subheadline}
+          serviceOptions={[
+            { value: 'consult', label: t.vision.cta.serviceOptions.consult, color: 'blue' },
+            { value: 'demo', label: t.vision.cta.serviceOptions.demo, color: 'cyan' },
+            { value: 'access', label: t.vision.cta.serviceOptions.access, color: 'gold' }
+          ]}
         />
 
       </motion.div>

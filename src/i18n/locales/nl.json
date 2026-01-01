@@ -30,7 +30,11 @@
             "aboutOxot": "Over OXOT",
             "strategicPlanning": "Strategische Planning",
             "servicesPortfolio": "Dienstenportfolio",
-            "apiEnhancements": "API Verbeteringen"
+            "apiEnhancements": "API Verbeteringen",
+            "brandingGuidelines": "Merkrichtlijnen",
+            "businessPitchDeck": "Zakelijke Presentatie",
+            "chatBot": "AI-Assistent",
+            "osintReport": "OSINT Rapport"
         }
     },
     "brand": {
@@ -63,9 +67,19 @@
         "whyOxotDescription": "Wij combineren diepgaande OT/ICS expertise met AI-ondersteunde analysemogelijkheden die geen traditioneel adviesbureau kan evenaren."
     },
     "vision": {
+        "hero": {
+            "title": "AEON CYBER DIGITAL TWIN",
+            "subtitle": "Het Besturingssysteem voor Soevereine Kritieke Infrastructuur.",
+            "versionStatus": "OXOT TITAN // v2.4.1 [ONLINE]"
+        },
         "cta": {
             "headline": "De toekomst behoort toe aan de voorbereiden.",
-            "subheadline": "Sluit u aan bij organisaties die bouwen aan soevereine digitale immuniteit."
+            "subheadline": "Sluit u aan bij organisaties die bouwen aan soevereine digitale immuniteit.",
+            "serviceOptions": {
+                "consult": "Strategisch Overleg",
+                "demo": "Platform Demo",
+                "access": "Early Access Programma"
+            }
         }
     },
     "agentBlue": {
@@ -75,6 +89,309 @@
         }
     },
     "agentRed": {
+        "hero": {
+            "title": "AGENT RED LEADER",
+            "subtitle": "SUBMIND ORCHESTRATOR // Autonoom. Doelgericht. Meedogenloos.",
+            "description": "Een volledig autonome vijandige submind uitgerust met de volledige mogelijkheden van Kali Linux. Geef het een doel, stel de Rules of Engagement in, en het <span class=\"text-red-500 font-bold border-b border-red-500/50\">zal</span> een weg vinden.",
+            "scroll": "Scroll om te Initialiseren"
+        },
+        "predator": {
+            "badge": "ADVERSARIAL CORE",
+            "title": "DE ULTIEME",
+            "titleHighlight": "PREDATOR.",
+            "description": "Red Leader is geen script. Het is een dynamische, denkende entiteit. Het bouwt aangepaste dreigingsmodellen op basis van de specifieke architectuur van het doelwit en gebruikt vervolgens de AEON Core om aanvalsvectoren te brainstormen met Gated Graph Neural Networks.",
+            "cards": {
+                "kali": {
+                    "title": "Volledig Kali Linux Arsenaal",
+                    "desc": "Natieve toegang tot Metasploit, Nmap, Burp Suite en aangepaste exploits. Het voert niet alleen tools uit; het begrijpt hun output en koppelt ze aan elkaar."
+                },
+                "gnn": {
+                    "title": "gGNN Brainstorming",
+                    "desc": "Gebruikt Gated Graph Neural Networks om statuspropagatie over de doeltopologie te modelleren en identificeert niet-voor de hand liggende aanvalspaden die standaard traversal mist."
+                },
+                "swarm": {
+                    "title": "Zwerm Divergentie Theorie",
+                    "desc": "Zet diverse UAV-neurale netwerken in met divergente agenten. Gebruikt adaptieve consensus algoritmen om lokale optima te vermijden en garandeert wiskundig convergentie op het meest verwoestende aanvalspad."
+                }
+            },
+            "terminal": {
+                "init": "$ init_sequence --target=\"Energie_Sector_Grid_A\"",
+                "target": "[+] Doelwit Verkregen: Industrieel Controlesysteem (ICS)",
+                "analysis": "[+] Architectuuranalyse: Siemens S7-1500 Gedetecteerd",
+                "scan": "[+] Kwetsbaarheidsscan: CVE-2024-XXXX (Kritiek)",
+                "optimization": "[!] GNN Optimalisatie: Aanvalspad #472 Geselecteerd (Waarschijnlijkheid: 98.2%)",
+                "instantiating": "[>] Submind Initialiseren: \"Signal Phantom\" voor Draadloze Toegang..."
+            }
+        },
+        "squad": {
+            "tickerLabel": "LIVE DREIGINGSFEED",
+            "ticker": {
+                "critical": "KRITIEK: APT29 laterale beweging gedetecteerd in Sector 4",
+                "warning": "WAARSCHUWING: Zero-day exploit geïdentificeerd in OpenSSL 3.0.1",
+                "alert": "ALARM: Nieuwe ransomware-variant 'BlackBastion' richt zich op gezondheidszorg",
+                "system": "SYSTEEM: Neurale rooster herkalibratie bezig...",
+                "intel": "INTEL: Dark web chatter wijst op aanstaande aanval op energienetwerk"
+            },
+            "title": "RED LEADER ESKADER",
+            "sections": {
+                "personas": {
+                    "title": "AUTONOME SUBMIND PERSONAS",
+                    "desc": "Agent Red voert niet alleen scripts uit; het creëert <strong>Subminds</strong>. Dit zijn autonome agenten met verschillende persoonlijkheden, doelen en capaciteiten, geschikt voor het doel.",
+                    "agents": {
+                        "wraith": {
+                            "role": "Externe Pivot",
+                            "desc": "Gespecialiseerd in cloudinfrastructuur. Zet 'Drive-by' websites en gecompromitteerde S3-buckets op om doelwitten te lokken."
+                        },
+                        "phantom": {
+                            "role": "Draadloze Interceptor",
+                            "desc": "Zet 'Evil Twin' SSID's in. Vangt handshakes op en misleidt gebruikers naar neppe bedrijfsportalen."
+                        },
+                        "mole": {
+                            "role": "Interne Pivot",
+                            "desc": "Living off the land. Draait Responder & Bloodhound om AD-paden in kaart te brengen. Beweegt lateraal zonder malware."
+                        },
+                        "sandbox": {
+                            "role": "Virtualisatie Engine",
+                            "desc": "Start exacte replica's van doelhardware voor veilige exploit-tests vóór live-implementatie."
+                        }
+                    }
+                },
+                "provisioning": {
+                    "title": "ZELF-PROVISIONING INFRASTRUCTUUR",
+                    "desc": "De Subminds hebben de bevoegdheid om hun eigen infrastructuur in de echte wereld te provisioneren en kleine subminds te installeren op gecompromitteerde infrastructuur om lateraal te bewegen.",
+                    "items": {
+                        "global": {
+                            "title": "Wereldwijde Aanwezigheid",
+                            "desc": "Een Red One Leader kan een submind starten in een specifieke AWS-regio (bijv. us-east-1) om een aanvaller vanuit die geografie te simuleren."
+                        },
+                        "tool": {
+                            "title": "Tool Synthese",
+                            "desc": "De submind kan tools downloaden (nmap, metasploit, sqlmap), afhankelijkheden installeren en zijn eigen omgeving configureren."
+                        },
+                        "code": {
+                            "title": "Code Synthese",
+                            "desc": "Met behulp van een ingebouwde LLM die is geoptimaliseerd voor offensieve beveiliging, kan de submind on-the-fly aangepaste Python-, Go- of Rust-scripts schrijven."
+                        }
+                    }
+                },
+                "simulation": {
+                    "title": "BACKEND DOELSIMULATIE (DE CYBER RANGE)",
+                    "desc": "Wanneer een doelomgeving is geïdentificeerd (bijv. een specifieke GitHub-repo, een container image of een firmware blob), start Agent Red een <strong>daadwerkelijke replica</strong> van de doelserver in de backend.",
+                    "cards": {
+                        "sandbox": {
+                            "title": "Sandboxed Analyse",
+                            "desc": "Voert volledige broncodeanalyse en dynamische tests uit in een veilige, geïsoleerde omgeving."
+                        },
+                        "exploit": {
+                            "title": "Exploit Verificatie",
+                            "desc": "Vindt kwetsbaarheden en test exploits tegen de replica <em>voordat</em> ze tegen het live doel worden ingezet."
+                        },
+                        "validation": {
+                            "title": "Zero-Risk Validatie",
+                            "desc": "Dit zorgt ervoor dat \"destructieve\" tests kunnen worden uitgevoerd zonder de werkelijke productieomgeving in gevaar te brengen."
+                        }
+                    }
+                }
+            }
+        },
+        "graph": {
+            "title": "DIEPE KENNIS",
+            "titleHighlight": "GRAAF INTEGRATIE",
+            "cards": {
+                "osint": {
+                    "title": "DIEPE OSINT & DARK WEB",
+                    "items": {
+                        "rfp": {
+                            "title": "Publieke RFP's:",
+                            "desc": "Analyseert RFP's om specifieke technologieën te identificeren (bijv. \"Op zoek naar Cisco ISE-leverancier\")."
+                        },
+                        "jobs": {
+                            "title": "Vacatures:",
+                            "desc": "Schraapt vacaturesites om tech-stacks af te leiden (bijv. \"Gezocht: Kubernetes Expert\")."
+                        },
+                        "profiling": {
+                            "title": "Werknemersprofilering:",
+                            "desc": "Brengt de organigram in kaart via LinkedIn om belangrijke doelwitten te identificeren."
+                        },
+                        "darkweb": {
+                            "title": "Dark Web:",
+                            "desc": "Monitort marktplaatsen voor gestolen inloggegevens en \"Toegang te Koop\"."
+                        }
+                    }
+                },
+                "supply": {
+                    "title": "SUPPLY CHAIN INLICHTINGEN",
+                    "items": {
+                        "suppliers": {
+                            "title": "Gemeenschappelijke Leveranciers:",
+                            "desc": "Kent het \"Gedeelde Lot\" van de sector. Als SolarWinds wordt getroffen, weet het wie er wordt getroffen."
+                        },
+                        "manuals": {
+                            "title": "Handleidingen:",
+                            "desc": "Verwerkt duizenden PDF-handleidingen op zoek naar standaardwachtwoorden (admin/1234) en verborgen debug-poorten."
+                        }
+                    }
+                }
+            },
+            "sectors": {
+                "title": "DE 16 KRITIEKE INFRASTRUCTUURSECTOREN",
+                "desc": "Agent Red beschikt over een vooraf geladen bibliotheek van architectuurpatronen voor alle 16 sectoren. Het \"weet\" hoe een typische faciliteit eruitziet, inclusief apparatuur, processen, leveranciers, werking, facilitaire lay-outs en veelvoorkomende zwakke punten."
+            }
+        },
+        "traversal": {
+            "badge": "AEON CORE CAPACITEIT",
+            "title": "20-Hop",
+            "titleHighlight": "Kennisgraaf",
+            "suffix": "Traversal",
+            "description": "De AEON Digital Twin onderhoudt een levende kennisgraaf van <span class=\"text-white\">miljoenen entiteiten</span>—bibliotheken, CVE's, apparatuur, systemen, applicaties, leveranciers en communicatiepaden. Ons <span class=\"text-red-400\">Gated Graph Neural Network (GGNN)</span> navigates tot 20 relatie-hops om aanvalspaden te ontdekken die geen enkele menselijke analist zou kunnen traceren.",
+            "cards": {
+                "l0": {
+                    "title": "Referentie Architectuur",
+                    "desc": "Sector-specifieke sjablonen: elektriciteitsnetten, waterzuivering, spoorwegsystemen—de basisontwerppatronen voor kritieke infrastructuur."
+                },
+                "l1": {
+                    "title": "Uw Werkelijke Omgeving",
+                    "desc": "Uw apparatuur, uw architectuur, uw operaties—elke PLC, elke bibliotheek, elke leveranciersrelatie in kaart gebracht en gecontextualiseerd."
+                },
+                "ggnn": {
+                    "title": "McKenney-Lacan Calculus",
+                    "desc": "AI-aangedreven graaf-traversal die aanvallersgedrag modelleert, exponentiële relatiecomplexiteit benut en 20-hop aanvalsketens voorspelt."
+                }
+            },
+            "complexity": {
+                "title": "Exponentiële Aanvalsoppervlak Ontdekking",
+                "l1": {
+                    "label": "1 Bibliotheek",
+                    "desc": "→ 10 directe afhankelijkheden"
+                },
+                "l5": {
+                    "label": "5 Hops",
+                    "desc": "→ 10.000 entiteitsrelaties"
+                },
+                "l10": {
+                    "label": "10 Hops",
+                    "desc": "→ 1M+ potentiële paden"
+                },
+                "l20": {
+                    "label": "20 Hops",
+                    "desc": "→ Miljarden aanvalsvectoren"
+                },
+                "hops": "Redeneer Hops",
+                "hopsDesc": "Van een enkele kwetsbare bibliotheek naar fysieke procesuitval—ontdekt in milliseconden."
+            },
+            "chain": {
+                "title": "Voorbeeld: Supply Chain → SCADA Aanvalspad",
+                "steps": {
+                    "vuln": "Kwetsb Bib",
+                    "deps": "Transitieve Afh",
+                    "servers": "App Servers",
+                    "bridge": "OT Brug",
+                    "impact": "PLC Impact"
+                }
+            }
+        },
+        "scenarios": {
+            "badge": "AANVALSSIMULATIE BIBLIOTHEEK",
+            "title": "GOLDEN",
+            "titleHighlight": "SCENARIOS",
+            "description": "Vooraf gebouwde, high-fidelity aanvalssimulaties die in kaart zijn gebracht met echte vijandige tradecraft. Elk scenario is ontworpen om specifieke detectie-, respons- en herstelmogelijkheden te stresstesten.",
+            "killChainTitle": "Kill Chain Uitvoering",
+            "impactTitle": "Strategische Impact",
+            "cards": {
+                "supply": {
+                    "title": "Supply Chain Injectie",
+                    "desc": "Simuleert een aanvaller die uw software-supply chain compromitteert via getyposquatte NPM/PyPI-pakketten. Het schadelijke pakket wordt opgenomen door uw CI/CD-pijplijn, waardoor de aanvaller code-uitvoering krijgt op buildservers en uiteindelijk productieomgevingen.",
+                    "steps": {
+                        "recon": {
+                            "label": "RECON",
+                            "desc": "Identificeer interne pakketnamen via gelekte package-lock.json of vacatures die specifieke bibliotheken noemen."
+                        },
+                        "weaponize": {
+                            "label": "WAPENEN",
+                            "desc": "Publiceer een getyposquat pakket (bijv. `lodasg` in plaats van `lodash`) met een schadelijk `postinstall` script."
+                        },
+                        "deliver": {
+                            "label": "LEVEREN",
+                            "desc": "Wacht tot een ontwikkelaar of CI/CD-systeem het schadelijke pakket installeert (`npm install`)."
+                        },
+                        "exploit": {
+                            "label": "EXPLOITEREN",
+                            "desc": "Verkrijg RCE op de buildserver, exfiltreer geheimen (AWS-sleutels, API-tokens) en injecteer achterdeurtjes in productieartefacten."
+                        }
+                    },
+                    "impact": "Test SCA-tooling, verificatie van afhankelijkheden en CI/CD-verharding. Legt hiaten bloot in softwareherkomst en SBOM-integriteit."
+                },
+                "insider": {
+                    "title": "De Insider Bedreiging",
+                    "desc": "Simuleert een ontevreden of gecompromitteerde werknemer met legitieme inloggegevens. De \"insider\" gebruikt zijn geldige toegang om over een periode van weken langzaam gevoelige gegevens te exfiltreren, opgaand in normaal netwerkverkeer om detectie door DLP- en SIEM-systemen te voorkomen.",
+                    "steps": {
+                        "access": {
+                            "label": "TOEGANG",
+                            "desc": "Gebruik geldige inloggegevens (T1078). Geen exploitatie nodig; de aanvaller is al binnen."
+                        },
+                        "collection": {
+                            "label": "VERZAMELING",
+                            "desc": "Toegang tot SharePoint, Confluence en interne Git-repo's. Download gevoelige ontwerpdocumenten en klantenlijsten."
+                        },
+                        "staging": {
+                            "label": "STAGING",
+                            "desc": "Archiveer verzamelde gegevens in versleutelde ZIP's. Hernoem bestanden naar goedaardige namen (`vergadering_notities.zip`)."
+                        },
+                        "exfil": {
+                            "label": "EXFIL",
+                            "desc": "Exfiltreer via HTTPS naar een persoonlijke cloudopslag (Dropbox, Google Drive) tijdens normale kantooruren."
+                        }
+                    },
+                    "impact": "Test UEBA, DLP-effectiviteit en gegevensclassificatiebeleid. Legt blinde vlekken bloot in monitoring van geprivilegieerde toegang."
+                },
+                "ransomware": {
+                    "title": "Ransomware Blitz",
+                    "desc": "Een full-speed simulatie. De aanvaller verkrijgt initiële toegang, schakelt verdedigingen uit en lanceert gelijktijdige encryptieroutines over het netwerk. Ontworpen om EDR \"Time to Detect\" en IR-playbook uitvoeringssnelheid te stresstesten.",
+                    "steps": {
+                        "access": {
+                            "label": "TOEGANG",
+                            "desc": "Exploiteer een openbaar gerichte webapplicatie (T1190) of gebruik gephishte inloggegevens voor VPN-toegang."
+                        },
+                        "lateral": {
+                            "label": "LATERAAL",
+                            "desc": "Gebruik PsExec/WMI voor snelle verspreiding over Windows-endpoints via SMB (T1021.002)."
+                        },
+                        "inhibit": {
+                            "label": "REMMEN",
+                            "desc": "Stop back-updiensten (Veeam, Acronis), verwijder schaduwkopieën (vssadmin) en schakel AV uit (T1489)."
+                        },
+                        "impact": {
+                            "label": "IMPACT",
+                            "desc": "Implementeer ransomware-payload. Versleutel alle toegankelijke bestandsshares en plaats losgeldbrief."
+                        }
+                    },
+                    "impact": "Meet Mean Time To Detect (MTTD) en Mean Time To Respond (MTTR). Valideert back-upintegriteit en netwerksegmentatie."
+                },
+                "ot": {
+                    "title": "OT/ICS Bridge Jump",
+                    "desc": "Simuleert een aanvaller die pivot van het zakelijke IT-netwerk naar Operationele Technologie (OT) netwerken die fysieke processen besturen. Het doel is om SCADA/ICS-systemen te bereiken via dual-homed engineering-werkstations of verkeerd geconfigureerde netwerkpaden.",
+                    "steps": {
+                        "access": {
+                            "label": "TOEGANG",
+                            "desc": "Spearphish een OT-ingenieur met een op maat gemaakt lokaas (nep P&ID-diagram, patchmelding van leverancier)."
+                        },
+                        "discovery": {
+                            "label": "ONTDEKKING",
+                            "desc": "Scan intern netwerk om dual-homed hosts te identificeren die IT/OT overbruggen (Historian-servers, Jump Hosts)."
+                        },
+                        "pivot": {
+                            "label": "PIVOT",
+                            "desc": "Compromitteer de Jump Host. Gebruik zijn OT-kant NIC om toegang te krijgen tot het SCADA-netwerksegment."
+                        },
+                        "control": {
+                            "label": "CONTROLE",
+                            "desc": "Stuur ongeautoriseerde commando's naar een PLC (T0836), wat een fysieke procesverstoring veroorzaakt (bijv. klep openen)."
+                        }
+                    },
+                    "impact": "Valideert IT/OT-segmentatie, DMZ-integriteit en ICS-specifieke monitoring. Legt risico's bloot in geconvergeerde omgevingen volgens IEC 62443."
+                }
+            }
+        },
         "cta": {
             "headline": "Uw tegenstanders zijn al aan het werk.",
             "subheadline": "Bent u klaar om te zien wat zij zien?"
@@ -234,6 +551,44 @@
         }
     },
     "nis2": {
+        "hero": {
+            "badge": "EU NIS2 Richtlijn Naleving",
+            "title": "De Nieuwe Standaard",
+            "subtitle": "voor Kritieke Veerkracht.",
+            "description": "Sinds oktober 2024 verplicht NIS2 cyberbeveiligingsmaatregelen voor essentiële en belangrijke entiteiten. Wij zorgen ervoor dat u niet alleen compliant bent, maar juridisch verdedigbaar."
+        },
+        "services": {
+            "gap": {
+                "title": "Hiatenanalyse & Gereedheid",
+                "desc": "Uitgebreide evaluatie van uw huidige cyberbeveiliging tegen NIS2-vereisten"
+            },
+            "policy": {
+                "title": "Beleid & Procedure Ontwikkeling",
+                "desc": "Ontwikkeling van compliant beveiligingsbeleid, procedures en bestuurskaders"
+            },
+            "tech": {
+                "title": "Technische Implementatie",
+                "desc": "Implementatie van beveiligingscontroles, monitoringsystemen en beschermende maatregelen"
+            },
+            "incident": {
+                "title": "Incident Response Programma",
+                "desc": "Bouwen en testen van incidentdetectie, respons en notificatiecapaciteiten"
+            },
+            "supply": {
+                "title": "Supply Chain Risicobeheer",
+                "desc": "Beoordeling en beheer van beveiligingsrisico's bij derden en leveranciers"
+            },
+            "audit": {
+                "title": "Audit & Certificering Ondersteuning",
+                "desc": "Voorbereiding op regelgevende audits en compliance certificering"
+            }
+        },
+        "differentiators": {
+            "experience": "Jaren OT/ICS Beveiligingservaring",
+            "certified": "Gecertificeerde Expertise",
+            "clients": "Kritieke Infrastructuur Klanten",
+            "response": "Incident Response Capaciteit"
+        },
         "cta": {
             "headline": "Klaar voor NIS2-naleving?",
             "subheadline": "Wacht niet op handhavingsacties. Krijg deskundige begeleiding om naleving te bereiken en te behouden.",
@@ -245,6 +600,27 @@
         }
     },
     "iec62443": {
+        "hero": {
+            "badge": "IEC 62443 Educatief Overzicht",
+            "title": "De Wereldwijde Standaard",
+            "highlight": "voor Industriële Veiligheid.",
+            "subtitle": "",
+            "stats": {
+                "documents": {
+                    "value": "14",
+                    "label": "Onderling verbonden documenten in 4 series."
+                },
+                "level": {
+                    "value": "SL-4",
+                    "label": "Maximale Beveiligingsniveau voor statelijke dreigingen."
+                },
+                "requirements": {
+                    "value": "7 FRs",
+                    "label": "Fundamentele Vereisten van toegang tot beschikbaarheid."
+                }
+            },
+            "scroll": "Scroll om te Ontdekken"
+        },
         "cta": {
             "headline": "Klaar voor Certificering?",
             "subheadline": "70% van de IEC 62443-fouten komt door verkeerd begrepen vereisten. Krijg deskundige voorbereiding.",
@@ -255,6 +631,69 @@
         }
     },
     "workshop": {
+        "hero": {
+            "badge": "Interactive Training Platform",
+            "title": "IEC 62443",
+            "titleHighlight": "Workshop Portal",
+            "subtitle": "Hands-on tools for risk assessment, architecture design, and compliance management. Explore the suite of AEON Cyber Digital Twin artifacts below."
+        },
+        "architecture": {
+            "title": "Digital Twin Architecture",
+            "subtitle": "LAYER_0: Component-Level Infrastructure Modeling",
+            "cards": {
+                "zones": {
+                    "title": "Zones & Conduits",
+                    "desc": "Visualize IEC 62443 security zones with SL color-coding. Click components to drill into SBOM details."
+                },
+                "traceability": {
+                    "title": "SBOM Traceability",
+                    "desc": "Trace vulnerabilities from CVE → Library → Interface → Sub-Component → System → Facility."
+                },
+                "epss": {
+                    "title": "EPSS Integration",
+                    "desc": "Real-time exploit probability scores for every library in your OT infrastructure."
+                }
+            },
+            "twinCore": {
+                "label": "Digital Twin Core // TIER III"
+            }
+        },
+        "workflow": {
+            "title": "IEC 62443 Workflow Architect",
+            "desc": "A dedicated Kanban-style tool for Suppliers and Integrators to manage Asset Risk, Implementation, and Verification phases.",
+            "badge": "SUPPORTING_ARTIFACT_02"
+        },
+        "canvas": {
+            "title": "Interactive Engineering Canvas",
+            "desc": "A complete IEC 62443 zone architecture with 45+ assets across 8 security zones. The canvas shows the integration between AEON Cloud (Digital Twin Core), the on-premise Blue Team Server, and the customer's IT/OT infrastructure from enterprise DMZ down to Level 0 process equipment.",
+            "legend": {
+                "aeon": {
+                    "title": "AEON Cloud",
+                    "desc": "Core, Red/Gold Team, Threat Intel, Simulation Engine"
+                },
+                "blue": {
+                    "title": "Blue Team Server",
+                    "desc": "Local Twin, Telemetry Store, Decision Engine, Collector"
+                },
+                "diode": {
+                    "title": "Data Diode",
+                    "desc": "Unidirectional gateway for threat intel into OT environment"
+                },
+                "ot": {
+                    "title": "OT Assets",
+                    "desc": "SCADA, PLCs, HMIs, Generators, Chillers, BMS, PDUs"
+                }
+            },
+            "interaction": "Interaction: Drag to pan • Scroll to zoom • Click any asset for details. The Blue Team Server autonomously processes telemetry and makes local decisions, while syncing insights to AEON Cloud for advanced simulation, research, and crisis management support."
+        },
+        "editor": {
+            "title": "Zone & Conduit Editor",
+            "desc": "Design your own secure zones and validate protocols against the reference library."
+        },
+        "compliance": {
+            "title": "Compliance Matrix",
+            "desc": "IEC 62443-3-3 System Requirements aligned with Foundational Requirements."
+        },
         "cta": {
             "headline": "Klaar voor praktijktraining?",
             "subheadline": "Volg workshops onder leiding van experts met deze tools in uw eigen systemen.",
@@ -285,18 +724,207 @@
         }
     },
     "about": {
+        "hero": {
+            "badge": "Soevereine Intelligentie // Amsterdam, Nederland",
+            "title": "Over",
+            "titleHighlight": "OXOT",
+            "description": "Vanuit het hart van Europa bouwen wij het immuunsysteem voor 's werelds meest kritieke infrastructuur.",
+            "locations": {
+                "hq": "Amsterdam HQ",
+                "global": "Wereldwijde Operaties",
+                "sectors": "16 Kritieke Sectoren"
+            }
+        },
+        "origin": {
+            "title": "Onze Oorsprong",
+            "subtitle": "EEN MISSIE, GEEN BAAN",
+            "p1": "OXOT is ontstaan uit het besef binnen Europese defensiekringen: bestaande cybersecurity tools waren reactief, gefragmenteerd en fundamenteel ondergeschikt aan de dreigingen.",
+            "p2": "We besloten iets anders te bouwen—een Digitale Tweeling die aanvallen kon voorspellen voordat ze plaatsvonden, door miljoenen scenario's per seconde te simuleren.",
+            "p3": "Vandaag beschermen we nationale energienetten, wereldwijde logistieke ketens en financiële systemen met een platform dat niet alleen blokkeert, maar anticipeert."
+        },
+        "leadership": {
+            "title": "Leiderschap",
+            "subtitle": "VETERANEN VAN CYBEROORLOGVOERING",
+            "roles": {
+                "ceo": {
+                    "name": "Dr. Adriaan van der Berg",
+                    "title": "Oprichter & CEO",
+                    "bio": "Voormalig NAVO Cyber Command. 15+ jaar bescherming van Europese kritieke infrastructuur. PhD in Computationele Dreigingsmodellering.",
+                    "credibility": "Ex-NAVO Cyber Command"
+                },
+                "cto": {
+                    "name": "Elena Kowalski",
+                    "title": "Chief Technology Officer",
+                    "bio": "Voormalig Hoofdingenieur bij een Fortune 50 defensie aannemer. Maker van de E27 Voorspellingsmachine. Auteur van 12 patenten in vijandige ML.",
+                    "credibility": "12 Patenten in AI/ML"
+                },
+                "cio": {
+                    "name": "Marcus Chen",
+                    "title": "Chief Intelligence Officer",
+                    "bio": "20 jaar in inlichtingen (SIGINT) bij Five Eyes landen. Pionierde psychometrische profilering voor cyberattributie.",
+                    "credibility": "Ex-Five Eyes Intel"
+                },
+                "coo": {
+                    "name": "Ingrid Müller",
+                    "title": "Chief Operations Officer",
+                    "bio": "Voormalig SOC Directeur voor een Europese netbeheerder. Leed incident response tijdens meerdere aanvallen van statelijke actoren.",
+                    "credibility": "Netbeveiliging Expert"
+                }
+            }
+        },
+        "values": {
+            "title": "Onze Waarden",
+            "subtitle": "DE CODE WAAR WE NAAR LEVEN",
+            "list": {
+                "sovereignty": {
+                    "title": "Soevereiniteit Eerst",
+                    "desc": "Wij geloven dat naties en kritieke organisaties hun eigen inlichtingen- en beveiligingsarchitectuur moeten bezitten."
+                },
+                "privacy": {
+                    "title": "Privacy by Design",
+                    "desc": "Onze Digital Twin modelleert metadata en gedrag, geen PII. We beschermen systemen zonder de rechten van mensen aan te tasten."
+                },
+                "resilience": {
+                    "title": "Radicale Veerkracht",
+                    "desc": "Systemen moeten ontworpen zijn om veilig te falen en direct te herstellen. We bouwen altijd voor het worst-case scenario."
+                },
+                "transparency": {
+                    "title": "Transparantie",
+                    "desc": "Geen black boxes. Onze klanten begrijpen precies hoe onze AI tot conclusies komt, wat zorgt voor verantwoording en vertrouwen."
+                }
+            }
+        },
         "cta": {
-            "headline": "Begin uw soevereine reis.",
-            "subheadline": "Werk samen met de toonaangevende cyberdefensiepraktijk van Amsterdam.",
+            "headline": "Begin Uw Soevereine Reis.",
+            "subheadline": "Partner met Amsterdam's Premier Cyber Defense Practice.",
             "serviceOptions": {
-                "blue": "Blue Team Defensie",
+                "blue": "Blue Team Verdediging",
                 "gold": "Strategisch Advies Gold",
                 "red": "Red Team Offensief",
-                "general": "Algemene Aanvraag"
+                "general": "Algemene Vraag"
             }
         }
     },
     "socV2": {
+        "hero": {
+            "mind": {
+                "badge": "The Symbolic Order // Cloud Strategy",
+                "title": "AEON Core",
+                "subtitle": "Mathematically Perfected Strategy • Massive Compute • Borromean Stability"
+            },
+            "synapse": {
+                "predictive": "Predictive Models",
+                "telemetry": "Telemetry"
+            },
+            "body": {
+                "badge": "The Real Register // Edge Physics",
+                "title": "Agent Blue",
+                "subtitle": "Autonomous Reflex • Millisecond Response • Data Sovereignty"
+            },
+            "overlay": {
+                "bicameral": "Bi-Cameral",
+                "defense": "Defense"
+            }
+        },
+        "origins": {
+            "badge": "Industrial Origins",
+            "title": "The 'Factory Model' of Cybersecurity",
+            "p1": "In modern Smart Manufacturing (e.g., at Olam Food Ingredients or Siemens factories), there is a critical distinction between \"Edge Autonomy\" and \"Cloud Analytics\".",
+            "p2": "A robotic arm on an assembly line cannot wait for the cloud to tell it to stop if a safety sensor is tripped—it must have a spinal reflex (Edge). However, the decision to retool the line for a new product requires massive data analysis (Cloud).",
+            "p3": "AEON applies this exact physics to cybersecurity. Agent Blue is the \"Factory Floor\" reflex—stopping attacks in milliseconds. AEON Core is the \"Headquarters\" strategy—analyzing global patterns to predict the next war.",
+            "card": {
+                "title": "Edge-Cloud Duality",
+                "edge": {
+                    "label": "EDGE (The Real):",
+                    "desc": "Reflex Actions (<5ms)"
+                },
+                "cloud": {
+                    "label": "CLOUD (The Symbolic):",
+                    "desc": "Strategic Calculus (Global)"
+                }
+            }
+        },
+        "calculus": {
+            "badge": "McKenney-Lacan Psychometrics",
+            "title": "The Calculus of Defense",
+            "desc": "Traditional security ignores the \"Real\" Register — the traumatic, invisible breaches that evade symbolic logs. AEON's Bi-Cameral Architecture is mathematically proven to maintain topological stability.",
+            "real": {
+                "label": "THE REAL (R)",
+                "desc": "The \"impossible\" breach that Agent Blue intercepts before it becomes a symbol."
+            },
+            "stability": {
+                "label": "BORROMEAN STABILITY",
+                "desc": "Ensuring R, S, and I registers remain interlocked to prevent Seldon Crises."
+            }
+        },
+        "multiplier": {
+            "title": "The",
+            "titleHighlight": "Force Multiplier",
+            "desc": "We don't just replace; we augment. Whether you have 0 analysts or 50, AEON integrates to exponentially increase your defensive capacity.",
+            "toggles": {
+                "copilot": "Mode A: Co-Pilot",
+                "autopilot": "Mode B: Autopilot"
+            },
+            "copilot": {
+                "badge": "Augmentation Protocol",
+                "title": "Supercharge Your Team",
+                "desc": "Agent Blue connects to your existing SIEM (Splunk, Sentinel, QRadar). It acts as a \"Tier 3 Analyst in a Box\", whispering answers to your human team.",
+                "features": [
+                    "Automated Threat Hunting",
+                    "Auto-Generated Incident Reports",
+                    "False Positive Reduction (-70%)"
+                ],
+                "stat": {
+                    "value": "5x",
+                    "label": "Analyst Capacity"
+                }
+            },
+            "autopilot": {
+                "badge": "Replacement Protocol",
+                "title": "We Take The Keys.",
+                "desc": "You hand the keys to us. Agent Blue handles the site, AEON Core handles the strategy, and our SOC watches the glass. Zero operational overhead for you.",
+                "features": [
+                    "Full Managed Detection & Response",
+                    "Liability Shift & Insurance",
+                    "Guaranteed 15-min Response"
+                ],
+                "stat": {
+                    "value": "24/7",
+                    "label": "Coverage"
+                }
+            }
+        },
+        "modules": {
+            "title": "Active Defense Modules",
+            "badge": "SYS.MOD.LOADED",
+            "cards": {
+                "telemetry": {
+                    "title": "Telemetrie-Mirroring",
+                    "desc": "Directe high-fidelity telemetrie-injectie vanuit uw SIEM in de E27 Prediction Engine.",
+                    "tags": [
+                        "Splunk",
+                        "Sentinel",
+                        "Elastic"
+                    ]
+                },
+                "profiling": {
+                    "title": "Psychometrische Profilering",
+                    "desc": "Verrijk standaard indicatoren met psychologie van de tegenstander. Begrijp 'wie' en 'waarom'.",
+                    "tags": [
+                        "Big 5 Kenmerken",
+                        "Dark Triad"
+                    ]
+                },
+                "validation": {
+                    "title": "Red Leader Validatie",
+                    "desc": "Continue validatie met Red Squadron Leader - scenario-gebaseerde emulatie.",
+                    "tags": [
+                        "APT-emulatie",
+                        "Statelijke Actoren"
+                    ]
+                }
+            }
+        },
         "cta": {
             "headline": "Co-piloot of Autopiloot?",
             "subheadline": "Kies het betrokkenheidsmodel dat bij uw volwassenheid past. Beide worden aangedreven door Agent Blue.",
@@ -738,5 +1366,512 @@
             "Latijns-Amerika",
             "Wereldwijd / Multi-Regio"
         ]
+    },
+    "osint": {
+        "navigation": {
+            "securityIntelligence": "Beveiligingsinlichtingen",
+            "strategicAnalysis": "Strategische Analyse",
+            "corporateStructure": "Bedrijfsstructuur",
+            "technicalDeepDives": "Technische Diepte-analyses",
+            "securityHub": "Security Hub",
+            "securityHubDesc": "Risicobeoordeling & Bedreigingsmodellering",
+            "redTeamDossier": "Red Team Dossier",
+            "redTeamDossierDesc": "Vijandelijk Perspectief & Aanvalsvectoren",
+            "technologyIntel": "Technologie Informatie",
+            "technologyIntelDesc": "Tech Stack & Kwetsbaarheidsanalyse",
+            "strategicMindMap": "Strategische Mind Map",
+            "strategicMindMapDesc": "Interactief Strategisch Afstemmingscanvas",
+            "nis2": "NIS2/Panopticon",
+            "nis2Desc": "Supply Chain Nalevingsprotocol",
+            "gtmStrategy": "GTM Strategie",
+            "gtmStrategyDesc": "AEON Service Afstemming",
+            "cyberThreatGtm": "Cyber Bedreiging GTM",
+            "cyberThreatGtmDesc": "Industriële Cyber Weerbaarheidsstrategie",
+            "executiveReport": "Directierapportage",
+            "executiveReportDesc": "Geconsolideerd Inlichtingenoverzicht",
+            "shanghaiFeed": "Shanghai FEED Specs",
+            "shanghaiFeedDesc": "IEC 62443 Ontwerpvereisten",
+            "groupStructure": "Groepsstructuur",
+            "groupStructureDesc": "Olam Group Dochterondernemingen & Reorganisatie",
+            "structureIntel": "Structuurinlichtingen",
+            "structureIntelDesc": "Gedetailleerde Bedrijfsanatomie & Voetafdruk",
+            "aiPartnerships": "AI Partnerschappen",
+            "aiPartnershipsDesc": "Technologiepartners & Cybersecurity",
+            "braincube": "Braincube Analyse",
+            "braincubeDesc": "IIoT Platform & Beveiligingsbeoordeling",
+            "thirdPartyRisk": "Derden Risico",
+            "thirdPartyRiskDesc": "Braincube OT Aanvalsvector",
+            "dairyFacility": "Zuivelfabriek Architectuur",
+            "dairyFacilityDesc": "NZ/AU Verwerkingsfabriek Engineering",
+            "menuTitle": "INTEL_NAVIGATOR",
+            "menuSubtitle": "OFI OSINT Rapportmodules",
+            "returnToOverview": "TERUG NAAR OSINT OVERZICHT",
+            "new": "NIEUW"
+        },
+        "report": {
+            "title": "OSINT RAPPORT",
+            "subtitle": "INLICHTINGEN DASHBOARD",
+            "company": {
+                "name": "Olam Food Ingredients (ofi)",
+                "shortName": "ofi",
+                "industry": "Voedselingrediënten & Landbouwverwerking",
+                "sector": "Landbouw & Voedselproductie",
+                "founded": "1989 (Olam Group)",
+                "incorporated": "Singapore",
+                "headquarters": "Singapore (Wereldwijd) / Londen (Commercieel)",
+                "employees": "12.000+",
+                "revenue": "S$10.5B (2024)",
+                "ebit": "S$1.07B (2024)",
+                "parent": "Olam Group Limited",
+                "website": "www.ofi.com",
+                "classification": "OSINT // ONGECLASSIFICEERD // COMMERCIEEL",
+                "reportDate": "01-01-2025",
+                "reportId": "OSINT-OFI-2025-001"
+            },
+            "labels": {
+                "companyOverview": "BEDRIJFSOVERZICHT",
+                "financialHealth": "FINANCIËLE GEZONDHEID",
+                "globalFootprint": "WERELDWIJDE VOETAFDRUK",
+                "digitalRiskProfile": "DIGITAAL RISICOPROFIEL",
+                "keyLeadership": "BELANGRIJKSTE LEIDERSCHAP",
+                "strategicPriorities": "STRATEGISCHE PRIORITEITEN",
+                "subsidiaries": "DOCHTERONDERNEMINGEN",
+                "techStack": "TECH STACK",
+                "riskAssessment": "RISICOBEOORDELING"
+            },
+            "metrics": {
+                "revenue": "Omzet",
+                "ebit": "EBIT (2024)",
+                "employees": "Werknemers",
+                "countries": "Landen",
+                "processingFacilities": "Verwerkingsfaciliteiten",
+                "innovationCentres": "Innovatiecentra",
+                "externalIPs": "Externe IP's",
+                "exposedServices": "Blootgestelde Services",
+                "leakedCredentials": "Gelekte Inloggegevens"
+            },
+            "risk": {
+                "critical": "KRITIEK",
+                "high": "HOOG",
+                "medium": "GEMIDDELD",
+                "low": "LAAG"
+            },
+            "footer": {
+                "title": "AEON INLICHTINGENDIENST",
+                "endOfReport": "EINDE RAPPORT // OFFICIEEL GEVERIFIEERD"
+            },
+            "intelligence": {
+                "title": "Bedrijfsinlichtingen",
+                "subtitle": "Geconsolideerd inlichtingenoverzicht van Olam Food Ingredients (ofi) - structuur, schaal, strategie en risicolandschap",
+                "executive": {
+                    "title": "Management Samenvatting",
+                    "identity": "Olam Food Ingredients (ofi) - onderscheidende bedrijfsgroep binnen Olam Group Limited, opgericht in 2020",
+                    "purpose": "\"De verandering zijn voor goed voedsel en een gezonde toekomst\"",
+                    "platforms": {
+                        "cocoa": "Cacao",
+                        "coffee": "Koffie",
+                        "dairy": "Zuivel",
+                        "nuts": "Noten",
+                        "spices": "Specerijen"
+                    },
+                    "scale": {
+                        "plants": "Fabrieken",
+                        "innovation": "Innovatiecentra",
+                        "farmers": "Boeren"
+                    }
+                },
+                "entities": {
+                    "title": "Belangrijkste Operationele Entiteiten",
+                    "ofi": {
+                        "role": "Voornaamste bedrijfsgroep",
+                        "focus": "Ingrediënten met toegevoegde waarde via 5 platforms"
+                    },
+                    "mindsprint": {
+                        "role": "Interne technologiemotor",
+                        "focus": "3.200+ professionals, AI, cyberbeveiliging (GuardianEye)"
+                    },
+                    "jiva": {
+                        "role": "Digitaal dienstenplatform voor boeren (GESLOTEN aug 2025)",
+                        "focus": "Kasconservatie, 606 werknemers getroffen"
+                    },
+                    "terrascope": {
+                        "role": "SaaS voor koolstofmeting",
+                        "focus": "ESG-diensten, land/natuur/net-zero"
+                    }
+                },
+                "subsidiaries": {
+                    "title": "Netwerk van Dochterondernemingen",
+                    "headers": {
+                        "name": "Dochteronderneming",
+                        "location": "Locatie",
+                        "function": "Functie"
+                    },
+                    "list": {
+                        "clubCoffee": {
+                            "function": "Toonaangevende koffiebrander op maat in Noord-Amerika"
+                        },
+                        "seda": {
+                            "function": "Fabriek voor oploskoffie"
+                        },
+                        "unicao": {
+                            "function": "Cacaoverwerking"
+                        },
+                        "macao": {
+                            "function": "Cacaomaling en laboratoriumfaciliteit"
+                        },
+                        "na": {
+                            "function": "Verenigd hoofdkantoor VS"
+                        },
+                        "cocoaBV": {
+                            "function": "Belangrijke Europese dochteronderneming"
+                        },
+                        "cocoaDE": {
+                            "function": "Belangrijke Europese dochteronderneming"
+                        },
+                        "locations": {
+                            "toronto": "Toronto, Canada",
+                            "palencia": "Palencia, Spanje",
+                            "abidjan": "Abidjan, Ivoorkust",
+                            "valencia": "Valencia, Spanje",
+                            "chicago": "Chicago, VS",
+                            "netherlands": "Nederland",
+                            "germany": "Duitsland"
+                        }
+                    }
+                },
+                "facilities": {
+                    "title": "Operationele Voetafdruk",
+                    "regions": {
+                        "na": "Noord-Amerika",
+                        "europe": "Europa",
+                        "apac": "Azië-Pacific",
+                        "africaLatam": "Afrika & Latijns-Amerika"
+                    }
+                },
+                "chronology": {
+                    "title": "Chronologie van Belangrijke Gebeurtenissen",
+                    "events": {
+                        "compass": "Lancering Cocoa Compass duurzaamheidsinitiatief",
+                        "ofiEst": "ofi formeel opgericht als bedrijfsgroep",
+                        "tokoroa": "Fase 1 van Tokoroa Zuivelfabriek geopend (Nieuw-Zeeland)",
+                        "mightyEarth": "Mighty Earth rapport over cacao-uitdagingen in Ghana",
+                        "salic": "Verkoop van 44,58% belang in Olam Agri aan SALIC",
+                        "jivaClose": "Strategische sluiting van Jiva Ag platform",
+                        "eudr": "deadline voor EUDR-naleving (KRITIEK)"
+                    }
+                },
+                "discrepancies": {
+                    "title": "Brontegenstrijdigheden",
+                    "intro": "Tegenstrijdige informatie geïdentificeerd in openbare bronnen:",
+                    "fields": {
+                        "employees": "Aantal Werknemers",
+                        "farmers": "Boerennetwerk",
+                        "innovation": "Innovatiecentra"
+                    }
+                }
+            },
+            "groupStructure": {
+                "header": {
+                    "title": "GROEPSSTRUCTUUR",
+                    "subtitle": "Bedrijfsanatomie & Analyse Dochterondernemingen",
+                    "back": "Terug naar OSINT Rapport"
+                },
+                "hierarchy": {
+                    "title": "Analyse Bedrijfsstructuur",
+                    "desc": "Olam Group Limited reorganiseerde in 2020 in drie afzonderlijke bedrijfsgroepen om langetermijnwaarde te ontsluiten: <strong> ofi (Olam Food Ingredients)</strong>, <strong>Olam Agri</strong> en de <strong>Resterende Olam Group</strong>. Deze scheiding heeft geleid tot verschillende operationele technologische voetafdrukken en cyberrisicoprofielen voor elke entiteit."
+                },
+                "digitalLayer": {
+                    "title": "Digitale & Innovatielaag",
+                    "desc": "<strong>Mindsprint (voorheen OTBS)</strong> fungeert als de digitale motor voor de groep en levert IT, cyberbeveiliging (GuardianEye) en gedeelde diensten. Het is een cruciaal knooppunt in de digitale supply chain van de groep en bedient zowel ofi als Olam Agri.",
+                    "link": "Bekijk Technologie Stack"
+                },
+                "geoComplexity": {
+                    "title": "Geografische Complexiteit",
+                    "desc": "De groep is actief in meer dan 60 landen. <strong>ofi</strong> heeft een sterke aanwezigheid in Europa en Noord- en Zuid-Amerika (ingrediënten met toegevoegde waarde), terwijl <strong>Olam Agri</strong> domineert in Azië en Afrika (voedingsmiddelen met groot volume). EUDR en NIS2-regelgeving hebben specifiek invloed op de Europese verwerkingshubs.",
+                    "link": "Bekijk Nalevingsstatus"
+                }
+            },
+            "orgMap": {
+                "root": {
+                    "label": "Olam Group Limited",
+                    "role": "Holdingmaatschappij"
+                },
+                "ofi": {
+                    "label": "ofi (Olam Food Ingredients)",
+                    "role": "Ingrediënten met Toegevoegde Waarde"
+                },
+                "agri": {
+                    "label": "Olam Agri",
+                    "role": "Voedselzekerheid & Logistiek"
+                },
+                "remaining": {
+                    "label": "Resterende Olam Group",
+                    "role": "Incubator & Nalatenschap"
+                },
+                "divisions": {
+                    "cocoa": {
+                        "label": "Cacao",
+                        "role": "Verwerking & Innovatie"
+                    },
+                    "coffee": {
+                        "label": "Koffie",
+                        "role": "Oplosbaar & Supply Chain"
+                    },
+                    "dairy": {
+                        "label": "Zuivel",
+                        "role": "Wereldwijde Verwerking"
+                    },
+                    "spices": {
+                        "label": "Specerijen",
+                        "role": "Productie"
+                    },
+                    "grains": {
+                        "label": "Granen & Oliën",
+                        "role": "Handel & Maling"
+                    },
+                    "freight": {
+                        "label": "Vrachtbeheer",
+                        "role": "Logistieke Derivaten"
+                    },
+                    "cotton": {
+                        "label": "Vezel & Katoen",
+                        "role": "Ginning & Opslag"
+                    },
+                    "mindsprint": {
+                        "label": "Mindsprint",
+                        "role": "Digitale Diensten & Cyber"
+                    },
+                    "nupo": {
+                        "label": "Nupo Ventures",
+                        "role": "Incubatie (Jiva, Terrascope)"
+                    }
+                },
+                "interaction": "INTERACTIEVE HIERARCHIE KAART // KLIK OP KNOPEN OM TE VOUWEN OF NAVIGEREN"
+            }
+        },
+        "executive": {
+            "title": "OFI Inlichtingenrapport",
+            "subtitle": "Geconsolideerd Inlichtingenoverzicht",
+            "backButton": "Terug naar OSINT Rapport",
+            "summary": {
+                "title": "1. MANAGEMENT SAMENVATTING",
+                "intro": "Dit rapport biedt een geconsolideerd inlichtingenoverzicht van <span class=\"text-white font-semibold\">Olam Food Ingredients (ofi)</span>, een belangrijke en evoluerende entiteit binnen de wereldwijde markt voor voedingsingrediënten. Gevormd door een strategische reorganisatie van de Olam Group, heeft ofi zich gevestigd als een gespecialiseerde, klantgerichte leverancier van ingrediënten met toegevoegde waarde.",
+                "coreIdentity": {
+                    "title": "Kernidentiteit",
+                    "desc": "Apart opererend concern binnen Olam Group Limited (2020). Kernactiviteit: cacao, koffie, zuivel, noten en specerijen. Doel: \"de verandering zijn voor goed voedsel en een gezonde toekomst.\""
+                },
+                "operationalScale": {
+                    "title": "Operationele Schaal",
+                    "desc": "120+ productielocaties, 19 innovatiecentra, netwerk van ~2,4 miljoen boeren. Verticaal geïntegreerd van inkoop tot geavanceerde verwerking."
+                },
+                "strategicDirection": {
+                    "title": "Strategische Richting",
+                    "desc": "Uitbreiding segment \"Ingrediënten & Oplossingen\", AtSource duurzaamheidsplatform, actieve voorbereiding op beursgang London Stock Exchange."
+                },
+                "keyRisks": {
+                    "title": "Belangrijkste Risico's",
+                    "desc": "EUDR en NIS2 regelgevende druk, volatiliteit van grondstoffenprijzen (cacao/koffie), industriële cyberdreigingen. 29% EBIT-groei toont veerkracht."
+                }
+            },
+            "anatomy": {
+                "title": "2. BEDRIJFSANATOMIE",
+                "hierarchy": {
+                    "title": "2.1 Organisatiestructuur en Belangrijkste Bedrijfsgroepen",
+                    "desc": "Na een bedrijfsreorganisatie werd ofi in 2020 formeel opgericht als een belangrijke bedrijfsgroep van Olam Group Limited, naast zusterentiteit Olam Agri."
+                },
+                "leadership": {
+                    "title": "2.2 Belangrijkste Leiderschap",
+                    "columns": {
+                        "name": "NAAM",
+                        "title": "TITEL",
+                        "unit": "AANGESLOTEN EENHEID"
+                    }
+                }
+            },
+            "footprint": {
+                "title": "3. OPERATIONELE VOETAFDRUK",
+                "hq": {
+                    "title": "3.1 Wereldwijd Hoofdkantoor",
+                    "corporate": {
+                        "title": "Zakelijk Hoofdkantoor",
+                        "desc": "7 Straits View, Marina One East Tower, Singapore"
+                    },
+                    "na": {
+                        "title": "Hoofdkantoor Noord-Amerika",
+                        "desc": "Chicago, Illinois (verenigd hoofdkantoor)"
+                    },
+                    "csc": {
+                        "title": "Klantoplossingscentra (CSCs)"
+                    }
+                },
+                "subsidiaries": {
+                    "title": "Regionale Dochterondernemingen"
+                }
+            },
+            "tech": {
+                "title": "4. TECHNISCHE & OPERATIONELE BEOORDELING",
+                "it": {
+                    "title": "4.1 Bedrijfstechnologie (IT)",
+                    "sap": {
+                        "title": "SAP S/4HANA",
+                        "desc": "Cloud Private Edition op AWS, beheerd door Mindsprint"
+                    },
+                    "atSource": {
+                        "title": "AtSource Platform",
+                        "desc": "Duurzaamheid & traceerbaarheid voor EUDR-naleving"
+                    },
+                    "guardian": {
+                        "title": "GuardianEye",
+                        "desc": "AI-gestuurde cyberverdediging & dreigingsdetectie"
+                    }
+                },
+                "ot": {
+                    "title": "4.2 Industriële & Operationele Technologie (OT)",
+                    "braincube": {
+                        "title": "Braincube IIoT",
+                        "desc": "6,5% opbrengstverhoging, 25% doorvoerverbetering, 100% kwaliteitsscores"
+                    },
+                    "rockwell": {
+                        "title": "Rockwell PlantPAx DCS",
+                        "desc": "Distributed Control System voor productie"
+                    },
+                    "aveva": {
+                        "title": "AVEVA/Wonderware SCADA",
+                        "desc": "Toezichthoudende HMI/SCADA-systemen"
+                    }
+                }
+            },
+            "chronology": {
+                "title": "5. CHRONOLOGIE VAN GEBEURTENISSEN"
+            },
+            "discrepancies": {
+                "title": "6. BRONTEGENSTRIJDIGHEDEN",
+                "intro": "In elke inlichtingencompilatie op basis van uiteenlopende openbare en interne bronnen kunnen tegenstrijdigheden ontstaan. Deze sectie identificeert transparant tegenstrijdige informatie die in de verstrekte documenten is aangetroffen."
+            },
+            "data": {
+                "orgEntities": {
+                    "ofi": {
+                        "desc": "Voornaamste bedrijfsgroep gericht op het leveren van ingrediënten met toegevoegde waarde voor voedingsmiddelen en dranken via cacao-, koffie-, zuivel-, noten- en specerijenplatforms."
+                    },
+                    "mindsprint": {
+                        "desc": "Interne technologie- en digitale dienstverleningsmotor met meer dan 3.200 professionals. Biedt AI-oplossingen, intelligente bedrijfsactiviteiten en cyberbeveiligingsdiensten via het GuardianEye-platform."
+                    },
+                    "jiva": {
+                        "desc": "Digitaal dienstverleningsplatform voor boeren ontwikkeld door Nupo Ventures. Olam kondigde sluiting aan in augustus 2025 met gevolgen voor 606 werknemers, voornamelijk in Indonesië."
+                    },
+                    "terrascope": {
+                        "desc": "Softwareplatform voor koolstofmeting en decarbonisatie van Nupo Ventures, bedient ondernemingen in de sectoren land, natuur en netto-nuleconomie."
+                    }
+                },
+                "subsidiaries": {
+                    "clubCoffee": "Koffiebranderij op maat in Noord-Amerika",
+                    "seda": "Oploskoffiefabriek",
+                    "unicao": "Cacaoverwerkingsfaciliteiten",
+                    "spain": "Cacaoverwerking Macao-merk",
+                    "na": "Activiteiten in de VS met verenigd hoofdkantoor",
+                    "cocoaBV": "Belangrijke dochteronderneming voor cacao",
+                    "cocoaDE": "Belangrijke dochteronderneming voor cacao"
+                },
+                "chronology": {
+                    "compass": "Cocoa Compass-initiatief gelanceerd",
+                    "ofiEst": "ofi formeel opgericht als afzonderlijke bedrijfsgroep",
+                    "tokoroa": "Fase 1 van Tokoroa Zuivelfabriek (NZ) geopend",
+                    "mightyEarth": "Mighty Earth Ghana cacaorapport gepubliceerd",
+                    "salic": "44,58% belang in Olam Agri verkocht aan SALIC",
+                    "jivaClose": "Sluiting Jiva Ag aangekondigd",
+                    "eudr": "EUDR-nalevingsdeadline"
+                },
+                "discrepancies": {
+                    "employee": "Olam International Factsheet vermeldt 14.975 vs LeadIQ schatting van ~10.000.",
+                    "farmer": "Jaarverslag 2024 citeert ~2,4 miljoen boeren vs Factsheet claim van 3,5 miljoen.",
+                    "innovation": "Bronnen geven 12, 15-19 en 19 (Jaarverslag 2024) als verschillende cijfers.",
+                    "stock": "LeadIQ identificeert 'TEAF' onjuist als ofi's symbool. ofi is in privébezit en bereidt zich voor op beursgang."
+                }
+            }
+        }
+    },
+    "security": {
+        "title": "CYBERSECURITY RISICO BEOORDELING",
+        "subtitle": "Dreigingslandschap, kwetsbaarheden en nalevingsstatus voor OFI-operaties",
+        "backLink": "Terug naar OSINT Rapport",
+        "overview": {
+            "riskLevel": "HOOG",
+            "sectorAttacks": "Sector Aanvallen (2024)",
+            "mitreTechniques": "MITRE ICS Technieken",
+            "criticalCves": "Kritieke CVEs",
+            "iecStatus": "IEC 62443 Status",
+            "statusInProgress": "In Uitvoering",
+            "statusPending": "In Afwachting",
+            "statusCertified": "Gecertificeerd"
+        },
+        "threatActors": {
+            "title": "Actieve Bedreigingsactoren (2024-2025)",
+            "description": "Het vierde kwartaal van 2024 zag een <span class='text-red-400 font-semibold'>118% piek</span> in ransomware-aanvallen tegen Voedsel & Landbouw. Dubbele afpersingstactieken domineren, waarbij groepen OT/ICS-systemen viseren voor maximale impact."
+        },
+        "techRisks": {
+            "title": "Samenvatting Technologierisico",
+            "risks": {
+                "braincube": {
+                    "reason": "Directe PLC-toegang, supply chain vector"
+                },
+                "rockwell": {
+                    "reason": "8 CVEs (CVSS tot 9.3)"
+                },
+                "sap": {
+                    "reason": "IT/OT grens API-blootstelling"
+                },
+                "siemens": {
+                    "reason": "Verouderde kwetsbaarheden"
+                }
+            }
+        },
+        "criticalAlert": {
+            "title": "KRITIEK: Braincube Derde partij Risico",
+            "description": "Braincube AI-platform heeft directe PLC-toegang in 120+ faciliteiten voor productie-optimalisatie. Dit creëert een potentiële supply chain aanvalsvector vergelijkbaar met SolarWinds.",
+            "tags": {
+                "poisoning": "AI Model Vergiftiging",
+                "injection": "Commando-injectie naar PLCs",
+                "exfiltration": "Formule Exfiltratie",
+                "supplyChain": "Supply Chain Aanval"
+            }
+        },
+        "subpages": {
+            "header": "GEDETAILLEERDE RAPPORTEN",
+            "mitre": {
+                "title": "MITRE ATT&CK Profiel",
+                "description": "ICS, Enterprise & Mobiele aanvalsmatrices"
+            },
+            "sectors": {
+                "title": "Sector Bedreigingen",
+                "description": "Maandelijkse aanvalsrapporten per industrie"
+            },
+            "technology": {
+                "title": "Technologie Risico's",
+                "description": "CVE database voor OFI tech stack"
+            },
+            "iec62443": {
+                "title": "IEC 62443 Naleving",
+                "description": "Shanghai CSC vereisten"
+            },
+            "attacker": {
+                "title": "Red Team Dossier",
+                "description": "Tegenstander analyse & risico's aangepaste apps"
+            }
+        },
+        "compliance": {
+            "title": "Nalevingsstatus",
+            "iec": {
+                "label": "IEC 62443",
+                "desc": "Shanghai CSC doel: Q2 2026"
+            },
+            "nis2": {
+                "label": "EU NIS2",
+                "desc": "EU faciliteiten (NL, DE, ES) binnen scope"
+            },
+            "fssc": {
+                "label": "FSSC 22000",
+                "desc": "Voedselveiligheidscertificering actief"
+            }
+        }
     }
 }

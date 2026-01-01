@@ -1,0 +1,26 @@
+This strategic intelligence report, prepared by **OXOT**, identifies the primary technology partners and internal entities responsible for the **Artificial Intelligence (AI)** and **Cybersecurity** architecture of **olam food ingredients (ofi)**. Under its "Hyper everything" digital mandate, ofi has transitioned from a traditional agribusiness to a tech-enabled solutions provider, leveraging a complex ecosystem of startups and enterprise leaders.
+
+### **I. Artificial Intelligence (AI) Partnerships**
+ofi utilizes AI across its entire "plant-to-palate" value chain, ranging from consumer trend prediction to industrial process optimization.
+
+*   **Mindsprint:** Originally Olam Group’s internal IT division, Mindsprint is now a standalone partner that serves as ofi’s primary digital engine. They have developed proprietary Generative AI (GenAI) applications, including a multi-lingual omnichannel conversational assistant for employees in remote plantations and an intelligent manufacturing AI-cloud platform that optimizes production quality by suggesting mathematically validated setpoints.
+*   **Braincube:** ofi has a strategic partnership with this French Industrial IoT provider to deploy "Product Clone" digital twin technology and AI at its flagship cocoa plants. Braincube’s CrossRank AI algorithm analyzes thousands of variables to prescribe optimal setpoints directly to production lines, resulting in a 6.5% yield increase and a 25% improvement in throughput.
+*   **Ai Palette:** ofi partners with this Singapore-based AI startup to power its consumer foresight engine. The platform uses AI to analyze social media, e-commerce, and reviews across 21 countries and 16 languages to predict flavor and category trends, which informs product development at ofi’s Customer Solution Centers.
+*   **Brightseed:** ofi Spices collaborates with this biosciences data company to utilize its **Forager® AI platform**. This AI researches complex molecular structures in black pepper to identify bioactive compounds and their potential health benefits.
+*   **SAP (Joule):** ofi uses **SAP S/4HANA** with the **Joule AI co-pilot** as its enterprise-level AI layer. This system is integrated with manufacturing execution systems to provide predictive maintenance and automated quality control for cocoa roasting and dairy pasteurization.
+*   **Beewise:** In its California almond orchards, ofi has replaced thousands of traditional hives with the **BeeHome™**, an AI and robotics-powered hive that provides automated, remote beekeeping to protect pollinators.
+*   **Terrascope:** An Olam-incubated venture, this SaaS platform uses machine learning and data science to measure Scope 3 greenhouse gas emissions across ofi’s complex supply chains.
+
+### **II. Cybersecurity Partnerships and Infrastructure**
+ofi treats cybersecurity as a board-level governance priority, particularly as it prepares for its London Stock Exchange IPO and navigates the **EU NIS2 Directive**.
+
+*   **Mindsprint (Managed Security Service Provider):** Mindsprint acts as ofi’s MSSP, managing its security operations center (SOC) and cyber defense strategies.
+*   **GuardianEye:** Mindsprint provides ofi with **GuardianEye**, an AI-powered cybersecurity platform that offers external attack surface management and 24/7 proactive threat detection.
+*   **OT Security Specialists (Claroty & Nozomi Networks):** Because ofi operates 120+ facilities with heavy industrial assets, it leverages specialized OT security tools likely from partners such as **Claroty** or **Nozomi Networks** to monitor industrial control systems (ICS) and protect the IT/OT boundary.
+*   **Fortinet & Dynatrace:** These vendors are identified as key components of the broader cybersecurity ecosystem for network security and observability.
+*   **Imperva:** ofi utilizes **Imperva** for application and edge security, protecting its digital platforms from external threats.
+*   **Nutanix:** ofi uses the **Nutanix Cloud Platform** and **Nutanix Flow** to achieve high availability and implement micro-segmentation, which prevents lateral movement of cyber threats between IT and OT zones.
+*   **Strategic Leadership:** The internal cybersecurity posture is led by **Felix Mathew** (Deputy CISO), who oversees the integration of these third-party security services with ofi’s manufacturing reality.
+
+### **III. Strategic Alignment and Cyber Risks**
+ofi’s technology partners are increasingly focused on the "Compliance Cliff," specifically the **EU Deforestation Regulation (EUDR)** 2025 deadline. Partners like **TRACT** (a traceability venture co-founded by Olam) and the **AtSource** platform are critical for providing the tamper-proof data integrity required to avoid export bans and regulatory penalties. **OXOT** has identified that the deep integration of third-party AI platforms like Braincube creates a high-value attack vector, necessitating specialized audits to ensure these AI recommendations do not become backdoors for industrial sabotage.

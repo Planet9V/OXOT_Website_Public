@@ -21,8 +21,8 @@ const sizeMap: Record<LogoSize, { width: number; height: number }> = {
 };
 
 const variantSrcMap: Record<LogoVariant, string> = {
-    default: '/OXOT3Logo_Black.png',
-    dark: '/OXOT3Logo_Black.png',
+    default: '/Logos_OXOT_Gold_White/OXOT_GW_Dark.svg',
+    dark: '/Logos_OXOT_Gold_White/OXOT_GW_Dark.svg',
     ribbon: '/OXOT_Gold_Ribbon.svg',
     'text-only': '/OXOT_Text_Only_Logo_grey.svg',
 };
