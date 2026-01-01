@@ -8,7 +8,7 @@ import {
   Zap, Shield, Globe, Layers, Sigma,
   LayoutDashboard, Briefcase, Activity,
   Terminal, Menu, X, BookOpen, Cpu,
-  Eye, Radio, Box, Building, Brain, Palette, FileSearch
+  Eye, Radio, Box, Building, Brain, Palette, FileSearch, Target
 } from 'lucide-react'
 import { BackgroundEffect } from './BackgroundEffect'
 import { LanguageSwitcher } from './ui/LanguageSwitcher'
@@ -56,6 +56,13 @@ const getNavGroups = (t: ReturnType<typeof useTranslations>['t']) => [
       { name: t.nav.links.sevenLayerTwin, path: '/architecture', icon: <Layers size={16} /> },
       { name: t.nav.links.conceptHub, path: '/concepts', icon: <Box size={16} /> },
       { name: t.nav.links.appliedTheory, path: '/theory', icon: <Brain size={16} /> },
+    ]
+  },
+  {
+    titleKey: 'campaigns',
+    title: t.nav.groups.campaigns,
+    links: [
+      { name: t.nav.links.frieslandCampina, path: '/campaigns/friesland-campina', icon: <Target size={16} />, customHover: "group-hover:text-oxot-gold group-hover:drop-shadow-[0_0_8px_rgba(245,158,11,0.6)]" },
     ]
   },
   {

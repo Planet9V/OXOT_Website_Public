@@ -13,6 +13,7 @@ export interface NavTranslations {
         advisory: string;
         coreSystems: string;
         corporate: string;
+        campaigns: string;
     };
     links: {
         goldTeam: string;
@@ -38,6 +39,7 @@ export interface NavTranslations {
         brandingGuidelines: string;
         businessPitchDeck: string;
         chatBot: string;
+        frieslandCampina: string;
     };
 }
 

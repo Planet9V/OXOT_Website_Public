@@ -9,7 +9,8 @@
             "operations": "Operaties",
             "advisory": "Advies",
             "coreSystems": "Kernsystemen",
-            "corporate": "Bedrijf"
+            "corporate": "Bedrijf",
+            "campaigns": "Strategische Campagnes"
         },
         "links": {
             "goldTeam": "Gold Team",
@@ -34,7 +35,8 @@
             "brandingGuidelines": "Merkrichtlijnen",
             "businessPitchDeck": "Zakelijke Presentatie",
             "chatBot": "AI-Assistent",
-            "osintReport": "OSINT Rapport"
+            "osintReport": "OSINT Rapport",
+            "frieslandCampina": "Project: Dairy Shield"
         }
     },
     "brand": {
