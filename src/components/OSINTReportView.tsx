@@ -4,15 +4,8 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import dynamic from 'next/dynamic';
 import Script from 'next/script';
-
-// Declare the ElevenLabs custom element type for TypeScript
-declare global {
-    namespace JSX {
-        interface IntrinsicElements {
-            'elevenlabs-convai': React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement> & { 'agent-id': string }, HTMLElement>
-        }
-    }
-}
+import VoiceReports from '@/components/osint/VoiceReports';
+import PrintableReports from '@/components/osint/PrintableReports';
 import {
     Building2, Users, Globe, Server, Package, AlertTriangle,
     MapPin, Phone, Mail, Briefcase, Shield, TrendingUp,
@@ -27,7 +20,7 @@ import { ScrollReveal } from '@/components/ScrollReveal';
 import GlobalOperationsMap from '@/components/osint/GlobalOperationsMap';
 import OSINTNavigationMenu from '@/components/osint/OSINTNavigationMenu';
 import OFIOrganizationMap from '@/components/osint/OFIOrganizationMap';
-import PrintableReports from '@/components/osint/PrintableReports';
+
 
 
 // Dynamic import for globe (client-side only) - REMOVED for Flat Map
@@ -666,6 +659,14 @@ export default function OSINTReportView() {
                 </div>
             </ScrollReveal>
 
+
+            {/* Section: Voice Reports */}
+            <ScrollReveal>
+                <section className="mb-20">
+                    <VoiceReports />
+                </section>
+            </ScrollReveal>
+
             {/* Section: Printable Reports */}
             <ScrollReveal>
                 <section className="mb-20">
@@ -805,6 +806,7 @@ export default function OSINTReportView() {
                 src="https://unpkg.com/@elevenlabs/convai-widget-embed"
                 strategy="afterInteractive"
             />
+            {/* @ts-expect-error - Custom element not fully typed in CI environment */}
             <elevenlabs-convai agent-id="agent_9601kdvywwtvfgx89pqyy9ex8s3h"></elevenlabs-convai>
         </div>
     );

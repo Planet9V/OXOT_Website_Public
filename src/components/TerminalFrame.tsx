@@ -69,7 +69,7 @@ const getNavGroups = (t: ReturnType<typeof useTranslations>['t']) => [
       { name: t.nav.links.apiEnhancements, path: '/corporate/enhancements', icon: <Zap size={16} /> },
       { name: t.nav.links.brandingGuidelines, path: '/corporate/branding', icon: <Palette size={16} />, customHover: "group-hover:text-amber-400 group-hover:drop-shadow-[0_0_8px_rgba(245,158,11,0.6)]" },
       { name: t.nav.links.businessPitchDeck, path: '/corporate/pitch-deck', icon: <Layers size={16} />, customHover: "group-hover:text-amber-400 group-hover:drop-shadow-[0_0_8px_rgba(245,158,11,0.6)]" },
-      { name: t.nav.links.chatBot, path: '/corporate/chat', icon: <Brain size={16} />, customHover: "group-hover:text-cyan-400 group-hover:drop-shadow-[0_0_8px_rgba(34,211,238,0.6)]" },
+
     ]
   }
 ]

@@ -4,14 +4,6 @@ import React from 'react'
 import Script from 'next/script'
 import { PageHeader } from '@/components/branding'
 
-// Declare the custom element type for TypeScript
-declare global {
-    namespace JSX {
-        interface IntrinsicElements {
-            'elevenlabs-convai': React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement> & { 'agent-id': string }, HTMLElement>
-        }
-    }
-}
 
 export default function ChatPage() {
     return (
@@ -36,6 +28,7 @@ export default function ChatPage() {
 
             <div className="w-full min-h-[700px] rounded-2xl overflow-hidden border border-white/10 bg-black/50 relative flex items-center justify-center">
                 {/* ElevenLabs ConvAI Widget */}
+                {/* @ts-expect-error - Custom element not fully typed in CI environment */}
                 <elevenlabs-convai agent-id="agent_9601kdvywwtvfgx89pqyy9ex8s3h"></elevenlabs-convai>
             </div>
         </div>

@@ -1196,6 +1196,7 @@ export interface OsintTranslations {
                 employee: string;
                 farmer: string;
                 innovation: string;
+                stock: string;
             };
         };
     };
