@@ -11,7 +11,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import {
     Search, Filter, Music, Layers, Zap, Volume2,
     ChevronDown, ChevronRight, BookOpen, Code, Grid, List,
-    Settings, Play, Users, Star, Wand2
+    Settings, Play, Users, Star, Wand2, Cpu, Brain, ExternalLink
 } from 'lucide-react';
 import { OXOTLogo } from '@/components/branding/OXOTLogo';
 import { PageHeader } from '@/components/branding/PageHeader';
@@ -409,6 +409,126 @@ export default function MPNReferencePage() {
                 <p>MPN Reference Dictionary v{MPN_REFERENCE_DICTIONARY.version}</p>
                 <p className="mt-1">Based on Canon v2.3 • McKenney-Lacan Theory</p>
             </footer>
+
+            {/* AI Models Infrastructure Section */}
+            <section className="py-12 px-6 border-t border-white/10 bg-gradient-to-b from-black to-gray-950">
+                <div className="max-w-7xl mx-auto">
+                    <div className="flex items-center gap-3 mb-8">
+                        <div className="p-3 rounded-xl bg-purple-500/10 border border-purple-500/30">
+                            <Brain className="w-6 h-6 text-purple-400" />
+                        </div>
+                        <div>
+                            <h2 className="text-2xl font-black uppercase tracking-tight text-white">
+                                AI Model Infrastructure
+                            </h2>
+                            <p className="text-sm text-gray-500 font-mono">
+                                OpenRouter & HuggingFace Integration
+                            </p>
+                        </div>
+                        <a
+                            href="/mckenney-lacan_theory/mckenney_lacan_appliced_2025_11_19/RSCH-42-AI_MODEL_FRAMEWORK.md"
+                            target="_blank"
+                            className="ml-auto flex items-center gap-2 text-xs text-oxot-gold hover:text-white transition-colors"
+                        >
+                            <ExternalLink className="w-4 h-4" />
+                            Full Documentation
+                        </a>
+                    </div>
+
+                    {/* OpenRouter Models */}
+                    <div className="mb-8">
+                        <h3 className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-4 flex items-center gap-2">
+                            <Cpu className="w-4 h-4" />
+                            OpenRouter Models (Text/Analysis)
+                        </h3>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            {[
+                                { model: 'google/gemini-3-flash-preview', role: 'PRIMARY', desc: 'Real-time psychometric analysis, score interpretation', latency: '~200ms' },
+                                { model: 'google/gemini-2.5-flash-lite', role: 'FALLBACK', desc: 'Lightweight backup when primary unavailable', latency: '~150ms' },
+                                { model: 'google/gemini-embedding-001', role: 'EMBEDDING', desc: 'Vector similarity for leitmotif matching', latency: '~100ms' },
+                            ].map((m) => (
+                                <div key={m.model} className="p-4 bg-gray-900/50 border border-white/10 rounded-xl">
+                                    <div className="flex items-center gap-2 mb-2">
+                                        <span className={`px-2 py-0.5 text-[10px] rounded font-bold ${m.role === 'PRIMARY' ? 'bg-green-500/20 text-green-400' :
+                                                m.role === 'FALLBACK' ? 'bg-yellow-500/20 text-yellow-400' :
+                                                    'bg-blue-500/20 text-blue-400'
+                                            }`}>{m.role}</span>
+                                        <span className="text-[10px] text-gray-500">{m.latency}</span>
+                                    </div>
+                                    <div className="text-sm text-white font-mono truncate">{m.model}</div>
+                                    <div className="text-xs text-gray-500 mt-1">{m.desc}</div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* HuggingFace Audio Models */}
+                    <div className="mb-8">
+                        <h3 className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-4 flex items-center gap-2">
+                            <Music className="w-4 h-4" />
+                            HuggingFace Audio Generation (API Accessible)
+                        </h3>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            {[
+                                { id: 'facebook/musicgen-large', params: '1.5B', desc: 'High-quality text-to-music audio generation', useCase: 'Ambient background audio for visualizations', apiOk: true },
+                                { id: 'facebook/musicgen-small', params: '300M', desc: 'Fast text-to-music audio generation', useCase: 'Quick audio previews for real-time playback', apiOk: true },
+                                { id: 'facebook/musicgen-melody', params: '-', desc: 'Melody-conditioned music generation', useCase: 'Leitmotif variations from MPN analysis', apiOk: true },
+                            ].map((m) => (
+                                <div key={m.id} className="p-4 bg-gray-900/50 border border-white/10 rounded-xl hover:border-purple-500/30 transition-colors">
+                                    <div className="flex items-center gap-2 mb-2">
+                                        <span className="px-2 py-0.5 text-[10px] rounded font-bold bg-green-500/20 text-green-400">
+                                            ✓ API
+                                        </span>
+                                        <span className="text-[10px] text-gray-500">{m.params} params</span>
+                                    </div>
+                                    <div className="text-sm text-white font-mono truncate">{m.id}</div>
+                                    <div className="text-xs text-gray-400 mt-1">{m.desc}</div>
+                                    <div className="text-[10px] text-purple-400 mt-2">MPN: {m.useCase}</div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* HuggingFace MIDI Models */}
+                    <div>
+                        <h3 className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-4 flex items-center gap-2">
+                            <Layers className="w-4 h-4" />
+                            HuggingFace MIDI/Symbolic (Require Local Hosting)
+                        </h3>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            {[
+                                { id: 'loubb/aria-medium-base', arch: 'LLaMA 3.2 (1B)', desc: 'Autoregressive MIDI for solo piano', useCase: 'Piano MIDI from psychometric state', register: 'Symbolic' },
+                                { id: 'asigalov61/Giant-Music-Transformer', arch: 'Transformer', desc: 'Full MIDI using LA MIDI Dataset', useCase: 'Multi-instrument score generation', register: 'Full Orchestra' },
+                                { id: 'skytnt/midi-model', arch: 'Transformer', desc: 'General-purpose MIDI generation', useCase: 'MPN conductor scores', register: 'Imaginary' },
+                                { id: 'skytnt/midi-model-tv2o-medium', arch: 'Transformer', desc: 'Medium-sized MIDI generation', useCase: 'Balanced quality/speed', register: 'Hybrid' },
+                                { id: 'brianflakes/rwkv-midi-piano', arch: 'RWKV (0.1B)', desc: 'Lightweight piano MIDI', useCase: 'Real register expressions', register: 'Real' },
+                                { id: 'asigalov61/Heptabit-Music-Transformer', arch: 'Transformer', desc: 'Compact symbolic music generation', useCase: 'Low-latency MPN playback', register: 'Interactive' },
+                            ].map((m) => (
+                                <div key={m.id} className="p-4 bg-gray-900/50 border border-white/10 rounded-xl hover:border-orange-500/30 transition-colors">
+                                    <div className="flex items-center gap-2 mb-2">
+                                        <span className="px-2 py-0.5 text-[10px] rounded font-bold bg-orange-500/20 text-orange-400">
+                                            ⚠ LOCAL
+                                        </span>
+                                        <span className="text-[10px] text-gray-500">{m.arch}</span>
+                                    </div>
+                                    <div className="text-sm text-white font-mono truncate">{m.id}</div>
+                                    <div className="text-xs text-gray-400 mt-1">{m.desc}</div>
+                                    <div className="flex items-center justify-between mt-2">
+                                        <span className="text-[10px] text-cyan-400">MPN: {m.useCase}</span>
+                                        <span className="text-[10px] text-gray-600">Register: {m.register}</span>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Note */}
+                    <div className="mt-8 p-4 bg-yellow-500/5 border border-yellow-500/20 rounded-xl text-sm text-yellow-400/80">
+                        <strong>Note:</strong> MIDI models require local hosting with <code className="bg-black/30 px-1 rounded">trust_remote_code=True</code>.
+                        See <a href="/mckenney-lacan_theory/mckenney_lacan_appliced_2025_11_19/RSCH-42-AI_MODEL_FRAMEWORK.md" className="underline hover:text-white">RSCH-42</a> for setup instructions.
+                    </div>
+                </div>
+            </section>
             {/* Adjustment Panel */}
             <AnimatePresence>
                 {adjustingEntry && (
