@@ -40,6 +40,7 @@ export interface NavTranslations {
         businessPitchDeck: string;
         chatBot: string;
         frieslandCampina: string;
+        campaignDashboard: string;
     };
 }
 

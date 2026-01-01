@@ -59,13 +59,6 @@ const getNavGroups = (t: ReturnType<typeof useTranslations>['t']) => [
     ]
   },
   {
-    titleKey: 'campaigns',
-    title: t.nav.groups.campaigns,
-    links: [
-      { name: t.nav.links.frieslandCampina, path: '/campaigns/friesland-campina', icon: <Target size={16} />, customHover: "group-hover:text-oxot-gold group-hover:drop-shadow-[0_0_8px_rgba(245,158,11,0.6)]" },
-    ]
-  },
-  {
     titleKey: 'corporate',
     title: t.nav.groups.corporate,
     links: [
@@ -77,6 +70,14 @@ const getNavGroups = (t: ReturnType<typeof useTranslations>['t']) => [
       { name: t.nav.links.brandingGuidelines, path: '/corporate/branding', icon: <Palette size={16} />, customHover: "group-hover:text-amber-400 group-hover:drop-shadow-[0_0_8px_rgba(245,158,11,0.6)]" },
       { name: t.nav.links.businessPitchDeck, path: '/corporate/pitch-deck', icon: <Layers size={16} />, customHover: "group-hover:text-amber-400 group-hover:drop-shadow-[0_0_8px_rgba(245,158,11,0.6)]" },
 
+    ]
+  },
+  {
+    titleKey: 'campaigns',
+    title: t.nav.groups.campaigns,
+    links: [
+      { name: t.nav.links.campaignDashboard, path: '/campaigns', icon: <LayoutDashboard size={16} />, customHover: "group-hover:text-oxot-gold group-hover:drop-shadow-[0_0_8px_rgba(245,158,11,0.6)]" },
+      { name: t.nav.links.frieslandCampina, path: '/campaigns/friesland-campina', icon: <Target size={16} />, customHover: "group-hover:text-oxot-gold group-hover:drop-shadow-[0_0_8px_rgba(245,158,11,0.6)]" },
     ]
   }
 ]

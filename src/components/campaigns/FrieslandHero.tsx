@@ -4,6 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ShieldCheck, Server, Activity } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function FrieslandHero() {
     return (
@@ -38,27 +39,27 @@ export default function FrieslandHero() {
                         </span>
                     </div>
 
-                    <h1 className="heading-1 text-white mb-6 leading-tight">
-                        Sovereign Immunity for the <br />
+                    <h1 className="text-4xl md:text-5xl font-black text-white mb-6 leading-tight tracking-tight uppercase">
+                        Sovereign Immunity for <br />
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-oxot-gold">
-                            Dairy Supply Chain
+                            Expedition 2030
                         </span>
                     </h1>
 
-                    <p className="text-xl text-white/80 max-w-2xl mb-10 font-light leading-relaxed">
+                    <p className="text-lg text-white/80 max-w-2xl mb-8 font-light leading-relaxed">
                         FrieslandCampina is transforming the future of nutrition. <br />
                         Protect your <span className="text-white font-medium">digital production lines</span> with autonomous, physics-based defense that respects data sovereignty.
                     </p>
 
                     <div className="flex flex-wrap gap-4">
-                        <button className="px-8 py-4 bg-oxot-gold text-oxot-blue font-bold rounded-lg hover:bg-white transition-colors duration-300 shadow-[0_0_20px_rgba(212,175,55,0.3)] flex items-center gap-2">
-                            <ShieldCheck size={20} />
+                        <button className="px-6 py-3 bg-oxot-gold text-oxot-blue font-bold rounded-lg hover:bg-white transition-colors duration-300 shadow-[0_0_20px_rgba(212,175,55,0.3)] flex items-center gap-2 text-sm uppercase tracking-wider">
+                            <ShieldCheck size={18} />
                             <span>Request Pilot Access</span>
                         </button>
-                        <button className="px-8 py-4 border border-white/20 text-white font-medium rounded-lg hover:bg-white/10 transition-all duration-300 backdrop-blur-sm flex items-center gap-2">
-                            <Activity size={20} />
+                        <Link href="/services/agent-blue" className="px-6 py-3 border border-white/20 text-white font-medium rounded-lg hover:bg-white/10 transition-all duration-300 backdrop-blur-sm flex items-center gap-2 text-sm uppercase tracking-wider">
+                            <Activity size={18} />
                             <span>Explore Agent Blue</span>
-                        </button>
+                        </Link>
                     </div>
                 </motion.div>
 
